@@ -1,0 +1,421 @@
+{
+  "schemaVersion": 1,
+  "dataTimestamp": "2026-08-14T00:00:00Z",
+  "works": [
+    {
+      "id": "odyssey",
+      "title": "오디세이",
+      "en": "THE ODYSSEY",
+      "pc1": "#1b3550",
+      "pc2": "#080d14",
+      "date": "2026.08.05",
+      "run": "172분",
+      "genre": "액션 · 어드벤처 · 판타지 서사극",
+      "meta": "2026.08.05 개봉 · 172분 · 액션/어드벤처",
+      "badges": ["IMAX43", "IMAX190", "DOLBY"],
+      "hook": "CGV 용산 IMAX — 국내 유일 1.43:1",
+      "open": null,
+      "tmdbId": 1368337,
+      "recommendedFormat": "IMAX43"
+    },
+    {
+      "id": "spiderman",
+      "title": "스파이더맨: 브랜드 뉴 데이",
+      "en": "SPIDER-MAN: BRAND NEW DAY",
+      "pc1": "#3d1a1f",
+      "pc2": "#0d0709",
+      "date": "2026.07.29",
+      "run": null,
+      "genre": "슈퍼히어로 액션",
+      "meta": "2026.07.29 개봉 · 슈퍼히어로 액션",
+      "badges": ["IMAX190", "SCREENX", "4DX"],
+      "hook": "ScreenX — 사상 첫 전용 촬영작",
+      "open": null,
+      "tmdbId": 969681,
+      "recommendedFormat": "SCREENX"
+    },
+    {
+      "id": "hope",
+      "title": "호프",
+      "en": "HOPE",
+      "pc1": "#20304a",
+      "pc2": "#0a0f16",
+      "date": "2026.07.15",
+      "run": "156분 (감독판 161분)",
+      "genre": "SF 액션 스릴러 · 크리처",
+      "meta": "2026.07.15 개봉 · 156분 · SF 액션 스릴러",
+      "badges": ["IMAX190", "4DX", "SCREENX", "DOLBY"],
+      "hook": "돌비 시네마 추천 — IMAX는 개봉 2주 한정",
+      "open": null,
+      "tmdbId": 1058424,
+      "recommendedFormat": "DOLBY"
+    },
+    {
+      "id": "toystory5",
+      "title": "토이 스토리 5",
+      "en": "TOY STORY 5",
+      "pc1": "#2a2f38",
+      "pc2": "#0c0e11",
+      "date": "2026.06.17",
+      "run": "102분",
+      "genre": "애니메이션 · 가족",
+      "meta": "2026.06.17 개봉 · 102분 · 애니메이션",
+      "badges": ["IMAX190"],
+      "hook": "일반관으로 충분 — 확장 화면비 없음 (1.85:1)",
+      "open": null,
+      "tmdbId": 1084244,
+      "recommendedFormat": "STD"
+    },
+    {
+      "id": "eyes",
+      "title": "눈동자",
+      "en": "THE EYES",
+      "pc1": "#33262c",
+      "pc2": "#0e0a0c",
+      "date": "2026.06.24",
+      "run": "105분",
+      "genre": "스릴러",
+      "meta": "2026.06.24 개봉 · 105분 · 스릴러",
+      "badges": ["STD"],
+      "hook": null,
+      "open": null,
+      "tmdbId": 1383154,
+      "recommendedFormat": "STD"
+    },
+    {
+      "id": "kingswarden",
+      "title": "왕과 사는 남자",
+      "en": "THE KING'S WARDEN",
+      "pc1": "#3a2a12",
+      "pc2": "#0e0a05",
+      "date": "2026.02.04",
+      "run": "117분",
+      "genre": "사극",
+      "meta": "2026.02.04 개봉 · 117분 · 사극",
+      "badges": ["STD"],
+      "hook": null,
+      "open": null,
+      "tmdbId": 1321179,
+      "recommendedFormat": "STD"
+    },
+    {
+      "id": "moana",
+      "title": "모아나 (실사판)",
+      "en": "MOANA",
+      "pc1": "#0f2135",
+      "pc2": "#071019",
+      "date": "2026.07.08",
+      "run": null,
+      "genre": null,
+      "meta": "2026.07.08 개봉 · 일반관",
+      "badges": ["STD"],
+      "hook": null,
+      "open": null,
+      "tmdbId": 1108427,
+      "recommendedFormat": "STD"
+    },
+    {
+      "id": "minions",
+      "title": "미니언즈 & 몬스터즈",
+      "en": "MINIONS & MONSTERS",
+      "pc1": "#26332a",
+      "pc2": "#0a0e0b",
+      "date": "2026.07.15",
+      "run": null,
+      "genre": null,
+      "meta": "2026.07.15 개봉 · 일반관",
+      "badges": ["STD"],
+      "hook": null,
+      "open": null,
+      "tmdbId": 1315772,
+      "recommendedFormat": "STD"
+    }
+  ],
+  "halls": [
+    {
+      "id": "yongsan",
+      "badge": "IMAX43",
+      "full": "CGV 용산아이파크몰 IMAX",
+      "short": "용산 IMAX",
+      "place": "서울 용산",
+      "fmt": ["IMAX43"],
+      "screen": "31 × 22.4 m (전 세계 IMAX 스크린 중 최대급)",
+      "ratioInfo": {
+        "shapeLabel": "GT 형상 (1.43:1)",
+        "projectedRatio": "1.43:1",
+        "ratioNote": "국내에서 실제로 1.43:1을 투사하는 유일한 상영관",
+        "mismatchNote": null
+      },
+      "proj": "Barco 6P DP4K-60L 듀얼 레이저",
+      "sound": "IMAX 12채널",
+      "seats": null,
+      "price": null
+    },
+    {
+      "id": "wangsimni",
+      "badge": "IMAX",
+      "full": "CGV 왕십리 IMAX",
+      "short": "왕십리 IMAX",
+      "place": "서울 성동",
+      "fmt": ["IMAX190"],
+      "screen": "22 × 13.3~14.8 m (2024-09 레이저 리뉴얼, 높이는 자료마다 표기가 엇갈림)",
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.90:1",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "4K 레이저",
+      "sound": "IMAX 12채널",
+      "seats": 268,
+      "price": null
+    },
+    {
+      "id": "cheonho",
+      "badge": "IMAX",
+      "full": "CGV 천호 IMAX",
+      "short": "천호 IMAX",
+      "place": "서울 강동",
+      "fmt": ["IMAX190"],
+      "screen": "GT 형상 스크린 (2025-12 CoLA 리뉴얼)",
+      "ratioInfo": {
+        "shapeLabel": "GT 형상 (1.43:1 설계)",
+        "projectedRatio": "1.90:1",
+        "ratioNote": null,
+        "mismatchNote": "스크린 자체는 용산과 같은 1.43:1 GT 형상이지만, CoLA 싱글 레이저 프로젝터가 출력을 1.90:1로 제한합니다 — 스크린 모양만 보고 1.43:1을 기대하면 안 됩니다."
+      },
+      "proj": "CoLA 싱글 레이저",
+      "sound": "12채널",
+      "seats": null,
+      "price": null
+    },
+    {
+      "id": "centumcity",
+      "badge": "IMAX",
+      "full": "CGV 센텀시티 IMAX",
+      "short": "센텀시티 IMAX",
+      "place": "부산 해운대",
+      "fmt": ["IMAX190"],
+      "screen": "30.2 × 15.7 m (매체별 수치 이견 있음, 2024-12 개관)",
+      "ratioInfo": {
+        "shapeLabel": "디지털 스크린 (1.90:1 규격, GT 형상 아님)",
+        "projectedRatio": "1.90:1",
+        "ratioNote": null,
+        "mismatchNote": "용산과 함께 국내에 단 둘뿐인 GT 듀얼 레이저 영사기를 쓰지만, 스크린 자체는 일반 디지털(1.90:1) 규격이라 1.43:1은 지원하지 않습니다 — 영사기가 최신이어도 스크린이 GT 형상이 아니면 확장 프레임을 볼 수 없습니다."
+      },
+      "proj": "IMAX GT Laser (Barco 듀얼 레이저)",
+      "sound": "IMAX 12채널",
+      "seats": 422,
+      "price": null
+    },
+    {
+      "id": "ilsan",
+      "badge": "IMAX",
+      "full": "CGV 일산 IMAX",
+      "short": "일산 IMAX",
+      "place": "경기 고양",
+      "fmt": ["IMAX190"],
+      "screen": "21 × 11.5 m (2024-09 레이저 리뉴얼)",
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.90:1",
+        "ratioNote": "2024-09 CoLA 싱글 레이저 전환",
+        "mismatchNote": null
+      },
+      "proj": "IMAX CoLA 싱글 레이저",
+      "sound": "IMAX 12채널",
+      "seats": 250,
+      "price": null
+    },
+    {
+      "id": "incheon",
+      "badge": "IMAX",
+      "full": "CGV 인천 IMAX",
+      "short": "인천 IMAX",
+      "place": "인천 미추홀",
+      "fmt": ["IMAX190"],
+      "screen": "17.2 × 9.2 m (2024-12 레이저 리뉴얼)",
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.90:1",
+        "ratioNote": "2024-12 CoLA 싱글 레이저 전환",
+        "mismatchNote": null
+      },
+      "proj": "IMAX CoLA 싱글 레이저",
+      "sound": "IMAX 12채널",
+      "seats": 321,
+      "price": null
+    },
+    {
+      "id": "ulsansamsan",
+      "badge": "IMAX",
+      "full": "CGV 울산삼산 IMAX",
+      "short": "울산삼산 IMAX",
+      "place": "울산 남구",
+      "fmt": ["IMAX190"],
+      "screen": "24.4 × 14.1 m (2024-10 레이저 리뉴얼)",
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.90:1",
+        "ratioNote": "2024-10 CoLA 싱글 레이저 전환",
+        "mismatchNote": null
+      },
+      "proj": "IMAX CoLA 싱글 레이저",
+      "sound": "IMAX 12채널",
+      "seats": 441,
+      "price": null
+    },
+    {
+      "id": "seomyeon",
+      "badge": "IMAX",
+      "full": "CGV 서면 IMAX",
+      "short": "서면 IMAX",
+      "place": "부산 부산진",
+      "fmt": ["IMAX190"],
+      "screen": "19 × 11.2 m (2010-07 개관)",
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.90:1",
+        "ratioNote": "2K 제논 듀얼램프 · 개관 이후 레이저 미전환",
+        "mismatchNote": null
+      },
+      "proj": "IMAX 2K 제논 듀얼램프",
+      "sound": "IMAX 6-Track",
+      "seats": 358,
+      "price": null
+    },
+    {
+      "id": "daejeon",
+      "badge": "IMAX",
+      "full": "CGV 대전 IMAX",
+      "short": "대전 IMAX",
+      "place": "대전 중구",
+      "fmt": ["IMAX190"],
+      "screen": "16 × 8.5 m",
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.90:1",
+        "ratioNote": "2K 제논 디지털 · 레이저 미전환",
+        "mismatchNote": null
+      },
+      "proj": "IMAX 2K 제논 디지털",
+      "sound": null,
+      "seats": 364,
+      "price": null
+    },
+    {
+      "id": "namyangjuDolby",
+      "badge": "DOLBY",
+      "full": "메가박스 남양주현대아울렛 스페이스원 Dolby Cinema",
+      "short": "남양주 돌비",
+      "place": "경기 남양주",
+      "fmt": ["DOLBY"],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.85:1",
+        "ratioNote": "국내 3호 돌비 시네마(2020-11 개관) · 플랫(비스타비전) 1.85:1로 알려져 있습니다 — 스코프 전용인 코엑스와 다릅니다",
+        "mismatchNote": null
+      },
+      "proj": "돌비 규격 듀얼 레이저 (Dolby Vision 4K)",
+      "sound": "돌비 애트모스 (SLS 스피커)",
+      "seats": 290,
+      "price": null
+    },
+    {
+      "id": "coex",
+      "badge": "DOLBY",
+      "full": "메가박스 코엑스 Dolby Cinema",
+      "short": "코엑스 돌비",
+      "place": "서울 강남",
+      "fmt": ["DOLBY"],
+      "screen": "17.4 × 7.4 m",
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "2.39:1",
+        "ratioNote": "네이티브 스코프 전용 — 1.85:1 상영작은 좌우에 여백이 남습니다",
+        "mismatchNote": null
+      },
+      "proj": "돌비 규격 듀얼 레이저",
+      "sound": "돌비 애트모스 + 돌비 비전",
+      "seats": null,
+      "price": null
+    },
+    {
+      "id": "worldtower",
+      "badge": "SUPERPLEX",
+      "full": "롯데시네마 월드타워 SUPERPLEX",
+      "short": "월드타워 수퍼플렉스",
+      "place": "서울 송파",
+      "fmt": ["SUPERPLEX"],
+      "screen": "25.6 × 13.8 m (플랫) / 34 × 13.8 m (스코프)",
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "2.39:1",
+        "ratioNote": "스코프 기준 국내 최대 폭",
+        "mismatchNote": null
+      },
+      "proj": "크리스티 4K 듀얼 레이저",
+      "sound": "돌비 애트모스 136 패키지",
+      "seats": 295,
+      "price": null
+    },
+    {
+      "id": "yongsanScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 용산아이파크몰 SCREENX",
+      "short": "용산 스크린엑스",
+      "place": "서울 용산",
+      "fmt": ["SCREENX"],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": "세계 최초 4면 ScreenX 상영관",
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": "국내 ScreenX 최초 돌비 애트모스",
+      "seats": null,
+      "price": null
+    },
+    {
+      "id": "yeouido4dx",
+      "badge": "4DX",
+      "full": "CGV 여의도 4DX SOUNDX",
+      "short": "여의도 4DX",
+      "place": "서울 영등포",
+      "fmt": ["4DX"],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": "SOUNDX",
+      "seats": 120,
+      "price": null
+    },
+    {
+      "id": "cheongdam4dx",
+      "badge": "4DX",
+      "full": "CGV 청담씨네시티 4DX SOUNDX",
+      "short": "청담 4DX",
+      "place": "서울 강남",
+      "fmt": ["4DX"],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": "SOUNDX",
+      "seats": 144,
+      "price": null
+    }
+  ]
+}
