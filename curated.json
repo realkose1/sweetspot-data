@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-08-15T19:00:00+09:00",
+  "dataTimestamp": "2026-08-16T12:30:00+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -58,7 +58,7 @@
         "SCREENX",
         "DOLBY"
       ],
-      "hook": "돌비 시네마 추천 — IMAX는 개봉 2주 한정",
+      "hook": "돌비 시네마 추천 — 사운드 밀도가 강점 (IMAX 상영은 종료)",
       "open": null,
       "tmdbId": 1058424,
       "recommendedFormat": "DOLBY"
