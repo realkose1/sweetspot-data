@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-08-15T18:30:00+09:00",
+  "dataTimestamp": "2026-08-15T19:00:00+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -499,6 +499,857 @@
       "price": null,
       "lat": 37.5276,
       "lon": 127.0406
+    },
+    {
+      "id": "apgujeong",
+      "badge": "IMAX",
+      "full": "CGV 압구정 IMAX",
+      "short": "압구정 IMAX",
+      "place": "서울 강남",
+      "fmt": [
+        "IMAX190"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.90:1",
+        "ratioNote": "듀얼 레이저 미지원 — 1.43:1 구현 불가",
+        "mismatchNote": null
+      },
+      "proj": "IMAX 싱글 레이저 (세부 모델 미확인)",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 37.5272,
+      "lon": 127.0402
+    },
+    {
+      "id": "yeongdeungpo",
+      "badge": "IMAX",
+      "full": "CGV 영등포타임스퀘어 IMAX",
+      "short": "영등포 IMAX",
+      "place": "서울 영등포",
+      "fmt": [
+        "IMAX190"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.90:1",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "IMAX CoLa 레이저",
+      "sound": "IMAX 12채널 (실링 서라운드)",
+      "seats": 387,
+      "price": null,
+      "lat": 37.5172,
+      "lon": 126.9033
+    },
+    {
+      "id": "gwanggyo",
+      "badge": "IMAX",
+      "full": "CGV 광교 IMAX",
+      "short": "광교 IMAX",
+      "place": "경기 수원",
+      "fmt": [
+        "IMAX190"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.90:1",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "IMAX CoLa 레이저 (국내 2번째 IMAX 레이저관)",
+      "sound": null,
+      "seats": 282,
+      "price": null,
+      "lat": 37.2938,
+      "lon": 127.0616
+    },
+    {
+      "id": "dongtan",
+      "badge": "IMAX",
+      "full": "CGV 동탄 IMAX",
+      "short": "동탄 IMAX",
+      "place": "경기 화성",
+      "fmt": [
+        "IMAX190"
+      ],
+      "screen": "가로 19m (세로 미확인, 일반관 전환 개조)",
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.90:1",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "IMAX XT 레이저 (국내 최초 XT Laser 도입)",
+      "sound": null,
+      "seats": 246,
+      "price": null,
+      "lat": 37.1997,
+      "lon": 127.0963
+    },
+    {
+      "id": "uijeongbu",
+      "badge": "IMAX",
+      "full": "CGV 의정부 IMAX",
+      "short": "의정부 IMAX",
+      "place": "경기 의정부",
+      "fmt": [
+        "IMAX190"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.90:1",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "IMAX XT 레이저 (2025-12 제논→XT 전환)",
+      "sound": null,
+      "seats": 266,
+      "price": null,
+      "lat": 37.7382,
+      "lon": 127.0464
+    },
+    {
+      "id": "wirye",
+      "badge": "IMAX",
+      "full": "CGV 스타필드시티위례 IMAX",
+      "short": "위례 IMAX",
+      "place": "경기 하남",
+      "fmt": [
+        "IMAX190"
+      ],
+      "screen": "14.8 × 8 m",
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.90:1",
+        "ratioNote": "2026-04 일반관에서 아이맥스로 전환 — 국내 IMAX 중 최소형급",
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 37.4776,
+      "lon": 127.1414
+    },
+    {
+      "id": "sopung",
+      "badge": "IMAX",
+      "full": "CGV 소풍 IMAX",
+      "short": "소풍(부천) IMAX",
+      "place": "경기 부천",
+      "fmt": [
+        "IMAX190"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.90:1",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "IMAX 2K 디지털 (레이저 미도입)",
+      "sound": null,
+      "seats": 346,
+      "price": null,
+      "lat": 37.4838,
+      "lon": 126.7679
+    },
+    {
+      "id": "daejeonTerminalImax",
+      "badge": "IMAX",
+      "full": "CGV 대전터미널 IMAX",
+      "short": "대전터미널 IMAX",
+      "place": "대전 동구",
+      "fmt": [
+        "IMAX190"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.90:1",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "IMAX XT 레이저",
+      "sound": "IMAX 12채널",
+      "seats": 173,
+      "price": null,
+      "lat": 36.3305,
+      "lon": 127.4467
+    },
+    {
+      "id": "cheonanTerminal",
+      "badge": "IMAX",
+      "full": "CGV 천안터미널 IMAX",
+      "short": "천안터미널 IMAX",
+      "place": "충남 천안",
+      "fmt": [
+        "IMAX190"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.90:1",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "IMAX 레이저 (2024 신설, 세부 모델 미확인)",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 36.8121,
+      "lon": 127.1526
+    },
+    {
+      "id": "cheonanPentaport",
+      "badge": "IMAX",
+      "full": "CGV 천안펜타포트 IMAX",
+      "short": "천안펜타포트 IMAX",
+      "place": "충남 천안",
+      "fmt": [
+        "IMAX190"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.90:1",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "IMAX 레이저 (2023-12 신설, 세부 모델 미확인)",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 36.8188,
+      "lon": 127.1145
+    },
+    {
+      "id": "cheongjuSeomun",
+      "badge": "IMAX",
+      "full": "CGV 청주(서문) IMAX",
+      "short": "청주서문 IMAX",
+      "place": "충북 청주",
+      "fmt": [
+        "IMAX190"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.90:1",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "IMAX 2K 제논 디지털 (구 CGV대구 장비 이전)",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 36.6354,
+      "lon": 127.4925
+    },
+    {
+      "id": "daegu",
+      "badge": "IMAX",
+      "full": "CGV 대구 IMAX",
+      "short": "대구 IMAX",
+      "place": "대구 북구",
+      "fmt": [
+        "IMAX190"
+      ],
+      "screen": "17.5 × 8.9 m",
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.90:1",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "IMAX CoLa 레이저 (비수도권 최초 레이저 IMAX, 국내 5번째)",
+      "sound": "IMAX 12채널",
+      "seats": null,
+      "price": null,
+      "lat": 35.8823,
+      "lon": 128.5943
+    },
+    {
+      "id": "suncheonSindae",
+      "badge": "IMAX",
+      "full": "CGV 순천신대 IMAX",
+      "short": "순천신대 IMAX",
+      "place": "전남 순천",
+      "fmt": [
+        "IMAX190"
+      ],
+      "screen": "18.6 × 9.4 m",
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.90:1",
+        "ratioNote": "2024-11 개관 — 광주터미널 폐점 이후 호남권 대체 수요",
+        "mismatchNote": null
+      },
+      "proj": "IMAX 레이저",
+      "sound": null,
+      "seats": 213,
+      "price": null,
+      "lat": 34.943,
+      "lon": 127.548
+    },
+    {
+      "id": "jeonjuHyoja",
+      "badge": "IMAX",
+      "full": "CGV 전주효자 IMAX",
+      "short": "전주효자 IMAX",
+      "place": "전북 전주",
+      "fmt": [
+        "IMAX190"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.90:1",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "IMAX 2K 디지털 (레이저 미도입)",
+      "sound": null,
+      "seats": 373,
+      "price": null,
+      "lat": 35.8103,
+      "lon": 127.1198
+    },
+    {
+      "id": "changwonTheCity",
+      "badge": "IMAX",
+      "full": "CGV 창원더시티 IMAX",
+      "short": "창원더시티 IMAX",
+      "place": "경남 창원",
+      "fmt": [
+        "IMAX190"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.90:1",
+        "ratioNote": "국내 2K 디지털 IMAX 중 최소형급",
+        "mismatchNote": null
+      },
+      "proj": "IMAX 2K 디지털",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 35.218,
+      "lon": 128.6811
+    },
+    {
+      "id": "pyeongtaek",
+      "badge": "IMAX",
+      "full": "CGV 평택 IMAX",
+      "short": "평택 IMAX",
+      "place": "경기 평택",
+      "fmt": [
+        "IMAX190"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.90:1",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "IMAX 레이저 (2023-12 신설, 세부 모델 미확인)",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 36.9921,
+      "lon": 127.0864
+    },
+    {
+      "id": "chuncheon",
+      "badge": "IMAX",
+      "full": "CGV 춘천 IMAX",
+      "short": "춘천 IMAX",
+      "place": "강원 춘천",
+      "fmt": [
+        "IMAX190"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.90:1",
+        "ratioNote": "강원권 유일의 IMAX",
+        "mismatchNote": null
+      },
+      "proj": "IMAX 2K 디지털",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 37.8562,
+      "lon": 127.7396
+    },
+    {
+      "id": "anseongDolby",
+      "badge": "DOLBY",
+      "full": "메가박스 안성스타필드 Dolby Cinema",
+      "short": "안성 돌비",
+      "place": "경기 안성",
+      "fmt": [
+        "DOLBY"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.85:1",
+        "ratioNote": "국내 2호 돌비 시네마(2020-10) · 대전과 함께 국내 유이한 빌트인 돌비시네마 · 플랫(비스타비전)",
+        "mismatchNote": null
+      },
+      "proj": "돌비 규격 듀얼 레이저",
+      "sound": "돌비 애트모스 (전관 매립형 스피커)",
+      "seats": null,
+      "price": null,
+      "lat": 37.0087,
+      "lon": 127.1734
+    },
+    {
+      "id": "daejeonSinsegaeDolby",
+      "badge": "DOLBY",
+      "full": "메가박스 대전신세계 Art&Science Dolby Cinema",
+      "short": "대전신세계 돌비",
+      "place": "대전 유성",
+      "fmt": [
+        "DOLBY"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.85:1",
+        "ratioNote": "비수도권 최초 돌비 시네마(2021-08) · 빌트인 · 국내 돌비관 중 하남에 이어 두 번째로 큰 스크린",
+        "mismatchNote": null
+      },
+      "proj": "돌비 규격 듀얼 레이저",
+      "sound": "돌비 애트모스",
+      "seats": null,
+      "price": null,
+      "lat": 36.3714,
+      "lon": 127.3855
+    },
+    {
+      "id": "daeguSinsegaeDolby",
+      "badge": "DOLBY",
+      "full": "메가박스 대구신세계(동대구) Dolby Cinema",
+      "short": "대구신세계 돌비",
+      "place": "대구 동구",
+      "fmt": [
+        "DOLBY"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.85:1",
+        "ratioNote": "영남 최초 돌비 시네마(2022-06, 구 MX관 리뉴얼) · 화면비는 개별 확인 자료 없이 '국내 돌비관 대부분 플랫(1.85:1)' 보도 패턴에서 추정",
+        "mismatchNote": null
+      },
+      "proj": "돌비 규격 레이저",
+      "sound": "돌비 애트모스",
+      "seats": null,
+      "price": null,
+      "lat": 35.8794,
+      "lon": 128.6285
+    },
+    {
+      "id": "suwonAkDolby",
+      "badge": "DOLBY",
+      "full": "메가박스 수원AK플라자(수원역) Dolby Cinema",
+      "short": "수원역 돌비",
+      "place": "경기 수원",
+      "fmt": [
+        "DOLBY"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.85:1",
+        "ratioNote": "국내 6번째 돌비 시네마(2023-08, 구 IMAX관 리뉴얼) · 경기 남부권 유일 돌비 시네마",
+        "mismatchNote": null
+      },
+      "proj": "돌비 규격 레이저",
+      "sound": "돌비 애트모스",
+      "seats": null,
+      "price": null,
+      "lat": 37.266,
+      "lon": 127.0007
+    },
+    {
+      "id": "songdoDolby",
+      "badge": "DOLBY",
+      "full": "메가박스 송도(트리플스트리트) Dolby Cinema",
+      "short": "송도 돌비",
+      "place": "인천 연수",
+      "fmt": [
+        "DOLBY"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.85:1",
+        "ratioNote": "인천 최초 돌비 시네마(2024-02, 구 MX관 리뉴얼)",
+        "mismatchNote": null
+      },
+      "proj": "돌비 규격 레이저",
+      "sound": "돌비 애트모스",
+      "seats": null,
+      "price": null,
+      "lat": 37.3894,
+      "lon": 126.6437
+    },
+    {
+      "id": "hanamStarfieldDolby",
+      "badge": "DOLBY",
+      "full": "메가박스 하남스타필드 Dolby Cinema",
+      "short": "하남스타필드 돌비",
+      "place": "경기 하남",
+      "fmt": [
+        "DOLBY"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "1.85:1",
+        "ratioNote": "국내 8번째 돌비 시네마(2024-07, 구 MX관 리뉴얼) · 국내 돌비관 중 최대 스크린",
+        "mismatchNote": null
+      },
+      "proj": "돌비 규격 레이저",
+      "sound": "돌비 애트모스",
+      "seats": null,
+      "price": null,
+      "lat": 37.5386,
+      "lon": 127.2146
+    },
+    {
+      "id": "yongsanUltra4dx",
+      "badge": "4DX",
+      "full": "CGV 용산아이파크몰 ULTRA 4DX",
+      "short": "용산 ULTRA 4DX",
+      "place": "서울 용산",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": "SOUNDX",
+      "seats": null,
+      "price": null,
+      "lat": 37.53,
+      "lon": 126.9647
+    },
+    {
+      "id": "wangsimniUltra4dx",
+      "badge": "4DX",
+      "full": "CGV 왕십리 ULTRA 4DX",
+      "short": "왕십리 ULTRA 4DX",
+      "place": "서울 성동",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": "SOUNDX",
+      "seats": null,
+      "price": null,
+      "lat": 37.5612,
+      "lon": 127.0377
+    },
+    {
+      "id": "cheonanTerminalUltra4dx",
+      "badge": "4DX",
+      "full": "CGV 천안터미널 ULTRA 4DX",
+      "short": "천안터미널 ULTRA 4DX",
+      "place": "충남 천안",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": "SOUNDX",
+      "seats": null,
+      "price": null,
+      "lat": 36.8121,
+      "lon": 127.1526
+    },
+    {
+      "id": "centumcityUltra4dx",
+      "badge": "4DX",
+      "full": "CGV 센텀시티 ULTRA 4DX",
+      "short": "센텀시티 ULTRA 4DX",
+      "place": "부산 해운대",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": "SOUNDX",
+      "seats": null,
+      "price": null,
+      "lat": 35.1689,
+      "lon": 129.132
+    },
+    {
+      "id": "daeguUltra4dx",
+      "badge": "4DX",
+      "full": "CGV 대구 ULTRA 4DX",
+      "short": "대구 ULTRA 4DX",
+      "place": "대구 북구",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": "SOUNDX",
+      "seats": 120,
+      "price": null,
+      "lat": 35.8823,
+      "lon": 128.5943
+    },
+    {
+      "id": "dongsuwonUltra4dx",
+      "badge": "4DX",
+      "full": "CGV 동수원 ULTRA 4DX",
+      "short": "동수원 ULTRA 4DX",
+      "place": "경기 수원",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": "SOUNDX",
+      "seats": 108,
+      "price": null,
+      "lat": 37.2757,
+      "lon": 127.0159
+    },
+    {
+      "id": "ilsanUltra4dx",
+      "badge": "4DX",
+      "full": "CGV 일산 ULTRA 4DX",
+      "short": "일산 ULTRA 4DX",
+      "place": "경기 고양",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": "SOUNDX",
+      "seats": null,
+      "price": null,
+      "lat": 37.6597,
+      "lon": 126.7733
+    },
+    {
+      "id": "sangbongUltra4dx",
+      "badge": "4DX",
+      "full": "CGV 상봉 ULTRA 4DX",
+      "short": "상봉 ULTRA 4DX",
+      "place": "서울 중랑",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": "SOUNDX",
+      "seats": 108,
+      "price": null,
+      "lat": 37.5966,
+      "lon": 127.0857
+    },
+    {
+      "id": "gwanggyoUltra4dx",
+      "badge": "4DX",
+      "full": "CGV 광교 ULTRA 4DX",
+      "short": "광교 ULTRA 4DX",
+      "place": "경기 수원",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": "SOUNDX",
+      "seats": null,
+      "price": null,
+      "lat": 37.2938,
+      "lon": 127.0616
+    },
+    {
+      "id": "wangsimniScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 왕십리 SCREENX",
+      "short": "왕십리 스크린엑스",
+      "place": "서울 성동",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "3Chip-DLP 4K 레이저 측면 프로젝터 (PLF)",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 37.5612,
+      "lon": 127.0377
+    },
+    {
+      "id": "seomyeonScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 서면 SCREENX",
+      "short": "서면 스크린엑스",
+      "place": "부산 부산진",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "ScreenX PLF (2022 실버스크린 리뉴얼)",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 35.1578,
+      "lon": 129.0592
+    },
+    {
+      "id": "daejeonTerminalScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 대전터미널 SCREENX",
+      "short": "대전터미널 스크린엑스",
+      "place": "대전 동구",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "ScreenX PLF (2023-12 신설)",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 36.3305,
+      "lon": 127.4467
+    },
+    {
+      "id": "coexMx4d",
+      "badge": "4DX",
+      "full": "메가박스 코엑스 MX4D",
+      "short": "코엑스 MX4D",
+      "place": "서울 강남",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 37.5119,
+      "lon": 127.0589
+    },
+    {
+      "id": "hanamStarfieldMx4d",
+      "badge": "4DX",
+      "full": "메가박스 하남스타필드 MX4D",
+      "short": "하남스타필드 MX4D",
+      "place": "경기 하남",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 37.5386,
+      "lon": 127.2146
     }
   ]
 }
