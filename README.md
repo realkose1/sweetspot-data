@@ -31,6 +31,15 @@ especially to:
   this file for the canonical example, and `ratioInfo.mismatchNote` for how
   to flag that kind of case explicitly rather than let it look consistent).
 - `screen` — physical dimensions. Only fill in when a source states them.
+- `lat`/`lon` — building-level GPS coordinates of the physical complex a hall
+  is in. Only fill in from an actual source (a landmark's published
+  coordinates, e.g. Wikipedia's infobox, or a named subway station/exit the
+  hall is confirmed to sit at/inside) — never eyeball a location on a map.
+  Leave both `null` (never one without the other) until you have a real
+  basis. A hall with no coordinates simply gets no distance treatment
+  anywhere in the app (onboarding's map pin still shows every hall marker
+  it can, but distance-based ranking/sorting skips that one hall) — exactly
+  like a nil `seats` renders as "—" instead of a guess.
 
 If a chain's marketing page changes but you can't independently confirm the
 new number is correct, it's fine to leave the old value in place and note
@@ -84,6 +93,7 @@ Top level:
 | `sound` | Sound system description, or `null`. |
 | `seats` | Integer seat count, or `null`. Must be a positive number if present — see the "never guess" section above. |
 | `price` | Premium-format surcharge, free text, or `null`. See above — almost certainly `null` for every hall today. |
+| `lat`, `lon` | Building-level GPS coordinates (decimal degrees, e.g. `37.5119`), or both `null`. Added 2026-08-15 — optional at every layer, so a payload without them (or an older cached one) still validates; schema stays v1. Must travel together — one set without the other fails the whole payload. The app rejects the whole payload if either falls outside a generous Korea bounding box (`lat` 33-39, `lon` 124-132), as a sanity check against a swapped-digit typo. See the "never guess" section above — same discipline as `seats`/`screen`. |
 
 ## How to publish an update
 
