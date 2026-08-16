@@ -54,6 +54,7 @@ def build_prompt(works: list, today: datetime) -> str:
 - 출처 URL이 없는 변경은 제안하지 않습니다.
 - 영화 추가/삭제와 상영관 데이터는 이 자동화의 범위 밖입니다. 새로 특수관 개봉이 확정된 주목할 만한 영화나, 상영관 개·폐관 소식이 있으면 notices에만 적으세요 (사람이 검토합니다).
 - 뉴스 기사·블로그 문장을 그대로 옮기지 않습니다. 사실만 추려 새로 씁니다.
+- 웹 검색은 최대 6회입니다. 여러 작품을 한 검색어로 묶는 등 꼭 필요한 확인에만 아껴 쓰세요. 검색으로 확인 못 한 작품은 변경하지 않으면 됩니다.
 
 응답 마지막에 아래 형식의 json 코드블록을 정확히 하나만 출력하세요:
 
@@ -106,13 +107,26 @@ def main() -> int:
     today = datetime.now(KST)
 
     client = Anthropic()
+    # cache_control: 웹 검색은 검색할 때마다 누적된 대화 전체를 다시 입력으로
+    # 처리하므로, 프롬프트 캐싱 없이는 입력 토큰이 검색 횟수에 따라 눈덩이처럼
+    # 불어난다 (첫 실행에서 확인: 12회 검색에 입력 ~33만 토큰). 캐시된 부분은
+    # 기본 단가의 ~10%로 재사용된다. max_uses도 6으로 제한 — 8편 점검에 충분.
     with client.messages.stream(
         model="claude-sonnet-5",
         max_tokens=32000,
-        tools=[{"type": "web_search_20260209", "name": "web_search", "max_uses": 12}],
+        cache_control={"type": "ephemeral"},
+        tools=[{"type": "web_search_20260209", "name": "web_search", "max_uses": 6}],
         messages=[{"role": "user", "content": build_prompt(data["works"], today)}],
     ) as stream:
         message = stream.get_final_message()
+
+    u = message.usage
+    searches = getattr(getattr(u, "server_tool_use", None), "web_search_requests", 0) or 0
+    cache_read = getattr(u, "cache_read_input_tokens", 0) or 0
+    cache_write = getattr(u, "cache_creation_input_tokens", 0) or 0
+    cost = (u.input_tokens * 3 + cache_write * 3.75 + cache_read * 0.3 + u.output_tokens * 15) / 1e6 + searches * 0.01
+    print(f"토큰: 입력 {u.input_tokens:,} / 캐시쓰기 {cache_write:,} / 캐시읽기 {cache_read:,} / 출력 {u.output_tokens:,} / 검색 {searches}회")
+    print(f"예상 비용(정가 기준): ${cost:.2f}")
 
     if message.stop_reason == "refusal":
         print("::error::모델이 요청을 거부함 (stop_reason=refusal)")
