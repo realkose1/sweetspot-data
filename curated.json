@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-08-16T20:15:15+09:00",
+  "dataTimestamp": "2026-08-16T23:15:58+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -174,7 +174,7 @@
       },
       "proj": "Barco 6P DP4K-60L 듀얼 레이저",
       "sound": "IMAX 12채널",
-      "seats": null,
+      "seats": 624,
       "price": null,
       "lat": 37.53,
       "lon": 126.9647
@@ -220,7 +220,7 @@
       },
       "proj": "CoLA 싱글 레이저",
       "sound": "12채널",
-      "seats": null,
+      "seats": 323,
       "price": null,
       "lat": 37.5456,
       "lon": 127.1428
@@ -404,7 +404,7 @@
       },
       "proj": "돌비 규격 듀얼 레이저",
       "sound": "돌비 애트모스 + 돌비 비전",
-      "seats": null,
+      "seats": 378,
       "price": null,
       "lat": 37.5119,
       "lon": 127.0589
@@ -519,7 +519,7 @@
       },
       "proj": "IMAX 싱글 레이저 (세부 모델 미확인)",
       "sound": null,
-      "seats": null,
+      "seats": 180,
       "price": null,
       "lat": 37.5272,
       "lon": 127.0402
@@ -634,7 +634,7 @@
       },
       "proj": null,
       "sound": null,
-      "seats": null,
+      "seats": 207,
       "price": null,
       "lat": 37.4776,
       "lon": 127.1414
@@ -703,7 +703,7 @@
       },
       "proj": "IMAX 레이저 (2024 신설, 세부 모델 미확인)",
       "sound": null,
-      "seats": null,
+      "seats": 210,
       "price": null,
       "lat": 36.8121,
       "lon": 127.1526
@@ -726,7 +726,7 @@
       },
       "proj": "IMAX 레이저 (2023-12 신설, 세부 모델 미확인)",
       "sound": null,
-      "seats": null,
+      "seats": 167,
       "price": null,
       "lat": 36.8188,
       "lon": 127.1145
@@ -749,7 +749,7 @@
       },
       "proj": "IMAX 2K 제논 디지털 (구 CGV대구 장비 이전)",
       "sound": null,
-      "seats": null,
+      "seats": 258,
       "price": null,
       "lat": 36.6354,
       "lon": 127.4925
@@ -772,7 +772,7 @@
       },
       "proj": "IMAX CoLa 레이저 (비수도권 최초 레이저 IMAX, 국내 5번째)",
       "sound": "IMAX 12채널",
-      "seats": null,
+      "seats": 241,
       "price": null,
       "lat": 35.8823,
       "lon": 128.5943
@@ -841,7 +841,7 @@
       },
       "proj": "IMAX 2K 디지털",
       "sound": null,
-      "seats": null,
+      "seats": 304,
       "price": null,
       "lat": 35.218,
       "lon": 128.6811
@@ -864,7 +864,7 @@
       },
       "proj": "IMAX 레이저 (2023-12 신설, 세부 모델 미확인)",
       "sound": null,
-      "seats": null,
+      "seats": 228,
       "price": null,
       "lat": 36.9921,
       "lon": 127.0864
@@ -887,7 +887,7 @@
       },
       "proj": "IMAX 2K 디지털",
       "sound": null,
-      "seats": null,
+      "seats": 321,
       "price": null,
       "lat": 37.8562,
       "lon": 127.7396
@@ -910,7 +910,7 @@
       },
       "proj": "돌비 규격 듀얼 레이저",
       "sound": "돌비 애트모스 (전관 매립형 스피커)",
-      "seats": null,
+      "seats": 254,
       "price": null,
       "lat": 37.0087,
       "lon": 127.1734
@@ -933,7 +933,7 @@
       },
       "proj": "돌비 규격 듀얼 레이저",
       "sound": "돌비 애트모스",
-      "seats": null,
+      "seats": 313,
       "price": null,
       "lat": 36.3714,
       "lon": 127.3855
@@ -956,7 +956,7 @@
       },
       "proj": "돌비 규격 레이저",
       "sound": "돌비 애트모스",
-      "seats": null,
+      "seats": 213,
       "price": null,
       "lat": 35.8794,
       "lon": 128.6285
@@ -979,7 +979,7 @@
       },
       "proj": "돌비 규격 레이저",
       "sound": "돌비 애트모스",
-      "seats": null,
+      "seats": 275,
       "price": null,
       "lat": 37.266,
       "lon": 127.0007
@@ -1002,7 +1002,7 @@
       },
       "proj": "돌비 규격 레이저",
       "sound": "돌비 애트모스",
-      "seats": null,
+      "seats": 285,
       "price": null,
       "lat": 37.3894,
       "lon": 126.6437
@@ -1025,7 +1025,7 @@
       },
       "proj": "돌비 규격 레이저",
       "sound": "돌비 애트모스",
-      "seats": null,
+      "seats": 336,
       "price": null,
       "lat": 37.5386,
       "lon": 127.2146
@@ -1048,7 +1048,7 @@
       },
       "proj": null,
       "sound": "SOUNDX",
-      "seats": null,
+      "seats": 144,
       "price": null,
       "lat": 37.53,
       "lon": 126.9647
@@ -1071,7 +1071,7 @@
       },
       "proj": null,
       "sound": "SOUNDX",
-      "seats": null,
+      "seats": 112,
       "price": null,
       "lat": 37.5612,
       "lon": 127.0377
@@ -1094,7 +1094,7 @@
       },
       "proj": null,
       "sound": "SOUNDX",
-      "seats": null,
+      "seats": 72,
       "price": null,
       "lat": 36.8121,
       "lon": 127.1526
@@ -1117,7 +1117,7 @@
       },
       "proj": null,
       "sound": "SOUNDX",
-      "seats": null,
+      "seats": 128,
       "price": null,
       "lat": 35.1689,
       "lon": 129.132
@@ -1186,7 +1186,7 @@
       },
       "proj": null,
       "sound": "SOUNDX",
-      "seats": null,
+      "seats": 120,
       "price": null,
       "lat": 37.6597,
       "lon": 126.7733
@@ -1232,7 +1232,7 @@
       },
       "proj": null,
       "sound": "SOUNDX",
-      "seats": null,
+      "seats": 144,
       "price": null,
       "lat": 37.2938,
       "lon": 127.0616
@@ -1255,7 +1255,7 @@
       },
       "proj": "3Chip-DLP 4K 레이저 측면 프로젝터 (PLF)",
       "sound": null,
-      "seats": null,
+      "seats": 143,
       "price": null,
       "lat": 37.5612,
       "lon": 127.0377
@@ -1278,7 +1278,7 @@
       },
       "proj": "ScreenX PLF (2022 실버스크린 리뉴얼)",
       "sound": null,
-      "seats": null,
+      "seats": 340,
       "price": null,
       "lat": 35.1578,
       "lon": 129.0592
@@ -1301,7 +1301,7 @@
       },
       "proj": "ScreenX PLF (2023-12 신설)",
       "sound": null,
-      "seats": null,
+      "seats": 230,
       "price": null,
       "lat": 36.3305,
       "lon": 127.4467
@@ -1324,7 +1324,7 @@
       },
       "proj": null,
       "sound": null,
-      "seats": null,
+      "seats": 192,
       "price": null,
       "lat": 37.5119,
       "lon": 127.0589
@@ -1347,7 +1347,7 @@
       },
       "proj": null,
       "sound": null,
-      "seats": null,
+      "seats": 132,
       "price": null,
       "lat": 37.5386,
       "lon": 127.2146
@@ -1370,7 +1370,7 @@
       },
       "proj": "다면 프로젝션",
       "sound": null,
-      "seats": null,
+      "seats": 61,
       "price": null,
       "lat": 37.501656,
       "lon": 127.026355
@@ -1393,7 +1393,7 @@
       },
       "proj": "다면 프로젝션",
       "sound": null,
-      "seats": null,
+      "seats": 126,
       "price": null,
       "lat": 37.755657,
       "lon": 128.898614
@@ -1416,7 +1416,7 @@
       },
       "proj": "다면 프로젝션",
       "sound": null,
-      "seats": null,
+      "seats": 127,
       "price": null,
       "lat": 37.56666,
       "lon": 127.157333
@@ -1439,7 +1439,7 @@
       },
       "proj": "다면 프로젝션",
       "sound": null,
-      "seats": null,
+      "seats": 171,
       "price": null,
       "lat": 37.501125,
       "lon": 126.882773
@@ -1462,7 +1462,7 @@
       },
       "proj": "다면 프로젝션",
       "sound": null,
-      "seats": null,
+      "seats": 75,
       "price": null,
       "lat": 37.606972,
       "lon": 126.723152
@@ -1485,7 +1485,7 @@
       },
       "proj": "다면 프로젝션",
       "sound": null,
-      "seats": null,
+      "seats": 182,
       "price": null,
       "lat": 37.202204,
       "lon": 127.098222
@@ -1508,7 +1508,7 @@
       },
       "proj": "다면 프로젝션",
       "sound": null,
-      "seats": null,
+      "seats": 156,
       "price": null,
       "lat": 37.557914,
       "lon": 126.856023
@@ -1554,7 +1554,7 @@
       },
       "proj": "다면 프로젝션",
       "sound": null,
-      "seats": null,
+      "seats": 85,
       "price": null,
       "lat": 37.504303,
       "lon": 126.762075
@@ -1577,7 +1577,7 @@
       },
       "proj": "다면 프로젝션",
       "sound": null,
-      "seats": null,
+      "seats": 174,
       "price": null,
       "lat": 37.597407,
       "lon": 127.092178
@@ -1600,7 +1600,7 @@
       },
       "proj": "다면 프로젝션",
       "sound": null,
-      "seats": null,
+      "seats": 172,
       "price": null,
       "lat": 36.502637,
       "lon": 127.247566
@@ -1623,7 +1623,7 @@
       },
       "proj": "다면 프로젝션",
       "sound": null,
-      "seats": null,
+      "seats": 124,
       "price": null,
       "lat": 35.168761,
       "lon": 129.129643
@@ -1646,7 +1646,7 @@
       },
       "proj": "다면 프로젝션",
       "sound": null,
-      "seats": null,
+      "seats": 132,
       "price": null,
       "lat": 37.556456,
       "lon": 126.940224
@@ -1669,7 +1669,7 @@
       },
       "proj": "다면 프로젝션",
       "sound": null,
-      "seats": null,
+      "seats": 175,
       "price": null,
       "lat": 37.313487,
       "lon": 126.830977
@@ -1692,7 +1692,7 @@
       },
       "proj": "다면 프로젝션",
       "sound": null,
-      "seats": null,
+      "seats": 240,
       "price": null,
       "lat": 37.517162,
       "lon": 126.903811
@@ -1715,7 +1715,7 @@
       },
       "proj": "다면 프로젝션",
       "sound": null,
-      "seats": null,
+      "seats": 229,
       "price": null,
       "lat": 37.3416,
       "lon": 127.106724
@@ -1738,7 +1738,7 @@
       },
       "proj": "다면 프로젝션",
       "sound": null,
-      "seats": null,
+      "seats": 216,
       "price": null,
       "lat": 35.541365,
       "lon": 129.338909
@@ -1761,7 +1761,7 @@
       },
       "proj": "다면 프로젝션",
       "sound": null,
-      "seats": null,
+      "seats": 103,
       "price": null,
       "lat": 37.451527,
       "lon": 126.701802
@@ -1784,7 +1784,7 @@
       },
       "proj": "다면 프로젝션",
       "sound": null,
-      "seats": null,
+      "seats": 90,
       "price": null,
       "lat": 37.655108,
       "lon": 126.772671
@@ -1807,7 +1807,7 @@
       },
       "proj": "다면 프로젝션",
       "sound": null,
-      "seats": null,
+      "seats": 99,
       "price": null,
       "lat": 37.738695,
       "lon": 127.045914
@@ -1830,7 +1830,7 @@
       },
       "proj": "다면 프로젝션",
       "sound": null,
-      "seats": null,
+      "seats": 125,
       "price": null,
       "lat": 36.798626,
       "lon": 127.101471
@@ -1853,7 +1853,7 @@
       },
       "proj": "다면 프로젝션",
       "sound": null,
-      "seats": null,
+      "seats": 162,
       "price": null,
       "lat": 37.545806,
       "lon": 127.1421
@@ -1876,7 +1876,7 @@
       },
       "proj": "다면 프로젝션",
       "sound": null,
-      "seats": null,
+      "seats": 111,
       "price": null,
       "lat": 36.991518,
       "lon": 127.085292
