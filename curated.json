@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-08-16T16:02:07+09:00",
+  "dataTimestamp": "2026-08-16T20:15:15+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -1351,6 +1351,788 @@
       "price": null,
       "lat": 37.5386,
       "lon": 127.2146
+    },
+    {
+      "id": "gangnamScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 강남 SCREENX",
+      "short": "강남 스크린엑스",
+      "place": "서울 강남",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 37.501656,
+      "lon": 127.026355
+    },
+    {
+      "id": "gangneungScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 강릉 SCREENX",
+      "short": "강릉 스크린엑스",
+      "place": "강원 강릉",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 37.755657,
+      "lon": 128.898614
+    },
+    {
+      "id": "godeokGangilScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 고덕강일 SCREENX",
+      "short": "고덕강일 스크린엑스",
+      "place": "서울 강동",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 37.56666,
+      "lon": 127.157333
+    },
+    {
+      "id": "guroScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 구로 SCREENX",
+      "short": "구로 스크린엑스",
+      "place": "서울 구로",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 37.501125,
+      "lon": 126.882773
+    },
+    {
+      "id": "gimpoScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 김포 SCREENX",
+      "short": "김포 스크린엑스",
+      "place": "경기 김포",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 37.606972,
+      "lon": 126.723152
+    },
+    {
+      "id": "dongtanStationScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 동탄역 SCREENX",
+      "short": "동탄역 스크린엑스",
+      "place": "경기 화성",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 37.202204,
+      "lon": 127.098222
+    },
+    {
+      "id": "deungchonScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 등촌 SCREENX",
+      "short": "등촌 스크린엑스",
+      "place": "서울 강서",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 37.557914,
+      "lon": 126.856023
+    },
+    {
+      "id": "baegotScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 배곧 SCREENX",
+      "short": "배곧 스크린엑스",
+      "place": "경기 시흥",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 37.368193,
+      "lon": 126.730693
+    },
+    {
+      "id": "bucheonScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 부천 SCREENX",
+      "short": "부천 스크린엑스",
+      "place": "경기 부천",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 37.504303,
+      "lon": 126.762075
+    },
+    {
+      "id": "sangbongScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 상봉 SCREENX",
+      "short": "상봉 스크린엑스",
+      "place": "서울 중랑",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 37.597407,
+      "lon": 127.092178
+    },
+    {
+      "id": "sejongScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 세종 SCREENX",
+      "short": "세종 스크린엑스",
+      "place": "세종",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 36.502637,
+      "lon": 127.247566
+    },
+    {
+      "id": "centumCityScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 센텀시티 SCREENX",
+      "short": "센텀시티 스크린엑스",
+      "place": "부산 해운대",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 35.168761,
+      "lon": 129.129643
+    },
+    {
+      "id": "sinchonArtreonScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 신촌아트레온 SCREENX",
+      "short": "신촌 스크린엑스",
+      "place": "서울 서대문",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 37.556456,
+      "lon": 126.940224
+    },
+    {
+      "id": "ansanScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 안산 SCREENX",
+      "short": "안산 스크린엑스",
+      "place": "경기 안산",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 37.313487,
+      "lon": 126.830977
+    },
+    {
+      "id": "yeongdeungpoScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 영등포 SCREENX",
+      "short": "영등포 스크린엑스",
+      "place": "서울 영등포",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 37.517162,
+      "lon": 126.903811
+    },
+    {
+      "id": "oriScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 오리 SCREENX",
+      "short": "오리 스크린엑스",
+      "place": "경기 성남",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 37.3416,
+      "lon": 127.106724
+    },
+    {
+      "id": "ulsanSamsanScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 울산삼산 SCREENX",
+      "short": "울산삼산 스크린엑스",
+      "place": "울산 남구",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 35.541365,
+      "lon": 129.338909
+    },
+    {
+      "id": "incheonScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 인천 SCREENX",
+      "short": "인천 스크린엑스",
+      "place": "인천 남동",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 37.451527,
+      "lon": 126.701802
+    },
+    {
+      "id": "ilsanScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 일산 SCREENX",
+      "short": "일산 스크린엑스",
+      "place": "경기 고양",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 37.655108,
+      "lon": 126.772671
+    },
+    {
+      "id": "uijeongbuScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 의정부 SCREENX",
+      "short": "의정부 스크린엑스",
+      "place": "경기 의정부",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 37.738695,
+      "lon": 127.045914
+    },
+    {
+      "id": "cheonanScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 천안펜타포트 SCREENX",
+      "short": "천안 스크린엑스",
+      "place": "충남 천안",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 36.798626,
+      "lon": 127.101471
+    },
+    {
+      "id": "cheonhoScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 천호 SCREENX",
+      "short": "천호 스크린엑스",
+      "place": "서울 강동",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 37.545806,
+      "lon": 127.1421
+    },
+    {
+      "id": "pyeongtaekScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 평택 SCREENX",
+      "short": "평택 스크린엑스",
+      "place": "경기 평택",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 36.991518,
+      "lon": 127.085292
+    },
+    {
+      "id": "hongdaeScreenX",
+      "badge": "SCREENX",
+      "full": "CGV 홍대 SCREENX",
+      "short": "홍대 스크린엑스",
+      "place": "서울 마포",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": null,
+      "seats": null,
+      "price": null,
+      "lat": 37.556509,
+      "lon": 126.92259
+    },
+    {
+      "id": "suwonSuperplex",
+      "badge": "SUPERPLEX",
+      "full": "롯데시네마 수원 SUPERPLEX",
+      "short": "수원 수퍼플렉스",
+      "place": "경기 수원",
+      "fmt": [
+        "SUPERPLEX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 204,
+      "price": null,
+      "lat": 37.26403,
+      "lon": 126.99696
+    },
+    {
+      "id": "eunpyeongSuperplex",
+      "badge": "SUPERPLEX",
+      "full": "롯데시네마 은평 SUPERPLEX",
+      "short": "은평 수퍼플렉스",
+      "place": "서울 은평",
+      "fmt": [
+        "SUPERPLEX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 404,
+      "price": null,
+      "lat": 37.637596,
+      "lon": 126.917525
+    },
+    {
+      "id": "gwangmyeongSuperplex",
+      "badge": "SUPERPLEX",
+      "full": "롯데시네마 광명아울렛 SUPERPLEX",
+      "short": "광명 수퍼플렉스",
+      "place": "경기 광명",
+      "fmt": [
+        "SUPERPLEX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 405,
+      "price": null,
+      "lat": 37.423759,
+      "lon": 126.884125
+    },
+    {
+      "id": "dongtanSuperplex",
+      "badge": "SUPERPLEX",
+      "full": "롯데시네마 동탄 SUPERPLEX",
+      "short": "동탄 수퍼플렉스",
+      "place": "경기 화성",
+      "fmt": [
+        "SUPERPLEX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 341,
+      "price": null,
+      "lat": 37.20031,
+      "lon": 127.097562
+    },
+    {
+      "id": "sujiSuperplex",
+      "badge": "SUPERPLEX",
+      "full": "롯데시네마 수지 SUPERPLEX",
+      "short": "수지 수퍼플렉스",
+      "place": "경기 용인",
+      "fmt": [
+        "SUPERPLEX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 396,
+      "price": null,
+      "lat": 37.313134,
+      "lon": 127.081204
+    },
+    {
+      "id": "pajuUnjeongSuperplex",
+      "badge": "SUPERPLEX",
+      "full": "롯데시네마 파주운정 SUPERPLEX",
+      "short": "파주운정 수퍼플렉스",
+      "place": "경기 파주",
+      "fmt": [
+        "SUPERPLEX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 358,
+      "price": null,
+      "lat": 37.729805,
+      "lon": 126.736762
+    },
+    {
+      "id": "cheongjuYongamSuperplex",
+      "badge": "SUPERPLEX",
+      "full": "롯데시네마 청주용암 SUPERPLEX",
+      "short": "청주용암 수퍼플렉스",
+      "place": "충북 청주",
+      "fmt": [
+        "SUPERPLEX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 384,
+      "price": null,
+      "lat": 36.606988,
+      "lon": 127.503098
+    },
+    {
+      "id": "sanginSuperplex",
+      "badge": "SUPERPLEX",
+      "full": "롯데시네마 상인 SUPERPLEX",
+      "short": "상인 수퍼플렉스",
+      "place": "대구 달서",
+      "fmt": [
+        "SUPERPLEX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 392,
+      "price": null,
+      "lat": 35.816575,
+      "lon": 128.539267
+    },
+    {
+      "id": "wonjuMusilSuperplex",
+      "badge": "SUPERPLEX",
+      "full": "롯데시네마 원주무실 SUPERPLEX",
+      "short": "원주무실 수퍼플렉스",
+      "place": "강원 원주",
+      "fmt": [
+        "SUPERPLEX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 308,
+      "price": null,
+      "lat": 37.334955,
+      "lon": 127.930187
+    },
+    {
+      "id": "gwangbokSuperplex",
+      "badge": "SUPERPLEX",
+      "full": "롯데시네마 광복 SUPERPLEX",
+      "short": "광복 수퍼플렉스",
+      "place": "부산 중구",
+      "fmt": [
+        "SUPERPLEX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 408,
+      "price": null,
+      "lat": 35.097843,
+      "lon": 129.036322
     }
   ]
 }
