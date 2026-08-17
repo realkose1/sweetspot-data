@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-08-17T06:20:55+09:00",
+  "dataTimestamp": "2026-08-17T11:29:14+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -1675,7 +1675,7 @@
       "lon": 126.830977
     },
     {
-      "id": "yeongdeungpoScreenX",
+      "id": "ydp",
       "badge": "SCREENX",
       "full": "CGV 영등포 SCREENX",
       "short": "영등포 스크린엑스",
