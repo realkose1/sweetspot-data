@@ -435,8 +435,8 @@
     {
       "id": "yongsanScreenX",
       "badge": "SCREENX",
-      "full": "CGV 용산아이파크몰 SCREENX",
-      "short": "용산 스크린엑스",
+      "full": "CGV 용산아이파크몰 SCREENX (리클라이너)",
+      "short": "용산 스크린엑스 리클라이너",
       "place": "서울 용산",
       "fmt": [
         "SCREENX"
@@ -450,7 +450,30 @@
       },
       "proj": "다면 프로젝션",
       "sound": "국내 ScreenX 최초 돌비 애트모스",
-      "seats": null,
+      "seats": 200,
+      "price": null,
+      "lat": 37.53,
+      "lon": 126.9647
+    },
+    {
+      "id": "yongsanScreenX14",
+      "badge": "SCREENX",
+      "full": "CGV 용산아이파크몰 14관 SCREENX",
+      "short": "용산 14관 스크린엑스",
+      "place": "서울 용산",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "ScreenX (레이저)",
+      "sound": null,
+      "seats": 115,
       "price": null,
       "lat": 37.53,
       "lon": 126.9647
