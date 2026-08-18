@@ -519,7 +519,7 @@
       },
       "proj": "IMAX 싱글 레이저 (세부 모델 미확인)",
       "sound": null,
-      "seats": 180,
+      "seats": 170,
       "price": null,
       "lat": 37.5272,
       "lon": 127.0402
@@ -680,7 +680,7 @@
       },
       "proj": "IMAX XT 레이저",
       "sound": "IMAX 12채널",
-      "seats": 173,
+      "seats": 225,
       "price": null,
       "lat": 36.3305,
       "lon": 127.4467
