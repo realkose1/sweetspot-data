@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-08-18T21:49:06+09:00",
+  "dataTimestamp": "2026-08-18T22:44:12+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -518,7 +518,7 @@
         "mismatchNote": null
       },
       "proj": null,
-      "sound": "SOUNDX",
+      "sound": "SOUNDX (IOSONO)",
       "seats": 144,
       "price": null,
       "lat": 37.5276,
@@ -1060,7 +1060,8 @@
       "short": "용산 ULTRA 4DX",
       "place": "서울 용산",
       "fmt": [
-        "4DX"
+        "4DX",
+        "SCREENX"
       ],
       "screen": null,
       "ratioInfo": {
@@ -1069,8 +1070,8 @@
         "ratioNote": null,
         "mismatchNote": null
       },
-      "proj": null,
-      "sound": "SOUNDX",
+      "proj": "크리스티 CP42LH 3DLP 4K 레이저",
+      "sound": null,
       "seats": 144,
       "price": null,
       "lat": 37.53,
@@ -1083,7 +1084,8 @@
       "short": "왕십리 ULTRA 4DX",
       "place": "서울 성동",
       "fmt": [
-        "4DX"
+        "4DX",
+        "SCREENX"
       ],
       "screen": null,
       "ratioInfo": {
@@ -1093,7 +1095,7 @@
         "mismatchNote": null
       },
       "proj": null,
-      "sound": "SOUNDX",
+      "sound": null,
       "seats": 112,
       "price": null,
       "lat": 37.5612,
@@ -1106,7 +1108,8 @@
       "short": "천안터미널 ULTRA 4DX",
       "place": "충남 천안",
       "fmt": [
-        "4DX"
+        "4DX",
+        "SCREENX"
       ],
       "screen": null,
       "ratioInfo": {
@@ -1116,7 +1119,7 @@
         "mismatchNote": null
       },
       "proj": null,
-      "sound": "SOUNDX",
+      "sound": null,
       "seats": 72,
       "price": null,
       "lat": 36.8121,
@@ -1129,7 +1132,8 @@
       "short": "센텀시티 ULTRA 4DX",
       "place": "부산 해운대",
       "fmt": [
-        "4DX"
+        "4DX",
+        "SCREENX"
       ],
       "screen": null,
       "ratioInfo": {
@@ -1139,7 +1143,7 @@
         "mismatchNote": null
       },
       "proj": null,
-      "sound": "SOUNDX",
+      "sound": null,
       "seats": 128,
       "price": null,
       "lat": 35.1689,
@@ -1152,7 +1156,8 @@
       "short": "대구 ULTRA 4DX",
       "place": "대구 북구",
       "fmt": [
-        "4DX"
+        "4DX",
+        "SCREENX"
       ],
       "screen": null,
       "ratioInfo": {
@@ -1162,7 +1167,7 @@
         "mismatchNote": null
       },
       "proj": null,
-      "sound": "SOUNDX",
+      "sound": null,
       "seats": 120,
       "price": null,
       "lat": 35.8823,
@@ -1175,7 +1180,8 @@
       "short": "동수원 ULTRA 4DX",
       "place": "경기 수원",
       "fmt": [
-        "4DX"
+        "4DX",
+        "SCREENX"
       ],
       "screen": null,
       "ratioInfo": {
@@ -1185,7 +1191,7 @@
         "mismatchNote": null
       },
       "proj": null,
-      "sound": "SOUNDX",
+      "sound": null,
       "seats": 108,
       "price": null,
       "lat": 37.2757,
@@ -1198,7 +1204,8 @@
       "short": "일산 ULTRA 4DX",
       "place": "경기 고양",
       "fmt": [
-        "4DX"
+        "4DX",
+        "SCREENX"
       ],
       "screen": null,
       "ratioInfo": {
@@ -1208,7 +1215,7 @@
         "mismatchNote": null
       },
       "proj": null,
-      "sound": "SOUNDX",
+      "sound": null,
       "seats": 120,
       "price": null,
       "lat": 37.6597,
@@ -1221,7 +1228,8 @@
       "short": "상봉 ULTRA 4DX",
       "place": "서울 중랑",
       "fmt": [
-        "4DX"
+        "4DX",
+        "SCREENX"
       ],
       "screen": null,
       "ratioInfo": {
@@ -1231,7 +1239,7 @@
         "mismatchNote": null
       },
       "proj": null,
-      "sound": "SOUNDX",
+      "sound": null,
       "seats": 108,
       "price": null,
       "lat": 37.5966,
@@ -1244,7 +1252,8 @@
       "short": "광교 ULTRA 4DX",
       "place": "경기 수원",
       "fmt": [
-        "4DX"
+        "4DX",
+        "SCREENX"
       ],
       "screen": null,
       "ratioInfo": {
@@ -1254,7 +1263,7 @@
         "mismatchNote": null
       },
       "proj": null,
-      "sound": "SOUNDX",
+      "sound": null,
       "seats": 144,
       "price": null,
       "lat": 37.2938,
@@ -1690,7 +1699,7 @@
         "ratioNote": null,
         "mismatchNote": null
       },
-      "proj": "다면 프로젝션",
+      "proj": "3Chip-DLP 4K 레이저 측면 프로젝터 (PLF)",
       "sound": null,
       "seats": 240,
       "price": null,
@@ -2288,7 +2297,7 @@
         "ratioNote": null,
         "mismatchNote": null
       },
-      "proj": null,
+      "proj": "4K 레이저 (전관 레이저)",
       "sound": null,
       "seats": 128,
       "price": null,
@@ -2426,7 +2435,7 @@
         "ratioNote": null,
         "mismatchNote": null
       },
-      "proj": null,
+      "proj": "2K 레이저",
       "sound": null,
       "seats": 132,
       "price": null,
@@ -2541,7 +2550,7 @@
         "ratioNote": null,
         "mismatchNote": null
       },
-      "proj": null,
+      "proj": "4K 레이저 (전관 레이저)",
       "sound": null,
       "seats": 116,
       "price": null,
