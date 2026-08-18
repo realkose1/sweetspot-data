@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-08-17T11:29:14+09:00",
+  "dataTimestamp": "2026-08-18T21:49:06+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -450,7 +450,7 @@
       },
       "proj": "다면 프로젝션",
       "sound": "국내 ScreenX 최초 돌비 애트모스",
-      "seats": 200,
+      "seats": 192,
       "price": null,
       "lat": 37.53,
       "lon": 126.9647
@@ -1491,29 +1491,6 @@
       "lon": 126.723152
     },
     {
-      "id": "dongtanStationScreenX",
-      "badge": "SCREENX",
-      "full": "CGV 동탄역 SCREENX",
-      "short": "동탄역 스크린엑스",
-      "place": "경기 화성",
-      "fmt": [
-        "SCREENX"
-      ],
-      "screen": null,
-      "ratioInfo": {
-        "shapeLabel": null,
-        "projectedRatio": "해당 없음 (측면 확장)",
-        "ratioNote": null,
-        "mismatchNote": null
-      },
-      "proj": "다면 프로젝션",
-      "sound": null,
-      "seats": 182,
-      "price": null,
-      "lat": 37.202204,
-      "lon": 127.098222
-    },
-    {
       "id": "deungchonScreenX",
       "badge": "SCREENX",
       "full": "CGV 등촌 SCREENX",
@@ -1554,7 +1531,7 @@
       },
       "proj": "다면 프로젝션",
       "sound": null,
-      "seats": null,
+      "seats": 89,
       "price": null,
       "lat": 37.368193,
       "lon": 126.730693
@@ -1744,33 +1721,10 @@
       "lon": 127.106724
     },
     {
-      "id": "ulsanSamsanScreenX",
-      "badge": "SCREENX",
-      "full": "CGV 울산삼산 SCREENX",
-      "short": "울산삼산 스크린엑스",
-      "place": "울산 남구",
-      "fmt": [
-        "SCREENX"
-      ],
-      "screen": null,
-      "ratioInfo": {
-        "shapeLabel": null,
-        "projectedRatio": "해당 없음 (측면 확장)",
-        "ratioNote": null,
-        "mismatchNote": null
-      },
-      "proj": "다면 프로젝션",
-      "sound": null,
-      "seats": 216,
-      "price": null,
-      "lat": 35.541365,
-      "lon": 129.338909
-    },
-    {
       "id": "incheonScreenX",
       "badge": "SCREENX",
-      "full": "CGV 인천 SCREENX",
-      "short": "인천 스크린엑스",
+      "full": "CGV 인천 2관 SCREENX",
+      "short": "인천 2관 스크린엑스",
       "place": "인천 남동",
       "fmt": [
         "SCREENX"
@@ -1785,6 +1739,29 @@
       "proj": "다면 프로젝션",
       "sound": null,
       "seats": 103,
+      "price": null,
+      "lat": 37.451527,
+      "lon": 126.701802
+    },
+    {
+      "id": "incheonScreenX14",
+      "badge": "SCREENX",
+      "full": "CGV 인천 14관 SCREENX (리클라이너)",
+      "short": "인천 14관 스크린엑스",
+      "place": "인천 남동",
+      "fmt": [
+        "SCREENX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "해당 없음 (측면 확장)",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": "다면 프로젝션",
+      "sound": null,
+      "seats": 106,
       "price": null,
       "lat": 37.451527,
       "lon": 126.701802
@@ -1922,7 +1899,7 @@
       },
       "proj": "다면 프로젝션",
       "sound": null,
-      "seats": null,
+      "seats": 72,
       "price": null,
       "lat": 37.556509,
       "lon": 126.92259
@@ -2156,6 +2133,788 @@
       "price": null,
       "lat": 35.097843,
       "lon": 129.036322
+    },
+    {
+      "id": "gangbyeon4dx",
+      "badge": "4DX",
+      "full": "CGV 강변 4DX",
+      "short": "강변 4DX",
+      "place": "서울 광진",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 108,
+      "price": null,
+      "lat": 37.535652,
+      "lon": 127.095741
+    },
+    {
+      "id": "gyeyang4dx",
+      "badge": "4DX",
+      "full": "CGV 계양 4DX",
+      "short": "계양 4DX",
+      "place": "인천 계양",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 96,
+      "price": null,
+      "lat": 37.533725,
+      "lon": 126.734526
+    },
+    {
+      "id": "godeokgangil4dx",
+      "badge": "4DX",
+      "full": "CGV 고덕강일 4DX",
+      "short": "고덕강일 4DX",
+      "place": "서울 강동",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 108,
+      "price": null,
+      "lat": 37.56666,
+      "lon": 127.157333
+    },
+    {
+      "id": "gwangjuCheomdan4dx",
+      "badge": "4DX",
+      "full": "CGV 광주첨단 4DX",
+      "short": "광주첨단 4DX",
+      "place": "광주 광산",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 120,
+      "price": null,
+      "lat": 35.216444,
+      "lon": 126.850623
+    },
+    {
+      "id": "gimhae4dx",
+      "badge": "4DX",
+      "full": "CGV 김해 4DX",
+      "short": "김해 4DX",
+      "place": "경남 김해",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 96,
+      "price": null,
+      "lat": 35.242181,
+      "lon": 128.868569
+    },
+    {
+      "id": "daeguStadium4dx",
+      "badge": "4DX",
+      "full": "CGV 대구스타디움 4DX",
+      "short": "대구스타디움 4DX",
+      "place": "대구 수성",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 108,
+      "price": null,
+      "lat": 35.831671,
+      "lon": 128.687322
+    },
+    {
+      "id": "daeguJukjeon4dx",
+      "badge": "4DX",
+      "full": "CGV 대구죽전 4DX",
+      "short": "대구죽전 4DX",
+      "place": "대구 달서",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 128,
+      "price": null,
+      "lat": 35.850437,
+      "lon": 128.536506
+    },
+    {
+      "id": "daejeon4dx",
+      "badge": "4DX",
+      "full": "CGV 대전 4DX",
+      "short": "대전 4DX",
+      "place": "대전 중구",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 108,
+      "price": null,
+      "lat": 36.3224,
+      "lon": 127.4125
+    },
+    {
+      "id": "daejeonTerminal4dx",
+      "badge": "4DX",
+      "full": "CGV 대전터미널 4DX",
+      "short": "대전터미널 4DX",
+      "place": "대전 동구",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 144,
+      "price": null,
+      "lat": 36.3305,
+      "lon": 127.4467
+    },
+    {
+      "id": "dongtanStation4dx",
+      "badge": "4DX",
+      "full": "CGV 동탄역 4DX",
+      "short": "동탄역 4DX",
+      "place": "경기 화성",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 84,
+      "price": null,
+      "lat": 37.202204,
+      "lon": 127.098222
+    },
+    {
+      "id": "banghak4dx",
+      "badge": "4DX",
+      "full": "CGV 방학 4DX",
+      "short": "방학 4DX",
+      "place": "서울 도봉",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 96,
+      "price": null,
+      "lat": 37.665356,
+      "lon": 127.043607
+    },
+    {
+      "id": "bucheon4dx",
+      "badge": "4DX",
+      "full": "CGV 부천 4DX",
+      "short": "부천 4DX",
+      "place": "경기 부천",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 132,
+      "price": null,
+      "lat": 37.504303,
+      "lon": 126.762075
+    },
+    {
+      "id": "seomyeon4dx",
+      "badge": "4DX",
+      "full": "CGV 서면 4DX",
+      "short": "서면 4DX",
+      "place": "부산 부산진",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 132,
+      "price": null,
+      "lat": 35.1578,
+      "lon": 129.0592
+    },
+    {
+      "id": "sinsegaeGyeonggi4dx",
+      "badge": "4DX",
+      "full": "CGV 신세계경기 4DX",
+      "short": "신세계경기 4DX",
+      "place": "경기 용인",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 76,
+      "price": null,
+      "lat": 37.324989,
+      "lon": 127.108119
+    },
+    {
+      "id": "sinchonArtreon4dx",
+      "badge": "4DX",
+      "full": "CGV 신촌아트레온 4DX",
+      "short": "신촌아트레온 4DX",
+      "place": "서울 서대문",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 108,
+      "price": null,
+      "lat": 37.556456,
+      "lon": 126.940224
+    },
+    {
+      "id": "asiad4dx",
+      "badge": "4DX",
+      "full": "CGV 아시아드 4DX",
+      "short": "아시아드 4DX",
+      "place": "부산 연제",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 84,
+      "price": null,
+      "lat": 35.191276,
+      "lon": 129.062007
+    },
+    {
+      "id": "ansan4dx",
+      "badge": "4DX",
+      "full": "CGV 안산 4DX",
+      "short": "안산 4DX",
+      "place": "경기 안산",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 132,
+      "price": null,
+      "lat": 37.313487,
+      "lon": 126.830977
+    },
+    {
+      "id": "yeonnam4dx",
+      "badge": "4DX",
+      "full": "CGV 연남 4DX",
+      "short": "연남 4DX",
+      "place": "서울 마포",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 116,
+      "price": null,
+      "lat": 37.55767,
+      "lon": 126.925896
+    },
+    {
+      "id": "yeongdeungpo4dx",
+      "badge": "4DX",
+      "full": "CGV 영등포타임스퀘어 4DX",
+      "short": "영등포 4DX",
+      "place": "서울 영등포",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 144,
+      "price": null,
+      "lat": 37.5172,
+      "lon": 126.9033
+    },
+    {
+      "id": "ulsanSamsan4dx",
+      "badge": "4DX",
+      "full": "CGV 울산삼산 4DX",
+      "short": "울산삼산 4DX",
+      "place": "울산 남구",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 168,
+      "price": null,
+      "lat": 35.5417,
+      "lon": 129.3358
+    },
+    {
+      "id": "incheon4dx",
+      "badge": "4DX",
+      "full": "CGV 인천 4DX",
+      "short": "인천 4DX",
+      "place": "인천 남동",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 144,
+      "price": null,
+      "lat": 37.4495,
+      "lon": 126.701
+    },
+    {
+      "id": "jeonjuGosa4dx",
+      "badge": "4DX",
+      "full": "CGV 전주고사 4DX",
+      "short": "전주고사 4DX",
+      "place": "전북 전주",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 84,
+      "price": null,
+      "lat": 35.820329,
+      "lon": 127.142033
+    },
+    {
+      "id": "jeju4dx",
+      "badge": "4DX",
+      "full": "CGV 제주 4DX",
+      "short": "제주 4DX",
+      "place": "제주 제주",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 96,
+      "price": null,
+      "lat": 33.500107,
+      "lon": 126.527274
+    },
+    {
+      "id": "junggye4dx",
+      "badge": "4DX",
+      "full": "CGV 중계 4DX",
+      "short": "중계 4DX",
+      "place": "서울 노원",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 108,
+      "price": null,
+      "lat": 37.639891,
+      "lon": 127.068654
+    },
+    {
+      "id": "cheonanPentaport4dx",
+      "badge": "4DX",
+      "full": "CGV 천안펜타포트 4DX",
+      "short": "천안펜타포트 4DX",
+      "place": "충남 천안",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 132,
+      "price": null,
+      "lat": 36.8188,
+      "lon": 127.1145
+    },
+    {
+      "id": "cheongjuZwell4dx",
+      "badge": "4DX",
+      "full": "CGV 청주지웰시티 4DX",
+      "short": "청주지웰시티 4DX",
+      "place": "충북 청주",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 140,
+      "price": null,
+      "lat": 36.643236,
+      "lon": 127.427806
+    },
+    {
+      "id": "pyeongtaek4dx",
+      "badge": "4DX",
+      "full": "CGV 평택 4DX",
+      "short": "평택 4DX",
+      "place": "경기 평택",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 132,
+      "price": null,
+      "lat": 36.9921,
+      "lon": 127.0864
+    },
+    {
+      "id": "goyangStarfieldDolbyVision",
+      "badge": "DOLBY VISION",
+      "full": "메가박스 고양스타필드 Dolby Vision",
+      "short": "고양스타필드 돌비비전",
+      "place": "경기 고양",
+      "fmt": [
+        "DOLBYVISION"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": "돌비 시네마 전용관이 아닌 일반 상영관에 돌비 비전·애트모스를 넣은 관이다.",
+        "mismatchNote": null
+      },
+      "proj": "돌비 비전",
+      "sound": "돌비 애트모스",
+      "seats": 218,
+      "price": null,
+      "lat": 37.647209,
+      "lon": 126.895737
+    },
+    {
+      "id": "guuiEastpoleDolbyVision",
+      "badge": "DOLBY VISION",
+      "full": "메가박스 구의이스트폴 Dolby Vision",
+      "short": "구의이스트폴 돌비비전",
+      "place": "서울 광진",
+      "fmt": [
+        "DOLBYVISION"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": "돌비 시네마 전용관이 아닌 일반 상영관에 돌비 비전·애트모스를 넣은 관이다.",
+        "mismatchNote": null
+      },
+      "proj": "돌비 비전",
+      "sound": "돌비 애트모스",
+      "seats": 145,
+      "price": null,
+      "lat": 37.536611,
+      "lon": 127.087853
+    },
+    {
+      "id": "mokdongDolbyVision",
+      "badge": "DOLBY VISION",
+      "full": "메가박스 목동 Dolby Vision",
+      "short": "목동 돌비비전",
+      "place": "서울 양천",
+      "fmt": [
+        "DOLBYVISION"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": "돌비 시네마 전용관이 아닌 일반 상영관에 돌비 비전·애트모스를 넣은 관이다.",
+        "mismatchNote": null
+      },
+      "proj": "돌비 비전",
+      "sound": "돌비 애트모스",
+      "seats": 318,
+      "price": null,
+      "lat": 37.529211,
+      "lon": 126.875985
+    },
+    {
+      "id": "sangamDolbyVision",
+      "badge": "DOLBY VISION",
+      "full": "메가박스 상암월드컵경기장 Dolby Vision",
+      "short": "상암 돌비비전",
+      "place": "서울 마포",
+      "fmt": [
+        "DOLBYVISION"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": "돌비 시네마 전용관이 아닌 일반 상영관에 돌비 비전·애트모스를 넣은 관이다.",
+        "mismatchNote": null
+      },
+      "proj": "돌비 비전",
+      "sound": "돌비 애트모스",
+      "seats": 342,
+      "price": null,
+      "lat": 37.568419,
+      "lon": 126.897255
+    },
+    {
+      "id": "suwonStarfieldDolbyVision",
+      "badge": "DOLBY VISION",
+      "full": "메가박스 수원스타필드 Dolby Vision",
+      "short": "수원스타필드 돌비비전",
+      "place": "경기 수원",
+      "fmt": [
+        "DOLBYVISION"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": "돌비 시네마 전용관이 아닌 일반 상영관에 돌비 비전·애트모스를 넣은 관이다.",
+        "mismatchNote": null
+      },
+      "proj": "돌비 비전",
+      "sound": "돌비 애트모스",
+      "seats": 238,
+      "price": null,
+      "lat": 37.287444,
+      "lon": 126.991575
+    },
+    {
+      "id": "cheongjuTerminalDolbyVision",
+      "badge": "DOLBY VISION",
+      "full": "메가박스 청주터미널 Dolby Vision",
+      "short": "청주터미널 돌비비전",
+      "place": "충북 청주",
+      "fmt": [
+        "DOLBYVISION"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": "돌비 시네마 전용관이 아닌 일반 상영관에 돌비 비전·애트모스를 넣은 관이다.",
+        "mismatchNote": null
+      },
+      "proj": "돌비 비전",
+      "sound": "돌비 애트모스",
+      "seats": 138,
+      "price": null,
+      "lat": 36.627238,
+      "lon": 127.430386
+    },
+    {
+      "id": "suwonAkMx4d",
+      "badge": "4DX",
+      "full": "메가박스 수원AK플라자(수원역) MX4D",
+      "short": "수원역 MX4D",
+      "place": "경기 수원",
+      "fmt": [
+        "4DX"
+      ],
+      "screen": null,
+      "ratioInfo": {
+        "shapeLabel": null,
+        "projectedRatio": "표준",
+        "ratioNote": null,
+        "mismatchNote": null
+      },
+      "proj": null,
+      "sound": null,
+      "seats": 176,
+      "price": null,
+      "lat": 37.266,
+      "lon": 127.0007
     }
   ]
 }
