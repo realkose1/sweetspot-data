@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-08-18T22:44:12+09:00",
+  "dataTimestamp": "2026-08-21T06:29:00+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -35,7 +35,8 @@
       "badges": [
         "IMAX190",
         "SCREENX",
-        "4DX"
+        "4DX",
+        "DOLBY"
       ],
       "hook": "ScreenX — 사상 첫 전용 촬영작",
       "open": null,
