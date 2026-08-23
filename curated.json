@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-08-21T06:29:00+09:00",
+  "dataTimestamp": "2026-08-23T10:19:44+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -1341,7 +1341,7 @@
     },
     {
       "id": "coexMx4d",
-      "badge": "4DX",
+      "badge": "MX4D",
       "full": "메가박스 코엑스 MX4D",
       "short": "코엑스 MX4D",
       "place": "서울 강남",
@@ -1364,7 +1364,7 @@
     },
     {
       "id": "hanamStarfieldMx4d",
-      "badge": "4DX",
+      "badge": "MX4D",
       "full": "메가박스 하남스타필드 MX4D",
       "short": "하남스타필드 MX4D",
       "place": "경기 하남",
@@ -2905,7 +2905,7 @@
     },
     {
       "id": "suwonAkMx4d",
-      "badge": "4DX",
+      "badge": "MX4D",
       "full": "메가박스 수원AK플라자(수원역) MX4D",
       "short": "수원역 MX4D",
       "place": "경기 수원",
