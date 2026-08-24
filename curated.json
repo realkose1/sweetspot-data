@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-08-24T06:22:32+09:00",
+  "dataTimestamp": "2026-08-24T21:04:37+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -18,7 +18,7 @@
         "4DX",
         "DOLBY"
       ],
-      "hook": "CGV 용산 IMAX — 국내 유일 1.43:1",
+      "hook": "1.43:1 풀프레임은 CGV 용산 IMAX뿐이에요",
       "open": null,
       "tmdbId": 1368337,
       "recommendedFormat": "IMAX43"
@@ -39,7 +39,7 @@
         "4DX",
         "DOLBY"
       ],
-      "hook": "ScreenX — 사상 첫 전용 촬영작",
+      "hook": "ScreenX 전용으로 촬영한 사상 첫 작품이에요",
       "open": null,
       "tmdbId": 969681,
       "recommendedFormat": "SCREENX"
@@ -60,7 +60,7 @@
         "SCREENX",
         "DOLBY"
       ],
-      "hook": "돌비 시네마 추천 — 사운드 밀도가 강점 (IMAX 상영은 종료)",
+      "hook": "돌비 시네마용으로 따로 컨버팅한 작품이에요",
       "open": null,
       "tmdbId": 1058424,
       "recommendedFormat": "DOLBY"
@@ -78,7 +78,7 @@
       "badges": [
         "IMAX190"
       ],
-      "hook": "일반관으로 충분 — 확장 화면비 없음 (1.85:1)",
+      "hook": "화면비가 1.85:1뿐이라 일반관으로 충분해요",
       "open": null,
       "tmdbId": 1084244,
       "recommendedFormat": "STD",
