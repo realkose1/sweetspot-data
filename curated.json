@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-08-24T21:04:37+09:00",
+  "dataTimestamp": "2026-08-24T21:48:24+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -332,7 +332,7 @@
       "ratioInfo": {
         "shapeLabel": null,
         "projectedRatio": "1.90:1",
-        "ratioNote": "2K 제논 듀얼램프 · 개관 이후 레이저 미전환",
+        "ratioNote": "2K 제논 듀얼램프 · 개관 이후 레이저 미전환 (2026-08 기준)",
         "mismatchNote": null
       },
       "proj": "IMAX 2K 제논 듀얼램프",
@@ -377,8 +377,8 @@
       "screen": null,
       "ratioInfo": {
         "shapeLabel": null,
-        "projectedRatio": "1.85:1",
-        "ratioNote": "국내 3호 돌비 시네마(2020-11 개관) · 플랫(비스타비전) 1.85:1로 알려져 있습니다 — 스코프 전용인 코엑스와 다릅니다",
+        "projectedRatio": "미확인",
+        "ratioNote": "국내 3호 돌비 시네마(2020-11 개관) · 화면비 미확인 — 스코프 전용인 코엑스와 달라 관별로 다릅니다",
         "mismatchNote": null
       },
       "proj": "돌비 규격 듀얼 레이저 (Dolby Vision 4K)",
@@ -542,7 +542,7 @@
         "ratioNote": "듀얼 레이저 미지원 — 1.43:1 구현 불가",
         "mismatchNote": null
       },
-      "proj": "IMAX 싱글 레이저 (세부 모델 미확인)",
+      "proj": "IMAX XT 레이저 (싱글)",
       "sound": null,
       "seats": 170,
       "price": null,
@@ -634,7 +634,7 @@
         "ratioNote": null,
         "mismatchNote": null
       },
-      "proj": "IMAX XT 레이저 (2025-12 제논→XT 전환)",
+      "proj": "IMAX XT 레이저 (2025-12 제논→XT 전환, 2026-08 기준)",
       "sound": null,
       "seats": 266,
       "price": null,
@@ -654,7 +654,7 @@
       "ratioInfo": {
         "shapeLabel": null,
         "projectedRatio": "1.90:1",
-        "ratioNote": "2026-04 일반관에서 아이맥스로 전환 — 국내 IMAX 중 최소형급",
+        "ratioNote": "2026-04 일반관에서 아이맥스로 전환 — 압구정보다 작은 소형 IMAX",
         "mismatchNote": null
       },
       "proj": null,
@@ -680,7 +680,7 @@
         "ratioNote": null,
         "mismatchNote": null
       },
-      "proj": "IMAX 2K 디지털 (레이저 미도입)",
+      "proj": "IMAX 2K 디지털 (레이저 미도입, 2026-08 기준)",
       "sound": null,
       "seats": 346,
       "price": null,
@@ -841,7 +841,7 @@
         "ratioNote": null,
         "mismatchNote": null
       },
-      "proj": "IMAX 2K 디지털 (레이저 미도입)",
+      "proj": "IMAX 2K 디지털 (레이저 미도입, 2026-08 기준)",
       "sound": null,
       "seats": 373,
       "price": null,
@@ -910,7 +910,7 @@
         "ratioNote": "강원권 유일의 IMAX",
         "mismatchNote": null
       },
-      "proj": "IMAX 2K 디지털",
+      "proj": "IMAX 2K 디지털 (레이저 미도입, 2026-08 기준)",
       "sound": null,
       "seats": 321,
       "price": null,
@@ -929,8 +929,8 @@
       "screen": null,
       "ratioInfo": {
         "shapeLabel": null,
-        "projectedRatio": "1.85:1",
-        "ratioNote": "국내 2호 돌비 시네마(2020-10) · 대전과 함께 국내 유이한 빌트인 돌비시네마 · 플랫(비스타비전)",
+        "projectedRatio": "미확인",
+        "ratioNote": "국내 2호 돌비 시네마(2020-10) · 화면비 미확인",
         "mismatchNote": null
       },
       "proj": "돌비 규격 듀얼 레이저",
@@ -952,8 +952,8 @@
       "screen": null,
       "ratioInfo": {
         "shapeLabel": null,
-        "projectedRatio": "1.85:1",
-        "ratioNote": "비수도권 최초 돌비 시네마(2021-08) · 빌트인 · 국내 돌비관 중 하남에 이어 두 번째로 큰 스크린",
+        "projectedRatio": "미확인",
+        "ratioNote": "비수도권 최초 돌비 시네마(2021-08) · 설계 단계부터 지어진 빌트인 돌비관 · 스크린 크기 비공개 · 화면비 미확인",
         "mismatchNote": null
       },
       "proj": "돌비 규격 듀얼 레이저",
@@ -975,8 +975,8 @@
       "screen": null,
       "ratioInfo": {
         "shapeLabel": null,
-        "projectedRatio": "1.85:1",
-        "ratioNote": "영남 최초 돌비 시네마(2022-06, 구 MX관 리뉴얼) · 화면비는 개별 확인 자료 없이 '국내 돌비관 대부분 플랫(1.85:1)' 보도 패턴에서 추정",
+        "projectedRatio": "미확인",
+        "ratioNote": "영남 최초 돌비 시네마(2022-06, 구 MX관 리뉴얼) · 화면비 미확인",
         "mismatchNote": null
       },
       "proj": "돌비 규격 레이저",
@@ -998,8 +998,8 @@
       "screen": null,
       "ratioInfo": {
         "shapeLabel": null,
-        "projectedRatio": "1.85:1",
-        "ratioNote": "국내 6번째 돌비 시네마(2023-08, 구 IMAX관 리뉴얼) · 경기 남부권 유일 돌비 시네마",
+        "projectedRatio": "미확인",
+        "ratioNote": "국내 6번째 돌비 시네마(2023-08, 구 IMAX관 리뉴얼) · 경기 남부권 유일 돌비 시네마 · 화면비 미확인",
         "mismatchNote": null
       },
       "proj": "돌비 규격 레이저",
@@ -1021,8 +1021,8 @@
       "screen": null,
       "ratioInfo": {
         "shapeLabel": null,
-        "projectedRatio": "1.85:1",
-        "ratioNote": "인천 최초 돌비 시네마(2024-02, 구 MX관 리뉴얼)",
+        "projectedRatio": "미확인",
+        "ratioNote": "인천 최초 돌비 시네마(2024-02, 구 MX관 리뉴얼) · 화면비 미확인",
         "mismatchNote": null
       },
       "proj": "돌비 규격 레이저",
@@ -1044,8 +1044,8 @@
       "screen": null,
       "ratioInfo": {
         "shapeLabel": null,
-        "projectedRatio": "1.85:1",
-        "ratioNote": "국내 8번째 돌비 시네마(2024-07, 구 MX관 리뉴얼) · 국내 돌비관 중 최대 스크린",
+        "projectedRatio": "미확인",
+        "ratioNote": "국내 8번째 돌비 시네마(2024-07, 구 MX관 리뉴얼) · 스크린 크기 비공개 · 화면비 미확인",
         "mismatchNote": null
       },
       "proj": "돌비 규격 레이저",
