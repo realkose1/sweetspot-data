@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-08-24T21:48:24+09:00",
+  "dataTimestamp": "2026-08-28T14:08:11+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -55,7 +55,6 @@
       "genre": "SF 액션 스릴러 · 크리처",
       "meta": "2026.07.15 개봉 · 156분 · SF 액션 스릴러",
       "badges": [
-        "IMAX190",
         "4DX",
         "SCREENX",
         "DOLBY"
