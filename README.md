@@ -138,3 +138,23 @@ app's own best-effort estimate rather than a published fact — see that
 file's own header comment for the full reasoning. A hall listed here with no
 matching seat-grid entry just shows without a seat guide, which the app
 already handles gracefully.
+
+---
+
+## `privacy.html` — 앱 개인정보 처리방침
+
+이 저장소는 데이터 피드 외에 개인정보 처리방침 페이지도 하나 서빙합니다. App
+Store가 개인정보 처리방침 URL을 필수로 요구하는데, 그 페이지 하나를 위해
+호스팅을 따로 두는 것보다 이미 있는 이 저장소를 GitHub Pages로 여는 편이
+간단해서 여기에 뒀습니다.
+
+- 게시 주소: `https://realkose1.github.io/sweetspot-data/privacy.html`
+- **원본은 이 저장소가 아니라 앱 저장소의 `appstore/privacy-policy.md`입니다.**
+  문구를 고칠 때는 그 파일을 먼저 고치고 여기로 옮기세요. 방침 문구는 App
+  Store Connect의 "앱 개인정보 보호" 설문 답안과 반드시 일치해야 하며, 그
+  대조표가 원본 파일에 함께 정리돼 있습니다.
+
+`curated.json`과는 완전히 무관합니다. 큐레이션 봇(`.github/workflows`)은
+`curated.json`만 건드리므로 이 파일을 덮어쓰지 않고, 앱은 피드를
+`raw.githubusercontent.com`에서 직접 읽으므로 Pages 활성화 여부와 무관하게
+동작합니다.
