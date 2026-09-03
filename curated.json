@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-08-31T08:15:52+09:00",
+  "dataTimestamp": "2026-09-04T08:01:09+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -76,7 +76,9 @@
       "genre": "애니메이션 · 가족",
       "meta": "2026.06.17 개봉 · 102분 · 애니메이션",
       "badges": [
-        "IMAX190"
+        "IMAX190",
+        "SCREENX",
+        "4DX"
       ],
       "hook": "화면비가 1.85:1뿐이라 일반관으로 충분해요",
       "open": null,
