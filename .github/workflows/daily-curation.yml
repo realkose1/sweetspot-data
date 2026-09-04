@@ -1,10 +1,24 @@
-name: 큐레이션 자동 발행 (주 2회)
+name: 큐레이션 자동 발행 (매일 점검 · 조건부 실행)
+
+# 매일 아침 무료 사전 점검(scripts/precheck.py)이 먼저 돌고, Claude를 부를 이유가
+# 있는 날에만 큐레이션(scripts/daily_curation.py)이 돈다. 이유가 무엇인지는
+# precheck.py 머리말에 있다. 요약하면: 화·목 기본 점검, 어떤 작품의 개봉일 ±3일,
+# TMDB 한국 상영작에 새 작품 등장, TMDB 개봉일과 curated.json 불일치, 수동 실행.
+#
+# 2026-09-01 이전에는 월·금 무조건 실행이었다. 회당 $0.4 안팎인데 대부분 "변경
+# 없음"으로 끝났고, 요일도 수요일 개봉 사이클과 어긋나 있었다. 지금 구조는
+# 매일 살펴보되 돈은 판이 바뀐 날에만 쓴다.
 
 on:
   schedule:
-    # 월·금 06:00 KST = 일·목 21:00 UTC. GitHub 스케줄 지연으로 수 분~수십 분 늦을 수 있음.
-    - cron: "0 21 * * 0,4"
-  workflow_dispatch: {}
+    # 매일 06:00 KST = 21:00 UTC. GitHub 스케줄 지연으로 수 분~수십 분 늦을 수 있음.
+    - cron: "0 21 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "사전 점검만 실행하고 Claude 단계는 건너뜀 (배선 확인용, 비용 0)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -24,28 +38,47 @@ jobs:
         with:
           python-version: "3.12"
 
+      # 표준 라이브러리만 쓰므로 pip 설치 없음 — 이 단계는 몇 초면 끝나고 비용도 없다.
+      - name: 사전 점검 (무료)
+        id: pre
+        env:
+          TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
+          # 수동 실행은 항상 Claude를 부른다. dry_run이면 아래 조건에서 다시 걸러진다.
+          FORCE: ${{ github.event_name == 'workflow_dispatch' && '1' || '' }}
+        run: python scripts/precheck.py
+
+      - name: 실행 사유
+        run: 'echo "run=${{ steps.pre.outputs.run }} — ${{ steps.pre.outputs.reason }}"'
+
       - name: Install SDK
+        if: ${{ steps.pre.outputs.run == 'true' && inputs.dry_run != true }}
         run: pip install anthropic
 
       - name: Run curation check
+        if: ${{ steps.pre.outputs.run == 'true' && inputs.dry_run != true }}
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/daily_curation.py
 
+      # tmdb_snapshot.json도 함께 커밋한다. 스냅샷은 사전 점검이 새 작품을 봤을 때만
+      # 바뀌고, 그 날은 Claude가 도는 날이므로 별도 커밋이 생기지 않는다. Claude
+      # 단계가 실패하면 여기까지 오지 않아 스냅샷도 커밋되지 않는다 — 그러면 다음
+      # 날 같은 작품이 다시 "새 작품"으로 잡혀 자연스럽게 재시도된다.
       - name: Commit & publish
+        if: ${{ steps.pre.outputs.run == 'true' && inputs.dry_run != true }}
         run: |
-          if git diff --quiet curated.json; then
-            echo "curated.json 변경 없음 — 발행 생략"
+          if git diff --quiet -- curated.json tmdb_snapshot.json && [ -z "$(git ls-files --others --exclude-standard tmdb_snapshot.json)" ]; then
+            echo "curated.json / tmdb_snapshot.json 변경 없음 — 발행 생략"
             exit 0
           fi
           git config user.name "sweetspot-curation-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add curated.json
-          git commit -m "자동 큐레이션: $(TZ=Asia/Seoul date +%Y-%m-%d) 점검 반영"
+          git add curated.json tmdb_snapshot.json
+          git commit -m "자동 큐레이션: $(TZ=Asia/Seoul date +%Y-%m-%d) 점검 반영 (${{ steps.pre.outputs.reason }})"
           git push
 
       - name: Open review issue (사람 확인 필요 사항)
-        if: ${{ hashFiles('review_notes.md') != '' }}
+        if: ${{ steps.pre.outputs.run == 'true' && inputs.dry_run != true && hashFiles('review_notes.md') != '' }}
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
