@@ -60,12 +60,31 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/daily_curation.py
 
+      # 건너뛴 날에도 기준 날짜는 오늘로 옮긴다. 앱의 "포맷 데이터 기준 N월 N일"
+      # 라벨이 dataTimestamp를 읽는데, 사전 점검이 "새 개봉 없음·개봉일 그대로"를
+      # 실제로 확인한 날이므로 그 날짜를 기준으로 삼을 근거가 있다(2026-09-04,
+      # owner 결정). 대가는 curated.json에 매일 한 줄짜리 커밋이 쌓이는 것 —
+      # 의도된 동작이다. Claude가 돈 날은 daily_curation.py가 이미 갱신했으므로
+      # 이 단계는 건너뛴 날에만 돈다. 시각 형식은 daily_curation.py와 동일.
+      - name: 기준 날짜 갱신 (변경 없음)
+        if: ${{ steps.pre.outputs.run != 'true' && inputs.dry_run != true }}
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime, timedelta, timezone
+          p = "curated.json"
+          d = json.load(open(p, encoding="utf-8"))
+          d["dataTimestamp"] = datetime.now(timezone(timedelta(hours=9))).strftime("%Y-%m-%dT%H:%M:%S+09:00")
+          open(p, "w", encoding="utf-8").write(json.dumps(d, ensure_ascii=False, indent=2) + "\n")
+          print("dataTimestamp →", d["dataTimestamp"])
+          PY
+
       # tmdb_snapshot.json도 함께 커밋한다. 스냅샷은 사전 점검이 새 작품을 봤을 때만
-      # 바뀌고, 그 날은 Claude가 도는 날이므로 별도 커밋이 생기지 않는다. Claude
-      # 단계가 실패하면 여기까지 오지 않아 스냅샷도 커밋되지 않는다 — 그러면 다음
-      # 날 같은 작품이 다시 "새 작품"으로 잡혀 자연스럽게 재시도된다.
+      # 바뀌고, 그 날은 Claude가 도는 날이다. Claude 단계가 실패하면 여기까지 오지
+      # 않아 스냅샷도 커밋되지 않는다 — 그러면 다음 날 같은 작품이 다시 "새 작품"
+      # 으로 잡혀 자연스럽게 재시도된다.
       - name: Commit & publish
-        if: ${{ steps.pre.outputs.run == 'true' && inputs.dry_run != true }}
+        if: ${{ inputs.dry_run != true }}
         run: |
           if git diff --quiet -- curated.json tmdb_snapshot.json && [ -z "$(git ls-files --others --exclude-standard tmdb_snapshot.json)" ]; then
             echo "curated.json / tmdb_snapshot.json 변경 없음 — 발행 생략"
@@ -74,7 +93,11 @@ jobs:
           git config user.name "sweetspot-curation-bot"
           git config user.email "actions@users.noreply.github.com"
           git add curated.json tmdb_snapshot.json
-          git commit -m "자동 큐레이션: $(TZ=Asia/Seoul date +%Y-%m-%d) 점검 반영 (${{ steps.pre.outputs.reason }})"
+          if [ "${{ steps.pre.outputs.run }}" = "true" ]; then
+            git commit -m "자동 큐레이션: $(TZ=Asia/Seoul date +%Y-%m-%d) 점검 반영 (${{ steps.pre.outputs.reason }})"
+          else
+            git commit -m "일일 점검: $(TZ=Asia/Seoul date +%Y-%m-%d) 변경 없음 — 기준 날짜 갱신"
+          fi
           git push
 
       - name: Open review issue (사람 확인 필요 사항)
