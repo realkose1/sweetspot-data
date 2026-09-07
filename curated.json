@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-09-07T07:49:46+09:00",
+  "dataTimestamp": "2026-09-08T08:22:05+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -133,12 +133,14 @@
       "genre": null,
       "meta": "2026.07.08 개봉 · 일반관",
       "badges": [
-        "STD"
+        "IMAX190",
+        "SCREENX",
+        "4DX"
       ],
       "hook": null,
       "open": null,
       "tmdbId": 1108427,
-      "recommendedFormat": "STD"
+      "recommendedFormat": "IMAX190"
     },
     {
       "id": "minions",
@@ -151,12 +153,13 @@
       "genre": null,
       "meta": "2026.07.15 개봉 · 일반관",
       "badges": [
-        "STD"
+        "SCREENX",
+        "4DX"
       ],
       "hook": null,
       "open": null,
       "tmdbId": 1315772,
-      "recommendedFormat": "STD"
+      "recommendedFormat": "SCREENX"
     }
   ],
   "halls": [
