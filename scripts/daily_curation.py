@@ -54,6 +54,10 @@ def build_prompt(works: list, today: datetime) -> str:
        내용은 "어느 포맷으로 볼지" 판단에 도움이 되는 확인된 사실이어야 합니다 — 확정된 개봉 포맷,
        촬영·마스터링 방식, 화면비 같은 것. 홍보 문구나 줄거리 요약이 아닙니다.
 4. badges / recommendedFormat — 특수관 포맷 상영이 공식 확정되거나 취소된 경우. badges 값은 다음 코드만 사용: IMAX43, IMAX190, DOLBY, SCREENX, 4DX, SUPERPLEX, STD.
+5. meta — 카드에 그대로 찍히는 한 줄이며 `날짜 개봉 · 상영시간 · 장르` 형식입니다(예: "2026.08.05 개봉 · 172분 · 액션/어드벤처").
+   date를 바꾸면 meta의 날짜도 같은 값으로 맞추고, badges를 STD에서 올리면 meta에 남아 있는
+   "일반관" 표기를 실제 상영시간·장르로 바꿉니다. **meta는 badges와 모순되면 안 됩니다** —
+   특수관 배지를 단 작품의 meta가 "일반관"이라고 말하는 상태가 실제로 있었습니다.
 
 절대 규칙:
 - 확인되지 않은 정보는 절대 만들지 않습니다. 불확실하면 변경하지 않습니다. "변경 없음"이 완벽하게 정상적인 결과입니다.
@@ -103,6 +107,37 @@ def validate_hook_invariant(works: list) -> None:
             f"특수관 배지가 있는데 hook이 비어 있음: {', '.join(offenders)} — "
             "badges를 올릴 때는 hook도 함께 제안해야 한다 (프롬프트 3-b)"
         )
+
+
+def validate_meta_invariant(works: list) -> None:
+    """meta 한 줄이 같은 레코드의 date·badges와 모순되지 않아야 한다.
+
+    meta는 date/run/genre를 문자열로 한 번 더 적어둔 비정규화 필드다. 앱은
+    `ReleaseDateStore.effectiveMeta(for:)`로 표시 시점에 맨 앞 날짜만 갈아끼우고
+    나머지는 그대로 쓰므로, 뒤쪽이 틀어지면 그대로 화면에 나간다.
+
+    2026-09-08에 실제로 그렇게 됐다. 봇이 모아나·미니언즈의 badges를 STD에서
+    특수관 포맷으로 올리면서 meta는 "2026.07.08 개봉 · 일반관" 그대로 뒀고,
+    앱에서 IMAX·SCREENX·4D 배지 바로 아래에 "일반관"이라고 적힌 카드가 나왔다.
+
+    두 가지만 본다. 둘 다 자동으로 판정 가능한 모순이다:
+      - meta가 그 작품의 date로 시작하는가
+      - 특수관 배지를 달고도 meta가 "일반관"이라 말하고 있지 않은가
+    상영시간·장르가 맞는지는 여기서 알 수 없다 — 그건 프롬프트(5)의 몫이다.
+    """
+    problems = []
+    for w in works:
+        meta = (w.get("meta") or "").strip()
+        if not meta:
+            problems.append(f"{w['id']}: meta 비어 있음")
+            continue
+        date = w.get("date")
+        if date and not meta.startswith(date):
+            problems.append(f"{w['id']}: meta가 date({date})로 시작하지 않음 — {meta!r}")
+        if w.get("badges") != ["STD"] and "일반관" in meta:
+            problems.append(f"{w['id']}: 특수관 배지({w.get('badges')})인데 meta가 '일반관' — {meta!r}")
+    if problems:
+        raise ValueError("meta 불일치: " + " / ".join(problems))
 
 
 def validate_changes(changes: list, works_by_id: dict) -> None:
@@ -187,6 +222,7 @@ def main() -> int:
     # 변경을 적용한 *뒤* 검사한다 — 이 실행이 badges를 올려놓고 hook을 빠뜨렸는지가
     # 관심사이므로, 반영 전 상태가 아니라 반영 후 상태를 봐야 한다.
     validate_hook_invariant(data["works"])
+    validate_meta_invariant(data["works"])
 
     # 변경이 없어도 '이 날짜에 점검됨'을 앱의 "N월 N일 기준" 라벨에 반영한다.
     data["dataTimestamp"] = today.strftime("%Y-%m-%dT%H:%M:%S+09:00")
