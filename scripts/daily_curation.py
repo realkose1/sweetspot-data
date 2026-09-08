@@ -46,7 +46,13 @@ def build_prompt(works: list, today: datetime) -> str:
 
 1. premiumEnd — 각 영화의 특수관 상영 종료가 극장 체인(CGV · 롯데시네마 · 메가박스) 공지나 공식 보도로 **명시적으로** 확인된 경우에만 "yyyy.MM.dd"로 설정합니다. 스크린 수 감소, 예매율, 추측으로는 절대 설정하지 않습니다.
 2. date — 미개봉작의 개봉일이 공식적으로 변경/확정된 경우 "yyyy.MM.dd"로 수정합니다.
-3. hook — 현재 문구가 사실과 어긋나게 된 경우 갱신합니다 (예: 이미 종료된 IMAX 상영을 '상영 중'처럼 표현). 한 문장, 담백하게.
+3. hook — 아래 두 경우에 씁니다. 한 문장, 담백하게.
+   (a) 현재 문구가 사실과 어긋나게 된 경우 갱신 (예: 이미 종료된 IMAX 상영을 '상영 중'처럼 표현).
+   (b) **badges를 STD에서 특수관 포맷으로 올리는 경우, 같은 응답에서 hook도 반드시 함께 제안합니다.**
+       앱은 특수관 목록의 각 작품 아래에 이 한 줄을 띄웁니다. 배지만 올리고 hook을 비워두면
+       그 작품만 설명 없이 덩그러니 놓입니다. hook이 비어도 되는 것은 badges가 STD일 때뿐입니다.
+       내용은 "어느 포맷으로 볼지" 판단에 도움이 되는 확인된 사실이어야 합니다 — 확정된 개봉 포맷,
+       촬영·마스터링 방식, 화면비 같은 것. 홍보 문구나 줄거리 요약이 아닙니다.
 4. badges / recommendedFormat — 특수관 포맷 상영이 공식 확정되거나 취소된 경우. badges 값은 다음 코드만 사용: IMAX43, IMAX190, DOLBY, SCREENX, 4DX, SUPERPLEX, STD.
 
 절대 규칙:
@@ -70,6 +76,33 @@ def extract_result(text: str) -> dict:
     if not blocks:
         raise ValueError("응답에서 json 코드블록을 찾지 못함")
     return json.loads(blocks[-1])
+
+
+def validate_hook_invariant(works: list) -> None:
+    """특수관 배지를 단 작품에는 반드시 hook이 있어야 한다.
+
+    2026-09-08에 실제로 깨진 불변식이다. 봇이 모아나·미니언즈의 badges를 STD에서
+    IMAX190/SCREENX/4DX로 올렸는데 hook은 건드리지 않아서, 두 작품이 앱의 "지금
+    특수관에서" 목록에 금색 한 줄 없이 올라왔다. 형제 카드에는 전부 있는 줄이라
+    빠진 것이 눈에 띈다.
+
+    앱 쪽 `FormatData.Work.recommendedFormat` 주석이 이미 이 불변식을 문서로
+    적어두고 있었다 — "hook이 nil이고 badges가 [.standard]일 때"만 예외라고. 문서에만
+    있고 어디서도 강제하지 않았던 것이 문제였으므로, 여기서 기계적으로 막는다.
+
+    프롬프트에도 같은 규칙을 넣었지만(3-b) 프롬프트는 부탁이고 이 함수는 보증이다.
+    모델이 잊으면 발행이 실패하고 Actions 로그에 남는다 — 조용히 빈 줄이 나가는
+    것보다 낫다.
+    """
+    offenders = [
+        w["id"] for w in works
+        if w.get("badges") != ["STD"] and not (w.get("hook") or "").strip()
+    ]
+    if offenders:
+        raise ValueError(
+            f"특수관 배지가 있는데 hook이 비어 있음: {', '.join(offenders)} — "
+            "badges를 올릴 때는 hook도 함께 제안해야 한다 (프롬프트 3-b)"
+        )
 
 
 def validate_changes(changes: list, works_by_id: dict) -> None:
@@ -150,6 +183,10 @@ def main() -> int:
         print(f"변경: {ch['workId']}.{ch['field']}: {old!r} -> {ch['value']!r}")
         print(f"  이유: {ch.get('reason', '')}")
         print(f"  출처: {ch['source']}")
+
+    # 변경을 적용한 *뒤* 검사한다 — 이 실행이 badges를 올려놓고 hook을 빠뜨렸는지가
+    # 관심사이므로, 반영 전 상태가 아니라 반영 후 상태를 봐야 한다.
+    validate_hook_invariant(data["works"])
 
     # 변경이 없어도 '이 날짜에 점검됨'을 앱의 "N월 N일 기준" 라벨에 반영한다.
     data["dataTimestamp"] = today.strftime("%Y-%m-%dT%H:%M:%S+09:00")

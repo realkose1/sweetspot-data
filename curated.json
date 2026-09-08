@@ -137,7 +137,7 @@
         "SCREENX",
         "4DX"
       ],
-      "hook": null,
+      "hook": "IMAX·ScreenX·4DX 모두 열리는 오션 어드벤처예요",
       "open": null,
       "tmdbId": 1108427,
       "recommendedFormat": "IMAX190"
@@ -156,7 +156,7 @@
         "SCREENX",
         "4DX"
       ],
-      "hook": null,
+      "hook": "ScreenX 확장 화면과 4DX 모션으로 열려요",
       "open": null,
       "tmdbId": 1315772,
       "recommendedFormat": "SCREENX"
