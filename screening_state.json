@@ -22,5 +22,27 @@
     "moana": 1,
     "minions": 1
   },
-  "prevPremiumRowCount": 256
+  "prevPremiumRowCount": 256,
+  "handledCandidates": {
+    "20241110": {
+      "date": "2026-09-21",
+      "action": "rejected",
+      "reason": "nonfilm-keyword: 콘서트"
+    },
+    "20233743": {
+      "date": "2026-09-21",
+      "action": "rejected",
+      "reason": "nonfilm-keyword: 콘서트"
+    },
+    "20070216": {
+      "date": "2026-09-21",
+      "action": "rejected",
+      "reason": "TMDB 실제 ID 및 한국 극장 개봉일(type 3)을 웹 검색으로 확인하지 못함(검색 도구 사용 한도 초과로 조회 불가). 추측 삽입 금지 원칙에 따라 미추가."
+    },
+    "20256308": {
+      "date": "2026-09-21",
+      "action": "rejected",
+      "reason": "TMDB 실제 ID 및 한국 극장 개봉일(type 3)을 웹 검색으로 확인하지 못함(검색 도구 사용 한도 초과로 조회 불가). 추측 삽입 금지 원칙에 따라 미추가."
+    }
+  }
 }
