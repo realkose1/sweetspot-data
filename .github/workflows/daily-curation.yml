@@ -37,6 +37,9 @@ concurrency:
 jobs:
   curate:
     runs-on: ubuntu-latest
+    # 수집 30분 + 큐레이션(웹 검색 6회) + 커밋에 여유를 둔 값. 기본값 360분짜리
+    # 잡이 매달려 있으면 concurrency group 때문에 다음 날 실행까지 막힌다.
+    timeout-minutes: 50
     steps:
       - uses: actions/checkout@v4
 
@@ -44,12 +47,22 @@ jobs:
         with:
           python-version: "3.12"
 
-      # 표준 라이브러리만 쓴다. 83개 극장 × 3일 ≈ 4분, 비용 0.
-      # 종료 코드 2(발행 불가) / 3(프리미엄 행 급감)도 잡에서는 실패로 보지 않는다 —
-      # 사유를 이슈로 올리고 아래 단계는 그대로 간다. dry_run이면 아무 파일도 쓰지
-      # 않는 모드로 돌려 배선만 확인한다.
+      # 표준 라이브러리만 쓴다. 249회 호출, 비용 0. 러너에서는 회당 3.4초가 나와
+      # 14분쯤 걸린다(2026-09-20 CI 실측; 로컬 한국에서는 0.2~0.6초).
+      #
+      # 시간 방어가 세 겹이다. 안쪽이 먼저 걸려야 이유가 남는다:
+      #   1. 스크립트의 시간 예산 25분 → 남은 요청을 실패로 처리하고 사유를 적는다
+      #   2. 이 단계의 timeout-minutes 30분 → 러너가 죽인다. 사유 파일이 없다
+      #   3. 잡의 timeout-minutes 50분
+      #
+      # continue-on-error가 필요하다. 이게 없으면 2번(단계 타임아웃)에 걸릴 때
+      # 잡이 실패로 끝나 아래 이슈 단계도 사전 점검도 건너뛰어진다 — 두 봇은
+      # 서로를 막지 않아야 한다는 전제가 바로 여기서 깨진다. outcome은 실제
+      # 결과('failure')를 유지하므로 아래 조건이 그걸 읽는다.
       - name: 상영 데이터 수집 (무료)
         id: screening
+        timeout-minutes: 30
+        continue-on-error: true
         run: |
           set +e
           python scripts/screening.py ${{ inputs.dry_run == true && '--dry-run' || '' }}
@@ -62,8 +75,13 @@ jobs:
 
       # 같은 제목의 열린 이슈가 있으면 열지 않는다. 전송 장애는 며칠 이어질 수 있고,
       # 그때마다 새 이슈를 열면 알림만 쌓인다.
+      #
+      # 조건이 두 갈래인 이유: 스크립트가 스스로 멈추면 code가 2나 3이지만,
+      # 단계가 timeout-minutes에 죽으면 $GITHUB_OUTPUT에 아무것도 쓰이지 못해
+      # code가 **빈 문자열**이 된다. 그 경우를 outcome으로 잡는다 — 빈 문자열과
+      # '0'의 비교에 기대는 것보다 의도가 분명하다.
       - name: 상영 수집 중단 이슈
-        if: ${{ steps.screening.outputs.code != '0' && inputs.dry_run != true }}
+        if: ${{ inputs.dry_run != true && (steps.screening.outcome != 'success' || steps.screening.outputs.code != '0') }}
         env:
           GH_TOKEN: ${{ github.token }}
           TITLE: "상영 데이터 수집 중단 (screening.py)"
@@ -75,9 +93,15 @@ jobs:
             exit 0
           fi
           {
-            echo "종료 코드: ${{ steps.screening.outputs.code }}"
+            echo "단계 결과: ${{ steps.screening.outcome }} / 종료 코드: '${{ steps.screening.outputs.code }}'"
             echo
-            cat screening_abort.txt 2>/dev/null || echo "사유 파일 없음 (screening_abort.txt)"
+            if [ -f screening_abort.txt ]; then
+              cat screening_abort.txt
+            else
+              echo "사유 파일(screening_abort.txt)이 없습니다 — 스크립트가 이유를 적기"
+              echo "전에 단계가 죽었다는 뜻입니다. timeout-minutes(30분)에 걸렸을"
+              echo "가능성이 큽니다. 위 로그의 진행 줄에서 회당 지연을 확인하세요."
+            fi
             echo
             echo "screening.json은 갱신되지 않았다. 앱은 checkedAt이 3일 넘게 지나면"
             echo "기존 포맷 후보 모드로 돌아간다 — 잘못된 목록을 보여주지는 않는다."

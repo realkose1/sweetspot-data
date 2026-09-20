@@ -67,11 +67,33 @@ CHANGES = REPO_ROOT / "screening_changes.json"
 ABORT = REPO_ROOT / "screening_abort.txt"
 
 KOBIS_URL = "https://www.kobis.or.kr/kobis/business/mast/thea/findSchedule.do"
-USER_AGENT = "sweetspot-screening-bot (+https://github.com/realkose1/sweetspot-data)"
+
+# 브라우저형 헤더. 국내 공공 사이트는 UA나 Referer가 없는 요청을 말없이 버리는
+# 경우가 있고, 이 엔드포인트는 페이지 안에서 XHR로 호출되는 것이라 Referer가
+# 자연스럽다. robots.txt는 `allow: /`이고 자동 수집 금지 문구도 없다(분석 문서
+# 2-4). 초당 한 건 아래로 두드리므로 위장해서 부하를 숨기는 것이 아니다.
+REQUEST_HEADERS = {
+    "User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                   "AppleWebKit/537.36 (KHTML, like Gecko) "
+                   "Chrome/140.0.0.0 Safari/537.36"),
+    "Referer": "https://www.kobis.or.kr/kobis/business/mast/thea/findSchedule.do",
+    "Accept": "application/json, text/javascript, */*; q=0.01",
+    "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8",
+    "X-Requested-With": "XMLHttpRequest",
+    "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+}
 
 HORIZON_DAYS = 3
-REQUEST_TIMEOUT = 20
-REQUEST_SLEEP = 0.3
+# 로컬(한국)에서는 회당 0.44초인데 GitHub 러너(미국)에서는 3.4초가 나온다.
+# 2026-09-20 CI dry run: 83곳 × 3일 = 249회에 14분 03초. 성공은 하지만 느리다.
+REQUEST_TIMEOUT = 10
+# 서버 자체 지연(러너에서 ~3.4초)이 이미 호출 간격을 벌려 주므로 잠깐만 쉰다.
+# 이 값이 실제로 의미를 갖는 건 응답이 빠른 곳에서 돌 때(로컬 0.44초)뿐이다.
+REQUEST_SLEEP = 0.1
+# 전체 벽시계 예산. 넘으면 수집을 멈추고 남은 요청을 실패로 처리한 뒤 아래
+# "절반 이상 실패" 규칙이 발행 여부를 정한다. 워크플로우의 step timeout(30분)
+# 보다 짧게 둔다 — 러너가 단계를 죽이면 이유를 적을 기회조차 없기 때문이다.
+DEFAULT_BUDGET_SECONDS = 25 * 60
 THEATER_FAILURE_ABORT_RATIO = 0.5
 PREMIUM_DROP_ABORT_RATIO = 0.5
 RETIRE_STREAK_DAYS = 7
@@ -180,27 +202,44 @@ def format_for_row(suffix: str | None, hall_fmts: set) -> str | None:
 
 def fetch_schedule(thea_cd: str, show_dt: str) -> list:
     body = urllib.parse.urlencode({"theaCd": thea_cd, "showDt": show_dt}).encode()
-    req = urllib.request.Request(
-        KOBIS_URL,
-        data=body,
-        headers={
-            "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-            "User-Agent": USER_AGENT,
-            "Accept": "application/json, text/javascript, */*",
-        },
-    )
+    req = urllib.request.Request(KOBIS_URL, data=body, headers=dict(REQUEST_HEADERS))
     with urllib.request.urlopen(req, timeout=REQUEST_TIMEOUT) as r:
         payload = json.loads(r.read().decode("utf-8"))
     schedule = payload.get("schedule")
     return schedule if isinstance(schedule, list) else []
 
 
-def collect_live(thea_cds: list, dates: list, warn) -> dict:
-    """{theaCd: {yyyyMMdd: [row, ...]}}. 실패한 (극장, 날짜)는 키가 없다."""
+def collect_live(thea_cds: list, dates: list, warn, budget_seconds: float) -> dict:
+    """{theaCd: {yyyyMMdd: [row, ...]}}. 실패한 (극장, 날짜)는 키가 없다.
+
+    실패 집합을 **비관적으로** 들고 간다 — 성공한 것만 지운다. 그래서 시간
+    예산이 끊겨 아예 시도조차 못한 (극장, 날짜)도 자동으로 실패로 남고, 그
+    뒤의 "절반 이상 실패 → 발행 중단" 판정을 예산 초과에도 그대로 쓸 수 있다.
+    끝까지 다 돌고 나서 판정하므로, 예산이 마지막 한두 극장에서 끊긴 경우에는
+    (실패율이 낮으니) 그대로 발행된다 — 그게 맞다.
+
+    진행 줄을 극장마다 하나씩, flush해서 찍는다. 2026-09-20 CI dry run에서
+    이 단계가 14분 걸렸는데 로그에 "어디서 시간을 쓰는지"가 전혀 없어 느린
+    것인지 멈춘 것인지 구분할 수 없었다. 회당 지연을 같이 찍으면 그 판단이
+    로그만 보고 된다.
+    """
+    started = time.monotonic()
     raw: dict = {cd: {} for cd in thea_cds}
+    failed = {dt: set(thea_cds) for dt in dates}
+    budget_hit = None
+    total = len(thea_cds) * len(dates)
+    done = 0
+
     for show_dt in dates:
-        failed = []
+        if budget_hit:
+            break
         for cd in thea_cds:
+            elapsed = time.monotonic() - started
+            if elapsed >= budget_seconds:
+                budget_hit = (show_dt, cd, elapsed)
+                break
+
+            t0 = time.monotonic()
             rows = None
             for attempt in (1, 2):
                 try:
@@ -212,15 +251,41 @@ def collect_live(thea_cds: list, dates: list, warn) -> dict:
                         warn(f"{cd} {show_dt} 수집 실패: {e}")
                     else:
                         time.sleep(REQUEST_SLEEP * 2)
+            latency = time.monotonic() - t0
+            done += 1
+
             if rows is None:
-                failed.append(cd)
+                mark = "실패"
             else:
                 raw[cd][show_dt] = rows
+                failed[show_dt].discard(cd)
+                mark = f"{len(rows):4d}행"
+            print(f"  [{done:3d}/{total}] {elapsed:6.1f}s {cd} {show_dt} "
+                  f"{latency:5.2f}s {mark}", flush=True)
             time.sleep(REQUEST_SLEEP)
-        if thea_cds and len(failed) / len(thea_cds) >= THEATER_FAILURE_ABORT_RATIO:
-            raise Abort(2, f"{show_dt} 수집 실패 극장 {len(failed)}/{len(thea_cds)}곳 "
-                           f"— 절반 이상 실패해 발행 중단")
-        print(f"  {show_dt}: 수집 {len(thea_cds) - len(failed)}곳 / 실패 {len(failed)}곳")
+
+        n_failed = len(failed[show_dt])
+        print(f"  {show_dt}: 수집 {len(thea_cds) - n_failed}곳 / 실패 {n_failed}곳 "
+              f"(경과 {time.monotonic() - started:.0f}초)", flush=True)
+
+    if budget_hit:
+        dt, cd, elapsed = budget_hit
+        warn(f"시간 예산 {budget_seconds:.0f}초 초과 ({elapsed:.0f}초 경과) — "
+             f"{dt} {cd}에서 수집을 멈춘다. 남은 요청은 실패로 처리")
+
+    # 날짜 하나라도 절반 이상 실패하면 발행하지 않는다. 3일 창을 약속하고
+    # 하루치만 싣는 것은 조용한 데이터 손실이다(빠진 날의 상영이 "없음"이 된다).
+    for show_dt in dates:
+        n_failed = len(failed[show_dt])
+        if not thea_cds or n_failed / len(thea_cds) < THEATER_FAILURE_ABORT_RATIO:
+            continue
+        collected = len(thea_cds) - n_failed
+        detail = (f"{show_dt} 수집 실패 극장 {n_failed}/{len(thea_cds)}곳 "
+                  f"— 절반 이상 실패해 발행 중단")
+        if budget_hit:
+            detail = (f"시간 예산 초과: {collected}/{len(thea_cds)} 극장 수집 "
+                      f"({show_dt} 기준) — {detail}")
+        raise Abort(2, detail)
     return raw
 
 
@@ -542,6 +607,10 @@ def main(argv=None) -> int:
                     help="findSchedule 응답 픽스처로 네트워크 대신 동작 (테스트용)")
     ap.add_argument("--dry-run", action="store_true",
                     help="계산해서 출력만 하고 아무 파일도 쓰지 않음")
+    ap.add_argument("--budget-seconds", type=float, default=DEFAULT_BUDGET_SECONDS,
+                    metavar="N",
+                    help=f"수집 전체 벽시계 예산 (기본 {DEFAULT_BUDGET_SECONDS:.0f}초). "
+                         "넘으면 남은 요청을 실패로 처리하고 절반 규칙에 맡긴다")
     args = ap.parse_args(argv)
 
     warnings: list = []
@@ -576,8 +645,9 @@ def main(argv=None) -> int:
             dates = [(base + timedelta(days=i)).strftime("%Y%m%d")
                      for i in range(HORIZON_DAYS)]
             print(f"KOBIS 수집: 극장 {len(thea_cds)}곳 × 날짜 {len(dates)}일 "
-                  f"({iso(dates[0])}~{iso(dates[-1])})")
-            raw = collect_live(thea_cds, dates, warn)
+                  f"({iso(dates[0])}~{iso(dates[-1])}) · 시간 예산 "
+                  f"{args.budget_seconds:.0f}초", flush=True)
+            raw = collect_live(thea_cds, dates, warn, args.budget_seconds)
             fetched = sum(1 for cd in thea_cds if raw.get(cd))
             failed = len(thea_cds) - fetched
 
