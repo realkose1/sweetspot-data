@@ -27,7 +27,11 @@ case "${1:-}" in
   *) echo "사용법: $0 [--dry-run|--apply]" >&2; exit 64 ;;
 esac
 
-mapfile -t numbers < <(
+# mapfile은 bash 4+ 전용이라 macOS 기본 bash(3.2)에서 없다 — while read로 모은다.
+numbers=()
+while IFS= read -r n; do
+  [ -n "$n" ] && numbers+=("$n")
+done < <(
   gh issue list --state open --limit 200 --json number,title \
     --jq ".[] | select(.title | test(\"$TITLE_PATTERN\")) | .number"
 )
