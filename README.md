@@ -163,17 +163,20 @@ Store가 개인정보 처리방침 URL을 필수로 요구하는데, 그 페이�
 
 ## 자동 큐레이션 봇 — 매일 점검, 조건부 실행 (2026-09-01~)
 
-`.github/workflows/daily-curation.yml` 이 매일 06:00 KST에 돈다. 단 두 단계다.
+`.github/workflows/daily-curation.yml` 이 매일 06:00 KST에 돈다. 세 단계이고,
+앞의 둘은 무료다. (0단계인 `scripts/screening.py`는 아래 "상영 데이터" 절에 있다.)
 
 1. **`scripts/precheck.py` — 무료 사전 점검.** Claude를 부를 이유가 있는지 판정한다.
    화·목 기본 점검 / 어떤 작품의 개봉일 ±3일 / TMDB 한국 상영작에 새 작품 등장 /
-   TMDB 개봉일과 `curated.json` 불일치 / 수동 실행. 이유가 하나도 없으면 Claude는
+   TMDB 개봉일과 `curated.json` 불일치 / 수동 실행 / **KOBIS 특수관 상영 후보
+   잔존**. 이유가 하나도 없으면 Claude는
    부르지 않고, `dataTimestamp`만 오늘로 옮겨 커밋한다 — 앱의 "포맷 데이터 기준
    N월 N일" 라벨이 이 값이라, "오늘 살펴봤고 새 개봉·개봉일 변동이 없었다"는 사실을
    날짜로 보여주기 위해서다(2026-09-04 owner 결정). 그래서 `curated.json`에는 매일
    한 줄짜리 커밋이 쌓인다. 의도된 동작이다.
 2. **`scripts/daily_curation.py` — Claude 큐레이션.** 사전 점검이 켠 날만 돈다. 회당
-   $0.4 안팎(Sonnet 5 정가, 웹 검색 6회).
+   $0.4 안팎(Sonnet 5 정가, 웹 검색 6회). 2026-09-20부터 **작품 추가**도 한다 —
+   아래 "상영 데이터 · 작품 추가와 은퇴" 절.
 
 이전(월·금 무조건 실행)과 비교하면 요일은 수요일 개봉 사이클에 맞춰지고, 비용은
 "판이 바뀐 날"에만 나간다. 왜 이렇게 짰는지는 `precheck.py` 머리말에 있다.
@@ -187,4 +190,76 @@ Store가 개인정보 처리방침 URL을 필수로 요구하는데, 그 페이�
 화·목 + 개봉일 창으로만 돈다(옛 "주 2회"와 비용 동일).
 
 **배선만 확인하고 싶을 때:** Actions → 이 워크플로우 → Run workflow → `dry_run` 체크.
-사전 점검만 돌고 Claude·커밋은 건너뛴다. 비용 0.
+상영 수집(`--dry-run`)과 사전 점검만 돌고 Claude·커밋·이슈는 모두 건너뛴다. 비용 0.
+
+## 상영 데이터 — KOBIS 매일 수집 (2026-09-20~)
+
+`docs/screening-contract.md` v1의 구현이다. 앱에 "이 작품이 지금 어느 관에서
+그 포맷으로 상영 중인가"를 넘긴다. 소스는 영화진흥위원회 통합전산망(KOBIS)
+상영스케줄 — 공개·무료·무키이며, 체인이 법에 따라 보고한 데이터다. 앱은 KOBIS를
+직접 부르지 않는다(접속처를 늘리지 않는다).
+
+### 파일
+
+| 파일 | 누가 쓰나 | 누가 읽나 |
+|---|---|---|
+| `kobis_halls.json` | 사람 (수작업 검수) | `screening.py` |
+| `kobis_movies.json` | 사람 + `daily_curation.py`(작품 추가 시) | `screening.py` |
+| `screening.json` | `screening.py` | **앱** |
+| `screening_state.json` | `screening.py`, `daily_curation.py` | 봇만 |
+| `screening_candidates.json` | `screening.py` | `precheck.py`, `daily_curation.py` |
+| `screening_changes.json` | 두 스크립트 | 워크플로우(이슈) |
+| `screening_abort.txt` | `screening.py` | 워크플로우(이슈) |
+
+`screening.json`은 `curated.json`과 **섞지 않는다.** 두 봇은 실패 모드도 갱신
+주기도 다르다. 하나가 죽어도 다른 하나는 살아야 한다. 앱도 별도 캐시 키·별도
+검증기로 받고, `checkedAt`이 3일 넘게 지나면 파일을 무시하고 기존 포맷 후보
+모드로 돌아간다.
+
+### 순서
+
+```
+screening.py  (무료, 매일)  →  precheck.py  (무료)  →  daily_curation.py  (유료, 조건부)  →  커밋
+```
+
+`screening.py`는 `kobis_halls.json`의 극장코드 83개에 대해 3일치(당일·+1·+2)를
+`findSchedule.do`로 받는다. 약 4분, 비용 0. 포맷 판정은 **관 이름이 아니라
+`movieNm` 접미사**로 한다 — ScreenX 관이 2D 영화를 `(디지털)`로 틀기 때문이다.
+예외는 `SUPERPLEX`·`DOLBYVISION` 같은 관 속성 포맷이다.
+
+오프라인 재현: `python3 scripts/screening.py --offline <findSchedule 응답 픽스처>`.
+아무 것도 쓰지 않고 계산만 보려면 `--dry-run`.
+
+### 실패하면
+
+| 상황 | 종료 코드 | 동작 |
+|---|---|---|
+| `curated.json`에 없는 hall/work id | 2 | **발행 중단.** 이슈 1건 |
+| 어떤 날짜든 극장 절반 이상 수집 실패 | 2 | **발행 중단.** 이슈 1건 |
+| 오늘 프리미엄 행 수가 지난 실행의 50% 미만 | 3 | **발행 중단.** 이슈 1건 (전송 장애 의심) |
+| 극장 몇 곳 실패 | 0 | 건너뛰고 로그. 발행은 계속 |
+
+발행 중단은 `screening.json`을 **건드리지 않는다**. 어제 파일이 그대로 남고,
+사흘이 지나면 앱이 스스로 포맷 후보 모드로 돌아간다. "상영 안 함"이라고 쓰는
+경우는 없다 — KOBIS 자신이 "일부 정보가 제공되지 않을 수 있다"고 고지한다.
+
+`screening.py`가 실패해도 `precheck.py`·`daily_curation.py`는 그대로 돈다.
+
+### 작품 추가와 은퇴
+
+- **추가** — 프리미엄 접미사로 걸렸는데 `kobis_movies.json`에 없는 `movieCd`는
+  `screening_candidates.json`에 후보로 쌓이고, 그것만으로 사전 점검이 유료 단계를
+  켠다. 하루 최대 2편, 극장 수가 큰 것부터. `tmdbId`가 확정되지 않으면 검증기가
+  거부한다 — 콘서트 실황·라이브뷰잉·스포츠 중계를 걸러내는 실질적인 장치다.
+  처리한 후보는 `screening_state.json`의 `handledCandidates`에 남아 7일간 다시
+  제안되지 않는다.
+- **은퇴** — 프리미엄 배지가 있는 작품이 3일 창 어디에도 프리미엄 상영이 없는
+  날이 7일 연속이면 `premiumEnd = lastPremiumSeen`. **배지는 지우지 않는다**(이력).
+  미개봉작은 은퇴시키지 않는다.
+
+### 이슈
+
+작품 추가 · 배지 변경 · 프리미엄 은퇴 · 상영 수집 중단, 이 네 가지 때만 연다.
+같은 제목의 열린 이슈가 있으면 다시 열지 않는다. 매일 열리던 "큐레이션 검토
+필요" 이슈는 폐지했다 — 남아 있는 것은 `scripts/close_stale_issues.sh`로 한 번에
+닫는다(기본 `--dry-run`, 실제로 닫으려면 `--apply`).

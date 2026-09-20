@@ -1,0 +1,743 @@
+{
+  "schemaVersion": 1,
+  "halls": {
+    "yongsan": {
+      "theaCd": "001088",
+      "theaNm": "CGV 용산아이파크몰",
+      "scrn": "^IMAX$",
+      "confidence": "auto"
+    },
+    "wangsimni": {
+      "theaCd": "001154",
+      "theaNm": "CGV 왕십리",
+      "scrn": "^IMAX$",
+      "confidence": "auto"
+    },
+    "cheonho": {
+      "theaCd": "001230",
+      "theaNm": "CGV 천호",
+      "scrn": "^IMAX$",
+      "confidence": "auto"
+    },
+    "centumcity": {
+      "theaCd": "011044",
+      "theaNm": "CGV 센텀시티",
+      "scrn": "^IMAX$",
+      "confidence": "auto"
+    },
+    "ilsan": {
+      "theaCd": "002126",
+      "theaNm": "CGV 일산",
+      "scrn": "^IMAX$",
+      "confidence": "auto"
+    },
+    "incheon": {
+      "theaCd": "015005",
+      "theaNm": "CGV 인천",
+      "scrn": "^IMAX$",
+      "confidence": "auto"
+    },
+    "ulsansamsan": {
+      "theaCd": "014013",
+      "theaNm": "CGV 울산삼산",
+      "scrn": "^8층\\ 9관\\ \\[IMAX\\]$",
+      "confidence": "auto"
+    },
+    "seomyeon": {
+      "theaCd": "011007",
+      "theaNm": "CGV 서면",
+      "scrn": "^IMAX관$",
+      "confidence": "auto"
+    },
+    "daejeon": {
+      "theaCd": "013012",
+      "theaNm": "CGV 대전",
+      "scrn": "^IMAX$",
+      "confidence": "auto"
+    },
+    "namyangjuDolby": {
+      "theaCd": "002269",
+      "theaNm": "메가박스 남양주현대아울렛 스페이스원",
+      "scrn": "^Dolby\\ Cinema$",
+      "confidence": "auto"
+    },
+    "coex": {
+      "theaCd": "001003",
+      "theaNm": "메가박스 코엑스",
+      "scrn": "^Dolby\\ Cinema관$",
+      "confidence": "auto"
+    },
+    "worldtower": {
+      "theaCd": "001224",
+      "theaNm": "롯데시네마 월드타워",
+      "scrn": "^21관\\(수퍼플렉스G/Dolby\\ ATMOS\\)$",
+      "confidence": "auto"
+    },
+    "yongsanScreenX": {
+      "theaCd": "001088",
+      "theaNm": "CGV 용산아이파크몰",
+      "scrn": "^16관\\(SCREENX\\)$",
+      "confidence": "reviewed",
+      "note": "같은 극장에 SCREENX 관이 2개; 번호 없는 쪽(리클라이너 등)으로 나머지 후보 배정"
+    },
+    "yongsanScreenX14": {
+      "theaCd": "001088",
+      "theaNm": "CGV 용산아이파크몰",
+      "scrn": "^14관\\(SCREENX\\)$",
+      "confidence": "reviewed",
+      "note": "같은 극장에 SCREENX 관이 2개; 14관 번호로 특정"
+    },
+    "yeouido4dx": {
+      "theaCd": "001034",
+      "theaNm": "CGV 여의도",
+      "scrn": "^4DX관$",
+      "confidence": "auto"
+    },
+    "cheongdam4dx": {
+      "theaCd": "001186",
+      "theaNm": "CGV 청담씨네시티",
+      "scrn": "^4DX$",
+      "confidence": "auto"
+    },
+    "apgujeong": {
+      "theaCd": "001111",
+      "theaNm": "CGV 압구정",
+      "scrn": "^IMAX관$",
+      "confidence": "auto"
+    },
+    "yeongdeungpo": {
+      "theaCd": "001158",
+      "theaNm": "CGV 영등포",
+      "scrn": "^IMAX관$",
+      "confidence": "auto"
+    },
+    "gwanggyo": {
+      "theaCd": "002259",
+      "theaNm": "CGV 광교",
+      "scrn": "^IMAX관$",
+      "confidence": "auto"
+    },
+    "dongtan": {
+      "theaCd": "002185",
+      "theaNm": "CGV 동탄",
+      "scrn": "^IMAX관$",
+      "confidence": "auto"
+    },
+    "uijeongbu": {
+      "theaCd": "001192",
+      "theaNm": "CGV 의정부",
+      "scrn": "^IMAX$",
+      "confidence": "auto"
+    },
+    "wirye": {
+      "theaCd": "002243",
+      "theaNm": "CGV 스타필드시티위례",
+      "scrn": "^IMAX관$",
+      "confidence": "auto"
+    },
+    "sopung": {
+      "theaCd": "002150",
+      "theaNm": "CGV 소풍",
+      "scrn": "^IMAX관$",
+      "confidence": "auto"
+    },
+    "daejeonTerminalImax": {
+      "theaCd": "013026",
+      "theaNm": "CGV 대전터미널",
+      "scrn": "^02\\(IMAX\\)관$",
+      "confidence": "auto"
+    },
+    "cheonanTerminal": {
+      "theaCd": "005064",
+      "theaNm": "CGV 천안터미널",
+      "scrn": "^IMAX관$",
+      "confidence": "auto"
+    },
+    "cheonanPentaport": {
+      "theaCd": "005043",
+      "theaNm": "CGV 천안펜타포트",
+      "scrn": "^04\\(IMAX\\)관$",
+      "confidence": "auto"
+    },
+    "cheongjuSeomun": {
+      "theaCd": "004017",
+      "theaNm": "CGV 청주(서문)",
+      "scrn": "^IMAX관$",
+      "confidence": "auto"
+    },
+    "daegu": {
+      "theaCd": "012057",
+      "theaNm": "CGV 대구",
+      "scrn": "^IMAX관$",
+      "confidence": "auto"
+    },
+    "suncheonSindae": {
+      "theaCd": "009061",
+      "theaNm": "CGV 순천신대",
+      "scrn": "^IMAX관$",
+      "confidence": "auto"
+    },
+    "jeonjuHyoja": {
+      "theaCd": "008051",
+      "theaNm": "CGV 전주효자",
+      "scrn": "^IMAX$",
+      "confidence": "auto"
+    },
+    "changwonTheCity": {
+      "theaCd": "007052",
+      "theaNm": "CGV 창원더시티",
+      "scrn": "^IMAX관$",
+      "confidence": "auto"
+    },
+    "pyeongtaek": {
+      "theaCd": "002176",
+      "theaNm": "CGV 평택",
+      "scrn": "^06관\\(IMAX관\\)$",
+      "confidence": "auto"
+    },
+    "chuncheon": {
+      "theaCd": "003039",
+      "theaNm": "CGV 춘천",
+      "scrn": "^IMAX관$",
+      "confidence": "auto"
+    },
+    "anseongDolby": {
+      "theaCd": "002268",
+      "theaNm": "메가박스 안성스타필드",
+      "scrn": "^Dolby\\ Cinema관$",
+      "confidence": "auto"
+    },
+    "daejeonSinsegaeDolby": {
+      "theaCd": "013038",
+      "theaNm": "메가박스 대전신세계 아트앤사이언스",
+      "scrn": "^돌비시네마$",
+      "confidence": "auto"
+    },
+    "daeguSinsegaeDolby": {
+      "theaCd": "012051",
+      "theaNm": "메가박스 대구신세계",
+      "scrn": "^Dolby\\ Cinema관$",
+      "confidence": "auto"
+    },
+    "songdoDolby": {
+      "theaCd": "015055",
+      "theaNm": "메가박스 송도",
+      "scrn": "^돌비시네마관\\(Dolby\\ Cinema\\)$",
+      "confidence": "auto"
+    },
+    "hanamStarfieldDolby": {
+      "theaCd": "002223",
+      "theaNm": "메가박스 하남스타필드",
+      "scrn": "^Dolby\\ Cinema관$",
+      "confidence": "auto"
+    },
+    "yongsanUltra4dx": {
+      "theaCd": "001088",
+      "theaNm": "CGV 용산아이파크몰",
+      "scrn": "^4DX$",
+      "confidence": "auto"
+    },
+    "wangsimniUltra4dx": {
+      "theaCd": "001154",
+      "theaNm": "CGV 왕십리",
+      "scrn": "^4DX$",
+      "confidence": "auto"
+    },
+    "cheonanTerminalUltra4dx": {
+      "theaCd": "005064",
+      "theaNm": "CGV 천안터미널",
+      "scrn": "^04관\\(4DX\\)$",
+      "confidence": "auto"
+    },
+    "centumcityUltra4dx": {
+      "theaCd": "011044",
+      "theaNm": "CGV 센텀시티",
+      "scrn": "^4DX$",
+      "confidence": "auto"
+    },
+    "daeguUltra4dx": {
+      "theaCd": "012057",
+      "theaNm": "CGV 대구",
+      "scrn": "^4DX관$",
+      "confidence": "auto"
+    },
+    "dongsuwonUltra4dx": {
+      "theaCd": "002116",
+      "theaNm": "CGV 동수원",
+      "scrn": "^4DX$",
+      "confidence": "auto"
+    },
+    "ilsanUltra4dx": {
+      "theaCd": "002126",
+      "theaNm": "CGV 일산",
+      "scrn": "^4DX$",
+      "confidence": "auto"
+    },
+    "sangbongUltra4dx": {
+      "theaCd": "001236",
+      "theaNm": "CGV 상봉",
+      "scrn": "^02관\\(4DX\\)$",
+      "confidence": "auto"
+    },
+    "gwanggyoUltra4dx": {
+      "theaCd": "002259",
+      "theaNm": "CGV 광교",
+      "scrn": "^4DX관$",
+      "confidence": "auto"
+    },
+    "wangsimniScreenX": {
+      "theaCd": "001154",
+      "theaNm": "CGV 왕십리",
+      "scrn": "^08관\\(SCREENX\\)$",
+      "confidence": "auto"
+    },
+    "seomyeonScreenX": {
+      "theaCd": "011007",
+      "theaNm": "CGV 서면",
+      "scrn": "^SCREENX관$",
+      "confidence": "auto"
+    },
+    "daejeonTerminalScreenX": {
+      "theaCd": "013026",
+      "theaNm": "CGV 대전터미널",
+      "scrn": "^04\\(SCREENX\\)관$",
+      "confidence": "auto"
+    },
+    "coexMx4d": {
+      "theaCd": "001003",
+      "theaNm": "메가박스 코엑스",
+      "scrn": "^MX4D관$",
+      "confidence": "auto"
+    },
+    "hanamStarfieldMx4d": {
+      "theaCd": "002223",
+      "theaNm": "메가박스 하남스타필드",
+      "scrn": "^MX4D관$",
+      "confidence": "auto"
+    },
+    "gangnamScreenX": {
+      "theaCd": "001123",
+      "theaNm": "CGV 강남",
+      "scrn": "^SCREENX관$",
+      "confidence": "auto"
+    },
+    "gangneungScreenX": {
+      "theaCd": "001194",
+      "theaNm": "CGV 강릉",
+      "scrn": "^08관\\(SCREENX\\)$",
+      "confidence": "auto"
+    },
+    "godeokGangilScreenX": {
+      "theaCd": "001298",
+      "theaNm": "CGV 고덕강일",
+      "scrn": "^SCREENX관$",
+      "confidence": "auto"
+    },
+    "guroScreenX": {
+      "theaCd": "001017",
+      "theaNm": "CGV 구로",
+      "scrn": "^01관\\(SCREENX\\)$",
+      "confidence": "auto"
+    },
+    "gimpoScreenX": {
+      "theaCd": "002273",
+      "theaNm": "CGV 김포 ",
+      "scrn": "^04관\\(SCREENX\\)$",
+      "confidence": "auto"
+    },
+    "deungchonScreenX": {
+      "theaCd": "001270",
+      "theaNm": "CGV 등촌",
+      "scrn": "^06관\\(SCREENX\\)$",
+      "confidence": "auto"
+    },
+    "baegotScreenX": {
+      "theaCd": "002233",
+      "theaNm": "CGV 배곧",
+      "scrn": "^02관$",
+      "confidence": "reviewed",
+      "note": "scrnNm에 (SCREENX) 표기가 없다; 3일 창의 (ScreenX) 접미사 상영으로 확인."
+    },
+    "bucheonScreenX": {
+      "theaCd": "002057",
+      "theaNm": "CGV 부천",
+      "scrn": "^08관\\(SCREENX\\)$",
+      "confidence": "auto"
+    },
+    "sangbongScreenX": {
+      "theaCd": "001236",
+      "theaNm": "CGV 상봉",
+      "scrn": "^05관\\(SCREENX\\)$",
+      "confidence": "auto"
+    },
+    "sejongScreenX": {
+      "theaCd": "017039",
+      "theaNm": "CGV 세종",
+      "scrn": "^06관\\(SCREENX\\)$",
+      "confidence": "auto"
+    },
+    "centumCityScreenX": {
+      "theaCd": "011044",
+      "theaNm": "CGV 센텀시티",
+      "scrn": "^02관\\(SCREENX\\)$",
+      "confidence": "auto"
+    },
+    "sinchonArtreonScreenX": {
+      "theaCd": "001205",
+      "theaNm": "CGV 신촌아트레온",
+      "scrn": "^04관\\(SCREENX\\)$",
+      "confidence": "auto"
+    },
+    "ansanScreenX": {
+      "theaCd": "002118",
+      "theaNm": "CGV 안산",
+      "scrn": "^08관\\(SCREENX\\)$",
+      "confidence": "auto"
+    },
+    "ydp": {
+      "theaCd": "001158",
+      "theaNm": "CGV 영등포",
+      "scrn": "^SCREENX관$",
+      "confidence": "auto"
+    },
+    "oriScreenX": {
+      "theaCd": "002010",
+      "theaNm": "CGV 오리",
+      "scrn": "^06관\\(SCREENX\\)$",
+      "confidence": "auto"
+    },
+    "incheonScreenX": {
+      "theaCd": "015005",
+      "theaNm": "CGV 인천",
+      "scrn": "^02관\\(SCREENX\\)$",
+      "confidence": "reviewed",
+      "note": "같은 극장에 SCREENX 관이 2개; 2관 번호로 특정"
+    },
+    "incheonScreenX14": {
+      "theaCd": "015005",
+      "theaNm": "CGV 인천",
+      "scrn": "^14관$",
+      "confidence": "reviewed",
+      "note": "리클라이너 ScreenX; 02관(SCREENX)이 incheonScreenX. (ScreenX) 접미사 상영으로 확인."
+    },
+    "ilsanScreenX": {
+      "theaCd": "002126",
+      "theaNm": "CGV 일산",
+      "scrn": "^05관\\(ScreenX\\)$",
+      "confidence": "auto"
+    },
+    "uijeongbuScreenX": {
+      "theaCd": "001192",
+      "theaNm": "CGV 의정부",
+      "scrn": "^07관\\(SCREENX\\)$",
+      "confidence": "auto"
+    },
+    "cheonhoScreenX": {
+      "theaCd": "001230",
+      "theaNm": "CGV 천호",
+      "scrn": "^02관\\(SCREENX\\)$",
+      "confidence": "auto"
+    },
+    "pyeongtaekScreenX": {
+      "theaCd": "002176",
+      "theaNm": "CGV 평택",
+      "scrn": "^04관\\(SCREENX\\)$",
+      "confidence": "auto"
+    },
+    "suwonSuperplex": {
+      "theaCd": "002049",
+      "theaNm": "롯데시네마 수원 ",
+      "scrn": "^01관\\(수퍼플렉스\\ /\\ Dolby\\ ATMOS/6P\\ Laser\\)$",
+      "confidence": "auto"
+    },
+    "eunpyeongSuperplex": {
+      "theaCd": "001239",
+      "theaNm": "롯데시네마 은평(롯데몰)",
+      "scrn": "^08관\\(수퍼플렉스\\ /\\ Dolby\\ ATMOS\\)$",
+      "confidence": "auto"
+    },
+    "gwangmyeongSuperplex": {
+      "theaCd": "002050",
+      "theaNm": "롯데시네마 광명아울렛",
+      "scrn": "^01관\\(수퍼플렉스\\ /\\ Dolby\\ ATMOS\\ \\)$",
+      "confidence": "auto"
+    },
+    "dongtanSuperplex": {
+      "theaCd": "002276",
+      "theaNm": "롯데시네마 동탄",
+      "scrn": "^04관\\(Superplex\\)$",
+      "confidence": "auto"
+    },
+    "sujiSuperplex": {
+      "theaCd": "002251",
+      "theaNm": "롯데시네마 수지",
+      "scrn": "^01관\\(Superplex\\)$",
+      "confidence": "auto"
+    },
+    "pajuUnjeongSuperplex": {
+      "theaCd": "002225",
+      "theaNm": "롯데시네마 파주운정",
+      "scrn": "^04관\\(수퍼플렉스\\ /\\ Dolby\\ ATMOS\\ \\)$",
+      "confidence": "auto"
+    },
+    "cheongjuYongamSuperplex": {
+      "theaCd": "004039",
+      "theaNm": "롯데시네마 청주용암",
+      "scrn": "^06관\\(수퍼플렉스\\ /\\ Dolby\\ ATMOS\\)$",
+      "confidence": "auto"
+    },
+    "sanginSuperplex": {
+      "theaCd": "012048",
+      "theaNm": "롯데시네마 상인",
+      "scrn": "^07관\\(\\ 수퍼플렉스\\ /\\ Dolby\\ ATMOS/6PLaser\\)$",
+      "confidence": "auto"
+    },
+    "wonjuMusilSuperplex": {
+      "theaCd": "003208",
+      "theaNm": "롯데시네마 원주무실",
+      "scrn": "^08관\\(Superplex/Dolby\\ ATMOS\\)$",
+      "confidence": "auto"
+    },
+    "gwangbokSuperplex": {
+      "theaCd": "011054",
+      "theaNm": "롯데시네마 광복",
+      "scrn": "^09관\\(수퍼플렉스Dolby\\ ATMOS\\ /\\ 6P\\ Laser\\ \\)$",
+      "confidence": "auto"
+    },
+    "gangbyeon4dx": {
+      "theaCd": "001016",
+      "theaNm": "CGV 강변",
+      "scrn": "^4DX$",
+      "confidence": "auto"
+    },
+    "gyeyang4dx": {
+      "theaCd": "015024",
+      "theaNm": "CGV 계양",
+      "scrn": "^04관\\(4DX\\)$",
+      "confidence": "auto"
+    },
+    "godeokgangil4dx": {
+      "theaCd": "001298",
+      "theaNm": "CGV 고덕강일",
+      "scrn": "^4DX관$",
+      "confidence": "auto"
+    },
+    "gwangjuCheomdan4dx": {
+      "theaCd": "016015",
+      "theaNm": "CGV 광주첨단",
+      "scrn": "^04관\\(4DX\\)$",
+      "confidence": "auto"
+    },
+    "gimhae4dx": {
+      "theaCd": "007031",
+      "theaNm": "CGV 김해",
+      "scrn": "^07관\\(4DX\\)$",
+      "confidence": "auto"
+    },
+    "daeguStadium4dx": {
+      "theaCd": "012034",
+      "theaNm": "CGV 대구스타디움",
+      "scrn": "^08관\\(4DX\\)$",
+      "confidence": "auto"
+    },
+    "daeguJukjeon4dx": {
+      "theaCd": "012058",
+      "theaNm": "CGV 대구죽전",
+      "scrn": "^4DX$",
+      "confidence": "auto"
+    },
+    "daejeon4dx": {
+      "theaCd": "013012",
+      "theaNm": "CGV 대전",
+      "scrn": "^4DX$",
+      "confidence": "auto"
+    },
+    "daejeonTerminal4dx": {
+      "theaCd": "013026",
+      "theaNm": "CGV 대전터미널",
+      "scrn": "^4DX$",
+      "confidence": "auto"
+    },
+    "dongtanStation4dx": {
+      "theaCd": "002234",
+      "theaNm": "CGV 동탄역",
+      "scrn": "^4DX$",
+      "confidence": "auto"
+    },
+    "banghak4dx": {
+      "theaCd": "001289",
+      "theaNm": "CGV 방학",
+      "scrn": "^4DX$",
+      "confidence": "auto"
+    },
+    "bucheon4dx": {
+      "theaCd": "002057",
+      "theaNm": "CGV 부천",
+      "scrn": "^01관\\(4DX\\)$",
+      "confidence": "auto"
+    },
+    "seomyeon4dx": {
+      "theaCd": "011007",
+      "theaNm": "CGV 서면",
+      "scrn": "^4DX관$",
+      "confidence": "auto"
+    },
+    "sinsegaeGyeonggi4dx": {
+      "theaCd": "002125",
+      "theaNm": "CGV 신세계경기",
+      "scrn": "^4DX$",
+      "confidence": "auto"
+    },
+    "sinchonArtreon4dx": {
+      "theaCd": "001205",
+      "theaNm": "CGV 신촌아트레온",
+      "scrn": "^06관\\(4DX\\)$",
+      "confidence": "auto"
+    },
+    "asiad4dx": {
+      "theaCd": "011045",
+      "theaNm": "CGV 아시아드",
+      "scrn": "^08관\\(4DX\\)$",
+      "confidence": "auto"
+    },
+    "ansan4dx": {
+      "theaCd": "002118",
+      "theaNm": "CGV 안산",
+      "scrn": "^4DX$",
+      "confidence": "auto"
+    },
+    "yeonnam4dx": {
+      "theaCd": "001283",
+      "theaNm": "CGV 연남",
+      "scrn": "^01관\\(4DX\\)$",
+      "confidence": "auto"
+    },
+    "yeongdeungpo4dx": {
+      "theaCd": "001158",
+      "theaNm": "CGV 영등포",
+      "scrn": "^02관\\ \\(4DX\\)$",
+      "confidence": "auto"
+    },
+    "ulsanSamsan4dx": {
+      "theaCd": "014013",
+      "theaNm": "CGV 울산삼산",
+      "scrn": "^8층\\ 10관\\ \\[4DX\\]$",
+      "confidence": "auto"
+    },
+    "incheon4dx": {
+      "theaCd": "015005",
+      "theaNm": "CGV 인천",
+      "scrn": "^04관\\(4DX\\)$",
+      "confidence": "auto"
+    },
+    "jeonjuGosa4dx": {
+      "theaCd": "008226",
+      "theaNm": "CGV 전주고사",
+      "scrn": "^08관\\ \\[4DX\\]$",
+      "confidence": "auto"
+    },
+    "jeju4dx": {
+      "theaCd": "010011",
+      "theaNm": "CGV 제주",
+      "scrn": "^4DX관$",
+      "confidence": "auto"
+    },
+    "junggye4dx": {
+      "theaCd": "001203",
+      "theaNm": "CGV 중계",
+      "scrn": "^03관\\(4DX\\)$",
+      "confidence": "auto"
+    },
+    "cheonanPentaport4dx": {
+      "theaCd": "005043",
+      "theaNm": "CGV 천안펜타포트",
+      "scrn": "^4DX$",
+      "confidence": "auto"
+    },
+    "cheongjuZwell4dx": {
+      "theaCd": "004036",
+      "theaNm": "CGV 청주지웰시티",
+      "scrn": "^01관\\(4DX\\)$",
+      "confidence": "auto"
+    },
+    "pyeongtaek4dx": {
+      "theaCd": "002176",
+      "theaNm": "CGV 평택",
+      "scrn": "^01관\\(4DX\\)$",
+      "confidence": "auto"
+    },
+    "goyangStarfieldDolbyVision": {
+      "theaCd": "002229",
+      "theaNm": "메가박스 고양스타필드",
+      "scrn": "^Dolby\\ Atmos관$",
+      "confidence": "auto"
+    },
+    "mokdongDolbyVision": {
+      "theaCd": "001112",
+      "theaNm": "메가박스 목동",
+      "scrn": "^Dolby\\ Atmos관$",
+      "confidence": "auto"
+    },
+    "sangamDolbyVision": {
+      "theaCd": "001267",
+      "theaNm": "메가박스 상암월드컵경기장",
+      "scrn": "^Dolby\\ ATMOS관$",
+      "confidence": "auto"
+    },
+    "suwonStarfieldDolbyVision": {
+      "theaCd": "002309",
+      "theaNm": "메가박스 수원스타필드",
+      "scrn": "^Dolby\\ Atoms관$",
+      "confidence": "auto"
+    },
+    "suwonAkDolby": {
+      "theaCd": "002303",
+      "theaNm": "메가박스 수원AK플라자",
+      "scrn": "^DOLBY\\ CINEMA$",
+      "confidence": "reviewed",
+      "note": "Site '메가박스 수원AK플라자(수원역)' confirmed as 002303 (002007/002309 are different sites). 002303-only fetch found a single Dolby Cinema screen: 'DOLBY CINEMA' (movieNm suffix (DOLBYCINEMA))."
+    },
+    "suwonAkMx4d": {
+      "theaCd": "002303",
+      "theaNm": "메가박스 수원AK플라자",
+      "scrn": "^MEGA\\(MX4D\\)관$",
+      "confidence": "reviewed",
+      "note": "Site '메가박스 수원AK플라자(수원역)' confirmed as 002303 (002007/002309 are different sites). 002303-only fetch found a single MX4D screen: 'MEGA(MX4D)관' (suffix (4D) when 4D-formatted, (디지털) otherwise)."
+    },
+    "hongdaeScreenX": {
+      "theaCd": "001222",
+      "theaNm": "CGV 홍대",
+      "scrn": "^0[135]관\\(SCREENX\\)$",
+      "confidence": "reviewed",
+      "note": "KOBIS has three ScreenX screens; the app models 홍대 ScreenX as one hall, so a premium showing in any counts."
+    },
+    "guuiEastpoleDolbyVision": {
+      "theaCd": "001299",
+      "theaNm": "메가박스 구의 이스트폴",
+      "scrn": "^DVA관$",
+      "confidence": "reviewed",
+      "note": "KOBIS labels the Dolby Vision/Atmos screen 'DVA관'. Hall-attribute format: any film shown in this screen counts."
+    },
+    "cheongjuTerminalDolbyVision": {
+      "theaCd": "004056",
+      "theaNm": "메가박스 청주터미널",
+      "scrn": "^DVA관$",
+      "confidence": "reviewed",
+      "note": "KOBIS labels the Dolby Vision/Atmos screen 'DVA관'. Hall-attribute format: any film shown in this screen counts."
+    }
+  },
+  "review": [
+    {
+      "hallId": "cheonanScreenX",
+      "reason": "RESURVEY: scrnNm 후보 0개 (theaCd 005043 CGV 천안펜타포트)",
+      "candidates": [],
+      "theaCd": "005043"
+    }
+  ],
+  "notes": [
+    "theaCd 002309 (메가박스 수원스타필드)의 scrnNm 'Dolby Atoms관'은 오타(Atmos의 철자 도치)가 아니라 KOBIS 응답에 실제로 존재하는 문자열 그대로 사용한 것 — 의도적 정확 일치(intentional-exact).",
+    "findTheaCdList.do는 wideareaCd 파라미터를 무시한다 — 17개 광역코드 전부 동일한 전국 606개 극장 리스트를 반환했다. 지역별로 조회 범위를 좁히는 용도로 쓸 수 없다.",
+    "극장명 매칭은 반드시 '정규화 없는 완전 일치(exact literal match)'를 '스타필드/시네마 등 토큰 제거 후 접두 매칭(prefix fallback)'보다 먼저 시도해야 한다 — 그렇지 않으면 예: '메가박스 수원' vs '메가박스 수원스타필드'처럼 서로 다른 실제 극장이 같은 정규화 문자열로 충돌한다.",
+    "scrn 패턴은 scrnNm.strip()에 대해 매칭한다 — KOBIS는 일부 관 이름에 머리/꼬리 공백을 붙여 보낸다(012057·001298·001289의 ' 4DX관'/' 4DX', 005043의 '10관 '). 패턴에는 그 공백을 넣지 않는다."
+  ]
+}

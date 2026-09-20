@@ -14,9 +14,17 @@ daily_curation.py 는 한 번 돌 때마다 $0.4 안팎이 든다(웹 검색 6�
   3. 어떤 작품의 개봉일이 오늘 ±3일 이내      → 포맷 확정/종료 공지가 나오는 창.
   4. TMDB 한국 상영작 목록에 처음 보는 작품   → 새 개봉이 있었다 = 판이 바뀌었다.
   5. TMDB의 한국 개봉일이 curated.json과 다름  → 개봉일이 옮겨졌다.
+  6. KOBIS 상영 후보가 남아 있음              → 특수관에 걸렸는데 아직 작품이 아니다.
 
-4·5는 TMDB_READ_TOKEN 이 있을 때만 검사한다. 없으면 1~3만으로 동작하며, 그 경우
+4·5는 TMDB_READ_TOKEN 이 있을 때만 검사한다. 없으면 나머지만으로 동작하며, 그 경우
 기존 "주 2회"와 비용이 같고 요일만 개봉 사이클에 맞춰진 것이다.
+
+6은 `screening.py`가 만든 screening_candidates.json을 읽는다. 무료다(파일 하나).
+같은 후보로 매일 유료 단계를 켜지 않기 위해, 이미 처리한(추가했거나 이유를 달아
+거절한) movieCd는 screening_state.json의 handledCandidates에 날짜와 함께 남고
+CANDIDATE_REOFFER_DAYS일 동안 제안하지 않는다. 판정 로직은 screening.py의
+`offerable_candidates()` 하나뿐이다 — precheck와 daily_curation이 각자 해석하면
+"처리했는데 또 제안"이 조용히 생긴다.
 
 ## 스냅샷 (tmdb_snapshot.json)
 
@@ -42,6 +50,8 @@ import urllib.error
 import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+
+import screening
 
 KST = timezone(timedelta(hours=9))
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -110,6 +120,19 @@ def main() -> int:
         d = parse_curated_date(w.get("date"))
         if d and abs((d - today).days) <= RELEASE_WINDOW_DAYS:
             reasons.append(f"{w['title']} 개봉일({w['date']})이 ±{RELEASE_WINDOW_DAYS}일 이내")
+
+    # 6. KOBIS 상영 후보 — 무료(로컬 파일 두 개). 토큰과 무관하게 항상 검사한다.
+    state = screening.load_state_file()
+    # 비영화 키워드에 걸린 후보로는 유료 단계를 켜지 않는다. daily_curation도 같은
+    # 규칙으로 프롬프트에서 빼지만, 거기서만 걸러내면 "콘서트 한 편 때문에 $0.4"가
+    # 그대로 나간다 — 판정을 켤지 말지가 이 스크립트의 일이므로 여기서도 본다.
+    offerable = [c for c in screening.offerable_candidates(
+                     screening.load_candidates_file(), state, today)
+                 if not screening.nonfilm_reason(c["kobisNm"])]
+    if offerable:
+        head = ", ".join(f"{c['kobisNm']}({c['theaterCount']}곳)" for c in offerable[:3])
+        reasons.append(f"KOBIS 특수관 상영 후보 {len(offerable)}편: {head}"
+                       + (" 외" if len(offerable) > 3 else ""))
 
     # 4·5. TMDB — 토큰이 있을 때만
     token = os.environ.get("TMDB_READ_TOKEN", "").strip()

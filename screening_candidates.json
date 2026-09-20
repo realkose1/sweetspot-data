@@ -1,0 +1,77 @@
+[
+  {
+    "movieCd": "20070216",
+    "kobisNm": "시간을 달리는 소녀",
+    "formats": [
+      "4DX"
+    ],
+    "theaterCount": 29,
+    "firstSeenDate": "2026-09-20"
+  },
+  {
+    "movieCd": "20241110",
+    "kobisNm": "아이유 콘서트 : 더 위닝",
+    "formats": [
+      "4DX",
+      "IMAX190",
+      "IMAX43",
+      "SCREENX"
+    ],
+    "theaterCount": 26,
+    "firstSeenDate": "2026-09-20"
+  },
+  {
+    "movieCd": "20256308",
+    "kobisNm": "인턴",
+    "formats": [
+      "SCREENX"
+    ],
+    "theaterCount": 24,
+    "firstSeenDate": "2026-09-20"
+  },
+  {
+    "movieCd": "20240614",
+    "kobisNm": "퇴마록",
+    "formats": [
+      "SCREENX"
+    ],
+    "theaterCount": 23,
+    "firstSeenDate": "2026-09-20"
+  },
+  {
+    "movieCd": "20233743",
+    "kobisNm": "아이유 콘서트 : 더 골든 아워",
+    "formats": [
+      "IMAX43"
+    ],
+    "theaterCount": 1,
+    "firstSeenDate": "2026-09-20"
+  },
+  {
+    "movieCd": "20255033",
+    "kobisNm": "암살자(들)",
+    "formats": [
+      "SUPERPLEX"
+    ],
+    "theaterCount": 1,
+    "firstSeenDate": "2026-09-20"
+  },
+  {
+    "movieCd": "20263870",
+    "kobisNm": "레지던트 이블: 0번째 밤",
+    "formats": [
+      "SUPERPLEX"
+    ],
+    "theaterCount": 1,
+    "firstSeenDate": "2026-09-20"
+  },
+  {
+    "movieCd": "20265146",
+    "kobisNm": "옵세션",
+    "formats": [
+      "SUPERPLEX"
+    ],
+    "theaterCount": 1,
+    "firstSeenDate": "2026-09-20"
+  }
+]

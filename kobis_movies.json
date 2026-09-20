@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "works": {
+    "odyssey": {
+      "movieCd": "20250654",
+      "kobisNm": "오디세이"
+    },
+    "spiderman": {
+      "movieCd": "20262770",
+      "kobisNm": "스파이더맨: 브랜드 뉴 데이"
+    },
+    "hope": {
+      "movieCd": "20233219",
+      "kobisNm": "호프"
+    },
+    "toystory5": {
+      "movieCd": "20259781",
+      "kobisNm": "토이 스토리 5"
+    },
+    "eyes": {
+      "movieCd": "20242402",
+      "kobisNm": "눈동자",
+      "note": "searchMovieList.do 31건 중 en='THE EYES'·연도 2025·상태 개봉으로 특정 (동명이작 다수: '2대1: 두꺼운 물건에 풀린 눈동자' 등)"
+    },
+    "kingswarden": {
+      "movieCd": "20242837",
+      "kobisNm": "왕과 사는 남자"
+    },
+    "moana": {
+      "movieCd": "20259946",
+      "kobisNm": "모아나",
+      "note": "searchMovieList.do 2건 중 제작연도 2026(실사판)으로 특정. 20165443은 2016 애니메이션 오리지널."
+    },
+    "minions": {
+      "movieCd": "20261784",
+      "kobisNm": "미니언즈 & 몬스터즈",
+      "note": "searchMovieList.do 2건 중 제목 완전일치(미니언즈 & 몬스터즈, 2026)로 특정. 20145361은 2015 '미니언즈'(별개 작품)."
+    }
+  }
+}
