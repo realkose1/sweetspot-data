@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-09-21T08:31:13+09:00",
+  "dataTimestamp": "2026-09-22T09:05:31+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -160,6 +160,28 @@
       "open": null,
       "tmdbId": 1315772,
       "recommendedFormat": "SCREENX"
+    },
+    {
+      "id": "avengersendgame",
+      "title": "어벤져스: 엔드게임 앙코르",
+      "en": "AVENGERS: ENDGAME",
+      "pc1": "#1c2340",
+      "pc2": "#05070d",
+      "date": "2019.04.24",
+      "run": "185분",
+      "genre": "슈퍼히어로 액션",
+      "meta": "2019.04.24 개봉(2026.09.23 재개봉) · 185분 · 슈퍼히어로 액션",
+      "badges": [
+        "IMAX190",
+        "SCREENX",
+        "4DX",
+        "DOLBY"
+      ],
+      "hook": "스크린X·돌비 시네마·4DX·아이맥스 특별관에서 모두 만날 수 있는 재개봉작이에요",
+      "open": null,
+      "tmdbId": 299534,
+      "recommendedFormat": "IMAX190",
+      "premiumEnd": null
     }
   ],
   "halls": [

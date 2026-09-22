@@ -1,5 +1,18 @@
 [
   {
+    "movieCd": "20266766",
+    "kobisNm": "어벤져스: 엔드게임 앙코르",
+    "formats": [
+      "4DX",
+      "DOLBY",
+      "DOLBYVISION",
+      "SCREENX",
+      "SUPERPLEX"
+    ],
+    "theaterCount": 72,
+    "firstSeenDate": "2026-09-22"
+  },
+  {
     "movieCd": "20070216",
     "kobisNm": "시간을 달리는 소녀",
     "formats": [
@@ -14,7 +27,6 @@
     "formats": [
       "4DX",
       "IMAX190",
-      "IMAX43",
       "SCREENX"
     ],
     "theaterCount": 26,
@@ -24,7 +36,8 @@
     "movieCd": "20256308",
     "kobisNm": "인턴",
     "formats": [
-      "SCREENX"
+      "SCREENX",
+      "SUPERPLEX"
     ],
     "theaterCount": 24,
     "firstSeenDate": "2026-09-20"
@@ -35,16 +48,7 @@
     "formats": [
       "SCREENX"
     ],
-    "theaterCount": 23,
-    "firstSeenDate": "2026-09-20"
-  },
-  {
-    "movieCd": "20233743",
-    "kobisNm": "아이유 콘서트 : 더 골든 아워",
-    "formats": [
-      "IMAX43"
-    ],
-    "theaterCount": 1,
+    "theaterCount": 22,
     "firstSeenDate": "2026-09-20"
   },
   {
@@ -53,7 +57,16 @@
     "formats": [
       "SUPERPLEX"
     ],
-    "theaterCount": 1,
+    "theaterCount": 11,
+    "firstSeenDate": "2026-09-20"
+  },
+  {
+    "movieCd": "20265146",
+    "kobisNm": "옵세션",
+    "formats": [
+      "SUPERPLEX"
+    ],
+    "theaterCount": 2,
     "firstSeenDate": "2026-09-20"
   },
   {
@@ -66,12 +79,21 @@
     "firstSeenDate": "2026-09-20"
   },
   {
-    "movieCd": "20265146",
-    "kobisNm": "옵세션",
+    "movieCd": "20265388",
+    "kobisNm": "고스트밴드",
     "formats": [
       "SUPERPLEX"
     ],
     "theaterCount": 1,
-    "firstSeenDate": "2026-09-20"
+    "firstSeenDate": "2026-09-22"
+  },
+  {
+    "movieCd": "20266051",
+    "kobisNm": "바다 탐험대 옥토넛 어보브 앤 비욘드 : 두근두근 대자연 어드벤처",
+    "formats": [
+      "SUPERPLEX"
+    ],
+    "theaterCount": 1,
+    "firstSeenDate": "2026-09-22"
   }
 ]
