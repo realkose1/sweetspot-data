@@ -205,6 +205,8 @@ Store가 개인정보 처리방침 URL을 필수로 요구하는데, 그 페이�
 |---|---|---|
 | `kobis_halls.json` | 사람 (수작업 검수) | `screening.py` |
 | `kobis_movies.json` | 사람 + `daily_curation.py`(작품 추가 시) | `screening.py` |
+| └ `works` | workId → movieCd 매핑 | |
+| └ `ignore` | 영구 제외 movieCd (사람만 씀) | |
 | `screening.json` | `screening.py` | **앱** |
 | `screening_state.json` | `screening.py`, `daily_curation.py` | 봇만 |
 | `screening_candidates.json` | `screening.py` | `precheck.py`, `daily_curation.py` |
@@ -257,9 +259,18 @@ screening.py  (무료, 매일)  →  precheck.py  (무료)  →  daily_curation.
 
 ### 작품 추가와 은퇴
 
-- **추가** — 프리미엄 접미사로 걸렸는데 `kobis_movies.json`에 없는 `movieCd`는
-  `screening_candidates.json`에 후보로 쌓이고, 그것만으로 사전 점검이 유료 단계를
-  켠다. 하루 최대 2편, 극장 수가 큰 것부터. 후보는 프롬프트에 닿기 전에 두 단계를
+- **후보 자격** — 창 안에서 **진짜 프리미엄 접미사**(`(IMAX)`·`(4D)`·`(ScreenX)`·
+  `(DOLBYCINEMA)`)로 한 번이라도 잡혀야 후보가 된다. 수퍼플렉스·Dolby Atmos 같은
+  **관 속성 관에서 `(디지털)`로만** 보인 것은 후보가 아니다 — 그 관들은 아무 영화나
+  틀기 때문에, 수퍼플렉스 한 관에 걸렸다는 이유로 후보가 되면 **배지에 넣을 포맷이
+  하나도 없는 작품**이 앱에 들어온다. (이미 큐레이션된 작품의 관 속성 상영은
+  `screening.json`에 그대로 싣는다 — 거기서는 "이 관에서 볼 수 있다"가 맞는 말이다.)
+- **영구 제외** — 이슈를 받은 사람이 "이건 이 앱 대상이 아니다"라고 판단하면
+  `kobis_movies.json`의 `ignore`에 `movieCd`를 넣는다. 그 뒤로는 후보로도,
+  `needsHuman`으로도 다시 올라오지 않는다. 키워드로 거를 수 없는 개별 편성이 오는
+  자리다(첫 항목: 아동 TV 스페셜 `바다 탐험대 옥토넛…`).
+- **추가** — 후보로 남은 `movieCd`는 `screening_candidates.json`에 쌓이고, 그것만으로
+  사전 점검이 유료 단계를 켠다. 하루 최대 2편, 극장 수가 큰 것부터. 후보는 프롬프트에 닿기 전에 두 단계를
   지난다:
   1. **비영화 키워드 필터**(콘서트·실황·뮤지컬·팬미팅 등) — 무료. 이것만 남으면
      유료 단계를 아예 켜지 않는다. TMDB에 등재된 콘서트 실황도 있으므로 `tmdbId`

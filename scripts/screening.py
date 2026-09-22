@@ -114,6 +114,10 @@ SUFFIX_IMAX = "IMAX"
 SUFFIX_4D = "4D"
 SUFFIX_SCREENX = "ScreenX"
 SUFFIX_DOLBYCINEMA = "DOLBYCINEMA"
+# 작품이 그 포맷으로 만들어졌다는 표시. 후보 발굴의 자격 조건이다 — 아래
+# `aggregate()` 주석 참고. 관 속성 포맷(`(디지털)`)은 여기 들어가지 않는다.
+PREMIUM_SUFFIXES = frozenset(
+    {SUFFIX_IMAX, SUFFIX_4D, SUFFIX_SCREENX, SUFFIX_DOLBYCINEMA})
 
 # 관이 그런 관인 포맷. 이 관에서 `(디지털)`은 "상영 중"이다.
 HALL_ATTRIBUTE_FORMATS = ("SUPERPLEX", "DOLBYVISION")
@@ -425,13 +429,25 @@ def build_movie_index(movies_map: dict, curated: dict) -> dict:
     return index
 
 
+def build_ignore_set(movies_map: dict) -> set:
+    """영구 제외 movieCd. 후보로도, needsHuman으로도 다시 올라오지 않는다.
+
+    이슈를 받은 사람이 "이건 이 앱 대상이 아니다"라고 판단한 것을 적어 두는
+    자리다. 키워드로 거를 수 없는 개별 편성이 여기 온다 — 옥토넛 같은 아동
+    TV 스페셜은 제목에 규칙성이 없어 정규식으로 잡을 수 없고, 그렇다고 매주
+    같은 이슈가 다시 열리게 둘 수도 없다.
+    """
+    return {str(cd) for cd in (movies_map.get("ignore") or {})}
+
+
 # ---------------------------------------------------------------- 집계
 
 def count_shows(show_tm: str) -> int:
     return len([s for s in (show_tm or "").split(",") if s.strip()])
 
 
-def aggregate(raw: dict, dates: list, hall_index: dict, movie_index: dict, warn):
+def aggregate(raw: dict, dates: list, hall_index: dict, movie_index: dict, warn,
+              ignore: set = frozenset()):
     """3일치 응답 → (works, premium_rows_today, candidates, works_with_premium).
 
     works: {workId: {hallId: {formats:set, lastSeen:str, showsToday:int}}}
@@ -473,12 +489,21 @@ def aggregate(raw: dict, dates: list, hall_index: dict, movie_index: dict, warn)
 
                 work_id = movie_index.get(movie_cd)
                 if work_id is None:
+                    if movie_cd in ignore:
+                        continue
                     cand = candidates.setdefault(movie_cd, {
-                        "kobisNm": title, "formats": set(), "theaCds": set(), "dates": set(),
+                        "kobisNm": title, "formats": set(), "theaCds": set(),
+                        "dates": set(), "premium": False,
                     })
                     cand["formats"].add(code)
                     cand["theaCds"].add(hall["theaCd"])
                     cand["dates"].add(show_dt)
+                    # 관 속성 관(SUPERPLEX·Dolby Atmos)의 `(디지털)` 상영만으로는
+                    # 후보가 되지 않는다. 그 관들은 아무 영화나 튼다 — 수퍼플렉스
+                    # 한 관에 걸렸다고 특수관 포맷 영화인 것이 아니다. 그걸 후보로
+                    # 올리면 배지에 넣을 포맷이 하나도 없는 작품이 앱에 들어온다.
+                    if suffix in PREMIUM_SUFFIXES:
+                        cand["premium"] = True
                     continue
 
                 slot = works.setdefault(work_id, {}).setdefault(hall_id, {
@@ -494,6 +519,14 @@ def aggregate(raw: dict, dates: list, hall_index: dict, movie_index: dict, warn)
     for hall_id in sorted(raw_only_match):
         warn(f"{hall_id}: scrnNm 원문으로만 패턴이 맞았다 — kobis_halls.json의 "
              f"scrn에 들어간 공백을 정리할 것")
+
+    # 관 속성 관에서만 보인 것은 후보에서 뺀다. screening.json 쪽(이미 큐레이션된
+    # 작품의 halls)은 그대로 둔다 — 거기서는 "이 관에서 볼 수 있다"가 맞는 말이다.
+    dropped = {cd: c for cd, c in candidates.items() if not c["premium"]}
+    for movie_cd, c in sorted(dropped.items(), key=lambda x: -len(x[1]["theaCds"])):
+        print(f"  후보 제외 {movie_cd} {c['kobisNm']} — 관 속성 관"
+              f"({','.join(sorted(c['formats']))})에서만 보임, 극장 {len(c['theaCds'])}곳")
+    candidates = {cd: c for cd, c in candidates.items() if c["premium"]}
     return works, premium_rows_today, candidates
 
 
@@ -648,6 +681,7 @@ def main(argv=None) -> int:
         halls_map, movies_map, curated, state = load_inputs()
         hall_index = build_hall_index(halls_map, curated, warn)
         movie_index = build_movie_index(movies_map, curated)
+        ignore = build_ignore_set(movies_map)
 
         thea_cds = sorted({h["theaCd"] for h in hall_index.values()}
                           | resurvey_thea_cds(halls_map))
@@ -674,7 +708,7 @@ def main(argv=None) -> int:
 
         today_iso = iso(dates[0])
         works, premium_rows_today, candidates = aggregate(
-            raw, dates, hall_index, movie_index, warn)
+            raw, dates, hall_index, movie_index, warn, ignore)
 
         # 프리미엄 행 급감 = 전송사업자 장애 의심. 발행하지 않는다.
         prev = state.get("prevPremiumRowCount")
@@ -691,7 +725,7 @@ def main(argv=None) -> int:
         # kobis_movies.json에 들어간(= 작품이 된) movieCd의 처리 기록은 지운다.
         handled = state.get("handledCandidates") or {}
         for movie_cd in list(handled):
-            if movie_cd in movie_index:
+            if movie_cd in movie_index or movie_cd in ignore:
                 del handled[movie_cd]
 
     except Abort as e:
