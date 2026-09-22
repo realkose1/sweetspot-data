@@ -1,16 +1,13 @@
 [
   {
-    "movieCd": "20266766",
-    "kobisNm": "어벤져스: 엔드게임 앙코르",
+    "movieCd": "20255033",
+    "kobisNm": "암살자(들)",
     "formats": [
-      "4DX",
-      "DOLBY",
       "DOLBYVISION",
-      "SCREENX",
       "SUPERPLEX"
     ],
-    "theaterCount": 72,
-    "firstSeenDate": "2026-09-22"
+    "theaterCount": 12,
+    "firstSeenDate": "2026-09-20"
   },
   {
     "movieCd": "20070216",
@@ -18,46 +15,7 @@
     "formats": [
       "4DX"
     ],
-    "theaterCount": 29,
-    "firstSeenDate": "2026-09-20"
-  },
-  {
-    "movieCd": "20241110",
-    "kobisNm": "아이유 콘서트 : 더 위닝",
-    "formats": [
-      "4DX",
-      "IMAX190",
-      "SCREENX"
-    ],
-    "theaterCount": 26,
-    "firstSeenDate": "2026-09-20"
-  },
-  {
-    "movieCd": "20256308",
-    "kobisNm": "인턴",
-    "formats": [
-      "SCREENX",
-      "SUPERPLEX"
-    ],
-    "theaterCount": 24,
-    "firstSeenDate": "2026-09-20"
-  },
-  {
-    "movieCd": "20240614",
-    "kobisNm": "퇴마록",
-    "formats": [
-      "SCREENX"
-    ],
-    "theaterCount": 22,
-    "firstSeenDate": "2026-09-20"
-  },
-  {
-    "movieCd": "20255033",
-    "kobisNm": "암살자(들)",
-    "formats": [
-      "SUPERPLEX"
-    ],
-    "theaterCount": 11,
+    "theaterCount": 10,
     "firstSeenDate": "2026-09-20"
   },
   {
@@ -70,22 +28,13 @@
     "firstSeenDate": "2026-09-20"
   },
   {
-    "movieCd": "20263870",
-    "kobisNm": "레지던트 이블: 0번째 밤",
+    "movieCd": "20256308",
+    "kobisNm": "인턴",
     "formats": [
       "SUPERPLEX"
     ],
     "theaterCount": 1,
     "firstSeenDate": "2026-09-20"
-  },
-  {
-    "movieCd": "20265388",
-    "kobisNm": "고스트밴드",
-    "formats": [
-      "SUPERPLEX"
-    ],
-    "theaterCount": 1,
-    "firstSeenDate": "2026-09-22"
   },
   {
     "movieCd": "20266051",
