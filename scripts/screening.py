@@ -94,6 +94,13 @@ REQUEST_SLEEP = 0.1
 # "절반 이상 실패" 규칙이 발행 여부를 정한다. 워크플로우의 step timeout(30분)
 # 보다 짧게 둔다 — 러너가 단계를 죽이면 이유를 적을 기회조차 없기 때문이다.
 DEFAULT_BUDGET_SECONDS = 25 * 60
+# 연속 실패가 이만큼 쌓이면 예산이 남았어도 즉시 접는다. 2026-09-21 실행이
+# 정확히 이 경우였다 — KOBIS가 러너에서 아예 응답하지 않아 126회 시도가 전부
+# 10초 타임아웃으로 죽었고, 성공이 단 한 건도 없는 채로 예산 25분을 다 썼다.
+# 실패는 빈 응답이 아니라 예외다(응답이 오면 스케줄이 비어도 성공으로 센다).
+# 그래서 연속 예외 10건은 "이 실행은 가망이 없다"는 뜻이다 — 3분 안에 접고
+# 같은 이유를 이슈로 올리는 편이 러너 25분을 태우는 것보다 낫다.
+OUTAGE_FAILURE_STREAK = 10
 THEATER_FAILURE_ABORT_RATIO = 0.5
 PREMIUM_DROP_ABORT_RATIO = 0.5
 RETIRE_STREAK_DAYS = 7
@@ -227,16 +234,21 @@ def collect_live(thea_cds: list, dates: list, warn, budget_seconds: float) -> di
     raw: dict = {cd: {} for cd in thea_cds}
     failed = {dt: set(thea_cds) for dt in dates}
     budget_hit = None
+    outage_hit = None
+    streak = 0
     total = len(thea_cds) * len(dates)
     done = 0
 
     for show_dt in dates:
-        if budget_hit:
+        if budget_hit or outage_hit:
             break
         for cd in thea_cds:
             elapsed = time.monotonic() - started
             if elapsed >= budget_seconds:
                 budget_hit = (show_dt, cd, elapsed)
+                break
+            if streak >= OUTAGE_FAILURE_STREAK:
+                outage_hit = (show_dt, streak, elapsed)
                 break
 
             t0 = time.monotonic()
@@ -255,8 +267,10 @@ def collect_live(thea_cds: list, dates: list, warn, budget_seconds: float) -> di
             done += 1
 
             if rows is None:
-                mark = "실패"
+                streak += 1
+                mark = f"실패(연속 {streak})"
             else:
+                streak = 0
                 raw[cd][show_dt] = rows
                 failed[show_dt].discard(cd)
                 mark = f"{len(rows):4d}행"
@@ -272,6 +286,10 @@ def collect_live(thea_cds: list, dates: list, warn, budget_seconds: float) -> di
         dt, cd, elapsed = budget_hit
         warn(f"시간 예산 {budget_seconds:.0f}초 초과 ({elapsed:.0f}초 경과) — "
              f"{dt} {cd}에서 수집을 멈춘다. 남은 요청은 실패로 처리")
+    if outage_hit:
+        dt, n, elapsed = outage_hit
+        warn(f"연속 {n}회 실패 ({elapsed:.0f}초 경과) — KOBIS 응답 없음으로 보고 "
+             f"{dt}에서 수집을 접는다. 남은 요청은 실패로 처리")
 
     # 날짜 하나라도 절반 이상 실패하면 발행하지 않는다. 3일 창을 약속하고
     # 하루치만 싣는 것은 조용한 데이터 손실이다(빠진 날의 상영이 "없음"이 된다).
@@ -282,7 +300,10 @@ def collect_live(thea_cds: list, dates: list, warn, budget_seconds: float) -> di
         collected = len(thea_cds) - n_failed
         detail = (f"{show_dt} 수집 실패 극장 {n_failed}/{len(thea_cds)}곳 "
                   f"— 절반 이상 실패해 발행 중단")
-        if budget_hit:
+        if outage_hit:
+            detail = (f"KOBIS 응답 없음(연속 {outage_hit[1]}회 실패로 조기 중단): "
+                      f"{collected}/{len(thea_cds)} 극장 수집 ({show_dt} 기준) — {detail}")
+        elif budget_hit:
             detail = (f"시간 예산 초과: {collected}/{len(thea_cds)} 극장 수집 "
                       f"({show_dt} 기준) — {detail}")
         raise Abort(2, detail)

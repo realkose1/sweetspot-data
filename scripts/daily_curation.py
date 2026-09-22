@@ -29,6 +29,7 @@ ScreenX·4DX에 걸려 있었다), 그것들은 TMDB 영화 DB에 없다.
 """
 
 import json
+import os
 import re
 import sys
 from datetime import datetime, timedelta, timezone
@@ -37,6 +38,7 @@ from pathlib import Path
 from anthropic import Anthropic
 
 import screening
+import tmdb_resolve
 
 KST = timezone(timedelta(hours=9))
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -129,31 +131,36 @@ def build_prompt(works: list, candidates: list, today: datetime) -> str:
 
 아래는 어제·오늘·내일 전국 특수관 편성에서 `(IMAX)`·`(4D)`·`(ScreenX)`·`(DOLBYCINEMA)` 접미사로
 실제로 잡혔는데 위 목록에 없는 콘텐츠입니다. `formats`는 KOBIS에서 관측된 포맷, `theaterCount`는
-그 포맷으로 걸린 극장 수입니다(많을수록 큰 편성).
+그 포맷으로 걸린 극장 수입니다(많을수록 큰 편성). 나머지 필드는 **TMDB API로 이미 확정한 값**입니다.
 
 {cand_json}
 
+**`tmdbId`·`en`·`date`·`run`·`genre`는 이미 TMDB API로 확정해 위에 적어 두었습니다.**
+그 다섯 개는 **그대로 옮겨 적으세요.** 검색해서 확인하지 마세요 — 이미 확인된 값이고,
+검증기가 `tmdbId`와 `date`가 위 값과 다르면 그 추가를 거부합니다. 웹 검색 예산은
+`hook`과 `meta`에만 쓰면 됩니다.
+
 이 중 **영화인 것만** `additions`로 추가하세요. 규칙:
 
-- **한 번에 최대 {MAX_ADDITIONS}편.** theaterCount가 큰 것부터 봅니다. 검색 예산이 부족하면 더 적게 넣으세요.
-- **영화가 아닌 것은 추가하지 않습니다.** 콘서트 실황·라이브뷰잉·뮤지컬·스포츠 중계·팬미팅·
-  재개봉 특가 이벤트는 이 앱의 대상이 아닙니다. 판단 기준은 단순합니다 — **TMDB 영화 DB에
-  그 작품이 없으면 추가하지 않습니다.**
+- **한 번에 최대 {MAX_ADDITIONS}편.** theaterCount가 큰 것부터 봅니다.
+- **영화가 아닌 것은 추가하지 않습니다.** 콘서트 실황·라이브뷰잉·뮤지컬·스포츠 중계·팬미팅은
+  이 앱의 대상이 아닙니다. TMDB에 있다고 영화인 것은 아닙니다 — 콘서트 실황도 TMDB에 등재된
+  것이 있습니다. 위 `genre`와 제목을 보고 판단하세요.
 - 추가할 작품마다 아래를 모두 채웁니다. 하나라도 확인 못 하면 그 작품은 넣지 말고 `rejected`에
   이유를 적으세요. 검증기가 빈 필드를 거부하므로 "일단 넣고 나중에"는 불가능합니다.
-  - `movieCd` — 위 후보 목록의 값 그대로.
-  - `tmdbId` — TMDB에서 **실제로 찾은** 정수 id. 추측 금지. 못 찾으면 추가하지 않습니다.
-  - `title` 한국어 제목 / `en` 영문 제목(대문자). `en`에서 work id를 자동 생성합니다.
-  - `date` — TMDB의 **한국 극장 개봉일(type 3)** "yyyy.MM.dd". 한국 극장 개봉일을 확인할 수
-    없으면 그렇게 말하고 추가하지 않습니다.
-  - `run` "123분" / `genre` "액션 · 스릴러"
+  - `movieCd`·`tmdbId`·`en`·`date`·`run`·`genre` — **위 값을 그대로.**
+  - `title` — 한국어 제목. 위 `koTitle`을 쓰되, KOBIS 표기(`kobisNm`)가 이번 편성을 더 잘
+    설명하면(예: 재개봉 행사명) 그쪽을 써도 됩니다.
   - `meta` — "`date` 개봉 · `run` · 장르" 형식. 반드시 `date`로 시작해야 합니다.
+    `reReleaseDate`가 있으면 "`date` 개봉(`reReleaseDate` 재개봉) · …"처럼 적습니다.
   - `badges` — 위 후보의 `formats`를 **모두 포함**해야 합니다(SUPERPLEX·DOLBYVISION은 관 속성이라
     예외). 확인된 포맷을 더 넣어도 됩니다.
   - `recommendedFormat` — `badges` 안의 값 하나.
-  - **재개봉작이면** (예: 2006년 작품이 2026년에 다시 걸린 경우) `date`는 그대로 TMDB의
-    한국 극장 개봉일이고, `meta`와 `hook`에 "재개봉"임을 적습니다. 재개봉 날짜를 새로
-    만들어 넣지 않습니다 — 확인된 개봉일은 원래 개봉일 하나뿐입니다.
+  - **재개봉작이면** `date`는 그대로 **원래** 한국 개봉일입니다(위 값). 재개봉 날짜는
+    `reReleaseDate`에 있을 때만 쓰고, 없으면 meta·hook에 날짜 없이 "재개봉"만 적습니다.
+    재개봉 날짜를 새로 만들어 넣지 않습니다.
+  - `dateType`이 3이 아니면(2=디지털/1=시사회) 한국 *극장* 개봉일이 TMDB에 없다는 뜻입니다.
+    그 경우 meta에 개봉일을 단정하지 말고 `rejected`로 넘기는 편이 낫습니다.
   - `hook` — 웹으로 확인된 한 문장. "어느 포맷으로 볼지" 판단에 쓰이는 사실만(촬영 포맷,
     마스터링, 화면비, 확정된 개봉 포맷). 홍보 문구·줄거리 금지. 비울 수 없습니다.
   - `pc1`·`pc2` — 카드 배경 그라디언트용 어두운 hex 2개("#1b3550" 형식). 포스터 색감에서 고르면
@@ -279,8 +286,8 @@ def validate_changes(changes: list, works_by_id: dict) -> None:
                 raise ValueError(f"{field} 값이 빈 문자열 (workId={wid})")
 
 
-def validate_additions(additions: list, works_by_id: dict,
-                       candidates: list) -> tuple:
+def validate_additions(additions: list, works_by_id: dict, candidates: list,
+                       resolved_by_cd: dict = None) -> tuple:
     """새 작품 추가를 기계적으로 검증하고 (work, meta) 목록을 만든다.
 
     프롬프트로 부탁한 것과 별개로 여기서 전부 다시 본다. 특히:
@@ -300,6 +307,7 @@ def validate_additions(additions: list, works_by_id: dict,
     검증은 반대로 하나라도 틀리면 전체를 거부한다(기존 동작 유지).
     """
     by_cd = {str(c.get("movieCd")): c for c in candidates}
+    resolved_by_cd = resolved_by_cd or {}
     taken = set(works_by_id)
     accepted, rejected = [], []
 
@@ -331,6 +339,17 @@ def validate_additions(additions: list, works_by_id: dict,
                                  "TMDB에 없는 콘텐츠(콘서트 실황·라이브뷰잉 등)는 추가하지 않는다")
             if not DATE_RE.match(str(add["date"])):
                 raise ValueError(f"date 형식 오류: {add['date']!r} (yyyy.MM.dd)")
+
+            # 사전 확정값과 다르면 모델이 지어낸 것이다. tmdbId와 date 둘 다
+            # TMDB API가 결정론적으로 답한 값이므로 협상의 여지가 없다.
+            pre = resolved_by_cd.get(movie_cd)
+            if pre:
+                if tmdb_id != pre["tmdbId"]:
+                    raise ValueError(f"tmdbId가 사전 확정값과 다름: {tmdb_id} != "
+                                     f"{pre['tmdbId']} — 확정값을 그대로 써야 한다")
+                if str(add["date"]) != pre["date"]:
+                    raise ValueError(f"date가 사전 확정값과 다름: {add['date']!r} != "
+                                     f"{pre['date']!r} — 확정값을 그대로 써야 한다")
 
             badges = add["badges"]
             if (not isinstance(badges, list)
@@ -428,11 +447,44 @@ def main() -> int:
                   f"비영화 키워드 {keyword!r} (영화라면 kobis_movies.json에 직접 넣을 것)")
             continue
         offered.append(cand)
+
+    # TMDB로 tmdbId·en·date·run·genre를 미리 확정한다. 이걸 모델에게 맡겼더니
+    # 2026-09-21·22에 후보 세 편이 "검색 예산 안에 TMDB id를 확인하지 못함"으로
+    # 거절됐다 — API가 결정론적으로 답하는 질문에 웹 검색 6회를 쓴 것이다.
+    token = os.environ.get("TMDB_READ_TOKEN", "").strip()
+    needs_human = []
+    if not token:
+        # 토큰 없이 모델에게 떠넘기면 위의 그 실패가 그대로 재현된다. 차라리
+        # 이번 실행의 후보 단계를 통째로 건너뛴다 — 처리 기록을 남기지 않으므로
+        # 토큰이 돌아오면 같은 후보가 그대로 다시 올라온다.
+        if offered:
+            print("::warning::TMDB_READ_TOKEN 없음 — 후보 사전 확정 불가, "
+                  f"이번 실행의 작품 추가를 건너뛴다 (후보 {len(offered)}편 보류)")
+        offered, resolved_by_cd = [], {}
+    else:
+        ok, needs_human = tmdb_resolve.resolve_all(token, offered)
+        resolved_by_cd = {r["movieCd"]: r for r in ok}
+        for r in needs_human:
+            screening.mark_candidate_handled(
+                state, r["movieCd"], "needsHuman", r["reason"], today.date())
+            print(f"::warning::사람 확인 필요 {r['movieCd']} {r['kobisNm']} — {r['reason']}")
+        offered = [c for c in offered if str(c["movieCd"]) in resolved_by_cd]
+
     offered = offered[:MAX_ADDITIONS]
-    if offered:
-        print("후보 " + ", ".join(
-            f"{c['kobisNm']}({c['movieCd']}, {','.join(c['formats'])}, "
-            f"{c['theaterCount']}곳)" for c in offered))
+    prompt_candidates = []
+    for c in offered:
+        r = resolved_by_cd[str(c["movieCd"])]
+        prompt_candidates.append({
+            "movieCd": c["movieCd"], "kobisNm": c["kobisNm"],
+            "formats": c["formats"], "theaterCount": c["theaterCount"],
+            "tmdbId": r["tmdbId"], "koTitle": r["koTitle"], "en": r["en"],
+            "date": r["date"], "dateType": r["dateType"],
+            "reReleaseDate": r["reReleaseDate"], "run": r["run"], "genre": r["genre"],
+        })
+        print(f"후보 확정 {c['movieCd']} {r['koTitle']} → tmdbId {r['tmdbId']} "
+              f"/ {r['date']}(type {r['dateType']})"
+              + (f" / 재개봉 {r['reReleaseDate']}" if r["reReleaseDate"] else "")
+              + f" / {r['run']} / {r['genre']}")
 
     client = Anthropic()
     # cache_control: 웹 검색은 검색할 때마다 누적된 대화 전체를 다시 입력으로
@@ -445,7 +497,7 @@ def main() -> int:
         cache_control={"type": "ephemeral"},
         tools=[{"type": "web_search_20260209", "name": "web_search", "max_uses": 6}],
         messages=[{"role": "user",
-                   "content": build_prompt(data["works"], offered, today)}],
+                   "content": build_prompt(data["works"], prompt_candidates, today)}],
     ) as stream:
         message = stream.get_final_message()
 
@@ -489,7 +541,8 @@ def main() -> int:
                 "reason": ch.get("reason", ""), "source": ch["source"],
             })
 
-    accepted, add_rejects = validate_additions(additions, works_by_id, offered)
+    accepted, add_rejects = validate_additions(
+        additions, works_by_id, prompt_candidates, resolved_by_cd)
     for movie_cd, why in add_rejects:
         print(f"::warning::추가 거부 {movie_cd}: {why}")
 
@@ -526,6 +579,11 @@ def main() -> int:
                 for r in rejected if isinstance(r, dict)}
     verdicts.update({cd: why for cd, why in add_rejects})
     added_cds = {e["movieCd"] for e in issue_entries if e["kind"] == "newWork"}
+    for r in needs_human:
+        issue_entries.append({
+            "kind": "needsHuman", "movieCd": r["movieCd"], "kobisNm": r["kobisNm"],
+            "reason": r["reason"], "candidates": r.get("candidates") or [],
+        })
     for cand in offered:
         movie_cd = str(cand["movieCd"])
         if movie_cd in added_cds:

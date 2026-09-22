@@ -11,7 +11,8 @@ name: 큐레이션 자동 발행 (매일 상영 수집 · 조건부 큐레이션
 #    TMDB 개봉일 불일치, 수동 실행, **KOBIS 상영 후보 잔존**(2026-09-20 추가).
 # 3. daily_curation.py — 유료 단계. 후보에서 작품을 추가할 수도 있다.
 #
-# 이슈는 네 가지 때만 연다: 작품 추가 · 배지 변경 · 프리미엄 은퇴 · screening 중단.
+# 이슈는 다섯 가지 때만 연다: 작품 추가 · 배지 변경 · 프리미엄 은퇴 ·
+# 후보 확인 필요(TMDB로 특정 실패) · screening 중단.
 # 매일 열리던 "큐레이션 검토 필요" 이슈는 폐지했다 — 매일 열리는 알림은 곧 아무도
 # 읽지 않는 알림이 된다. notices는 Actions 로그에만 남는다.
 
@@ -185,7 +186,7 @@ jobs:
       # 이슈를 여는 유일한 다른 경로. screening.py(은퇴)와 daily_curation.py(작품
       # 추가·배지 변경)가 같은 파일에 덧붙이고, 여기서 한 건당 이슈 하나를 연다.
       # 제목이 같은 열린 이슈가 있으면 건너뛴다.
-      - name: 변경 이슈 (작품 추가 · 배지 변경 · 은퇴)
+      - name: 변경 이슈 (작품 추가 · 배지 변경 · 은퇴 · 후보 확인)
         if: ${{ inputs.dry_run != true && hashFiles('screening_changes.json') != '' }}
         env:
           GH_TOKEN: ${{ github.token }}
@@ -196,12 +197,15 @@ jobs:
           # 백슬래시가 이스케이프로 해석되어 본문이 망가진다.
           import json, pathlib
           kinds = {"newWork": "작품 추가", "badgeChange": "배지 변경",
-                   "retirement": "프리미엄 은퇴"}
+                   "retirement": "프리미엄 은퇴", "needsHuman": "후보 확인 필요"}
           doc = json.load(open("screening_changes.json", encoding="utf-8"))
           index = []
           for i, c in enumerate(doc.get("changes", [])):
               label = kinds.get(c.get("kind"), c.get("kind") or "변경")
-              title = f"{label}: {c.get('workId', '?')}"
+              # needsHuman은 아직 work가 아니라 후보다 — workId가 없으므로
+              # movieCd로 제목을 만든다(같은 후보로 매일 이슈가 열리지 않게 dedupe도 이 제목 기준).
+              subject = c.get("workId") or f"{c.get('kobisNm', '?')} ({c.get('movieCd', '?')})"
+              title = f"{label}: {subject}"
               body = pathlib.Path(f"/tmp/issues/{i}.md")
               body.write_text(
                   json.dumps(c, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

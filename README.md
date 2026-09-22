@@ -208,6 +208,7 @@ Store가 개인정보 처리방침 URL을 필수로 요구하는데, 그 페이�
 | `screening.json` | `screening.py` | **앱** |
 | `screening_state.json` | `screening.py`, `daily_curation.py` | 봇만 |
 | `screening_candidates.json` | `screening.py` | `precheck.py`, `daily_curation.py` |
+| `scripts/tmdb_resolve.py` | — | `daily_curation.py` (후보 TMDB 사전 확정) |
 | `screening_changes.json` | 두 스크립트 | 워크플로우(이슈) |
 | `screening_abort.txt` | `screening.py` | 워크플로우(이슈) |
 
@@ -244,6 +245,7 @@ screening.py  (무료, 매일)  →  precheck.py  (무료)  →  daily_curation.
 | 어떤 날짜든 극장 절반 이상 수집 실패 | 2 | **발행 중단.** 이슈 1건 |
 | 오늘 프리미엄 행 수가 지난 실행의 50% 미만 | 3 | **발행 중단.** 이슈 1건 (전송 장애 의심) |
 | 시간 예산(25분) 초과 | 2 | 남은 요청을 실패로 처리 → 위 "절반 이상" 규칙이 판정 |
+| 연속 10회 실패 (KOBIS 무응답) | 2 | 즉시 조기 중단. 25분을 태우지 않는다 |
 | 단계 타임아웃(30분)에 러너가 죽임 | (없음) | 이슈 1건. `outcome`으로 잡으므로 사유 파일이 없어도 열린다 |
 | 극장 몇 곳 실패 | 0 | 건너뛰고 로그. 발행은 계속 |
 
@@ -257,17 +259,29 @@ screening.py  (무료, 매일)  →  precheck.py  (무료)  →  daily_curation.
 
 - **추가** — 프리미엄 접미사로 걸렸는데 `kobis_movies.json`에 없는 `movieCd`는
   `screening_candidates.json`에 후보로 쌓이고, 그것만으로 사전 점검이 유료 단계를
-  켠다. 하루 최대 2편, 극장 수가 큰 것부터. `tmdbId`가 확정되지 않으면 검증기가
-  거부한다 — 콘서트 실황·라이브뷰잉·스포츠 중계를 걸러내는 실질적인 장치다.
-  처리한 후보는 `screening_state.json`의 `handledCandidates`에 남아 7일간 다시
-  제안되지 않는다.
+  켠다. 하루 최대 2편, 극장 수가 큰 것부터. 후보는 프롬프트에 닿기 전에 두 단계를
+  지난다:
+  1. **비영화 키워드 필터**(콘서트·실황·뮤지컬·팬미팅 등) — 무료. 이것만 남으면
+     유료 단계를 아예 켜지 않는다. TMDB에 등재된 콘서트 실황도 있으므로 `tmdbId`
+     존재만으로는 비영화를 거르지 못한다.
+  2. **`scripts/tmdb_resolve.py`의 TMDB 사전 확정** — `tmdbId`·`en`·`date`·`run`·
+     `genre`를 API로 확정해 "이미 확인된 사실"로 프롬프트에 넣는다. 모델은 웹 검색
+     6회를 `hook`·`meta`에만 쓴다. 특정하지 못하면(0건·동명이작 동률·KR 개봉 정보
+     없음) `needsHuman`으로 빼고 이슈를 연다.
+
+  동명이작은 인기도가 아니라 **`movieCd` 앞 네 자리(KOBIS 등록연도)**로 가른다 —
+  `인턴`을 인기도로 고르면 2015년 낸시 마이어스 영화를 집지만 지금 걸려 있는 것은
+  2026년 한국 영화다. 검증기는 새 작품의 `tmdbId`와 `date`가 사전 확정값과 다르면
+  거부한다. 처리한 후보는 `screening_state.json`의 `handledCandidates`에 남아
+  7일간 다시 제안되지 않는다.
 - **은퇴** — 프리미엄 배지가 있는 작품이 3일 창 어디에도 프리미엄 상영이 없는
   날이 7일 연속이면 `premiumEnd = lastPremiumSeen`. **배지는 지우지 않는다**(이력).
   미개봉작은 은퇴시키지 않는다.
 
 ### 이슈
 
-작품 추가 · 배지 변경 · 프리미엄 은퇴 · 상영 수집 중단, 이 네 가지 때만 연다.
+작품 추가 · 배지 변경 · 프리미엄 은퇴 · 후보 확인 필요(TMDB 특정 실패) ·
+상영 수집 중단, 이 다섯 가지 때만 연다.
 같은 제목의 열린 이슈가 있으면 다시 열지 않는다. 매일 열리던 "큐레이션 검토
 필요" 이슈는 폐지했다 — 남아 있는 것은 `scripts/close_stale_issues.sh`로 한 번에
 닫는다(기본 `--dry-run`, 실제로 닫으려면 `--apply`).
