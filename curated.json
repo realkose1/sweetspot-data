@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-09-23T08:38:33+09:00",
+  "dataTimestamp": "2026-09-24T08:36:32+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -181,6 +181,29 @@
       "open": null,
       "tmdbId": 299534,
       "recommendedFormat": "IMAX190",
+      "premiumEnd": null
+    },
+    {
+      "id": "residentevil",
+      "title": "레지던트 이블: 0번째 밤",
+      "en": "RESIDENT EVIL",
+      "pc1": "#3a0d12",
+      "pc2": "#0d0304",
+      "date": "2026.09.17",
+      "run": "94분",
+      "genre": "SF · 호러 · 액션",
+      "meta": "2026.09.17 개봉 · 94분 · SF · 호러 · 액션",
+      "badges": [
+        "IMAX190",
+        "DOLBY",
+        "4DX",
+        "SCREENX",
+        "DOLBYVISION"
+      ],
+      "hook": "IMAX·돌비 시네마·4DX·ScreenX 특별관으로 동시 개봉했어요",
+      "open": null,
+      "tmdbId": 1423191,
+      "recommendedFormat": "DOLBY",
       "premiumEnd": null
     }
   ],

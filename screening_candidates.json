@@ -19,6 +19,16 @@
     "firstSeenDate": "2026-09-20"
   },
   {
+    "movieCd": "20256308",
+    "kobisNm": "인턴",
+    "formats": [
+      "DOLBYVISION",
+      "SUPERPLEX"
+    ],
+    "theaterCount": 2,
+    "firstSeenDate": "2026-09-20"
+  },
+  {
     "movieCd": "20265146",
     "kobisNm": "옵세션",
     "formats": [
@@ -28,13 +38,22 @@
     "firstSeenDate": "2026-09-20"
   },
   {
-    "movieCd": "20256308",
-    "kobisNm": "인턴",
+    "movieCd": "20256161",
+    "kobisNm": "타짜: 벨제붑의 노래",
     "formats": [
-      "SUPERPLEX"
+      "DOLBYVISION"
     ],
     "theaterCount": 1,
-    "firstSeenDate": "2026-09-20"
+    "firstSeenDate": "2026-09-24"
+  },
+  {
+    "movieCd": "20263870",
+    "kobisNm": "레지던트 이블: 0번째 밤",
+    "formats": [
+      "DOLBYVISION"
+    ],
+    "theaterCount": 1,
+    "firstSeenDate": "2026-09-24"
   },
   {
     "movieCd": "20266051",

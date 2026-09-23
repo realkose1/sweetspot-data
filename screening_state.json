@@ -4,24 +4,26 @@
     "20256308": "2026-09-20",
     "20070216": "2026-09-20",
     "20265146": "2026-09-20",
-    "20266051": "2026-09-22"
+    "20266051": "2026-09-22",
+    "20256161": "2026-09-24",
+    "20263870": "2026-09-24"
   },
   "lastPremiumSeen": {
-    "odyssey": "2026-09-25",
-    "spiderman": "2026-09-25",
+    "odyssey": "2026-09-26",
+    "spiderman": "2026-09-26",
     "hope": "2026-09-22",
-    "avengersendgame": "2026-09-25"
+    "avengersendgame": "2026-09-26"
   },
   "noPremiumStreak": {
     "odyssey": 0,
     "spiderman": 0,
-    "hope": 1,
-    "toystory5": 3,
-    "moana": 3,
-    "minions": 3,
+    "hope": 2,
+    "toystory5": 4,
+    "moana": 4,
+    "minions": 4,
     "avengersendgame": 0
   },
-  "prevPremiumRowCount": 210,
+  "prevPremiumRowCount": 220,
   "handledCandidates": {
     "20241110": {
       "date": "2026-09-21",
@@ -57,6 +59,16 @@
       "date": "2026-09-23",
       "action": "rejected",
       "reason": "영화(옵세션/Obsession, tmdbId 1339713, 2026.09.02 국내 개봉, 공포, 108분)는 확인됐으나, badges를 SUPERPLEX로 올릴 때 필수로 요구되는 '어느 포맷으로 볼지' 판단용 확정 사실(촬영 포맷·마스터링·화면비 등)을 웹 검색으로 찾지 못해 hook을 채울 수 없음. theaterCount도 2관에 불과해 편성 신뢰도가 낮음."
+    },
+    "20263870": {
+      "date": "2026-09-24",
+      "action": "added",
+      "reason": "residentevil 추가"
+    },
+    "20256161": {
+      "date": "2026-09-24",
+      "action": "rejected",
+      "reason": "TMDB에 실제 영화(id 1394740, 타짜: 벨제붑의 노래)로 존재하나, KOBIS 관측 포맷이 DOLBYVISION(1개관)뿐이고 이는 규칙상 관 속성 예외 항목이라 badges를 채울 근거(IMAX·ScreenX·4DX·돌비시네마 등 실제 특수관 편성)를 확인하지 못해 이번엔 보류"
     }
   }
 }
