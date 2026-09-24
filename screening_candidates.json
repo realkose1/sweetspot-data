@@ -1,67 +1,26 @@
 [
   {
-    "movieCd": "20255033",
-    "kobisNm": "암살자(들)",
-    "formats": [
-      "DOLBYVISION",
-      "SUPERPLEX"
-    ],
-    "theaterCount": 12,
-    "firstSeenDate": "2026-09-20"
-  },
-  {
     "movieCd": "20070216",
     "kobisNm": "시간을 달리는 소녀",
     "formats": [
       "4DX"
     ],
-    "theaterCount": 10,
+    "premiumFormats": [
+      "4DX"
+    ],
+    "theaterCount": 9,
     "firstSeenDate": "2026-09-20"
   },
   {
-    "movieCd": "20256308",
-    "kobisNm": "인턴",
+    "movieCd": "20266462",
+    "kobisNm": "수호도사: 세계유산을 지켜라",
     "formats": [
-      "DOLBYVISION",
-      "SUPERPLEX"
+      "4DX"
     ],
-    "theaterCount": 2,
-    "firstSeenDate": "2026-09-20"
-  },
-  {
-    "movieCd": "20265146",
-    "kobisNm": "옵세션",
-    "formats": [
-      "SUPERPLEX"
+    "premiumFormats": [
+      "4DX"
     ],
-    "theaterCount": 2,
-    "firstSeenDate": "2026-09-20"
-  },
-  {
-    "movieCd": "20256161",
-    "kobisNm": "타짜: 벨제붑의 노래",
-    "formats": [
-      "DOLBYVISION"
-    ],
-    "theaterCount": 1,
-    "firstSeenDate": "2026-09-24"
-  },
-  {
-    "movieCd": "20263870",
-    "kobisNm": "레지던트 이블: 0번째 밤",
-    "formats": [
-      "DOLBYVISION"
-    ],
-    "theaterCount": 1,
-    "firstSeenDate": "2026-09-24"
-  },
-  {
-    "movieCd": "20266051",
-    "kobisNm": "바다 탐험대 옥토넛 어보브 앤 비욘드 : 두근두근 대자연 어드벤처",
-    "formats": [
-      "SUPERPLEX"
-    ],
-    "theaterCount": 1,
-    "firstSeenDate": "2026-09-22"
+    "theaterCount": 3,
+    "firstSeenDate": "2026-09-25"
   }
 ]
