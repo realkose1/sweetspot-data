@@ -68,11 +68,11 @@ Top level:
 | `run` | Runtime, free text (e.g. `"172분"`), or `null` if unknown. |
 | `genre` | Free text, or `null`. |
 | `meta` | Must be exactly `"{date} 개봉 · {rest}"` — the app swaps only the leading date at display time and keeps `{rest}` verbatim, so make sure `meta` actually starts with the same date you put in `date`. |
-| `badges` | Array of format codes this film is actually released in. Valid values: `"IMAX43"`, `"IMAX190"`, `"DOLBY"`, `"SCREENX"`, `"4DX"`, `"SUPERPLEX"`, `"STD"`. Must have at least one entry — use `["STD"]` for a film with no special format. **Do not invent a new code** — the seven above are the only ones the app knows how to render (name/color/icon); a genuinely new premium format needs an app update, not just a JSON edit. |
-| `hook` | One short line of editorial claim about the best way to see this film (e.g. `"CGV 용산 IMAX — 국내 유일 1.43:1"`), or `null` if there's nothing to say beyond "일반관으로 충분". |
+| `badges` | Array of format codes this film is actually released in. Valid values: `"IMAX43"`, `"IMAX190"`, `"DOLBY"`, `"SCREENX"`, `"4DX"`, `"SUPERPLEX"`, `"STD"`. Must have at least one entry — use `["STD"]` for a film with no special format. **Do not invent a new code** — the seven above are the only ones the app knows how to render (name/color/icon); a genuinely new premium format needs an app update, not just a JSON edit. **At most 4 entries** — the 1.0 app's badge row overflows at 5 and breaks the whole 영화 tab layout (2026-09-24). `SUPERPLEX`/`DOLBYVISION` are hall attributes, not film formats — the bot and `scripts/audit_feed.py` reject them in `badges`. |
+| `hook` | One short line of editorial claim about the best way to see this film (e.g. `"CGV 용산 IMAX — 국내 유일 1.43:1"`), or `null` if there's nothing to say beyond "일반관으로 충분". Must not name a format missing from `badges` (IMAX/아이맥스, 돌비/Dolby, 4DX, ScreenX/스크린X) — same for `meta`. |
 | `open` | Ticket-open announcement line, only when a chain has actually announced one publicly. `null` otherwise — don't guess a date. |
 | `tmdbId` | The film's TMDB movie id (integer), or `null`. Strongly recommended: look it up at themoviedb.org and pin it here — without it the app falls back to a fuzzy title search that can mismatch retitled or common-name films. Must be a positive integer if present. |
-| `recommendedFormat` | One format code (not an array) — the single best format for this film, must be one of the codes also present in `badges`. |
+| `recommendedFormat` | One format code (not an array) — the single best format for this film, must be one of the codes also present in `badges`. Sole exception: `"STD"` = "일반관으로 충분" editorial verdict on a film that has premium badges (e.g. toystory5). |
 
 ### `halls[]` (theaters)
 
@@ -285,14 +285,28 @@ screening.py  (무료, 매일)  →  precheck.py  (무료)  →  daily_curation.
   2026년 한국 영화다. 검증기는 새 작품의 `tmdbId`와 `date`가 사전 확정값과 다르면
   거부한다. 처리한 후보는 `screening_state.json`의 `handledCandidates`에 남아
   7일간 다시 제안되지 않는다.
+- **배지 근거 (2026-09-24~)** — 배지는 **KOBIS 프리미엄 접미사 관측으로만** 붙는다.
+  `(IMAX)`→IMAX190/IMAX43(관에 따라) · `(4D)`→4DX · `(ScreenX)`→SCREENX ·
+  `(DOLBYCINEMA)`→DOLBY. 새 작품은 badges가 그 관측 집합(후보의 `premiumFormats`)과
+  **정확히** 같아야 하고, 기존 작품의 배지 증가는 늘어난 코드마다 screening.py가
+  상태 파일에 남긴 `observedPremiumFormats`에 있어야 한다. 뉴스로 포맷을 추론하지
+  않는다. 계기: 그날 봇이 SUPERPLEX 1곳만 잡힌 `residentevil`에 배지 5개와
+  "IMAX·돌비 시네마·4DX·ScreenX 특별관 동시 개봉" 훅을 지어 붙였고, 배지 5개가 1.0
+  앱의 영화 탭 레이아웃을 깨뜨렸다.
+- **발행 감사** — 커밋 직전 `scripts/audit_feed.py`가 curated.json을 본다(배지 4개
+  초과 · 작품 배지의 SUPERPLEX/DOLBYVISION · recommendedFormat ∉ badges(STD 예외) ·
+  배지에 없는 포맷을 부르는 hook/meta). 실패하면 **커밋하지 않고** "피드 감사 실패"
+  이슈를 연다.
 - **은퇴** — 프리미엄 배지가 있는 작품이 3일 창 어디에도 프리미엄 상영이 없는
   날이 7일 연속이면 `premiumEnd = lastPremiumSeen`. **배지는 지우지 않는다**(이력).
-  미개봉작은 은퇴시키지 않는다.
+  미개봉작은 은퇴시키지 않는다. 같은 날(Asia/Seoul) 두 번째 실행부터는
+  `screening_state.json`의 `lastRunDate`를 보고 카운터를 건드리지 않는다
+  ("같은 날 재실행 — 은퇴 카운터 유지").
 
 ### 이슈
 
 작품 추가 · 배지 변경 · 프리미엄 은퇴 · 후보 확인 필요(TMDB 특정 실패) ·
-상영 수집 중단, 이 다섯 가지 때만 연다.
+상영 수집 중단 · 피드 감사 실패, 이 여섯 가지 때만 연다.
 같은 제목의 열린 이슈가 있으면 다시 열지 않는다. 매일 열리던 "큐레이션 검토
 필요" 이슈는 폐지했다 — 남아 있는 것은 `scripts/close_stale_issues.sh`로 한 번에
 닫는다(기본 `--dry-run`, 실제로 닫으려면 `--apply`).

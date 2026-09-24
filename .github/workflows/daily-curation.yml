@@ -11,8 +11,8 @@ name: 큐레이션 자동 발행 (매일 상영 수집 · 조건부 큐레이션
 #    TMDB 개봉일 불일치, 수동 실행, **KOBIS 상영 후보 잔존**(2026-09-20 추가).
 # 3. daily_curation.py — 유료 단계. 후보에서 작품을 추가할 수도 있다.
 #
-# 이슈는 다섯 가지 때만 연다: 작품 추가 · 배지 변경 · 프리미엄 은퇴 ·
-# 후보 확인 필요(TMDB로 특정 실패) · screening 중단.
+# 이슈는 여섯 가지 때만 연다: 작품 추가 · 배지 변경 · 프리미엄 은퇴 ·
+# 후보 확인 필요(TMDB로 특정 실패) · screening 중단 · 피드 감사 실패(커밋 보류).
 # 매일 열리던 "큐레이션 검토 필요" 이슈는 폐지했다 — 매일 열리는 알림은 곧 아무도
 # 읽지 않는 알림이 된다. notices는 Actions 로그에만 남는다.
 
@@ -149,6 +149,51 @@ jobs:
           print("dataTimestamp →", d["dataTimestamp"])
           PY
 
+      # 발행 직전 감사. 2026-09-24 residentevil 사고(관측 없는 배지 5개 → 1.0 앱의
+      # 배지 줄이 넘쳐 영화 탭 레이아웃이 깨짐)의 마지막 그물이다. 배지 4개 초과 ·
+      # 작품 배지의 SUPERPLEX/DOLBYVISION · recommendedFormat ∉ badges · 배지에 없는
+      # 포맷을 부르는 hook/meta 중 하나라도 있으면 커밋하지 않고 이슈를 연다.
+      # 스크립트는 표준 라이브러리만 쓴다(Claude를 건너뛴 날엔 SDK가 없다).
+      - name: 피드 감사
+        id: audit
+        if: ${{ inputs.dry_run != true }}
+        run: |
+          set +e
+          python scripts/audit_feed.py > /tmp/audit.txt 2>&1
+          code=$?
+          set -e
+          cat /tmp/audit.txt
+          if [ "$code" -eq 0 ]; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+            echo "::error::피드 감사 실패 — 커밋을 건너뛴다"
+          fi
+
+      - name: 피드 감사 실패 이슈
+        if: ${{ inputs.dry_run != true && steps.audit.outcome == 'success' && steps.audit.outputs.ok != 'true' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITLE: "피드 감사 실패"
+        run: |
+          existing=$(gh issue list --state open --limit 100 \
+            --json title --jq "map(select(.title == \"$TITLE\")) | length")
+          if [ "$existing" != "0" ]; then
+            echo "같은 제목의 열린 이슈가 있음 — 새로 열지 않음"
+          else
+            {
+              echo "scripts/audit_feed.py가 curated.json에서 규칙 위반을 찾았다."
+              echo "이번 실행의 결과는 **커밋하지 않았다** — 앱은 어제 피드를 계속 본다."
+              echo
+              echo '```'
+              cat /tmp/audit.txt
+              echo '```'
+            } > /tmp/audit-body.md
+            gh issue create --title "$TITLE" --body-file /tmp/audit-body.md
+          fi
+          # 실행을 빨간색으로 남긴다. 아래 커밋·변경 이슈 단계는 조건으로 건너뛴다.
+          exit 1
+
       # 커밋 대상 여섯 개:
       #   curated.json           앱이 읽는 큐레이션 피드
       #   screening.json         앱이 읽는 "지금 상영 중" (매일 바뀐다)
@@ -160,7 +205,7 @@ jobs:
       # Claude 단계가 실패하면 여기까지 오지 않아 스냅샷도 커밋되지 않는다 —
       # 그러면 다음 날 같은 작품이 다시 "새 작품"으로 잡혀 자연스럽게 재시도된다.
       - name: Commit & publish
-        if: ${{ inputs.dry_run != true }}
+        if: ${{ inputs.dry_run != true && steps.audit.outputs.ok == 'true' }}
         env:
           TRACKED: curated.json screening.json screening_state.json screening_candidates.json kobis_movies.json tmdb_snapshot.json
         run: |
@@ -187,7 +232,7 @@ jobs:
       # 추가·배지 변경)가 같은 파일에 덧붙이고, 여기서 한 건당 이슈 하나를 연다.
       # 제목이 같은 열린 이슈가 있으면 건너뛴다.
       - name: 변경 이슈 (작품 추가 · 배지 변경 · 은퇴 · 후보 확인)
-        if: ${{ inputs.dry_run != true && hashFiles('screening_changes.json') != '' }}
+        if: ${{ inputs.dry_run != true && steps.audit.outputs.ok == 'true' && hashFiles('screening_changes.json') != '' }}
         env:
           GH_TOKEN: ${{ github.token }}
         run: |

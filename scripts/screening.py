@@ -209,6 +209,44 @@ def format_for_row(suffix: str | None, hall_fmts: set) -> str | None:
     return None   # (VR) 등
 
 
+def premium_code(suffix: str | None, hall_fmts: set) -> str | None:
+    """진짜 프리미엄 접미사 → **작품 배지** 코드. 관 속성 상영이면 None.
+
+    `format_for_row`와 다른 점은 `(DOLBYCINEMA)` 하나다. 그 함수는 *관*에 붙일
+    코드를 고르므로 Atmos관의 `(DOLBYCINEMA)`를 DOLBYVISION으로 내지만, 작품
+    배지 쪽에서 DOLBYVISION은 금지된 관 속성 코드다. 작품이 돌비 시네마용으로
+    배급된다는 표시는 접미사 그 자체이므로 배지 근거로는 언제나 DOLBY다.
+
+    작품 배지는 이 함수가 낸 코드로만 뒷받침된다(2026-09-24 사고 — 관측 없는
+    배지 다섯 개가 붙은 작품이 앱에 들어갔다).
+    """
+    if suffix == SUFFIX_IMAX:
+        return hall_imax_code(hall_fmts)
+    if suffix == SUFFIX_4D:
+        return "4DX"
+    if suffix == SUFFIX_SCREENX:
+        return "SCREENX"
+    if suffix == SUFFIX_DOLBYCINEMA:
+        return "DOLBY"
+    return None
+
+
+HALL_ATTRIBUTE_SET = frozenset(HALL_ATTRIBUTE_FORMATS)
+
+
+def premium_formats_of(cand: dict) -> set:
+    """후보 하나의 "배지 근거가 되는" 관측 포맷.
+
+    `premiumFormats`(프리미엄 접미사 수준 관측, 2026-09-24~)가 있으면 그것을,
+    없으면(그 전 코드가 쓴 후보 파일) `formats`에서 관 속성 코드를 뺀 것을 쓴다.
+    옛 파일의 DOLBYVISION은 `(DOLBYCINEMA)`에서 왔는지 `(디지털)`에서 왔는지
+    알 수 없으므로 근거로 치지 않는다 — 모르면 없는 것이다.
+    """
+    if isinstance(cand.get("premiumFormats"), list):
+        return {str(f) for f in cand["premiumFormats"]}
+    return {str(f) for f in (cand.get("formats") or [])} - HALL_ATTRIBUTE_SET
+
+
 # ---------------------------------------------------------------- 수집
 
 def fetch_schedule(thea_cd: str, show_dt: str) -> list:
@@ -494,6 +532,7 @@ def aggregate(raw: dict, dates: list, hall_index: dict, movie_index: dict, warn,
                     cand = candidates.setdefault(movie_cd, {
                         "kobisNm": title, "formats": set(), "theaCds": set(),
                         "dates": set(), "premium": False,
+                        "premiumFormats": set(),
                     })
                     cand["formats"].add(code)
                     cand["theaCds"].add(hall["theaCd"])
@@ -504,12 +543,18 @@ def aggregate(raw: dict, dates: list, hall_index: dict, movie_index: dict, warn,
                     # 올리면 배지에 넣을 포맷이 하나도 없는 작품이 앱에 들어온다.
                     if suffix in PREMIUM_SUFFIXES:
                         cand["premium"] = True
+                        cand["premiumFormats"].add(premium_code(suffix, hall["fmts"]))
                     continue
 
                 slot = works.setdefault(work_id, {}).setdefault(hall_id, {
                     "formats": set(), "lastSeen": "", "showsToday": 0,
+                    "premiumFormats": set(),
                 })
                 slot["formats"].add(code)
+                if suffix in PREMIUM_SUFFIXES:
+                    # screening.json에는 싣지 않는다(build_screening이 안 읽는다).
+                    # 기존 작품의 배지 증가를 검증하는 근거로 상태 파일에만 남긴다.
+                    slot["premiumFormats"].add(premium_code(suffix, hall["fmts"]))
                 slot["lastSeen"] = max(slot["lastSeen"], show_dt)
                 if show_dt == today:
                     slot["showsToday"] += count_shows(row.get("showTm"))
@@ -574,6 +619,8 @@ def build_candidates(candidates: dict, state: dict, today_iso: str) -> list:
             "movieCd": movie_cd,
             "kobisNm": c["kobisNm"],
             "formats": sorted(c["formats"]),
+            # 배지 근거. 작품 추가 시 badges는 이것과 **정확히** 같아야 한다.
+            "premiumFormats": sorted(c.get("premiumFormats") or ()),
             "theaterCount": len(c["theaCds"]),
             "firstSeenDate": first_seen[movie_cd],
         })
@@ -582,6 +629,22 @@ def build_candidates(candidates: dict, state: dict, today_iso: str) -> list:
         if movie_cd not in candidates:
             del first_seen[movie_cd]
     out.sort(key=lambda c: (-c["theaterCount"], c["movieCd"]))
+    return out
+
+
+def observed_premium_by_work(works: dict) -> dict:
+    """{workId: [프리미엄 접미사로 본 배지 코드]} — 3일 창 기준, 관 속성 제외.
+
+    daily_curation.py가 기존 작품의 배지 증가를 이것으로 검증한다. 여기 없는
+    코드는 추가할 수 없다 — 뉴스나 추측이 아니라 KOBIS 편성만이 배지 근거다.
+    """
+    out = {}
+    for work_id, halls in works.items():
+        seen = set()
+        for slot in halls.values():
+            seen |= set(slot.get("premiumFormats") or ())
+        if seen:
+            out[work_id] = sorted(seen)
     return out
 
 
@@ -599,10 +662,20 @@ def parse_curated_date(s):
 
 def update_state_and_retire(works: dict, curated: dict, state: dict,
                             premium_rows_today: int, today, warn):
-    """lastPremiumSeen · noPremiumStreak 갱신 + 은퇴 판정. (changes, retired) 반환."""
+    """lastPremiumSeen · noPremiumStreak 갱신 + 은퇴 판정. changes 목록 반환.
+
+    같은 날(Asia/Seoul) 두 번째 실행부터는 카운터를 건드리지 않는다. 은퇴 규칙은
+    "연속된 **날**"을 세는데, 수동 재실행이 하루에 한 번 더 세면 7일이 6일 만에
+    찬다 — 2026-09-22에 실제로 noPremiumStreak이 2→3으로 올라 손으로 되돌렸다.
+    """
     last_seen = state.setdefault("lastPremiumSeen", {})
     streak = state.setdefault("noPremiumStreak", {})
     changes = []
+    today_iso = today.isoformat()
+    if state.get("lastRunDate") == today_iso:
+        print(f"같은 날 재실행 — 은퇴 카운터 유지 (lastRunDate {today_iso})")
+        state["prevPremiumRowCount"] = premium_rows_today
+        return changes
 
     premium_now = {}
     for work_id, halls in works.items():
@@ -645,6 +718,7 @@ def update_state_and_retire(works: dict, curated: dict, state: dict,
         })
 
     state["prevPremiumRowCount"] = premium_rows_today
+    state["lastRunDate"] = today_iso
     return changes
 
 
@@ -721,6 +795,7 @@ def main(argv=None) -> int:
         cand_list = build_candidates(candidates, state, today_iso)
         changes = update_state_and_retire(
             works, curated, state, premium_rows_today, now.date(), warn)
+        state["observedPremiumFormats"] = observed_premium_by_work(works)
 
         # kobis_movies.json에 들어간(= 작품이 된) movieCd의 처리 기록은 지운다.
         handled = state.get("handledCandidates") or {}
@@ -743,11 +818,13 @@ def main(argv=None) -> int:
     for work_id, w in screening["works"].items():
         fmts = sorted({f for h in w["halls"].values() for f in h["formats"]})
         shows = sum(h["showsToday"] for h in w["halls"].values())
+        backed = ",".join(state.get("observedPremiumFormats", {}).get(work_id, [])) or "-"
         print(f"  {work_id:14s} 관 {len(w['halls']):3d}개  {','.join(fmts):32s} "
-              f"오늘 {shows}회차")
+              f"오늘 {shows}회차  배지 근거 {backed}")
     for c in cand_list[:12]:
         print(f"  후보 {c['movieCd']} {c['kobisNm']} "
-              f"{','.join(c['formats'])} 극장 {c['theaterCount']}곳")
+              f"{','.join(c['formats'])} (배지 근거 {','.join(c['premiumFormats']) or '없음'}) "
+              f"극장 {c['theaterCount']}곳")
     for ch in changes:
         print(f"  은퇴 {ch['workId']}.premiumEnd = {ch['value']}")
     if warnings:

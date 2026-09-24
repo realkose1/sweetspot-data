@@ -126,9 +126,12 @@ def main() -> int:
     # 비영화 키워드에 걸린 후보로는 유료 단계를 켜지 않는다. daily_curation도 같은
     # 규칙으로 프롬프트에서 빼지만, 거기서만 걸러내면 "콘서트 한 편 때문에 $0.4"가
     # 그대로 나간다 — 판정을 켤지 말지가 이 스크립트의 일이므로 여기서도 본다.
+    # 배지 근거(프리미엄 접미사 관측)가 없는 후보도 마찬가지다 — daily_curation이
+    # 어차피 추가를 거부한다(2026-09-24 residentevil 사고 이후 규칙).
     offerable = [c for c in screening.offerable_candidates(
                      screening.load_candidates_file(), state, today)
-                 if not screening.nonfilm_reason(c["kobisNm"])]
+                 if not screening.nonfilm_reason(c["kobisNm"])
+                 and screening.premium_formats_of(c)]
     if offerable:
         head = ", ".join(f"{c['kobisNm']}({c['theaterCount']}곳)" for c in offerable[:3])
         reasons.append(f"KOBIS 특수관 상영 후보 {len(offerable)}편: {head}"

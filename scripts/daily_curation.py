@@ -26,6 +26,19 @@ ScreenX·4DX에 걸려 있었다), 그것들은 TMDB 영화 DB에 없다.
 `handledCandidates`에 날짜와 함께 남아 일정 기간 다시 제안되지 않는다. 모델이
 아무 판단도 하지 않은 후보도 "확인되지 않음"으로 처리 기록을 남긴다 — 그러지
 않으면 같은 후보로 매일 유료 단계가 켜진다.
+
+## 배지는 KOBIS 관측으로만 (2026-09-24~)
+
+그날 봇이 KOBIS에서 SUPERPLEX 1곳만 잡힌 `residentevil`을 배지 다섯 개
+(IMAX190·DOLBY·4DX·SCREENX·DOLBYVISION)와 "IMAX·돌비 시네마·4DX·ScreenX 특별관으로
+동시 개봉했어요" 훅으로 추가했다. 전부 지어낸 것이었다. 검증기가 "badges ⊇ 관측"만
+봤기 때문에 남는 배지가 통과했고, 배지 다섯 개가 1.0 앱의 배지 줄을 넘쳐 영화 탭
+레이아웃을 모든 사용자에게서 깨뜨렸다. 이제 검증기가 강제한다(프롬프트는 부탁):
+
+- 새 작품: badges == 그 movieCd의 프리미엄 접미사 관측 집합 (`premiumFormats`). 정확히.
+- 기존 작품: 늘어난 배지마다 screening.py가 남긴 관측(`observedPremiumFormats`)에 있어야 한다.
+- 작품 배지에 SUPERPLEX·DOLBYVISION 금지(관 속성), 최대 4개, recommendedFormat ∈ badges,
+  hook·meta가 badges에 없는 포맷을 이름으로 부르면 거부 — `audit_feed.work_problems`.
 """
 
 import json
@@ -37,6 +50,7 @@ from pathlib import Path
 
 from anthropic import Anthropic
 
+import audit_feed
 import screening
 import tmdb_resolve
 
@@ -54,6 +68,9 @@ KNOWN_CODES = {"IMAX43", "IMAX190", "DOLBY", "DOLBYVISION", "SCREENX", "4DX",
 # 관이 그런 관이라서 붙는 포맷. 작품의 속성이 아니므로 "작품 배지가 KOBIS에서 본
 # 포맷을 모두 포함해야 한다"는 규칙에서 빼 준다 (계약 "관 속성 포맷" 절).
 HALL_ATTRIBUTE_CODES = {"SUPERPLEX", "DOLBYVISION"}
+# 작품 배지로 쓸 수 없는 코드와 개수 상한 — 발행 감사(audit_feed.py)와 같은 값.
+FORBIDDEN_WORK_BADGES = set(audit_feed.FORBIDDEN_WORK_BADGES)
+MAX_BADGES = audit_feed.MAX_BADGES
 MUTABLE_FIELDS = {"date", "run", "meta", "hook", "open", "premiumEnd", "badges", "recommendedFormat"}
 DATE_FIELDS = {"date", "premiumEnd"}
 NULLABLE_FIELDS = {"date", "run", "hook", "open", "premiumEnd"}
@@ -87,9 +104,11 @@ def add_movie_mapping(work_id: str, movie_cd: str, kobis_nm: str) -> None:
                           encoding="utf-8")
 
 
-def build_prompt(works: list, candidates: list, today: datetime) -> str:
+def build_prompt(works: list, candidates: list, today: datetime,
+                 observed_by_work: dict = None) -> str:
     works_json = json.dumps(works, ensure_ascii=False, indent=1)
     cand_json = json.dumps(candidates, ensure_ascii=False, indent=1)
+    observed_json = json.dumps(observed_by_work or {}, ensure_ascii=False)
     return f"""당신은 한국 특수 상영관(IMAX · 돌비 시네마 · ScreenX · 4DX) 정보 앱 '몇관몇열'의 데이터 큐레이터입니다.
 오늘 날짜: {today.strftime('%Y년 %m월 %d일')} (KST)
 
@@ -108,9 +127,15 @@ def build_prompt(works: list, candidates: list, today: datetime) -> str:
        그 작품만 설명 없이 덩그러니 놓입니다. hook이 비어도 되는 것은 badges가 STD일 때뿐입니다.
        내용은 "어느 포맷으로 볼지" 판단에 도움이 되는 확인된 사실이어야 합니다 — 확정된 개봉 포맷,
        촬영·마스터링 방식, 화면비 같은 것. 홍보 문구나 줄거리 요약이 아닙니다.
-4. badges / recommendedFormat — 특수관 포맷 상영이 공식 확정된 경우, 또는 아래 KOBIS 관측 목록에서
-   기존 작품에 새 포맷이 잡힌 경우 그 포맷을 **추가**합니다. badges 값은 다음 코드만 사용:
-   IMAX43, IMAX190, DOLBY, DOLBYVISION, SCREENX, 4DX, SUPERPLEX, STD.
+4. badges / recommendedFormat — **배지는 KOBIS 편성 관측에서만 옵니다.** 기존 작품에 배지를 추가할 수
+   있는 것은 아래 "KOBIS 관측" 목록에 그 작품의 그 코드가 있을 때뿐입니다. 뉴스·보도자료·예매 페이지·
+   "특별관 동시 개봉" 같은 기사 문구로 포맷을 추론하지 마세요. 목록에 없는 코드를 넣으면 발행 전체가
+   거부됩니다.
+   KOBIS 관측(작품별, 프리미엄 접미사로 실제 편성된 포맷): {observed_json}
+   badges 값은 다음 코드만 사용: IMAX43, IMAX190, DOLBY, SCREENX, 4DX, STD.
+   **SUPERPLEX·DOLBYVISION은 작품 배지로 쓸 수 없습니다** — 관이 그런 관이라는 뜻이지 작품의 포맷이 아닙니다.
+   **배지는 작품당 최대 {MAX_BADGES}개입니다** — 앱의 배지 줄이 그 이상을 담지 못합니다.
+   recommendedFormat은 badges 안의 값이어야 합니다("일반관으로 충분"이라는 판단일 때만 STD).
    **badges는 줄어들지 않습니다** — 상영이 끝난 것은 배지를 지우는 게 아니라 premiumEnd로 적습니다(이력).
    검증기가 이것을 강제하므로 기존 값을 뺀 badges를 제안하면 발행 전체가 실패합니다.
 5. meta — 카드에 그대로 찍히는 한 줄이며 `날짜 개봉 · 상영시간 · 장르` 형식입니다(예: "2026.08.05 개봉 · 172분 · 액션/어드벤처").
@@ -119,6 +144,8 @@ def build_prompt(works: list, candidates: list, today: datetime) -> str:
    특수관 배지를 단 작품의 meta가 "일반관"이라고 말하는 상태가 실제로 있었습니다.
 
 절대 규칙:
+- **hook과 meta는 badges에 없는 포맷을 이름으로 부르지 않습니다.** IMAX/아이맥스, 돌비/Dolby, 4DX,
+  ScreenX/스크린X를 적으려면 그 포맷이 그 작품의 badges에 있어야 합니다. 검증기가 거부합니다.
 - 확인되지 않은 정보는 절대 만들지 않습니다. 불확실하면 변경하지 않습니다. "변경 없음"이 완벽하게 정상적인 결과입니다.
 - 출처 URL이 없는 변경은 제안하지 않습니다.
 - 영화 **삭제**와 상영관(halls) 데이터는 이 자동화의 범위 밖입니다. 상영관 개·폐관 소식은 notices에만 적으세요.
@@ -130,8 +157,9 @@ def build_prompt(works: list, candidates: list, today: datetime) -> str:
 ## KOBIS 특수관 후보 (작품 추가 검토)
 
 아래는 어제·오늘·내일 전국 특수관 편성에서 `(IMAX)`·`(4D)`·`(ScreenX)`·`(DOLBYCINEMA)` 접미사로
-실제로 잡혔는데 위 목록에 없는 콘텐츠입니다. `formats`는 KOBIS에서 관측된 포맷, `theaterCount`는
-그 포맷으로 걸린 극장 수입니다(많을수록 큰 편성). 나머지 필드는 **TMDB API로 이미 확정한 값**입니다.
+실제로 잡혔는데 위 목록에 없는 콘텐츠입니다. `formats`는 KOBIS에서 프리미엄 접미사로 관측된 포맷 —
+**그 작품의 badges가 될 수 있는 유일한 값**입니다. `theaterCount`는 그 편성이 걸린 극장 수입니다(많을수록
+큰 편성). 나머지 필드는 **TMDB API로 이미 확정한 값**입니다.
 
 {cand_json}
 
@@ -153,8 +181,9 @@ def build_prompt(works: list, candidates: list, today: datetime) -> str:
     설명하면(예: 재개봉 행사명) 그쪽을 써도 됩니다.
   - `meta` — "`date` 개봉 · `run` · 장르" 형식. 반드시 `date`로 시작해야 합니다.
     `reReleaseDate`가 있으면 "`date` 개봉(`reReleaseDate` 재개봉) · …"처럼 적습니다.
-  - `badges` — 위 후보의 `formats`를 **모두 포함**해야 합니다(SUPERPLEX·DOLBYVISION은 관 속성이라
-    예외). 확인된 포맷을 더 넣어도 됩니다.
+  - `badges` — 위 후보의 `formats`와 **정확히 같게** 적습니다. 빼지도 더하지도 마세요. 뉴스에서
+    "IMAX·4DX 동시 개봉"을 읽었더라도 `formats`에 없으면 넣지 않습니다 — 검증기가 그 추가를 거부합니다.
+    `formats`가 {MAX_BADGES}개를 넘으면 그 작품은 `rejected`로 넘기세요(사람이 고릅니다).
   - `recommendedFormat` — `badges` 안의 값 하나.
   - **재개봉작이면** `date`는 그대로 **원래** 한국 개봉일입니다(위 값). 재개봉 날짜는
     `reReleaseDate`에 있을 때만 쓰고, 없으면 meta·hook에 날짜 없이 "재개봉"만 적습니다.
@@ -162,7 +191,8 @@ def build_prompt(works: list, candidates: list, today: datetime) -> str:
   - `dateType`이 3이 아니면(2=디지털/1=시사회) 한국 *극장* 개봉일이 TMDB에 없다는 뜻입니다.
     그 경우 meta에 개봉일을 단정하지 말고 `rejected`로 넘기는 편이 낫습니다.
   - `hook` — 웹으로 확인된 한 문장. "어느 포맷으로 볼지" 판단에 쓰이는 사실만(촬영 포맷,
-    마스터링, 화면비, 확정된 개봉 포맷). 홍보 문구·줄거리 금지. 비울 수 없습니다.
+    마스터링, 화면비). 홍보 문구·줄거리 금지. 비울 수 없습니다. `badges`에 없는 포맷의 이름을
+    쓰지 않습니다("IMAX·4DX 특별관으로 동시 개봉" 같은 문장은 badges가 그 포맷을 모두 담을 때만).
   - `pc1`·`pc2` — 카드 배경 그라디언트용 어두운 hex 2개("#1b3550" 형식). 포스터 색감에서 고르면
     됩니다. 사실 주장이 아니므로 판단해서 채우세요.
   - `source` — 근거 URL 하나.
@@ -249,7 +279,15 @@ def validate_meta_invariant(works: list) -> None:
         raise ValueError("meta 불일치: " + " / ".join(problems))
 
 
-def validate_changes(changes: list, works_by_id: dict) -> None:
+def validate_changes(changes: list, works_by_id: dict,
+                     observed_by_work: dict = None) -> None:
+    """`changes`를 검증한다. 하나라도 틀리면 전체 거부(ValueError).
+
+    `observed_by_work`는 screening.py가 상태 파일에 남긴 작품별 프리미엄 접미사
+    관측이다. 주어지면 늘어나는 배지마다 거기 있어야 한다. main()은 항상 dict를
+    넘긴다(없으면 빈 dict — 관측이 없으면 배지를 늘릴 수 없다). None은 관측 검사를
+    건너뛴다는 뜻이고 단위 시험에서만 쓴다.
+    """
     if len(changes) > MAX_CHANGES:
         raise ValueError(f"변경 제안 {len(changes)}건 > 허용치 {MAX_CHANGES}건 — 전체 거부")
     for ch in changes:
@@ -278,12 +316,40 @@ def validate_changes(changes: list, works_by_id: dict) -> None:
                 raise ValueError(
                     f"badges에서 {', '.join(sorted(dropped))}가 빠졌다 (workId={wid}) — "
                     f"배지는 줄어들 수 없다. 종료는 premiumEnd로 적는다")
+            forbidden = sorted(set(value) & FORBIDDEN_WORK_BADGES)
+            if forbidden:
+                raise ValueError(f"badges에 관 속성 코드 {forbidden} (workId={wid}) — "
+                                 "SUPERPLEX·DOLBYVISION은 작품 배지가 될 수 없다")
+            if len(value) > MAX_BADGES:
+                raise ValueError(f"badges {len(value)}개 > {MAX_BADGES}개 (workId={wid}) "
+                                 f"— 1.0 앱의 배지 줄이 넘친다")
+            if len(set(value)) != len(value):
+                raise ValueError(f"badges에 중복 코드: {wid} = {value!r}")
+            if observed_by_work is not None:
+                seen = set(observed_by_work.get(wid) or [])
+                added = set(value) - set(works_by_id[wid].get("badges") or []) - {"STD"}
+                unbacked = sorted(added - seen)
+                if unbacked:
+                    raise ValueError(
+                        f"badges에 추가한 {unbacked}가 KOBIS에서 관측되지 않았다 "
+                        f"(workId={wid}, 관측 {sorted(seen)}) — 배지는 KOBIS 편성으로만 는다")
         elif field == "recommendedFormat":
             if value not in KNOWN_CODES:
                 raise ValueError(f"recommendedFormat 값 오류: {wid} = {value!r}")
         else:
             if not isinstance(value, str) or not value.strip():
                 raise ValueError(f"{field} 값이 빈 문자열 (workId={wid})")
+
+    # 필드별 검사가 끝나면 변경을 **모두 반영한 모습**으로 작품 단위 규칙을 본다.
+    # recommendedFormat과 badges가 한 배치에서 같이 바뀔 수 있고, hook이 badges에
+    # 없는 포맷을 부르는지는 두 필드를 함께 봐야 알 수 있다.
+    after = {}
+    for ch in changes:
+        wid = ch["workId"]
+        after.setdefault(wid, dict(works_by_id[wid]))[ch["field"]] = ch["value"]
+    problems = [p for w in after.values() for p in audit_feed.work_problems(w)]
+    if problems:
+        raise ValueError("변경 반영 후 작품 규칙 위반: " + " / ".join(problems))
 
 
 def validate_additions(additions: list, works_by_id: dict, candidates: list,
@@ -355,12 +421,29 @@ def validate_additions(additions: list, works_by_id: dict, candidates: list,
             if (not isinstance(badges, list)
                     or not all(isinstance(b, str) and b in KNOWN_CODES for b in badges)):
                 raise ValueError(f"badges 값 오류: {badges!r}")
-            required = {f for f in (cand.get("formats") or [])
-                        if f not in HALL_ATTRIBUTE_CODES}
-            lacking = required - set(badges)
+            # 배지 = 프리미엄 접미사 관측, 정확히. 모자라도(관측 누락) 남아도(지어냄)
+            # 거부한다. 2026-09-24 residentevil은 관측 없이 다섯 개를 달았다.
+            observed = screening.premium_formats_of(cand)
+            if not observed:
+                raise ValueError("KOBIS 프리미엄 접미사 관측이 없음 — 배지 근거가 없다 "
+                                 f"(관측 포맷: {cand.get('formats')}, 관 속성은 근거가 아님)")
+            forbidden = sorted(set(badges) & FORBIDDEN_WORK_BADGES)
+            if forbidden:
+                raise ValueError(f"badges에 관 속성 코드 {forbidden} — "
+                                 "SUPERPLEX·DOLBYVISION은 작품 배지가 될 수 없다")
+            if len(set(badges)) != len(badges):
+                raise ValueError(f"badges에 중복 코드: {badges!r}")
+            lacking = observed - set(badges)
             if lacking:
                 raise ValueError(f"KOBIS에서 본 포맷 {', '.join(sorted(lacking))}가 "
-                                 f"badges에 없음 (본 포맷: {cand.get('formats')})")
+                                 f"badges에 없음 (본 포맷: {sorted(observed)})")
+            extra = set(badges) - observed
+            if extra:
+                raise ValueError(f"KOBIS에서 관측되지 않은 배지 {sorted(extra)} "
+                                 f"(관측: {sorted(observed)}) — 배지는 관측과 정확히 같아야 한다")
+            if len(badges) > MAX_BADGES:
+                raise ValueError(f"badges {len(badges)}개 > {MAX_BADGES}개 — 1.0 앱의 배지 줄이 "
+                                 "넘친다. 사람이 고를 것")
             if add["recommendedFormat"] not in badges:
                 raise ValueError(f"recommendedFormat {add['recommendedFormat']!r}이 "
                                  f"badges {badges} 안에 없음")
@@ -375,7 +458,7 @@ def validate_additions(additions: list, works_by_id: dict, candidates: list,
                 raise ValueError(f"work id {work_id!r}가 이미 있음 — en을 확인할 것")
             taken.add(work_id)
 
-            accepted.append({
+            work = {
                 "id": work_id,
                 "title": add["title"].strip(),
                 "en": add["en"].strip(),
@@ -394,7 +477,12 @@ def validate_additions(additions: list, works_by_id: dict, candidates: list,
                 "_movieCd": movie_cd,
                 "_source": add["source"],
                 "_reason": add.get("reason", ""),
-            })
+            }
+            # hook·meta가 badges에 없는 포맷을 부르는지 등 작품 단위 규칙.
+            problems = audit_feed.work_problems(work)
+            if problems:
+                raise ValueError(" / ".join(problems))
+            accepted.append(work)
         except (ValueError, KeyError, AttributeError, TypeError) as e:
             rejected.append((movie_cd, str(e)))
     return accepted, rejected
@@ -438,6 +526,15 @@ def main() -> int:
     # MAX_ADDITIONS 자리를 차지하지 않게 한다.
     offered = []
     for cand in pool:
+        if not screening.premium_formats_of(cand):
+            # 옛 후보 파일(관 속성 관에서만 본 것)이 남아 있을 때. 배지 근거가 없는
+            # 후보는 모델에게 보이지도 않는다 — 보이면 배지를 지어낸다(09-24).
+            screening.mark_candidate_handled(
+                state, cand["movieCd"], "rejected",
+                "KOBIS 프리미엄 접미사 관측 없음 — 배지 근거 없음", today.date())
+            print(f"::warning::후보 제외 {cand['movieCd']} {cand['kobisNm']} — "
+                  f"프리미엄 접미사 관측 없음 (formats {cand.get('formats')})")
+            continue
         keyword = screening.nonfilm_reason(cand["kobisNm"])
         if keyword:
             screening.mark_candidate_handled(
@@ -476,7 +573,10 @@ def main() -> int:
         r = resolved_by_cd[str(c["movieCd"])]
         prompt_candidates.append({
             "movieCd": c["movieCd"], "kobisNm": c["kobisNm"],
-            "formats": c["formats"], "theaterCount": c["theaterCount"],
+            # 배지 근거(프리미엄 접미사 관측)만 보여 준다. 관 속성 코드를 보여 주면
+            # 모델이 그걸 배지로 옮긴다.
+            "formats": sorted(screening.premium_formats_of(c)),
+            "theaterCount": c["theaterCount"],
             "tmdbId": r["tmdbId"], "koTitle": r["koTitle"], "en": r["en"],
             "date": r["date"], "dateType": r["dateType"],
             "reReleaseDate": r["reReleaseDate"], "run": r["run"], "genre": r["genre"],
@@ -485,6 +585,8 @@ def main() -> int:
               f"/ {r['date']}(type {r['dateType']})"
               + (f" / 재개봉 {r['reReleaseDate']}" if r["reReleaseDate"] else "")
               + f" / {r['run']} / {r['genre']}")
+
+    observed_by_work = state.get("observedPremiumFormats") or {}
 
     client = Anthropic()
     # cache_control: 웹 검색은 검색할 때마다 누적된 대화 전체를 다시 입력으로
@@ -497,7 +599,8 @@ def main() -> int:
         cache_control={"type": "ephemeral"},
         tools=[{"type": "web_search_20260209", "name": "web_search", "max_uses": 6}],
         messages=[{"role": "user",
-                   "content": build_prompt(data["works"], prompt_candidates, today)}],
+                   "content": build_prompt(data["works"], prompt_candidates, today,
+                                           observed_by_work)}],
     ) as stream:
         message = stream.get_final_message()
 
@@ -524,7 +627,7 @@ def main() -> int:
     notices = result.get("notices") or []
     summary = result.get("summary") or ""
 
-    validate_changes(changes, works_by_id)
+    validate_changes(changes, works_by_id, observed_by_work)
 
     issue_entries = []
     for ch in changes:
@@ -597,6 +700,11 @@ def main() -> int:
     # 작품도 같은 불변식을 지나간다.
     validate_hook_invariant(data["works"])
     validate_meta_invariant(data["works"])
+    # 발행 직전 감사(audit_feed.py)와 같은 규칙을 쓰기 전에 한 번 더. 여기서
+    # 걸리면 아무것도 쓰지 않는다.
+    problems = audit_feed.audit(data["works"])
+    if problems:
+        raise ValueError("피드 감사 실패: " + " / ".join(problems))
 
     # 변경이 없어도 '이 날짜에 점검됨'을 앱의 "N월 N일 기준" 라벨에 반영한다.
     data["dataTimestamp"] = today.strftime("%Y-%m-%dT%H:%M:%S+09:00")
