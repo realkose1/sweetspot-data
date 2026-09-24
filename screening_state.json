@@ -62,8 +62,8 @@
     },
     "20263870": {
       "date": "2026-09-24",
-      "action": "added",
-      "reason": "residentevil 추가"
+      "action": "rejected",
+      "reason": "수동 핫픽스: KOBIS에서 SUPERPLEX 1곳만 확인됨. 봇이 IMAX·돌비·4DX·ScreenX 배지를 근거 없이 붙여 추가했던 것을 제거."
     },
     "20256161": {
       "date": "2026-09-24",
