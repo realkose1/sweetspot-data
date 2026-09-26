@@ -22,5 +22,17 @@
     ],
     "theaterCount": 3,
     "firstSeenDate": "2026-09-25"
+  },
+  {
+    "movieCd": "20267229",
+    "kobisNm": "언섀터",
+    "formats": [
+      "SCREENX"
+    ],
+    "premiumFormats": [
+      "SCREENX"
+    ],
+    "theaterCount": 1,
+    "firstSeenDate": "2026-09-27"
   }
 ]
