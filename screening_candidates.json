@@ -1,5 +1,19 @@
 [
   {
+    "movieCd": "20224573",
+    "kobisNm": "부활남: 더 레드",
+    "formats": [
+      "4DX",
+      "SCREENX"
+    ],
+    "premiumFormats": [
+      "4DX",
+      "SCREENX"
+    ],
+    "theaterCount": 48,
+    "firstSeenDate": "2026-09-28"
+  },
+  {
     "movieCd": "20070216",
     "kobisNm": "시간을 달리는 소녀",
     "formats": [
@@ -12,27 +26,17 @@
     "firstSeenDate": "2026-09-20"
   },
   {
-    "movieCd": "20266462",
-    "kobisNm": "수호도사: 세계유산을 지켜라",
-    "formats": [
-      "4DX"
-    ],
-    "premiumFormats": [
-      "4DX"
-    ],
-    "theaterCount": 3,
-    "firstSeenDate": "2026-09-25"
-  },
-  {
     "movieCd": "20267229",
     "kobisNm": "언섀터",
     "formats": [
+      "4DX",
       "SCREENX"
     ],
     "premiumFormats": [
+      "4DX",
       "SCREENX"
     ],
-    "theaterCount": 1,
+    "theaterCount": 8,
     "firstSeenDate": "2026-09-27"
   }
 ]
