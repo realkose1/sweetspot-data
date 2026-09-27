@@ -63,7 +63,8 @@
       "hook": "돌비 시네마용으로 따로 컨버팅한 작품이에요",
       "open": null,
       "tmdbId": 1058424,
-      "recommendedFormat": "DOLBY"
+      "recommendedFormat": "DOLBY",
+      "premiumEnd": "2026.09.22"
     },
     {
       "id": "toystory5",
@@ -140,7 +141,8 @@
       "hook": "IMAX·ScreenX·4DX 모두 열리는 오션 어드벤처예요",
       "open": null,
       "tmdbId": 1108427,
-      "recommendedFormat": "IMAX190"
+      "recommendedFormat": "IMAX190",
+      "premiumEnd": "2026.09.19"
     },
     {
       "id": "minions",
@@ -159,7 +161,8 @@
       "hook": "ScreenX 확장 화면과 4DX 모션으로 열려요",
       "open": null,
       "tmdbId": 1315772,
-      "recommendedFormat": "SCREENX"
+      "recommendedFormat": "SCREENX",
+      "premiumEnd": "2026.09.19"
     },
     {
       "id": "avengersendgame",

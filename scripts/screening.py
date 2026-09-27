@@ -103,7 +103,17 @@ DEFAULT_BUDGET_SECONDS = 25 * 60
 OUTAGE_FAILURE_STREAK = 10
 THEATER_FAILURE_ABORT_RATIO = 0.5
 PREMIUM_DROP_ABORT_RATIO = 0.5
-RETIRE_STREAK_DAYS = 7
+# 3일 창은 이미 today..today+2를 덮는다. 그래서 연속 3회(같은 날 재실행은 세지
+# 않으므로 실질적으로 3일)를 비우면 "예정된 프리미엄 상영이 5일 가까이 전혀
+# 없었다"는 뜻이 된다(오늘 창이 비고 → 다음 실행의 창도 비고 → 그다음도 비면,
+# 그 사이 실제로 상영이 없었던 날은 최소 이 정도다). moana·minions처럼
+# lastPremiumSeen이 아예 없는 작품을 7일까지 기다리면 영영 은퇴하지 못하는
+# 문제(2026-09-27)가 있었다 — 그래서 임계값을 낮췄다.
+RETIRE_AFTER_EMPTY_RUNS = 3
+# 파이프라인이 처음 KOBIS를 수집하기 시작한 날. lastPremiumSeen도 noPremiumSince도
+# 없는 레거시 상태(스트릭만 있고 언제부터 비었는지 기록이 없던 시절)의 최후
+# 폴백이다 — 그 이전 상영 여부는 이 봇이 관측한 적이 없다.
+PIPELINE_START_DATE = "2026-09-19"
 # 한 번 처리한(추가했거나 이유를 달아 거절한) 후보를 다시 제안하기까지 기다리는
 # 날수. 같은 후보로 매일 유료 단계를 켜지 않기 위한 것이고, 그렇다고 영영
 # 잊지도 않는다 — 극장 수가 늘거나 거절 사유가 낡을 수 있다.
@@ -662,14 +672,25 @@ def parse_curated_date(s):
 
 def update_state_and_retire(works: dict, curated: dict, state: dict,
                             premium_rows_today: int, today, warn):
-    """lastPremiumSeen · noPremiumStreak 갱신 + 은퇴 판정. changes 목록 반환.
+    """lastPremiumSeen · noPremiumStreak · noPremiumSince 갱신 + 은퇴 판정.
 
-    같은 날(Asia/Seoul) 두 번째 실행부터는 카운터를 건드리지 않는다. 은퇴 규칙은
-    "연속된 **날**"을 세는데, 수동 재실행이 하루에 한 번 더 세면 7일이 6일 만에
-    찬다 — 2026-09-22에 실제로 noPremiumStreak이 2→3으로 올라 손으로 되돌렸다.
+    changes 목록을 반환한다. 같은 날(Asia/Seoul) 두 번째 실행부터는 카운터를
+    건드리지 않는다. 은퇴 규칙은 "연속된 **날**"을 세는데, 수동 재실행이 하루에
+    한 번 더 세면 임계값이 하루 일찍 찬다 — 2026-09-22에 실제로 noPremiumStreak이
+    2→3으로 올라 손으로 되돌렸다.
+
+    `noPremiumSince[workId]`는 현재 스트릭이 시작된(0→1로 오른) 날이다. 프리미엄
+    상영이 다시 보이면(스트릭이 0으로 리셋되면) 지운다. `lastPremiumSeen`이 있는
+    작품은 그대로 그 날짜를 은퇴일로 쓰고, 없는 작품(2026-09-19 파이프라인 시작
+    이후 한 번도 프리미엄 상영이 관측되지 않은 moana·minions 같은 경우)은
+    `noPremiumSince`의 **전날**을 은퇴일로 쓴다 — `noPremiumSince` 자체는 "비어
+    있는 것을 처음 본 날"이라 실제로 비기 시작한 날보다 하루 늦다. 그마저도 없는
+    레거시 상태(스트릭은 있는데 noPremiumSince가 없던 시절 데이터)는
+    `PIPELINE_START_DATE`로 떨어진다.
     """
     last_seen = state.setdefault("lastPremiumSeen", {})
     streak = state.setdefault("noPremiumStreak", {})
+    since = state.setdefault("noPremiumSince", {})
     changes = []
     today_iso = today.isoformat()
     if state.get("lastRunDate") == today_iso:
@@ -691,30 +712,39 @@ def update_state_and_retire(works: dict, curated: dict, state: dict,
         work_id = work["id"]
         if not has_premium_badges(work):
             streak.pop(work_id, None)
+            since.pop(work_id, None)
             continue
         if work_id in premium_now:
             streak[work_id] = 0
+            since.pop(work_id, None)
             continue
-        streak[work_id] = int(streak.get(work_id, 0)) + 1
+        prev_streak = int(streak.get(work_id, 0))
+        streak[work_id] = prev_streak + 1
+        if prev_streak == 0:
+            since[work_id] = today_iso
 
-        if streak[work_id] < RETIRE_STREAK_DAYS or work.get("premiumEnd"):
+        if streak[work_id] < RETIRE_AFTER_EMPTY_RUNS or work.get("premiumEnd"):
             continue
         release = parse_curated_date(work.get("date"))
         if release and release > today:
             continue          # 미개봉작은 은퇴시키지 않는다
+
         end = last_seen.get(work_id)
-        if not end:
-            warn(f"{work_id}: 프리미엄 미상영 {streak[work_id]}일 연속이지만 "
-                 f"lastPremiumSeen이 없어 premiumEnd를 정할 수 없음 — 사람 확인 필요")
-            continue
-        work["premiumEnd"] = dotted(end)
+        if end:
+            end_date = parse_iso(end)
+        else:
+            since_iso = since.get(work_id)
+            since_date = parse_iso(since_iso) if since_iso else None
+            end_date = (since_date - timedelta(days=1)) if since_date else \
+                parse_iso(PIPELINE_START_DATE)
+        work["premiumEnd"] = dotted(end_date.isoformat())
         changes.append({
             "kind": "retirement",
             "workId": work_id,
             "field": "premiumEnd",
             "value": work["premiumEnd"],
-            "reason": f"3일 창에 프리미엄 상영이 없는 날 {streak[work_id]}일 연속 "
-                      f"(계약 '봇 동작' 3). 배지는 그대로 둔다.",
+            "reason": f"3일 창에 프리미엄 상영이 없는 실행이 {streak[work_id]}회 연속"
+                      f"(계약 '봇 동작' 3, RETIRE_AFTER_EMPTY_RUNS). 배지는 그대로 둔다.",
         })
 
     state["prevPremiumRowCount"] = premium_rows_today
