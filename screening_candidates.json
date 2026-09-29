@@ -4,13 +4,15 @@
     "kobisNm": "부활남: 더 레드",
     "formats": [
       "4DX",
-      "SCREENX"
+      "DOLBYVISION",
+      "SCREENX",
+      "SUPERPLEX"
     ],
     "premiumFormats": [
       "4DX",
       "SCREENX"
     ],
-    "theaterCount": 48,
+    "theaterCount": 54,
     "firstSeenDate": "2026-09-28"
   },
   {
@@ -22,7 +24,7 @@
     "premiumFormats": [
       "4DX"
     ],
-    "theaterCount": 10,
+    "theaterCount": 9,
     "firstSeenDate": "2026-09-20"
   },
   {
@@ -38,5 +40,17 @@
     ],
     "theaterCount": 8,
     "firstSeenDate": "2026-09-27"
+  },
+  {
+    "movieCd": "20264775",
+    "kobisNm": "디거",
+    "formats": [
+      "IMAX43"
+    ],
+    "premiumFormats": [
+      "IMAX43"
+    ],
+    "theaterCount": 1,
+    "firstSeenDate": "2026-09-29"
   }
 ]

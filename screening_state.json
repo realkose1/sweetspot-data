@@ -2,24 +2,25 @@
   "candidateFirstSeen": {
     "20070216": "2026-09-20",
     "20267229": "2026-09-27",
-    "20224573": "2026-09-28"
+    "20224573": "2026-09-28",
+    "20264775": "2026-09-29"
   },
   "lastPremiumSeen": {
-    "odyssey": "2026-09-30",
-    "spiderman": "2026-09-30",
-    "hope": "2026-09-30",
-    "avengersendgame": "2026-09-30"
+    "odyssey": "2026-10-01",
+    "spiderman": "2026-10-01",
+    "hope": "2026-10-01",
+    "avengersendgame": "2026-10-01"
   },
   "noPremiumStreak": {
     "odyssey": 0,
     "spiderman": 0,
     "hope": 0,
-    "toystory5": 8,
-    "moana": 8,
-    "minions": 8,
+    "toystory5": 9,
+    "moana": 9,
+    "minions": 9,
     "avengersendgame": 0
   },
-  "prevPremiumRowCount": 218,
+  "prevPremiumRowCount": 204,
   "handledCandidates": {
     "20241110": {
       "date": "2026-09-21",
@@ -52,7 +53,7 @@
       "reason": "TMDB에 실제 영화(id 1394740, 타짜: 벨제붑의 노래)로 존재하나, KOBIS 관측 포맷이 DOLBYVISION(1개관)뿐이고 이는 규칙상 관 속성 예외 항목이라 badges를 채울 근거(IMAX·ScreenX·4DX·돌비시네마 등 실제 특수관 편성)를 확인하지 못해 이번엔 보류"
     }
   },
-  "lastRunDate": "2026-09-28",
+  "lastRunDate": "2026-09-29",
   "observedPremiumFormats": {
     "odyssey": [
       "4DX",
