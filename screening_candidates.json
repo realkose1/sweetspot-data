@@ -16,18 +16,6 @@
     "firstSeenDate": "2026-09-28"
   },
   {
-    "movieCd": "20070216",
-    "kobisNm": "시간을 달리는 소녀",
-    "formats": [
-      "4DX"
-    ],
-    "premiumFormats": [
-      "4DX"
-    ],
-    "theaterCount": 9,
-    "firstSeenDate": "2026-09-20"
-  },
-  {
     "movieCd": "20267229",
     "kobisNm": "언섀터",
     "formats": [
@@ -38,17 +26,17 @@
       "4DX",
       "SCREENX"
     ],
-    "theaterCount": 8,
+    "theaterCount": 7,
     "firstSeenDate": "2026-09-27"
   },
   {
     "movieCd": "20264775",
     "kobisNm": "디거",
     "formats": [
-      "IMAX43"
+      "IMAX190"
     ],
     "premiumFormats": [
-      "IMAX43"
+      "IMAX190"
     ],
     "theaterCount": 1,
     "firstSeenDate": "2026-09-29"
