@@ -16,6 +16,21 @@
     "firstSeenDate": "2026-09-28"
   },
   {
+    "movieCd": "20264775",
+    "kobisNm": "디거",
+    "formats": [
+      "DOLBY",
+      "DOLBYVISION",
+      "IMAX190"
+    ],
+    "premiumFormats": [
+      "DOLBY",
+      "IMAX190"
+    ],
+    "theaterCount": 20,
+    "firstSeenDate": "2026-09-29"
+  },
+  {
     "movieCd": "20267229",
     "kobisNm": "언섀터",
     "formats": [
@@ -26,19 +41,7 @@
       "4DX",
       "SCREENX"
     ],
-    "theaterCount": 7,
+    "theaterCount": 6,
     "firstSeenDate": "2026-09-27"
-  },
-  {
-    "movieCd": "20264775",
-    "kobisNm": "디거",
-    "formats": [
-      "IMAX190"
-    ],
-    "premiumFormats": [
-      "IMAX190"
-    ],
-    "theaterCount": 1,
-    "firstSeenDate": "2026-09-29"
   }
 ]
