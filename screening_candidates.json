@@ -5,8 +5,7 @@
     "formats": [
       "4DX",
       "DOLBYVISION",
-      "SCREENX",
-      "SUPERPLEX"
+      "SCREENX"
     ],
     "premiumFormats": [
       "4DX",
@@ -27,7 +26,7 @@
       "DOLBY",
       "IMAX190"
     ],
-    "theaterCount": 20,
+    "theaterCount": 21,
     "firstSeenDate": "2026-09-29"
   },
   {
@@ -43,5 +42,17 @@
     ],
     "theaterCount": 6,
     "firstSeenDate": "2026-09-27"
+  },
+  {
+    "movieCd": "20070216",
+    "kobisNm": "시간을 달리는 소녀",
+    "formats": [
+      "4DX"
+    ],
+    "premiumFormats": [
+      "4DX"
+    ],
+    "theaterCount": 1,
+    "firstSeenDate": "2026-10-02"
   }
 ]
