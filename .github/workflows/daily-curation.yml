@@ -128,6 +128,10 @@ jobs:
         if: ${{ steps.pre.outputs.run == 'true' && inputs.dry_run != true }}
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # 후보를 TMDB로 미리 확정하는 데 쓴다. 빠지면 후보가 매일 '보류'되고,
+          # 보류는 처리 기록에 남지 않아 precheck가 같은 후보로 매일 Claude를 켠다
+          # (2026-09-25~10-03 9일 연속 발생).
+          TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
         run: python scripts/daily_curation.py
 
       # 건너뛴 날에도 기준 날짜는 오늘로 옮긴다. 앱의 "포맷 데이터 기준 N월 N일"

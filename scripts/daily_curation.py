@@ -594,7 +594,7 @@ def main() -> int:
     # 불어난다 (첫 실행에서 확인: 12회 검색에 입력 ~33만 토큰). 캐시된 부분은
     # 기본 단가의 ~10%로 재사용된다. max_uses도 6으로 제한 — 8편 점검에 충분.
     with client.messages.stream(
-        model="claude-sonnet-5",
+        model="claude-sonnet-5-5",
         max_tokens=32000,
         cache_control={"type": "ephemeral"},
         tools=[{"type": "web_search_20260209", "name": "web_search", "max_uses": 6}],
@@ -608,7 +608,8 @@ def main() -> int:
     searches = getattr(getattr(u, "server_tool_use", None), "web_search_requests", 0) or 0
     cache_read = getattr(u, "cache_read_input_tokens", 0) or 0
     cache_write = getattr(u, "cache_creation_input_tokens", 0) or 0
-    cost = (u.input_tokens * 3 + cache_write * 3.75 + cache_read * 0.3 + u.output_tokens * 15) / 1e6 + searches * 0.01
+    # claude-sonnet-5-5 단가 ($/1M): 입력 2 · 캐시 쓰기(5분) 2.5 · 캐시 읽기 0.2 · 출력 10, 검색 $0.01/회
+    cost = (u.input_tokens * 2 + cache_write * 2.5 + cache_read * 0.2 + u.output_tokens * 10) / 1e6 + searches * 0.01
     print(f"토큰: 입력 {u.input_tokens:,} / 캐시쓰기 {cache_write:,} / 캐시읽기 {cache_read:,} / 출력 {u.output_tokens:,} / 검색 {searches}회")
     print(f"예상 비용(정가 기준): ${cost:.2f}")
 
