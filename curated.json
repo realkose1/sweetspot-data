@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-10-03T09:44:15+09:00",
+  "dataTimestamp": "2026-10-04T08:44:47+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -184,6 +184,26 @@
       "open": null,
       "tmdbId": 299534,
       "recommendedFormat": "IMAX190",
+      "premiumEnd": null
+    },
+    {
+      "id": "reawakenedman",
+      "title": "부활남: 더 레드",
+      "en": "REAWAKENED MAN",
+      "pc1": "#3a1518",
+      "pc2": "#0d0607",
+      "date": "2026.09.30",
+      "run": "102분",
+      "genre": "액션 · 판타지",
+      "meta": "2026.09.30 개봉 · 102분 · 액션/판타지",
+      "badges": [
+        "4DX",
+        "SCREENX"
+      ],
+      "hook": "배급사가 ScreenX와 4DX 특별관 개봉을 확정한 작품이에요",
+      "open": null,
+      "tmdbId": 961214,
+      "recommendedFormat": "4DX",
       "premiumEnd": null
     }
   ],
