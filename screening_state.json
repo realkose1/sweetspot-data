@@ -1,26 +1,25 @@
 {
   "candidateFirstSeen": {
-    "20267229": "2026-09-27",
-    "20224573": "2026-09-28",
-    "20264775": "2026-09-29",
-    "20070216": "2026-10-02"
+    "20264775": "2026-09-29"
   },
   "lastPremiumSeen": {
-    "odyssey": "2026-10-04",
-    "spiderman": "2026-10-04",
-    "hope": "2026-10-04",
-    "avengersendgame": "2026-10-04"
+    "odyssey": "2026-10-07",
+    "spiderman": "2026-10-06",
+    "hope": "2026-10-07",
+    "avengersendgame": "2026-10-07",
+    "reawakenedman": "2026-10-07"
   },
   "noPremiumStreak": {
     "odyssey": 0,
     "spiderman": 0,
     "hope": 0,
-    "toystory5": 12,
-    "moana": 12,
-    "minions": 12,
-    "avengersendgame": 0
+    "toystory5": 13,
+    "moana": 13,
+    "minions": 13,
+    "avengersendgame": 0,
+    "reawakenedman": 0
   },
-  "prevPremiumRowCount": 196,
+  "prevPremiumRowCount": 271,
   "handledCandidates": {
     "20241110": {
       "date": "2026-09-21",
@@ -52,18 +51,13 @@
       "action": "rejected",
       "reason": "TMDB에 실제 영화(id 1394740, 타짜: 벨제붑의 노래)로 존재하나, KOBIS 관측 포맷이 DOLBYVISION(1개관)뿐이고 이는 규칙상 관 속성 예외 항목이라 badges를 채울 근거(IMAX·ScreenX·4DX·돌비시네마 등 실제 특수관 편성)를 확인하지 못해 이번엔 보류"
     },
-    "20224573": {
-      "date": "2026-10-04",
-      "action": "added",
-      "reason": "reawakenedman 추가"
-    },
     "20264775": {
       "date": "2026-10-04",
       "action": "rejected",
       "reason": "영화이고 KOBIS 편성(DOLBY·IMAX190)은 확인되나, 포맷 선택에 쓸 촬영 방식·화면비를 신뢰할 만한 출처로 확인하지 못해 hook을 쓸 수 없음. 나무위키의 화면비 표기는 위키 정보라 채택하지 않았고 웹 검색 한도에도 도달함. 다음 회차에 hook 근거를 확인한 뒤 재검토 바람"
     }
   },
-  "lastRunDate": "2026-10-02",
+  "lastRunDate": "2026-10-05",
   "observedPremiumFormats": {
     "odyssey": [
       "4DX",
@@ -77,6 +71,10 @@
     "avengersendgame": [
       "4DX",
       "DOLBY",
+      "SCREENX"
+    ],
+    "reawakenedman": [
+      "4DX",
       "SCREENX"
     ],
     "hope": [

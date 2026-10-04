@@ -1,20 +1,5 @@
 [
   {
-    "movieCd": "20224573",
-    "kobisNm": "부활남: 더 레드",
-    "formats": [
-      "4DX",
-      "DOLBYVISION",
-      "SCREENX"
-    ],
-    "premiumFormats": [
-      "4DX",
-      "SCREENX"
-    ],
-    "theaterCount": 54,
-    "firstSeenDate": "2026-09-28"
-  },
-  {
     "movieCd": "20264775",
     "kobisNm": "디거",
     "formats": [
@@ -26,33 +11,7 @@
       "DOLBY",
       "IMAX190"
     ],
-    "theaterCount": 21,
+    "theaterCount": 19,
     "firstSeenDate": "2026-09-29"
-  },
-  {
-    "movieCd": "20267229",
-    "kobisNm": "언섀터",
-    "formats": [
-      "4DX",
-      "SCREENX"
-    ],
-    "premiumFormats": [
-      "4DX",
-      "SCREENX"
-    ],
-    "theaterCount": 6,
-    "firstSeenDate": "2026-09-27"
-  },
-  {
-    "movieCd": "20070216",
-    "kobisNm": "시간을 달리는 소녀",
-    "formats": [
-      "4DX"
-    ],
-    "premiumFormats": [
-      "4DX"
-    ],
-    "theaterCount": 1,
-    "firstSeenDate": "2026-10-02"
   }
 ]
