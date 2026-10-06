@@ -1,5 +1,18 @@
 [
   {
+    "movieCd": "20265062",
+    "kobisNm": "룩백",
+    "formats": [
+      "DOLBY",
+      "DOLBYVISION"
+    ],
+    "premiumFormats": [
+      "DOLBY"
+    ],
+    "theaterCount": 14,
+    "firstSeenDate": "2026-10-06"
+  },
+  {
     "movieCd": "20264775",
     "kobisNm": "디거",
     "formats": [
@@ -11,7 +24,7 @@
       "DOLBY",
       "IMAX190"
     ],
-    "theaterCount": 19,
+    "theaterCount": 13,
     "firstSeenDate": "2026-09-29"
   }
 ]

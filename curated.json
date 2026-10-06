@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-10-05T08:57:53+09:00",
+  "dataTimestamp": "2026-10-06T10:48:13+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -204,6 +204,25 @@
       "open": null,
       "tmdbId": 961214,
       "recommendedFormat": "4DX",
+      "premiumEnd": null
+    },
+    {
+      "id": "lookback",
+      "title": "룩백",
+      "en": "LOOK BACK",
+      "pc1": "#22303d",
+      "pc2": "#0a0d11",
+      "date": "2026.10.08",
+      "run": "101분",
+      "genre": "드라마",
+      "meta": "2026.10.08 개봉 · 101분 · 드라마",
+      "badges": [
+        "DOLBY"
+      ],
+      "hook": "국내 개봉 때부터 돌비 시네마 상영이 확정된 작품이에요",
+      "open": null,
+      "tmdbId": 1591675,
+      "recommendedFormat": "DOLBY",
       "premiumEnd": null
     }
   ],
