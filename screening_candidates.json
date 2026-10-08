@@ -1,15 +1,14 @@
 [
   {
-    "movieCd": "20264775",
-    "kobisNm": "디거",
+    "movieCd": "20262975",
+    "kobisNm": "신극장판 은혼: 요시와라 대염상",
     "formats": [
-      "DOLBY",
-      "DOLBYVISION"
+      "4DX"
     ],
     "premiumFormats": [
-      "DOLBY"
+      "4DX"
     ],
-    "theaterCount": 5,
-    "firstSeenDate": "2026-09-29"
+    "theaterCount": 1,
+    "firstSeenDate": "2026-10-08"
   }
 ]

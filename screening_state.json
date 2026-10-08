@@ -1,27 +1,27 @@
 {
   "candidateFirstSeen": {
-    "20264775": "2026-09-29"
+    "20262975": "2026-10-08"
   },
   "lastPremiumSeen": {
-    "odyssey": "2026-10-09",
+    "odyssey": "2026-10-10",
     "spiderman": "2026-10-06",
-    "hope": "2026-10-08",
-    "avengersendgame": "2026-10-09",
-    "reawakenedman": "2026-10-09",
-    "lookback": "2026-10-09"
+    "hope": "2026-10-10",
+    "avengersendgame": "2026-10-10",
+    "reawakenedman": "2026-10-10",
+    "lookback": "2026-10-10"
   },
   "noPremiumStreak": {
     "odyssey": 0,
-    "spiderman": 1,
+    "spiderman": 2,
     "hope": 0,
-    "toystory5": 15,
-    "moana": 15,
-    "minions": 15,
+    "toystory5": 16,
+    "moana": 16,
+    "minions": 16,
     "avengersendgame": 0,
     "reawakenedman": 0,
     "lookback": 0
   },
-  "prevPremiumRowCount": 172,
+  "prevPremiumRowCount": 165,
   "handledCandidates": {
     "20241110": {
       "date": "2026-09-21",
@@ -57,13 +57,17 @@
       "date": "2026-10-04",
       "action": "rejected",
       "reason": "영화이고 KOBIS 편성(DOLBY·IMAX190)은 확인되나, 포맷 선택에 쓸 촬영 방식·화면비를 신뢰할 만한 출처로 확인하지 못해 hook을 쓸 수 없음. 나무위키의 화면비 표기는 위키 정보라 채택하지 않았고 웹 검색 한도에도 도달함. 다음 회차에 hook 근거를 확인한 뒤 재검토 바람"
+    },
+    "20262975": {
+      "date": "2026-10-08",
+      "action": "rejected",
+      "reason": "영화(애니메이션 극장판)이고 4DX 편성은 관측됐으나, TMDB 확정값 run이 null이라 meta(날짜 · 상영시간 · 장르)와 run 필드를 채울 수 없음. 검색으로 run을 채우지 말라는 지침에 따라 보류. 편성 극장 수 1곳이며, 'CGV 단독 9월 9일 재개봉'과 4DX 상영 확정은 SNS 게시물로만 확인되어 공식 출처 확인 필요(reReleaseDate도 null). 사람이 run을 확인하면 재검토 가능."
     }
   },
-  "lastRunDate": "2026-10-07",
+  "lastRunDate": "2026-10-08",
   "observedPremiumFormats": {
     "odyssey": [
       "4DX",
-      "DOLBY",
       "IMAX190",
       "IMAX43"
     ],
@@ -72,7 +76,6 @@
     ],
     "avengersendgame": [
       "4DX",
-      "DOLBY",
       "SCREENX"
     ],
     "reawakenedman": [
