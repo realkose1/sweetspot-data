@@ -1,28 +1,29 @@
 {
   "candidateFirstSeen": {
     "20262975": "2026-10-08",
-    "20267229": "2026-10-09"
+    "20267229": "2026-10-09",
+    "20266263": "2026-10-10"
   },
   "lastPremiumSeen": {
-    "odyssey": "2026-10-11",
+    "odyssey": "2026-10-12",
     "spiderman": "2026-10-06",
-    "hope": "2026-10-11",
-    "avengersendgame": "2026-10-11",
-    "reawakenedman": "2026-10-11",
-    "lookback": "2026-10-11"
+    "hope": "2026-10-12",
+    "avengersendgame": "2026-10-12",
+    "reawakenedman": "2026-10-12",
+    "lookback": "2026-10-12"
   },
   "noPremiumStreak": {
     "odyssey": 0,
-    "spiderman": 3,
+    "spiderman": 4,
     "hope": 0,
-    "toystory5": 17,
-    "moana": 17,
-    "minions": 17,
+    "toystory5": 18,
+    "moana": 18,
+    "minions": 18,
     "avengersendgame": 0,
     "reawakenedman": 0,
     "lookback": 0
   },
-  "prevPremiumRowCount": 165,
+  "prevPremiumRowCount": 167,
   "handledCandidates": {
     "20241110": {
       "date": "2026-09-21",
@@ -68,9 +69,14 @@
       "date": "2026-10-09",
       "action": "rejected",
       "reason": "린킨 파크 '언섀터'는 음악·다큐멘터리 장르로 공연 실황 성격이 강해 앱 대상(영화)이 아님. dateType이 2(디지털)라 한국 극장 개봉일도 확정되지 않았고, KOBIS 4DX 편성도 1개 극장뿐임"
+    },
+    "20266263": {
+      "date": "2026-10-10",
+      "action": "rejected",
+      "reason": "영화이고 TMDB 확정값은 있으나, hook에 쓸 수 있는 확인된 포맷 사실을 찾지 못함. 확인된 것은 10월 14일 개봉과 웹툰 원작뿐이었고, ScreenX 편성 근거나 촬영·마스터링 정보는 없었음. KOBIS 편성도 1개 극장뿐이라 정식 특별관 개봉인지 불확실함. 웹 검색 한도에 도달해 추가 확인을 못 함. 개봉 후 ScreenX 편성이 늘면 다시 검토."
     }
   },
-  "lastRunDate": "2026-10-09",
+  "lastRunDate": "2026-10-10",
   "observedPremiumFormats": {
     "odyssey": [
       "4DX",
@@ -82,13 +88,15 @@
     ],
     "avengersendgame": [
       "4DX",
+      "DOLBY",
+      "SCREENX"
+    ],
+    "reawakenedman": [
+      "4DX",
       "SCREENX"
     ],
     "hope": [
       "4DX"
-    ],
-    "reawakenedman": [
-      "SCREENX"
     ]
   },
   "noPremiumSince": {

@@ -12,6 +12,18 @@
     "firstSeenDate": "2026-10-08"
   },
   {
+    "movieCd": "20266263",
+    "kobisNm": "전자오락수호대",
+    "formats": [
+      "SCREENX"
+    ],
+    "premiumFormats": [
+      "SCREENX"
+    ],
+    "theaterCount": 1,
+    "firstSeenDate": "2026-10-10"
+  },
+  {
     "movieCd": "20267229",
     "kobisNm": "언섀터",
     "formats": [
