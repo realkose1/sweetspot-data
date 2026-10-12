@@ -1,29 +1,29 @@
 {
   "candidateFirstSeen": {
-    "20262975": "2026-10-08",
-    "20267229": "2026-10-09",
-    "20266263": "2026-10-10"
+    "20266263": "2026-10-10",
+    "20263410": "2026-10-12",
+    "20264775": "2026-10-12"
   },
   "lastPremiumSeen": {
-    "odyssey": "2026-10-13",
+    "odyssey": "2026-10-14",
     "spiderman": "2026-10-06",
-    "hope": "2026-10-13",
-    "avengersendgame": "2026-10-13",
+    "hope": "2026-10-14",
+    "avengersendgame": "2026-10-14",
     "reawakenedman": "2026-10-13",
-    "lookback": "2026-10-13"
+    "lookback": "2026-10-14"
   },
   "noPremiumStreak": {
     "odyssey": 0,
-    "spiderman": 5,
+    "spiderman": 6,
     "hope": 0,
-    "toystory5": 19,
-    "moana": 19,
-    "minions": 19,
+    "toystory5": 20,
+    "moana": 20,
+    "minions": 20,
     "avengersendgame": 0,
     "reawakenedman": 0,
     "lookback": 0
   },
-  "prevPremiumRowCount": 169,
+  "prevPremiumRowCount": 163,
   "handledCandidates": {
     "20241110": {
       "date": "2026-09-21",
@@ -56,9 +56,9 @@
       "reason": "TMDB에 실제 영화(id 1394740, 타짜: 벨제붑의 노래)로 존재하나, KOBIS 관측 포맷이 DOLBYVISION(1개관)뿐이고 이는 규칙상 관 속성 예외 항목이라 badges를 채울 근거(IMAX·ScreenX·4DX·돌비시네마 등 실제 특수관 편성)를 확인하지 못해 이번엔 보류"
     },
     "20264775": {
-      "date": "2026-10-04",
+      "date": "2026-10-12",
       "action": "rejected",
-      "reason": "영화이고 KOBIS 편성(DOLBY·IMAX190)은 확인되나, 포맷 선택에 쓸 촬영 방식·화면비를 신뢰할 만한 출처로 확인하지 못해 hook을 쓸 수 없음. 나무위키의 화면비 표기는 위키 정보라 채택하지 않았고 웹 검색 한도에도 도달함. 다음 회차에 hook 근거를 확인한 뒤 재검토 바람"
+      "reason": "영화이고 date·dateType(3)도 정상이나, 돌비 시네마 상영이나 촬영 포맷·화면비 같은 확인된 사실을 검색으로 얻지 못해 hook을 채울 수 없음. theaterCount도 1로 작은 편성이라 추가 보류."
     },
     "20262975": {
       "date": "2026-10-08",
@@ -74,9 +74,14 @@
       "date": "2026-10-10",
       "action": "rejected",
       "reason": "영화이고 TMDB 확정값은 있으나, hook에 쓸 수 있는 확인된 포맷 사실을 찾지 못함. 확인된 것은 10월 14일 개봉과 웹툰 원작뿐이었고, ScreenX 편성 근거나 촬영·마스터링 정보는 없었음. KOBIS 편성도 1개 극장뿐이라 정식 특별관 개봉인지 불확실함. 웹 검색 한도에 도달해 추가 확인을 못 함. 개봉 후 ScreenX 편성이 늘면 다시 검토."
+    },
+    "20263410": {
+      "date": "2026-10-12",
+      "action": "rejected",
+      "reason": "영화이고 date·dateType(3)도 정상이나, 웹 검색 한도 내에서 4DX 편성이나 촬영·마스터링·화면비 등 포맷 판단용 사실을 확인하지 못해 hook을 채울 수 없음. hook은 비울 수 없으므로 이번에는 추가하지 않고 다음 점검에서 재검토."
     }
   },
-  "lastRunDate": "2026-10-11",
+  "lastRunDate": "2026-10-12",
   "observedPremiumFormats": {
     "odyssey": [
       "4DX",
@@ -97,7 +102,8 @@
       "SCREENX"
     ],
     "hope": [
-      "4DX"
+      "4DX",
+      "SCREENX"
     ]
   },
   "noPremiumSince": {
