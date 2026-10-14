@@ -24,17 +24,5 @@
     ],
     "theaterCount": 8,
     "firstSeenDate": "2026-10-12"
-  },
-  {
-    "movieCd": "20264775",
-    "kobisNm": "디거",
-    "formats": [
-      "DOLBYVISION"
-    ],
-    "premiumFormats": [
-      "DOLBY"
-    ],
-    "theaterCount": 1,
-    "firstSeenDate": "2026-10-12"
   }
 ]

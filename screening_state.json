@@ -1,29 +1,28 @@
 {
   "candidateFirstSeen": {
     "20266263": "2026-10-10",
-    "20263410": "2026-10-12",
-    "20264775": "2026-10-12"
+    "20263410": "2026-10-12"
   },
   "lastPremiumSeen": {
-    "odyssey": "2026-10-15",
+    "odyssey": "2026-10-16",
     "spiderman": "2026-10-06",
-    "hope": "2026-10-15",
-    "avengersendgame": "2026-10-15",
+    "hope": "2026-10-16",
+    "avengersendgame": "2026-10-16",
     "reawakenedman": "2026-10-13",
-    "lookback": "2026-10-15"
+    "lookback": "2026-10-16"
   },
   "noPremiumStreak": {
     "odyssey": 0,
-    "spiderman": 7,
+    "spiderman": 8,
     "hope": 0,
-    "toystory5": 21,
-    "moana": 21,
-    "minions": 21,
+    "toystory5": 22,
+    "moana": 22,
+    "minions": 22,
     "avengersendgame": 0,
-    "reawakenedman": 0,
+    "reawakenedman": 1,
     "lookback": 0
   },
-  "prevPremiumRowCount": 165,
+  "prevPremiumRowCount": 166,
   "handledCandidates": {
     "20241110": {
       "date": "2026-09-21",
@@ -81,7 +80,7 @@
       "reason": "영화이고 date·dateType(3)도 정상이나, 웹 검색 한도 내에서 4DX 편성이나 촬영·마스터링·화면비 등 포맷 판단용 사실을 확인하지 못해 hook을 채울 수 없음. hook은 비울 수 없으므로 이번에는 추가하지 않고 다음 점검에서 재검토."
     }
   },
-  "lastRunDate": "2026-10-13",
+  "lastRunDate": "2026-10-14",
   "observedPremiumFormats": {
     "odyssey": [
       "4DX",
@@ -97,12 +96,7 @@
       "DOLBY",
       "SCREENX"
     ],
-    "reawakenedman": [
-      "4DX",
-      "SCREENX"
-    ],
     "hope": [
-      "4DX",
       "SCREENX"
     ]
   },
@@ -110,6 +104,7 @@
     "toystory5": "2026-09-21",
     "moana": "2026-09-21",
     "minions": "2026-09-21",
-    "spiderman": "2026-10-07"
+    "spiderman": "2026-10-07",
+    "reawakenedman": "2026-10-14"
   }
 }
