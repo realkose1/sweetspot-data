@@ -14,6 +14,18 @@
     "firstSeenDate": "2026-10-10"
   },
   {
+    "movieCd": "20264444",
+    "kobisNm": "웨일폴: 고래에 먹힌 남자",
+    "formats": [
+      "4DX"
+    ],
+    "premiumFormats": [
+      "4DX"
+    ],
+    "theaterCount": 38,
+    "firstSeenDate": "2026-10-16"
+  },
+  {
     "movieCd": "20263410",
     "kobisNm": "스트리트 파이터",
     "formats": [
@@ -24,5 +36,17 @@
     ],
     "theaterCount": 8,
     "firstSeenDate": "2026-10-12"
+  },
+  {
+    "movieCd": "20264775",
+    "kobisNm": "디거",
+    "formats": [
+      "DOLBYVISION"
+    ],
+    "premiumFormats": [
+      "DOLBY"
+    ],
+    "theaterCount": 1,
+    "firstSeenDate": "2026-10-16"
   }
 ]

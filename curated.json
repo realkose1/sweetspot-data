@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-10-15T08:51:57+09:00",
+  "dataTimestamp": "2026-10-16T08:40:49+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -205,7 +205,7 @@
       "open": null,
       "tmdbId": 961214,
       "recommendedFormat": "4DX",
-      "premiumEnd": null
+      "premiumEnd": "2026.10.13"
     },
     {
       "id": "lookback",
@@ -224,6 +224,25 @@
       "open": null,
       "tmdbId": 1591675,
       "recommendedFormat": "DOLBY",
+      "premiumEnd": null
+    },
+    {
+      "id": "whalefall",
+      "title": "웨일폴: 고래에 먹힌 남자",
+      "en": "WHALEFALL",
+      "pc1": "#0f2a3a",
+      "pc2": "#050e14",
+      "date": "2026.10.14",
+      "run": "106분",
+      "genre": "스릴러",
+      "meta": "2026.10.14 개봉 · 106분 · 스릴러",
+      "badges": [
+        "4DX"
+      ],
+      "hook": "개봉일부터 4DX 상영이 함께 편성된 작품이에요",
+      "open": null,
+      "tmdbId": 1255833,
+      "recommendedFormat": "4DX",
       "premiumEnd": null
     }
   ],

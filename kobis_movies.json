@@ -47,6 +47,10 @@
     "lookback": {
       "movieCd": "20265062",
       "kobisNm": "룩백"
+    },
+    "whalefall": {
+      "movieCd": "20264444",
+      "kobisNm": "웨일폴: 고래에 먹힌 남자"
     }
   },
   "ignore": {
