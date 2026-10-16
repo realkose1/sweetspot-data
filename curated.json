@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-10-16T08:40:49+09:00",
+  "dataTimestamp": "2026-10-17T08:39:27+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -243,6 +243,26 @@
       "open": null,
       "tmdbId": 1255833,
       "recommendedFormat": "4DX",
+      "premiumEnd": null
+    },
+    {
+      "id": "guardiansofthevideogame",
+      "title": "전자오락수호대",
+      "en": "GUARDIANS OF THE VIDEO GAME",
+      "pc1": "#1d2a4a",
+      "pc2": "#080b16",
+      "date": "2026.10.14",
+      "run": "110분",
+      "genre": "애니메이션 · 판타지 · 모험 · 액션",
+      "meta": "2026.10.14 개봉 · 110분 · 애니메이션/판타지",
+      "badges": [
+        "4DX",
+        "SCREENX"
+      ],
+      "hook": "CGV에서 ScreenX와 4DX를 결합한 통합관으로 개봉한 작품이에요",
+      "open": null,
+      "tmdbId": 1688392,
+      "recommendedFormat": "SCREENX",
       "premiumEnd": null
     }
   ],
