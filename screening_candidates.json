@@ -1,19 +1,5 @@
 [
   {
-    "movieCd": "20266263",
-    "kobisNm": "전자오락수호대",
-    "formats": [
-      "4DX",
-      "SCREENX"
-    ],
-    "premiumFormats": [
-      "4DX",
-      "SCREENX"
-    ],
-    "theaterCount": 49,
-    "firstSeenDate": "2026-10-10"
-  },
-  {
     "movieCd": "20263410",
     "kobisNm": "스트리트 파이터",
     "formats": [
