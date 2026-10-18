@@ -55,6 +55,14 @@
     "guardiansofthevideogame": {
       "movieCd": "20266263",
       "kobisNm": "전자오락수호대"
+    },
+    "colony": {
+      "movieCd": "20252402",
+      "kobisNm": "군체"
+    },
+    "streetfighter": {
+      "movieCd": "20263410",
+      "kobisNm": "스트리트 파이터"
     }
   },
   "ignore": {

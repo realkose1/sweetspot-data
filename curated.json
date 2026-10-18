@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-10-18T08:02:13+09:00",
+  "dataTimestamp": "2026-10-19T08:00:07+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -263,6 +263,44 @@
       "open": null,
       "tmdbId": 1688392,
       "recommendedFormat": "SCREENX",
+      "premiumEnd": null
+    },
+    {
+      "id": "colony",
+      "title": "군체",
+      "en": "COLONY",
+      "pc1": "#1f2e2a",
+      "pc2": "#070c0b",
+      "date": "2026.05.21",
+      "run": "123분",
+      "genre": "공포 · 액션 · SF",
+      "meta": "2026.05.21 개봉 · 123분 · 공포/액션/SF",
+      "badges": [
+        "4DX"
+      ],
+      "hook": "CGV가 5월 21일 개봉 때부터 4DX 상영을 편성한 작품이에요",
+      "open": null,
+      "tmdbId": 1375646,
+      "recommendedFormat": "4DX",
+      "premiumEnd": null
+    },
+    {
+      "id": "streetfighter",
+      "title": "스트리트 파이터",
+      "en": "STREET FIGHTER",
+      "pc1": "#4a1a24",
+      "pc2": "#0d0609",
+      "date": "2026.10.14",
+      "run": "120분",
+      "genre": "액션 · 판타지",
+      "meta": "2026.10.14 개봉 · 120분 · 액션/판타지",
+      "badges": [
+        "4DX"
+      ],
+      "hook": "개봉일인 10월 14일부터 CGV에서 4DX로 상영하는 작품이에요",
+      "open": null,
+      "tmdbId": 1153576,
+      "recommendedFormat": "4DX",
       "premiumEnd": null
     }
   ],

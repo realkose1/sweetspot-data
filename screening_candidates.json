@@ -1,5 +1,31 @@
 [
   {
+    "movieCd": "20252402",
+    "kobisNm": "군체",
+    "formats": [
+      "4DX"
+    ],
+    "premiumFormats": [
+      "4DX"
+    ],
+    "theaterCount": 34,
+    "firstSeenDate": "2026-10-19"
+  },
+  {
+    "movieCd": "20267763",
+    "kobisNm": "투피엠 콘서트 \"더 리턴\" 인 시네마",
+    "formats": [
+      "4DX",
+      "SCREENX"
+    ],
+    "premiumFormats": [
+      "4DX",
+      "SCREENX"
+    ],
+    "theaterCount": 25,
+    "firstSeenDate": "2026-10-19"
+  },
+  {
     "movieCd": "20263410",
     "kobisNm": "스트리트 파이터",
     "formats": [
