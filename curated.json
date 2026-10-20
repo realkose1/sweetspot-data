@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-10-19T08:00:07+09:00",
+  "dataTimestamp": "2026-10-20T09:15:15+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -18,7 +18,7 @@
         "4DX",
         "DOLBY"
       ],
-      "hook": "1.43:1 풀프레임은 CGV 용산 IMAX뿐이에요",
+      "hook": "1.43:1 풀프레임을 볼 수 있던 국내 유일의 CGV 용산 IMAX에서는 10월 20일에 내려와요",
       "open": null,
       "tmdbId": 1368337,
       "recommendedFormat": "IMAX43"
@@ -301,6 +301,25 @@
       "open": null,
       "tmdbId": 1153576,
       "recommendedFormat": "4DX",
+      "premiumEnd": null
+    },
+    {
+      "id": "digger",
+      "title": "디거",
+      "en": "DIGGER",
+      "pc1": "#3a2e1a",
+      "pc2": "#0d0a06",
+      "date": "2026.10.03",
+      "run": "129분",
+      "genre": "코미디 · 드라마",
+      "meta": "2026.10.03 개봉 · 129분 · 코미디/드라마",
+      "badges": [
+        "DOLBY"
+      ],
+      "hook": "돌비 비전과 돌비 애트모스가 적용된 돌비 시네마 특별관에서 상영하는 작품이에요",
+      "open": null,
+      "tmdbId": 1248832,
+      "recommendedFormat": "DOLBY",
       "premiumEnd": null
     }
   ],

@@ -1,34 +1,36 @@
 {
   "candidateFirstSeen": {
-    "20263410": "2026-10-12",
     "20264775": "2026-10-16",
-    "20267763": "2026-10-19",
-    "20252402": "2026-10-19"
+    "20267763": "2026-10-19"
   },
   "lastPremiumSeen": {
-    "odyssey": "2026-10-21",
+    "odyssey": "2026-10-22",
     "spiderman": "2026-10-06",
-    "hope": "2026-10-21",
-    "avengersendgame": "2026-10-21",
+    "hope": "2026-10-22",
+    "avengersendgame": "2026-10-22",
     "reawakenedman": "2026-10-19",
     "lookback": "2026-10-20",
     "whalefall": "2026-10-20",
-    "guardiansofthevideogame": "2026-10-21"
+    "guardiansofthevideogame": "2026-10-22",
+    "colony": "2026-10-22",
+    "streetfighter": "2026-10-22"
   },
   "noPremiumStreak": {
     "odyssey": 0,
-    "spiderman": 13,
+    "spiderman": 14,
     "hope": 0,
-    "toystory5": 27,
-    "moana": 27,
-    "minions": 27,
+    "toystory5": 28,
+    "moana": 28,
+    "minions": 28,
     "avengersendgame": 0,
-    "reawakenedman": 0,
+    "reawakenedman": 1,
     "lookback": 0,
     "whalefall": 0,
-    "guardiansofthevideogame": 0
+    "guardiansofthevideogame": 0,
+    "colony": 0,
+    "streetfighter": 0
   },
-  "prevPremiumRowCount": 197,
+  "prevPremiumRowCount": 196,
   "handledCandidates": {
     "20241110": {
       "date": "2026-09-21",
@@ -61,9 +63,9 @@
       "reason": "TMDB에 실제 영화(id 1394740, 타짜: 벨제붑의 노래)로 존재하나, KOBIS 관측 포맷이 DOLBYVISION(1개관)뿐이고 이는 규칙상 관 속성 예외 항목이라 badges를 채울 근거(IMAX·ScreenX·4DX·돌비시네마 등 실제 특수관 편성)를 확인하지 못해 이번엔 보류"
     },
     "20264775": {
-      "date": "2026-10-12",
-      "action": "rejected",
-      "reason": "영화이고 date·dateType(3)도 정상이나, 돌비 시네마 상영이나 촬영 포맷·화면비 같은 확인된 사실을 검색으로 얻지 못해 hook을 채울 수 없음. theaterCount도 1로 작은 편성이라 추가 보류."
+      "date": "2026-10-20",
+      "action": "added",
+      "reason": "digger 추가"
     },
     "20262975": {
       "date": "2026-10-08",
@@ -75,23 +77,13 @@
       "action": "rejected",
       "reason": "린킨 파크 '언섀터'는 음악·다큐멘터리 장르로 공연 실황 성격이 강해 앱 대상(영화)이 아님. dateType이 2(디지털)라 한국 극장 개봉일도 확정되지 않았고, KOBIS 4DX 편성도 1개 극장뿐임"
     },
-    "20263410": {
-      "date": "2026-10-19",
-      "action": "added",
-      "reason": "streetfighter 추가"
-    },
     "20267763": {
       "date": "2026-10-19",
       "action": "rejected",
       "reason": "nonfilm-keyword: 콘서트"
-    },
-    "20252402": {
-      "date": "2026-10-19",
-      "action": "added",
-      "reason": "colony 추가"
     }
   },
-  "lastRunDate": "2026-10-19",
+  "lastRunDate": "2026-10-20",
   "observedPremiumFormats": {
     "odyssey": [
       "4DX",
@@ -118,7 +110,10 @@
     "whalefall": [
       "4DX"
     ],
-    "reawakenedman": [
+    "colony": [
+      "4DX"
+    ],
+    "streetfighter": [
       "4DX"
     ]
   },
@@ -126,6 +121,7 @@
     "toystory5": "2026-09-21",
     "moana": "2026-09-21",
     "minions": "2026-09-21",
-    "spiderman": "2026-10-07"
+    "spiderman": "2026-10-07",
+    "reawakenedman": "2026-10-20"
   }
 }

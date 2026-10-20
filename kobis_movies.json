@@ -63,6 +63,10 @@
     "streetfighter": {
       "movieCd": "20263410",
       "kobisNm": "스트리트 파이터"
+    },
+    "digger": {
+      "movieCd": "20264775",
+      "kobisNm": "디거"
     }
   },
   "ignore": {
