@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-10-20T09:15:15+09:00",
+  "dataTimestamp": "2026-10-21T08:46:57+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -18,7 +18,7 @@
         "4DX",
         "DOLBY"
       ],
-      "hook": "1.43:1 풀프레임을 볼 수 있던 국내 유일의 CGV 용산 IMAX에서는 10월 20일에 내려와요",
+      "hook": "1.43:1 풀프레임을 볼 수 있던 국내 유일의 CGV 용산 IMAX 상영은 10월 20일에 끝났어요",
       "open": null,
       "tmdbId": 1368337,
       "recommendedFormat": "IMAX43"
