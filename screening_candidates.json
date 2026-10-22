@@ -1,5 +1,18 @@
 [
   {
+    "movieCd": "20261807",
+    "kobisNm": "극장판 치이카와: 인어 섬의 비밀",
+    "formats": [
+      "4DX",
+      "SUPERPLEX"
+    ],
+    "premiumFormats": [
+      "4DX"
+    ],
+    "theaterCount": 38,
+    "firstSeenDate": "2026-10-22"
+  },
+  {
     "movieCd": "20267763",
     "kobisNm": "투피엠 콘서트 \"더 리턴\" 인 시네마",
     "formats": [

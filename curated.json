@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-10-21T08:46:57+09:00",
+  "dataTimestamp": "2026-10-22T09:18:45+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -320,6 +320,25 @@
       "open": null,
       "tmdbId": 1248832,
       "recommendedFormat": "DOLBY",
+      "premiumEnd": null
+    },
+    {
+      "id": "chiikawathemoviethesecretofthemermaidisland",
+      "title": "극장판 치이카와: 인어 섬의 비밀",
+      "en": "CHIIKAWA THE MOVIE: THE SECRET OF THE MERMAID ISLAND",
+      "pc1": "#2a3a4a",
+      "pc2": "#0b1016",
+      "date": "2026.09.30",
+      "run": "99분",
+      "genre": "애니메이션 · 가족 · 모험 · 판타지",
+      "meta": "2026.09.30 개봉 · 99분 · 애니메이션/가족",
+      "badges": [
+        "4DX"
+      ],
+      "hook": "10월 24일과 25일 이틀 동안 전국 CGV 4DX관에서 한정 상영해요",
+      "open": null,
+      "tmdbId": 1586876,
+      "recommendedFormat": "4DX",
       "premiumEnd": null
     }
   ],
