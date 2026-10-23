@@ -3,37 +3,37 @@
     "20267763": "2026-10-19"
   },
   "lastPremiumSeen": {
-    "odyssey": "2026-10-25",
+    "odyssey": "2026-10-26",
     "spiderman": "2026-10-06",
-    "hope": "2026-10-25",
-    "avengersendgame": "2026-10-25",
+    "hope": "2026-10-26",
+    "avengersendgame": "2026-10-26",
     "reawakenedman": "2026-10-19",
     "lookback": "2026-10-20",
     "whalefall": "2026-10-20",
-    "guardiansofthevideogame": "2026-10-25",
-    "colony": "2026-10-25",
-    "streetfighter": "2026-10-25",
-    "chiikawathemoviethesecretofthemermaidisland": "2026-10-25",
+    "guardiansofthevideogame": "2026-10-26",
+    "colony": "2026-10-26",
+    "streetfighter": "2026-10-26",
+    "chiikawathemoviethesecretofthemermaidisland": "2026-10-26",
     "digger": "2026-10-25"
   },
   "noPremiumStreak": {
     "odyssey": 0,
-    "spiderman": 17,
+    "spiderman": 18,
     "hope": 0,
-    "toystory5": 31,
-    "moana": 31,
-    "minions": 31,
+    "toystory5": 32,
+    "moana": 32,
+    "minions": 32,
     "avengersendgame": 0,
-    "reawakenedman": 4,
-    "lookback": 3,
-    "whalefall": 3,
+    "reawakenedman": 5,
+    "lookback": 4,
+    "whalefall": 4,
     "guardiansofthevideogame": 0,
     "colony": 0,
     "streetfighter": 0,
     "digger": 0,
     "chiikawathemoviethesecretofthemermaidisland": 0
   },
-  "prevPremiumRowCount": 185,
+  "prevPremiumRowCount": 163,
   "handledCandidates": {
     "20241110": {
       "date": "2026-09-21",
@@ -81,7 +81,7 @@
       "reason": "nonfilm-keyword: 콘서트"
     }
   },
-  "lastRunDate": "2026-10-23",
+  "lastRunDate": "2026-10-24",
   "observedPremiumFormats": {
     "hope": [
       "DOLBY",
