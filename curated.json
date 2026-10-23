@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-10-22T09:18:45+09:00",
+  "dataTimestamp": "2026-10-23T08:59:51+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -224,7 +224,7 @@
       "open": null,
       "tmdbId": 1591675,
       "recommendedFormat": "DOLBY",
-      "premiumEnd": null
+      "premiumEnd": "2026.10.20"
     },
     {
       "id": "whalefall",
@@ -243,7 +243,7 @@
       "open": null,
       "tmdbId": 1255833,
       "recommendedFormat": "4DX",
-      "premiumEnd": null
+      "premiumEnd": "2026.10.20"
     },
     {
       "id": "guardiansofthevideogame",
@@ -339,7 +339,7 @@
       "open": null,
       "tmdbId": 1586876,
       "recommendedFormat": "4DX",
-      "premiumEnd": null
+      "premiumEnd": "2026.10.25"
     }
   ],
   "halls": [

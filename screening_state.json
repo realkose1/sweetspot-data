@@ -1,37 +1,39 @@
 {
   "candidateFirstSeen": {
-    "20267763": "2026-10-19",
-    "20261807": "2026-10-22"
+    "20267763": "2026-10-19"
   },
   "lastPremiumSeen": {
-    "odyssey": "2026-10-24",
+    "odyssey": "2026-10-25",
     "spiderman": "2026-10-06",
-    "hope": "2026-10-24",
-    "avengersendgame": "2026-10-24",
+    "hope": "2026-10-25",
+    "avengersendgame": "2026-10-25",
     "reawakenedman": "2026-10-19",
     "lookback": "2026-10-20",
     "whalefall": "2026-10-20",
-    "guardiansofthevideogame": "2026-10-24",
-    "colony": "2026-10-24",
-    "streetfighter": "2026-10-24"
+    "guardiansofthevideogame": "2026-10-25",
+    "colony": "2026-10-25",
+    "streetfighter": "2026-10-25",
+    "chiikawathemoviethesecretofthemermaidisland": "2026-10-25",
+    "digger": "2026-10-25"
   },
   "noPremiumStreak": {
     "odyssey": 0,
-    "spiderman": 16,
+    "spiderman": 17,
     "hope": 0,
-    "toystory5": 30,
-    "moana": 30,
-    "minions": 30,
+    "toystory5": 31,
+    "moana": 31,
+    "minions": 31,
     "avengersendgame": 0,
-    "reawakenedman": 3,
-    "lookback": 2,
-    "whalefall": 2,
+    "reawakenedman": 4,
+    "lookback": 3,
+    "whalefall": 3,
     "guardiansofthevideogame": 0,
     "colony": 0,
     "streetfighter": 0,
-    "digger": 2
+    "digger": 0,
+    "chiikawathemoviethesecretofthemermaidisland": 0
   },
-  "prevPremiumRowCount": 157,
+  "prevPremiumRowCount": 185,
   "handledCandidates": {
     "20241110": {
       "date": "2026-09-21",
@@ -77,20 +79,18 @@
       "date": "2026-10-19",
       "action": "rejected",
       "reason": "nonfilm-keyword: 콘서트"
-    },
-    "20261807": {
-      "date": "2026-10-22",
-      "action": "added",
-      "reason": "chiikawathemoviethesecretofthemermaidisland 추가"
     }
   },
-  "lastRunDate": "2026-10-22",
+  "lastRunDate": "2026-10-23",
   "observedPremiumFormats": {
     "hope": [
       "DOLBY",
       "SCREENX"
     ],
     "odyssey": [
+      "4DX"
+    ],
+    "chiikawathemoviethesecretofthemermaidisland": [
       "4DX"
     ],
     "guardiansofthevideogame": [
@@ -106,6 +106,9 @@
     "avengersendgame": [
       "4DX",
       "SCREENX"
+    ],
+    "digger": [
+      "DOLBY"
     ]
   },
   "noPremiumSince": {
@@ -115,7 +118,6 @@
     "spiderman": "2026-10-07",
     "reawakenedman": "2026-10-20",
     "lookback": "2026-10-21",
-    "whalefall": "2026-10-21",
-    "digger": "2026-10-21"
+    "whalefall": "2026-10-21"
   }
 }
