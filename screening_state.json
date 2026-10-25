@@ -1,39 +1,41 @@
 {
   "candidateFirstSeen": {
-    "20267763": "2026-10-19"
+    "20267763": "2026-10-19",
+    "20264498": "2026-10-26",
+    "20155762": "2026-10-26"
   },
   "lastPremiumSeen": {
-    "odyssey": "2026-10-27",
+    "odyssey": "2026-10-28",
     "spiderman": "2026-10-06",
-    "hope": "2026-10-27",
-    "avengersendgame": "2026-10-27",
+    "hope": "2026-10-28",
+    "avengersendgame": "2026-10-28",
     "reawakenedman": "2026-10-19",
     "lookback": "2026-10-20",
     "whalefall": "2026-10-20",
-    "guardiansofthevideogame": "2026-10-27",
+    "guardiansofthevideogame": "2026-10-28",
     "colony": "2026-10-27",
     "streetfighter": "2026-10-27",
-    "chiikawathemoviethesecretofthemermaidisland": "2026-10-27",
+    "chiikawathemoviethesecretofthemermaidisland": "2026-10-28",
     "digger": "2026-10-25"
   },
   "noPremiumStreak": {
     "odyssey": 0,
-    "spiderman": 19,
+    "spiderman": 20,
     "hope": 0,
-    "toystory5": 33,
-    "moana": 33,
-    "minions": 33,
+    "toystory5": 34,
+    "moana": 34,
+    "minions": 34,
     "avengersendgame": 0,
-    "reawakenedman": 6,
-    "lookback": 5,
-    "whalefall": 5,
+    "reawakenedman": 7,
+    "lookback": 6,
+    "whalefall": 6,
     "guardiansofthevideogame": 0,
     "colony": 0,
     "streetfighter": 0,
-    "digger": 0,
+    "digger": 1,
     "chiikawathemoviethesecretofthemermaidisland": 0
   },
-  "prevPremiumRowCount": 154,
+  "prevPremiumRowCount": 190,
   "handledCandidates": {
     "20241110": {
       "date": "2026-09-21",
@@ -76,21 +78,28 @@
       "reason": "린킨 파크 '언섀터'는 음악·다큐멘터리 장르로 공연 실황 성격이 강해 앱 대상(영화)이 아님. dateType이 2(디지털)라 한국 극장 개봉일도 확정되지 않았고, KOBIS 4DX 편성도 1개 극장뿐임"
     },
     "20267763": {
-      "date": "2026-10-19",
+      "date": "2026-10-26",
       "action": "rejected",
       "reason": "nonfilm-keyword: 콘서트"
+    },
+    "20155762": {
+      "date": "2026-10-26",
+      "action": "added",
+      "reason": "attackontitancrimsonbowandarrow 추가"
+    },
+    "20264498": {
+      "date": "2026-10-26",
+      "action": "rejected",
+      "reason": "영화이고 개봉일(2026.10.28)도 확인되나, hook에 쓸 4DX 관련 확인 사실(개봉 포맷 공식 발표, 촬영·마스터링 방식, 화면비)을 신뢰할 수 있는 출처로 찾지 못함. 상영 타입 정보는 나무위키에만 있어 근거로 쓰지 않음. 빈 hook으로는 추가할 수 없어 보류하며 다음 점검에서 재확인"
     }
   },
-  "lastRunDate": "2026-10-25",
+  "lastRunDate": "2026-10-26",
   "observedPremiumFormats": {
     "hope": [
       "DOLBY",
       "SCREENX"
     ],
     "odyssey": [
-      "4DX"
-    ],
-    "chiikawathemoviethesecretofthemermaidisland": [
       "4DX"
     ],
     "guardiansofthevideogame": [
@@ -100,15 +109,15 @@
     "colony": [
       "4DX"
     ],
+    "chiikawathemoviethesecretofthemermaidisland": [
+      "4DX"
+    ],
     "streetfighter": [
       "4DX"
     ],
     "avengersendgame": [
       "4DX",
       "SCREENX"
-    ],
-    "digger": [
-      "DOLBY"
     ]
   },
   "noPremiumSince": {
@@ -118,6 +127,7 @@
     "spiderman": "2026-10-07",
     "reawakenedman": "2026-10-20",
     "lookback": "2026-10-21",
-    "whalefall": "2026-10-21"
+    "whalefall": "2026-10-21",
+    "digger": "2026-10-26"
   }
 }

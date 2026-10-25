@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-10-25T08:06:33+09:00",
+  "dataTimestamp": "2026-10-26T08:10:59+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -335,11 +335,30 @@
       "badges": [
         "4DX"
       ],
-      "hook": "10월 24일과 25일 이틀 동안 전국 CGV 4DX관에서 한정 상영해요",
+      "hook": "10월 24일과 25일 이틀 동안 전국 CGV 4DX관에서 한정 상영했어요",
       "open": null,
       "tmdbId": 1586876,
       "recommendedFormat": "4DX",
       "premiumEnd": "2026.10.25"
+    },
+    {
+      "id": "attackontitancrimsonbowandarrow",
+      "title": "진격의 거인: 홍련의 화살",
+      "en": "ATTACK ON TITAN: CRIMSON BOW AND ARROW",
+      "pc1": "#3a2a1c",
+      "pc2": "#0d0907",
+      "date": "2015.01.28",
+      "run": "118분",
+      "genre": "애니메이션 · 액션 · 모험 · 판타지",
+      "meta": "2015.01.28 개봉(재개봉) · 118분 · 애니메이션/액션",
+      "badges": [
+        "4DX"
+      ],
+      "hook": "CGV 단독으로 재개봉했고 4DX관에서도 상영해요",
+      "open": null,
+      "tmdbId": 379088,
+      "recommendedFormat": "4DX",
+      "premiumEnd": null
     }
   ],
   "halls": [
