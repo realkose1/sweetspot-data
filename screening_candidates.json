@@ -1,14 +1,15 @@
 [
   {
-    "movieCd": "20155762",
-    "kobisNm": "진격의 거인: 홍련의 화살",
+    "movieCd": "20264498",
+    "kobisNm": "하트 오브 비스트",
     "formats": [
-      "4DX"
+      "4DX",
+      "SUPERPLEX"
     ],
     "premiumFormats": [
       "4DX"
     ],
-    "theaterCount": 31,
+    "theaterCount": 9,
     "firstSeenDate": "2026-10-26"
   },
   {
@@ -22,20 +23,7 @@
       "4DX",
       "SCREENX"
     ],
-    "theaterCount": 24,
-    "firstSeenDate": "2026-10-19"
-  },
-  {
-    "movieCd": "20264498",
-    "kobisNm": "하트 오브 비스트",
-    "formats": [
-      "4DX",
-      "SUPERPLEX"
-    ],
-    "premiumFormats": [
-      "4DX"
-    ],
     "theaterCount": 9,
-    "firstSeenDate": "2026-10-26"
+    "firstSeenDate": "2026-10-19"
   }
 ]

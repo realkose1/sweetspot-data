@@ -1,41 +1,42 @@
 {
   "candidateFirstSeen": {
     "20267763": "2026-10-19",
-    "20264498": "2026-10-26",
-    "20155762": "2026-10-26"
+    "20264498": "2026-10-26"
   },
   "lastPremiumSeen": {
-    "odyssey": "2026-10-28",
+    "odyssey": "2026-10-30",
     "spiderman": "2026-10-06",
-    "hope": "2026-10-28",
-    "avengersendgame": "2026-10-28",
+    "hope": "2026-10-30",
+    "avengersendgame": "2026-10-30",
     "reawakenedman": "2026-10-19",
     "lookback": "2026-10-20",
     "whalefall": "2026-10-20",
-    "guardiansofthevideogame": "2026-10-28",
+    "guardiansofthevideogame": "2026-10-30",
     "colony": "2026-10-27",
     "streetfighter": "2026-10-27",
-    "chiikawathemoviethesecretofthemermaidisland": "2026-10-28",
-    "digger": "2026-10-25"
+    "chiikawathemoviethesecretofthemermaidisland": "2026-10-30",
+    "digger": "2026-10-25",
+    "attackontitancrimsonbowandarrow": "2026-10-30"
   },
   "noPremiumStreak": {
     "odyssey": 0,
-    "spiderman": 20,
+    "spiderman": 21,
     "hope": 0,
-    "toystory5": 34,
-    "moana": 34,
-    "minions": 34,
+    "toystory5": 35,
+    "moana": 35,
+    "minions": 35,
     "avengersendgame": 0,
-    "reawakenedman": 7,
-    "lookback": 6,
-    "whalefall": 6,
+    "reawakenedman": 8,
+    "lookback": 7,
+    "whalefall": 7,
     "guardiansofthevideogame": 0,
-    "colony": 0,
-    "streetfighter": 0,
-    "digger": 1,
-    "chiikawathemoviethesecretofthemermaidisland": 0
+    "colony": 1,
+    "streetfighter": 1,
+    "digger": 2,
+    "chiikawathemoviethesecretofthemermaidisland": 0,
+    "attackontitancrimsonbowandarrow": 0
   },
-  "prevPremiumRowCount": 190,
+  "prevPremiumRowCount": 152,
   "handledCandidates": {
     "20241110": {
       "date": "2026-09-21",
@@ -82,42 +83,30 @@
       "action": "rejected",
       "reason": "nonfilm-keyword: 콘서트"
     },
-    "20155762": {
-      "date": "2026-10-26",
-      "action": "added",
-      "reason": "attackontitancrimsonbowandarrow 추가"
-    },
     "20264498": {
       "date": "2026-10-26",
       "action": "rejected",
       "reason": "영화이고 개봉일(2026.10.28)도 확인되나, hook에 쓸 4DX 관련 확인 사실(개봉 포맷 공식 발표, 촬영·마스터링 방식, 화면비)을 신뢰할 수 있는 출처로 찾지 못함. 상영 타입 정보는 나무위키에만 있어 근거로 쓰지 않음. 빈 hook으로는 추가할 수 없어 보류하며 다음 점검에서 재확인"
     }
   },
-  "lastRunDate": "2026-10-26",
+  "lastRunDate": "2026-10-28",
   "observedPremiumFormats": {
     "hope": [
       "DOLBY",
       "SCREENX"
     ],
-    "odyssey": [
-      "4DX"
-    ],
     "guardiansofthevideogame": [
-      "4DX",
       "SCREENX"
     ],
-    "colony": [
-      "4DX"
+    "attackontitancrimsonbowandarrow": [
+      "4DX",
+      "SCREENX"
     ],
     "chiikawathemoviethesecretofthemermaidisland": [
       "4DX"
     ],
-    "streetfighter": [
-      "4DX"
-    ],
     "avengersendgame": [
-      "4DX",
-      "SCREENX"
+      "4DX"
     ]
   },
   "noPremiumSince": {
@@ -128,6 +117,8 @@
     "reawakenedman": "2026-10-20",
     "lookback": "2026-10-21",
     "whalefall": "2026-10-21",
-    "digger": "2026-10-26"
+    "digger": "2026-10-26",
+    "colony": "2026-10-28",
+    "streetfighter": "2026-10-28"
   }
 }
