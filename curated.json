@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-10-28T09:26:00+09:00",
+  "dataTimestamp": "2026-10-29T09:46:46+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -320,7 +320,7 @@
       "open": null,
       "tmdbId": 1248832,
       "recommendedFormat": "DOLBY",
-      "premiumEnd": null
+      "premiumEnd": "2026.10.25"
     },
     {
       "id": "chiikawathemoviethesecretofthemermaidisland",
@@ -352,7 +352,8 @@
       "genre": "애니메이션 · 액션 · 모험 · 판타지",
       "meta": "2015.01.28 개봉(재개봉) · 118분 · 애니메이션/액션",
       "badges": [
-        "4DX"
+        "4DX",
+        "SCREENX"
       ],
       "hook": "CGV 단독으로 재개봉했고 4DX관에서도 상영해요",
       "open": null,
