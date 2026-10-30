@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-10-29T09:46:46+09:00",
+  "dataTimestamp": "2026-10-30T09:46:51+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -282,7 +282,7 @@
       "open": null,
       "tmdbId": 1375646,
       "recommendedFormat": "4DX",
-      "premiumEnd": null
+      "premiumEnd": "2026.10.27"
     },
     {
       "id": "streetfighter",
@@ -301,7 +301,7 @@
       "open": null,
       "tmdbId": 1153576,
       "recommendedFormat": "4DX",
-      "premiumEnd": null
+      "premiumEnd": "2026.10.27"
     },
     {
       "id": "digger",
