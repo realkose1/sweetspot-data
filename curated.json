@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-11-01T09:03:15+09:00",
+  "dataTimestamp": "2026-11-02T09:44:55+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -359,6 +359,25 @@
       "open": null,
       "tmdbId": 379088,
       "recommendedFormat": "4DX",
+      "premiumEnd": null
+    },
+    {
+      "id": "chainsawmanthemovierezearc",
+      "title": "극장판 체인소 맨: 레제편",
+      "en": "CHAINSAW MAN - THE MOVIE: REZE ARC",
+      "pc1": "#3a1a14",
+      "pc2": "#0d0605",
+      "date": "2025.09.24",
+      "run": "100분",
+      "genre": "애니메이션 · 액션 · 로맨스 · 판타지",
+      "meta": "2025.09.24 개봉 · 100분 · 애니메이션/액션",
+      "badges": [
+        "SCREENX"
+      ],
+      "hook": "국내 개봉 당시 CGV SCREENX관에서도 상영한 작품이에요",
+      "open": null,
+      "tmdbId": 1218925,
+      "recommendedFormat": "SCREENX",
       "premiumEnd": null
     }
   ],
