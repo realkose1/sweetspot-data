@@ -1,42 +1,43 @@
 {
   "candidateFirstSeen": {
-    "20264498": "2026-10-26",
-    "20256757": "2026-11-02"
+    "20264498": "2026-10-26"
   },
   "lastPremiumSeen": {
-    "odyssey": "2026-11-04",
+    "odyssey": "2026-11-05",
     "spiderman": "2026-10-06",
-    "hope": "2026-11-04",
-    "avengersendgame": "2026-11-04",
+    "hope": "2026-11-05",
+    "avengersendgame": "2026-11-05",
     "reawakenedman": "2026-10-19",
     "lookback": "2026-10-20",
     "whalefall": "2026-10-20",
-    "guardiansofthevideogame": "2026-11-03",
+    "guardiansofthevideogame": "2026-11-05",
     "colony": "2026-10-27",
     "streetfighter": "2026-10-27",
-    "chiikawathemoviethesecretofthemermaidisland": "2026-11-04",
+    "chiikawathemoviethesecretofthemermaidisland": "2026-11-05",
     "digger": "2026-10-25",
-    "attackontitancrimsonbowandarrow": "2026-11-04"
+    "attackontitancrimsonbowandarrow": "2026-11-05",
+    "chainsawmanthemovierezearc": "2026-11-05"
   },
   "noPremiumStreak": {
     "odyssey": 0,
-    "spiderman": 25,
+    "spiderman": 26,
     "hope": 0,
-    "toystory5": 39,
-    "moana": 39,
-    "minions": 39,
+    "toystory5": 40,
+    "moana": 40,
+    "minions": 40,
     "avengersendgame": 0,
-    "reawakenedman": 12,
-    "lookback": 11,
-    "whalefall": 11,
+    "reawakenedman": 13,
+    "lookback": 12,
+    "whalefall": 12,
     "guardiansofthevideogame": 0,
-    "colony": 5,
-    "streetfighter": 5,
-    "digger": 6,
+    "colony": 6,
+    "streetfighter": 6,
+    "digger": 7,
     "chiikawathemoviethesecretofthemermaidisland": 0,
-    "attackontitancrimsonbowandarrow": 0
+    "attackontitancrimsonbowandarrow": 0,
+    "chainsawmanthemovierezearc": 0
   },
-  "prevPremiumRowCount": 150,
+  "prevPremiumRowCount": 149,
   "handledCandidates": {
     "20241110": {
       "date": "2026-09-21",
@@ -87,14 +88,9 @@
       "date": "2026-11-02",
       "action": "rejected",
       "reason": "영화이고 KOBIS 4DX 편성(14개 극장)이 확인되지만, 필수 항목인 hook으로 쓸 '포맷 판단용 확인 사실'(촬영 포맷·마스터링·화면비·CGV 4DX 확정 공지)을 검색으로 확인하지 못함. 검색에서는 롯데시네마 MX4D·메가박스 특별관 상영 확정 기사만 나옴. 검색 한도 소진으로 추가 확인 불가. 다음 점검에서 재검토."
-    },
-    "20256757": {
-      "date": "2026-11-02",
-      "action": "added",
-      "reason": "chainsawmanthemovierezearc 추가"
     }
   },
-  "lastRunDate": "2026-11-02",
+  "lastRunDate": "2026-11-03",
   "observedPremiumFormats": {
     "hope": [
       "4DX",
@@ -102,6 +98,7 @@
       "SCREENX"
     ],
     "guardiansofthevideogame": [
+      "4DX",
       "SCREENX"
     ],
     "attackontitancrimsonbowandarrow": [
@@ -110,6 +107,9 @@
     ],
     "chiikawathemoviethesecretofthemermaidisland": [
       "4DX"
+    ],
+    "chainsawmanthemovierezearc": [
+      "SCREENX"
     ],
     "avengersendgame": [
       "4DX"

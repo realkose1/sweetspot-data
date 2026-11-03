@@ -1,17 +1,5 @@
 [
   {
-    "movieCd": "20256757",
-    "kobisNm": "극장판 체인소 맨: 레제편",
-    "formats": [
-      "SCREENX"
-    ],
-    "premiumFormats": [
-      "SCREENX"
-    ],
-    "theaterCount": 21,
-    "firstSeenDate": "2026-11-02"
-  },
-  {
     "movieCd": "20264498",
     "kobisNm": "하트 오브 비스트",
     "formats": [
