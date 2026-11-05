@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-11-04T10:12:19+09:00",
+  "dataTimestamp": "2026-11-05T10:27:57+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -378,6 +378,25 @@
       "open": null,
       "tmdbId": 1218925,
       "recommendedFormat": "SCREENX",
+      "premiumEnd": null
+    },
+    {
+      "id": "fall2deadpoint",
+      "title": "폴2: 데드포인트",
+      "en": "FALL 2: DEADPOINT",
+      "pc1": "#2a3340",
+      "pc2": "#0a0d11",
+      "date": "2026.11.11",
+      "run": "99분",
+      "genre": "스릴러",
+      "meta": "2026.11.11 개봉 · 99분 · 스릴러",
+      "badges": [
+        "4DX"
+      ],
+      "hook": "개봉 전 11월 7~8일에 CGV 영등포타임스퀘어 등 5개 지점에서 4DX 프리미어 상영회가 열려요",
+      "open": null,
+      "tmdbId": 1101412,
+      "recommendedFormat": "4DX",
       "premiumEnd": null
     }
   ],
