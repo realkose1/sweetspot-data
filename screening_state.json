@@ -1,44 +1,45 @@
 {
   "candidateFirstSeen": {
-    "20264498": "2026-10-26",
-    "20264957": "2026-11-05"
+    "20264498": "2026-10-26"
   },
   "lastPremiumSeen": {
-    "odyssey": "2026-11-07",
+    "odyssey": "2026-11-08",
     "spiderman": "2026-10-06",
-    "hope": "2026-11-07",
-    "avengersendgame": "2026-11-07",
+    "hope": "2026-11-08",
+    "avengersendgame": "2026-11-08",
     "reawakenedman": "2026-10-19",
     "lookback": "2026-10-20",
     "whalefall": "2026-11-06",
     "guardiansofthevideogame": "2026-11-06",
     "colony": "2026-10-27",
     "streetfighter": "2026-10-27",
-    "chiikawathemoviethesecretofthemermaidisland": "2026-11-07",
+    "chiikawathemoviethesecretofthemermaidisland": "2026-11-08",
     "digger": "2026-10-25",
-    "attackontitancrimsonbowandarrow": "2026-11-07",
-    "chainsawmanthemovierezearc": "2026-11-07"
+    "attackontitancrimsonbowandarrow": "2026-11-08",
+    "chainsawmanthemovierezearc": "2026-11-08",
+    "fall2deadpoint": "2026-11-08"
   },
   "noPremiumStreak": {
     "odyssey": 0,
-    "spiderman": 28,
+    "spiderman": 29,
     "hope": 0,
-    "toystory5": 42,
-    "moana": 42,
-    "minions": 42,
+    "toystory5": 43,
+    "moana": 43,
+    "minions": 43,
     "avengersendgame": 0,
-    "reawakenedman": 15,
-    "lookback": 14,
+    "reawakenedman": 16,
+    "lookback": 15,
     "whalefall": 0,
     "guardiansofthevideogame": 0,
-    "colony": 8,
-    "streetfighter": 8,
-    "digger": 9,
+    "colony": 9,
+    "streetfighter": 9,
+    "digger": 10,
     "chiikawathemoviethesecretofthemermaidisland": 0,
     "attackontitancrimsonbowandarrow": 0,
-    "chainsawmanthemovierezearc": 0
+    "chainsawmanthemovierezearc": 0,
+    "fall2deadpoint": 0
   },
-  "prevPremiumRowCount": 134,
+  "prevPremiumRowCount": 132,
   "handledCandidates": {
     "20241110": {
       "date": "2026-09-21",
@@ -89,14 +90,9 @@
       "date": "2026-11-02",
       "action": "rejected",
       "reason": "영화이고 KOBIS 4DX 편성(14개 극장)이 확인되지만, 필수 항목인 hook으로 쓸 '포맷 판단용 확인 사실'(촬영 포맷·마스터링·화면비·CGV 4DX 확정 공지)을 검색으로 확인하지 못함. 검색에서는 롯데시네마 MX4D·메가박스 특별관 상영 확정 기사만 나옴. 검색 한도 소진으로 추가 확인 불가. 다음 점검에서 재검토."
-    },
-    "20264957": {
-      "date": "2026-11-05",
-      "action": "added",
-      "reason": "fall2deadpoint 추가"
     }
   },
-  "lastRunDate": "2026-11-05",
+  "lastRunDate": "2026-11-06",
   "observedPremiumFormats": {
     "odyssey": [
       "DOLBY"
@@ -118,6 +114,9 @@
       "4DX"
     ],
     "avengersendgame": [
+      "4DX"
+    ],
+    "fall2deadpoint": [
       "4DX"
     ]
   },

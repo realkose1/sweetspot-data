@@ -11,17 +11,5 @@
     ],
     "theaterCount": 12,
     "firstSeenDate": "2026-10-26"
-  },
-  {
-    "movieCd": "20264957",
-    "kobisNm": "폴2: 데드포인트",
-    "formats": [
-      "4DX"
-    ],
-    "premiumFormats": [
-      "4DX"
-    ],
-    "theaterCount": 5,
-    "firstSeenDate": "2026-11-05"
   }
 ]
