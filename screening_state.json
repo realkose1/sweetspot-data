@@ -3,43 +3,43 @@
     "20264498": "2026-10-26"
   },
   "lastPremiumSeen": {
-    "odyssey": "2026-11-08",
+    "odyssey": "2026-11-09",
     "spiderman": "2026-10-06",
-    "hope": "2026-11-08",
-    "avengersendgame": "2026-11-08",
+    "hope": "2026-11-09",
+    "avengersendgame": "2026-11-09",
     "reawakenedman": "2026-10-19",
     "lookback": "2026-10-20",
     "whalefall": "2026-11-06",
-    "guardiansofthevideogame": "2026-11-06",
+    "guardiansofthevideogame": "2026-11-09",
     "colony": "2026-10-27",
     "streetfighter": "2026-10-27",
-    "chiikawathemoviethesecretofthemermaidisland": "2026-11-08",
+    "chiikawathemoviethesecretofthemermaidisland": "2026-11-09",
     "digger": "2026-10-25",
-    "attackontitancrimsonbowandarrow": "2026-11-08",
-    "chainsawmanthemovierezearc": "2026-11-08",
+    "attackontitancrimsonbowandarrow": "2026-11-09",
+    "chainsawmanthemovierezearc": "2026-11-09",
     "fall2deadpoint": "2026-11-08"
   },
   "noPremiumStreak": {
     "odyssey": 0,
-    "spiderman": 29,
+    "spiderman": 30,
     "hope": 0,
-    "toystory5": 43,
-    "moana": 43,
-    "minions": 43,
+    "toystory5": 44,
+    "moana": 44,
+    "minions": 44,
     "avengersendgame": 0,
-    "reawakenedman": 16,
-    "lookback": 15,
-    "whalefall": 0,
+    "reawakenedman": 17,
+    "lookback": 16,
+    "whalefall": 1,
     "guardiansofthevideogame": 0,
-    "colony": 9,
-    "streetfighter": 9,
-    "digger": 10,
+    "colony": 10,
+    "streetfighter": 10,
+    "digger": 11,
     "chiikawathemoviethesecretofthemermaidisland": 0,
     "attackontitancrimsonbowandarrow": 0,
     "chainsawmanthemovierezearc": 0,
     "fall2deadpoint": 0
   },
-  "prevPremiumRowCount": 132,
+  "prevPremiumRowCount": 170,
   "handledCandidates": {
     "20241110": {
       "date": "2026-09-21",
@@ -92,7 +92,7 @@
       "reason": "영화이고 KOBIS 4DX 편성(14개 극장)이 확인되지만, 필수 항목인 hook으로 쓸 '포맷 판단용 확인 사실'(촬영 포맷·마스터링·화면비·CGV 4DX 확정 공지)을 검색으로 확인하지 못함. 검색에서는 롯데시네마 MX4D·메가박스 특별관 상영 확정 기사만 나옴. 검색 한도 소진으로 추가 확인 불가. 다음 점검에서 재검토."
     }
   },
-  "lastRunDate": "2026-11-06",
+  "lastRunDate": "2026-11-07",
   "observedPremiumFormats": {
     "odyssey": [
       "DOLBY"
@@ -104,13 +104,13 @@
     "chainsawmanthemovierezearc": [
       "SCREENX"
     ],
+    "chiikawathemoviethesecretofthemermaidisland": [
+      "4DX"
+    ],
     "hope": [
       "4DX"
     ],
     "guardiansofthevideogame": [
-      "4DX"
-    ],
-    "chiikawathemoviethesecretofthemermaidisland": [
       "4DX"
     ],
     "avengersendgame": [
@@ -129,6 +129,7 @@
     "lookback": "2026-10-21",
     "digger": "2026-10-26",
     "colony": "2026-10-28",
-    "streetfighter": "2026-10-28"
+    "streetfighter": "2026-10-28",
+    "whalefall": "2026-11-07"
   }
 }
