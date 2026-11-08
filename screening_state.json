@@ -3,43 +3,43 @@
     "20264498": "2026-10-26"
   },
   "lastPremiumSeen": {
-    "odyssey": "2026-11-09",
+    "odyssey": "2026-11-10",
     "spiderman": "2026-10-06",
-    "hope": "2026-11-09",
-    "avengersendgame": "2026-11-09",
+    "hope": "2026-11-10",
+    "avengersendgame": "2026-11-10",
     "reawakenedman": "2026-10-19",
     "lookback": "2026-10-20",
     "whalefall": "2026-11-06",
-    "guardiansofthevideogame": "2026-11-09",
+    "guardiansofthevideogame": "2026-11-10",
     "colony": "2026-10-27",
     "streetfighter": "2026-10-27",
-    "chiikawathemoviethesecretofthemermaidisland": "2026-11-09",
+    "chiikawathemoviethesecretofthemermaidisland": "2026-11-10",
     "digger": "2026-10-25",
-    "attackontitancrimsonbowandarrow": "2026-11-09",
-    "chainsawmanthemovierezearc": "2026-11-09",
+    "attackontitancrimsonbowandarrow": "2026-11-10",
+    "chainsawmanthemovierezearc": "2026-11-10",
     "fall2deadpoint": "2026-11-08"
   },
   "noPremiumStreak": {
     "odyssey": 0,
-    "spiderman": 30,
+    "spiderman": 31,
     "hope": 0,
-    "toystory5": 44,
-    "moana": 44,
-    "minions": 44,
+    "toystory5": 45,
+    "moana": 45,
+    "minions": 45,
     "avengersendgame": 0,
-    "reawakenedman": 17,
-    "lookback": 16,
-    "whalefall": 1,
+    "reawakenedman": 18,
+    "lookback": 17,
+    "whalefall": 2,
     "guardiansofthevideogame": 0,
-    "colony": 10,
-    "streetfighter": 10,
-    "digger": 11,
+    "colony": 11,
+    "streetfighter": 11,
+    "digger": 12,
     "chiikawathemoviethesecretofthemermaidisland": 0,
     "attackontitancrimsonbowandarrow": 0,
     "chainsawmanthemovierezearc": 0,
     "fall2deadpoint": 0
   },
-  "prevPremiumRowCount": 170,
+  "prevPremiumRowCount": 171,
   "handledCandidates": {
     "20241110": {
       "date": "2026-09-21",
@@ -92,7 +92,7 @@
       "reason": "영화이고 KOBIS 4DX 편성(14개 극장)이 확인되지만, 필수 항목인 hook으로 쓸 '포맷 판단용 확인 사실'(촬영 포맷·마스터링·화면비·CGV 4DX 확정 공지)을 검색으로 확인하지 못함. 검색에서는 롯데시네마 MX4D·메가박스 특별관 상영 확정 기사만 나옴. 검색 한도 소진으로 추가 확인 불가. 다음 점검에서 재검토."
     }
   },
-  "lastRunDate": "2026-11-07",
+  "lastRunDate": "2026-11-08",
   "observedPremiumFormats": {
     "odyssey": [
       "DOLBY"
