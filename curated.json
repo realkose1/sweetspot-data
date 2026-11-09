@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-11-08T09:22:07+09:00",
+  "dataTimestamp": "2026-11-09T09:44:47+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -397,6 +397,26 @@
       "open": null,
       "tmdbId": 1101412,
       "recommendedFormat": "4DX",
+      "premiumEnd": null
+    },
+    {
+      "id": "dune",
+      "title": "듄",
+      "en": "DUNE",
+      "pc1": "#3a2a14",
+      "pc2": "#0e0a05",
+      "date": "2021.10.20",
+      "run": "155분",
+      "genre": "SF · 모험",
+      "meta": "2021.10.20 개봉(2022.02.09 재개봉) · 155분 · SF/모험",
+      "badges": [
+        "IMAX190",
+        "IMAX43"
+      ],
+      "hook": "IMAX 인증 디지털 카메라로 촬영해 1.43:1 풀화면 장면이 한 시간 넘게 이어지는 작품이에요",
+      "open": null,
+      "tmdbId": 438631,
+      "recommendedFormat": "IMAX43",
       "premiumEnd": null
     }
   ],

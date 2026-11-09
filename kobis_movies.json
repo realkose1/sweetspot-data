@@ -83,6 +83,10 @@
     "fall2deadpoint": {
       "movieCd": "20264957",
       "kobisNm": "폴2: 데드포인트"
+    },
+    "dune": {
+      "movieCd": "20210087",
+      "kobisNm": "듄"
     }
   },
   "ignore": {

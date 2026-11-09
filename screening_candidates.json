@@ -1,5 +1,31 @@
 [
   {
+    "movieCd": "20244801",
+    "kobisNm": "하이라이트: 라이츠 고 온, 어게인 인 시네마",
+    "formats": [
+      "4DX"
+    ],
+    "premiumFormats": [
+      "4DX"
+    ],
+    "theaterCount": 34,
+    "firstSeenDate": "2026-11-09"
+  },
+  {
+    "movieCd": "20210087",
+    "kobisNm": "듄",
+    "formats": [
+      "IMAX190",
+      "IMAX43"
+    ],
+    "premiumFormats": [
+      "IMAX190",
+      "IMAX43"
+    ],
+    "theaterCount": 25,
+    "firstSeenDate": "2026-11-09"
+  },
+  {
     "movieCd": "20264498",
     "kobisNm": "하트 오브 비스트",
     "formats": [
@@ -9,7 +35,43 @@
     "premiumFormats": [
       "4DX"
     ],
-    "theaterCount": 11,
+    "theaterCount": 12,
     "firstSeenDate": "2026-10-26"
+  },
+  {
+    "movieCd": "20194376",
+    "kobisNm": "탑건: 매버릭",
+    "formats": [
+      "DOLBYVISION"
+    ],
+    "premiumFormats": [
+      "DOLBY"
+    ],
+    "theaterCount": 1,
+    "firstSeenDate": "2026-11-09"
+  },
+  {
+    "movieCd": "20259626",
+    "kobisNm": "마이클",
+    "formats": [
+      "DOLBYVISION"
+    ],
+    "premiumFormats": [
+      "DOLBY"
+    ],
+    "theaterCount": 1,
+    "firstSeenDate": "2026-11-09"
+  },
+  {
+    "movieCd": "20261782",
+    "kobisNm": "프로젝트 헤일메리",
+    "formats": [
+      "DOLBYVISION"
+    ],
+    "premiumFormats": [
+      "DOLBY"
+    ],
+    "theaterCount": 1,
+    "firstSeenDate": "2026-11-09"
   }
 ]
