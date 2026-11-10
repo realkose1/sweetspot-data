@@ -87,6 +87,10 @@
     "dune": {
       "movieCd": "20210087",
       "kobisNm": "듄"
+    },
+    "topgunmaverick": {
+      "movieCd": "20194376",
+      "kobisNm": "탑건: 매버릭"
     }
   },
   "ignore": {

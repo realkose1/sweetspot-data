@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-11-09T09:44:47+09:00",
+  "dataTimestamp": "2026-11-10T12:23:14+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -417,6 +417,25 @@
       "open": null,
       "tmdbId": 438631,
       "recommendedFormat": "IMAX43",
+      "premiumEnd": null
+    },
+    {
+      "id": "topgunmaverick",
+      "title": "탑건: 매버릭",
+      "en": "TOP GUN: MAVERICK",
+      "pc1": "#1a2a44",
+      "pc2": "#070b12",
+      "date": "2022.06.22",
+      "run": "131분",
+      "genre": "액션 · 드라마",
+      "meta": "2022.06.22 개봉(2026.05.13 재개봉) · 131분 · 액션/드라마",
+      "badges": [
+        "DOLBY"
+      ],
+      "hook": "2026년 개봉 40주년 재개봉 때 메가박스가 돌비 시네마와 돌비 애트모스로 상영을 편성했어요",
+      "open": null,
+      "tmdbId": 361743,
+      "recommendedFormat": "DOLBY",
       "premiumEnd": null
     }
   ],

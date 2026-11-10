@@ -8,21 +8,7 @@
     "premiumFormats": [
       "4DX"
     ],
-    "theaterCount": 34,
-    "firstSeenDate": "2026-11-09"
-  },
-  {
-    "movieCd": "20210087",
-    "kobisNm": "듄",
-    "formats": [
-      "IMAX190",
-      "IMAX43"
-    ],
-    "premiumFormats": [
-      "IMAX190",
-      "IMAX43"
-    ],
-    "theaterCount": 25,
+    "theaterCount": 37,
     "firstSeenDate": "2026-11-09"
   },
   {
@@ -49,6 +35,18 @@
     ],
     "theaterCount": 1,
     "firstSeenDate": "2026-11-09"
+  },
+  {
+    "movieCd": "20247221",
+    "kobisNm": "폭설",
+    "formats": [
+      "4DX"
+    ],
+    "premiumFormats": [
+      "4DX"
+    ],
+    "theaterCount": 1,
+    "firstSeenDate": "2026-11-10"
   },
   {
     "movieCd": "20259626",
