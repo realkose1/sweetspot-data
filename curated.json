@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-11-10T12:23:14+09:00",
+  "dataTimestamp": "2026-11-11T10:13:16+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -393,7 +393,7 @@
       "badges": [
         "4DX"
       ],
-      "hook": "개봉 전 11월 7~8일에 CGV 영등포타임스퀘어 등 5개 지점에서 4DX 프리미어 상영회가 열려요",
+      "hook": "개봉 전 11월 7~8일에 CGV 영등포타임스퀘어 등 5개 지점에서 4DX 프리미어 상영회를 열었어요",
       "open": null,
       "tmdbId": 1101412,
       "recommendedFormat": "4DX",
@@ -435,6 +435,25 @@
       "hook": "2026년 개봉 40주년 재개봉 때 메가박스가 돌비 시네마와 돌비 애트모스로 상영을 편성했어요",
       "open": null,
       "tmdbId": 361743,
+      "recommendedFormat": "DOLBY",
+      "premiumEnd": null
+    },
+    {
+      "id": "michael",
+      "title": "마이클",
+      "en": "MICHAEL",
+      "pc1": "#2b1d12",
+      "pc2": "#0c0806",
+      "date": "2026.05.13",
+      "run": "128분",
+      "genre": "음악 · 드라마",
+      "meta": "2026.05.13 개봉 · 128분 · 음악/드라마",
+      "badges": [
+        "DOLBY"
+      ],
+      "hook": "화면비는 1.85:1이고, 개봉 때 돌비 시네마 상영작으로 편성됐어요",
+      "open": null,
+      "tmdbId": 936075,
       "recommendedFormat": "DOLBY",
       "premiumEnd": null
     }

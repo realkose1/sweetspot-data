@@ -91,6 +91,10 @@
     "topgunmaverick": {
       "movieCd": "20194376",
       "kobisNm": "탑건: 매버릭"
+    },
+    "michael": {
+      "movieCd": "20259626",
+      "kobisNm": "마이클"
     }
   },
   "ignore": {
