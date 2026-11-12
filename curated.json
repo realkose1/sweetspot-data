@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-11-11T10:13:16+09:00",
+  "dataTimestamp": "2026-11-12T11:14:22+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -397,7 +397,7 @@
       "open": null,
       "tmdbId": 1101412,
       "recommendedFormat": "4DX",
-      "premiumEnd": null
+      "premiumEnd": "2026.11.08"
     },
     {
       "id": "dune",
@@ -454,6 +454,44 @@
       "hook": "화면비는 1.85:1이고, 개봉 때 돌비 시네마 상영작으로 편성됐어요",
       "open": null,
       "tmdbId": 936075,
+      "recommendedFormat": "DOLBY",
+      "premiumEnd": null
+    },
+    {
+      "id": "projecthailmary",
+      "title": "프로젝트 헤일메리",
+      "en": "PROJECT HAIL MARY",
+      "pc1": "#2a3350",
+      "pc2": "#090c14",
+      "date": "2026.03.18",
+      "run": "157분",
+      "genre": "SF · 모험",
+      "meta": "2026.03.18 개봉 · 157분 · SF/모험",
+      "badges": [
+        "DOLBY"
+      ],
+      "hook": "감독들이 안내한 상영 포맷 기준으로 돌비 시네마에서는 2.0:1 화면비로 상영해요",
+      "open": null,
+      "tmdbId": 687163,
+      "recommendedFormat": "DOLBY",
+      "premiumEnd": null
+    },
+    {
+      "id": "thehungergamessunriseonthereaping",
+      "title": "헝거게임 50번째 추첨의 날",
+      "en": "THE HUNGER GAMES: SUNRISE ON THE REAPING",
+      "pc1": "#3a2a18",
+      "pc2": "#0d0905",
+      "date": "2026.11.18",
+      "run": "159분",
+      "genre": "SF · 액션 · 모험",
+      "meta": "2026.11.18 개봉 · 159분 · SF/액션/모험",
+      "badges": [
+        "DOLBY"
+      ],
+      "hook": "메가박스가 개봉일인 11월 18일부터 돌비 시네마와 돌비 비전+애트모스 특별관에서 상영해요",
+      "open": null,
+      "tmdbId": 1300968,
       "recommendedFormat": "DOLBY",
       "premiumEnd": null
     }

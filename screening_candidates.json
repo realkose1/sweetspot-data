@@ -37,18 +37,6 @@
     "firstSeenDate": "2026-11-10"
   },
   {
-    "movieCd": "20259626",
-    "kobisNm": "마이클",
-    "formats": [
-      "DOLBYVISION"
-    ],
-    "premiumFormats": [
-      "DOLBY"
-    ],
-    "theaterCount": 1,
-    "firstSeenDate": "2026-11-09"
-  },
-  {
     "movieCd": "20261782",
     "kobisNm": "프로젝트 헤일메리",
     "formats": [
@@ -59,5 +47,17 @@
     ],
     "theaterCount": 1,
     "firstSeenDate": "2026-11-09"
+  },
+  {
+    "movieCd": "20267121",
+    "kobisNm": "헝거게임 50번째 추첨의 날",
+    "formats": [
+      "DOLBY"
+    ],
+    "premiumFormats": [
+      "DOLBY"
+    ],
+    "theaterCount": 1,
+    "firstSeenDate": "2026-11-12"
   }
 ]

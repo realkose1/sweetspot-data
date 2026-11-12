@@ -95,6 +95,14 @@
     "michael": {
       "movieCd": "20259626",
       "kobisNm": "마이클"
+    },
+    "projecthailmary": {
+      "movieCd": "20261782",
+      "kobisNm": "프로젝트 헤일메리"
+    },
+    "thehungergamessunriseonthereaping": {
+      "movieCd": "20267121",
+      "kobisNm": "헝거게임 50번째 추첨의 날"
     }
   },
   "ignore": {
