@@ -8,7 +8,7 @@
     "premiumFormats": [
       "4DX"
     ],
-    "theaterCount": 38,
+    "theaterCount": 37,
     "firstSeenDate": "2026-11-09"
   },
   {
@@ -21,43 +21,7 @@
     "premiumFormats": [
       "4DX"
     ],
-    "theaterCount": 12,
+    "theaterCount": 11,
     "firstSeenDate": "2026-10-26"
-  },
-  {
-    "movieCd": "20247221",
-    "kobisNm": "폭설",
-    "formats": [
-      "4DX"
-    ],
-    "premiumFormats": [
-      "4DX"
-    ],
-    "theaterCount": 1,
-    "firstSeenDate": "2026-11-10"
-  },
-  {
-    "movieCd": "20261782",
-    "kobisNm": "프로젝트 헤일메리",
-    "formats": [
-      "DOLBYVISION"
-    ],
-    "premiumFormats": [
-      "DOLBY"
-    ],
-    "theaterCount": 1,
-    "firstSeenDate": "2026-11-09"
-  },
-  {
-    "movieCd": "20267121",
-    "kobisNm": "헝거게임 50번째 추첨의 날",
-    "formats": [
-      "DOLBY"
-    ],
-    "premiumFormats": [
-      "DOLBY"
-    ],
-    "theaterCount": 1,
-    "firstSeenDate": "2026-11-12"
   }
 ]
