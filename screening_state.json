@@ -4,42 +4,42 @@
     "20244801": "2026-11-09"
   },
   "lastPremiumSeen": {
-    "odyssey": "2026-11-15",
+    "odyssey": "2026-11-16",
     "spiderman": "2026-10-06",
-    "hope": "2026-11-15",
-    "avengersendgame": "2026-11-15",
+    "hope": "2026-11-16",
+    "avengersendgame": "2026-11-16",
     "reawakenedman": "2026-10-19",
     "lookback": "2026-10-20",
     "whalefall": "2026-11-06",
-    "guardiansofthevideogame": "2026-11-15",
+    "guardiansofthevideogame": "2026-11-16",
     "colony": "2026-10-27",
     "streetfighter": "2026-10-27",
-    "chiikawathemoviethesecretofthemermaidisland": "2026-11-15",
+    "chiikawathemoviethesecretofthemermaidisland": "2026-11-16",
     "digger": "2026-10-25",
-    "attackontitancrimsonbowandarrow": "2026-11-15",
-    "chainsawmanthemovierezearc": "2026-11-15",
+    "attackontitancrimsonbowandarrow": "2026-11-16",
+    "chainsawmanthemovierezearc": "2026-11-16",
     "fall2deadpoint": "2026-11-14",
-    "dune": "2026-11-15",
-    "topgunmaverick": "2026-11-15",
-    "michael": "2026-11-15",
+    "dune": "2026-11-16",
+    "topgunmaverick": "2026-11-16",
+    "michael": "2026-11-16",
     "thehungergamessunriseonthereaping": "2026-11-14",
-    "projecthailmary": "2026-11-15"
+    "projecthailmary": "2026-11-16"
   },
   "noPremiumStreak": {
     "odyssey": 0,
-    "spiderman": 36,
+    "spiderman": 37,
     "hope": 0,
-    "toystory5": 50,
-    "moana": 50,
-    "minions": 50,
+    "toystory5": 51,
+    "moana": 51,
+    "minions": 51,
     "avengersendgame": 0,
-    "reawakenedman": 23,
-    "lookback": 22,
-    "whalefall": 7,
+    "reawakenedman": 24,
+    "lookback": 23,
+    "whalefall": 8,
     "guardiansofthevideogame": 0,
-    "colony": 16,
-    "streetfighter": 16,
-    "digger": 17,
+    "colony": 17,
+    "streetfighter": 17,
+    "digger": 18,
     "chiikawathemoviethesecretofthemermaidisland": 0,
     "attackontitancrimsonbowandarrow": 0,
     "chainsawmanthemovierezearc": 0,
@@ -50,7 +50,7 @@
     "projecthailmary": 0,
     "thehungergamessunriseonthereaping": 0
   },
-  "prevPremiumRowCount": 227,
+  "prevPremiumRowCount": 216,
   "handledCandidates": {
     "20241110": {
       "date": "2026-09-21",
@@ -113,7 +113,7 @@
       "reason": "KOBIS '폭설'은 2026.11.18 개봉 예정인 한국 영화(김윤석·구교환 주연)로 확인됨. 그런데 제공된 TMDB 값(tmdbId 1104331, 2024.10.23, 77분, 드라마·로맨스)은 다른 작품으로 보임. 매칭 오류 가능성이 커서 추가하지 않음. 4DX는 개봉 전 시사회 편성으로 보이며, 개봉 후 재검토 필요."
     }
   },
-  "lastRunDate": "2026-11-13",
+  "lastRunDate": "2026-11-14",
   "observedPremiumFormats": {
     "dune": [
       "IMAX190",
@@ -134,10 +134,10 @@
     "guardiansofthevideogame": [
       "4DX"
     ],
-    "hope": [
+    "chiikawathemoviethesecretofthemermaidisland": [
       "4DX"
     ],
-    "chiikawathemoviethesecretofthemermaidisland": [
+    "hope": [
       "4DX"
     ],
     "chainsawmanthemovierezearc": [
