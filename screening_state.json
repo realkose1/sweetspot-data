@@ -1,10 +1,13 @@
 {
   "candidateFirstSeen": {
     "20264498": "2026-10-26",
-    "20244801": "2026-11-09"
+    "20244801": "2026-11-09",
+    "20268264": "2026-11-16",
+    "20167904": "2026-11-16",
+    "20247221": "2026-11-16"
   },
   "lastPremiumSeen": {
-    "odyssey": "2026-11-17",
+    "odyssey": "2026-11-18",
     "spiderman": "2026-10-06",
     "hope": "2026-11-17",
     "avengersendgame": "2026-11-17",
@@ -16,41 +19,41 @@
     "streetfighter": "2026-10-27",
     "chiikawathemoviethesecretofthemermaidisland": "2026-11-17",
     "digger": "2026-10-25",
-    "attackontitancrimsonbowandarrow": "2026-11-17",
+    "attackontitancrimsonbowandarrow": "2026-11-18",
     "chainsawmanthemovierezearc": "2026-11-17",
     "fall2deadpoint": "2026-11-14",
     "dune": "2026-11-17",
     "topgunmaverick": "2026-11-17",
     "michael": "2026-11-17",
-    "thehungergamessunriseonthereaping": "2026-11-14",
+    "thehungergamessunriseonthereaping": "2026-11-18",
     "projecthailmary": "2026-11-17"
   },
   "noPremiumStreak": {
     "odyssey": 0,
-    "spiderman": 38,
+    "spiderman": 39,
     "hope": 0,
-    "toystory5": 52,
-    "moana": 52,
-    "minions": 52,
+    "toystory5": 53,
+    "moana": 53,
+    "minions": 53,
     "avengersendgame": 0,
-    "reawakenedman": 25,
-    "lookback": 24,
-    "whalefall": 9,
+    "reawakenedman": 26,
+    "lookback": 25,
+    "whalefall": 10,
     "guardiansofthevideogame": 0,
-    "colony": 18,
-    "streetfighter": 18,
-    "digger": 19,
+    "colony": 19,
+    "streetfighter": 19,
+    "digger": 20,
     "chiikawathemoviethesecretofthemermaidisland": 0,
     "attackontitancrimsonbowandarrow": 0,
     "chainsawmanthemovierezearc": 0,
-    "fall2deadpoint": 1,
+    "fall2deadpoint": 2,
     "dune": 0,
     "topgunmaverick": 0,
     "michael": 0,
     "projecthailmary": 0,
-    "thehungergamessunriseonthereaping": 1
+    "thehungergamessunriseonthereaping": 0
   },
-  "prevPremiumRowCount": 214,
+  "prevPremiumRowCount": 227,
   "handledCandidates": {
     "20241110": {
       "date": "2026-09-21",
@@ -103,17 +106,22 @@
       "reason": "영화이고 KOBIS 편성 포맷은 4DX 하나지만, hook에 쓸 확인된 포맷 사실이 없음. 국내 보도는 MX4D·메가박스 특별관 상영까지만 확인되고(MX4D는 배지로 쓸 수 없어 hook에 이름을 쓸 수 없음), 화면비 2.39:1은 나무위키에만 나옴. 추가 검색 한도가 소진되어 공식 출처를 확인하지 못해 보류. 촬영 포맷·화면비를 공식 출처로 확인한 뒤 재검토 필요"
     },
     "20244801": {
-      "date": "2026-11-09",
+      "date": "2026-11-16",
       "action": "rejected",
-      "reason": "하이라이트의 콘서트 필름(장르: 다큐멘터리·음악)이라 영화가 아니므로 앱 대상 외"
+      "reason": "하이라이트 콘서트 실황(장르: 다큐멘터리·음악). 이 앱의 대상인 영화가 아니라 콘서트 실황이라 추가하지 않음."
     },
     "20247221": {
       "date": "2026-11-11",
       "action": "rejected",
       "reason": "KOBIS '폭설'은 2026.11.18 개봉 예정인 한국 영화(김윤석·구교환 주연)로 확인됨. 그런데 제공된 TMDB 값(tmdbId 1104331, 2024.10.23, 77분, 드라마·로맨스)은 다른 작품으로 보임. 매칭 오류 가능성이 커서 추가하지 않음. 4DX는 개봉 전 시사회 편성으로 보이며, 개봉 후 재검토 필요."
+    },
+    "20268264": {
+      "date": "2026-11-16",
+      "action": "rejected",
+      "reason": "임영웅 콘서트 실황(장르: 음악·다큐멘터리). 이 앱의 대상인 영화가 아니라 콘서트 실황이라 추가하지 않음."
     }
   },
-  "lastRunDate": "2026-11-15",
+  "lastRunDate": "2026-11-16",
   "observedPremiumFormats": {
     "dune": [
       "IMAX190",
@@ -124,14 +132,14 @@
       "IMAX190",
       "IMAX43"
     ],
-    "attackontitancrimsonbowandarrow": [
+    "thehungergamessunriseonthereaping": [
       "4DX",
+      "DOLBY"
+    ],
+    "attackontitancrimsonbowandarrow": [
       "SCREENX"
     ],
     "guardiansofthevideogame": [
-      "4DX"
-    ],
-    "chiikawathemoviethesecretofthemermaidisland": [
       "4DX"
     ],
     "hope": [
@@ -164,7 +172,6 @@
     "colony": "2026-10-28",
     "streetfighter": "2026-10-28",
     "whalefall": "2026-11-07",
-    "fall2deadpoint": "2026-11-15",
-    "thehungergamessunriseonthereaping": "2026-11-15"
+    "fall2deadpoint": "2026-11-15"
   }
 }
