@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-11-16T09:58:06+09:00",
+  "dataTimestamp": "2026-11-17T12:40:10+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -492,6 +492,25 @@
       "hook": "메가박스가 개봉일인 11월 18일부터 돌비 시네마와 돌비 비전+애트모스 특별관에서 상영해요",
       "open": null,
       "tmdbId": 1300968,
+      "recommendedFormat": "DOLBY",
+      "premiumEnd": null
+    },
+    {
+      "id": "lalaland",
+      "title": "라라랜드",
+      "en": "LA LA LAND",
+      "pc1": "#2a1f4a",
+      "pc2": "#0c0914",
+      "date": "2016.12.07",
+      "run": "127분",
+      "genre": "코미디 · 드라마 · 로맨스",
+      "meta": "2016.12.07 개봉(재개봉) · 127분 · 코미디/드라마/로맨스",
+      "badges": [
+        "DOLBY"
+      ],
+      "hook": "개봉 10주년 재개봉에 맞춰 메가박스가 11월 18일부터 돌비 시네마와 돌비 비전+애트모스 특별관에서 상영해요.",
+      "open": null,
+      "tmdbId": 313369,
       "recommendedFormat": "DOLBY",
       "premiumEnd": null
     }

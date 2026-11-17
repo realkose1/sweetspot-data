@@ -1,7 +1,20 @@
 [
   {
+    "movieCd": "20247221",
+    "kobisNm": "폭설",
+    "formats": [
+      "4DX",
+      "SUPERPLEX"
+    ],
+    "premiumFormats": [
+      "4DX"
+    ],
+    "theaterCount": 41,
+    "firstSeenDate": "2026-11-16"
+  },
+  {
     "movieCd": "20268264",
-    "kobisNm": "임영웅 | 아임 히어로 더 스타디움 2",
+    "kobisNm": "임영웅ㅣ아임 히어로 더 스타디움 2",
     "formats": [
       "IMAX190",
       "IMAX43",
@@ -13,19 +26,6 @@
       "SCREENX"
     ],
     "theaterCount": 40,
-    "firstSeenDate": "2026-11-16"
-  },
-  {
-    "movieCd": "20247221",
-    "kobisNm": "폭설",
-    "formats": [
-      "4DX",
-      "SUPERPLEX"
-    ],
-    "premiumFormats": [
-      "4DX"
-    ],
-    "theaterCount": 38,
     "firstSeenDate": "2026-11-16"
   },
   {
@@ -64,7 +64,7 @@
     "premiumFormats": [
       "4DX"
     ],
-    "theaterCount": 9,
+    "theaterCount": 8,
     "firstSeenDate": "2026-10-26"
   }
 ]

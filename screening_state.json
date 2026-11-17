@@ -7,7 +7,7 @@
     "20247221": "2026-11-16"
   },
   "lastPremiumSeen": {
-    "odyssey": "2026-11-18",
+    "odyssey": "2026-11-19",
     "spiderman": "2026-10-06",
     "hope": "2026-11-17",
     "avengersendgame": "2026-11-17",
@@ -19,41 +19,41 @@
     "streetfighter": "2026-10-27",
     "chiikawathemoviethesecretofthemermaidisland": "2026-11-17",
     "digger": "2026-10-25",
-    "attackontitancrimsonbowandarrow": "2026-11-18",
+    "attackontitancrimsonbowandarrow": "2026-11-19",
     "chainsawmanthemovierezearc": "2026-11-17",
     "fall2deadpoint": "2026-11-14",
     "dune": "2026-11-17",
     "topgunmaverick": "2026-11-17",
     "michael": "2026-11-17",
-    "thehungergamessunriseonthereaping": "2026-11-18",
+    "thehungergamessunriseonthereaping": "2026-11-19",
     "projecthailmary": "2026-11-17"
   },
   "noPremiumStreak": {
     "odyssey": 0,
-    "spiderman": 39,
+    "spiderman": 40,
     "hope": 0,
-    "toystory5": 53,
-    "moana": 53,
-    "minions": 53,
+    "toystory5": 54,
+    "moana": 54,
+    "minions": 54,
     "avengersendgame": 0,
-    "reawakenedman": 26,
-    "lookback": 25,
-    "whalefall": 10,
+    "reawakenedman": 27,
+    "lookback": 26,
+    "whalefall": 11,
     "guardiansofthevideogame": 0,
-    "colony": 19,
-    "streetfighter": 19,
-    "digger": 20,
+    "colony": 20,
+    "streetfighter": 20,
+    "digger": 21,
     "chiikawathemoviethesecretofthemermaidisland": 0,
     "attackontitancrimsonbowandarrow": 0,
     "chainsawmanthemovierezearc": 0,
-    "fall2deadpoint": 2,
+    "fall2deadpoint": 3,
     "dune": 0,
     "topgunmaverick": 0,
     "michael": 0,
     "projecthailmary": 0,
     "thehungergamessunriseonthereaping": 0
   },
-  "prevPremiumRowCount": 227,
+  "prevPremiumRowCount": 226,
   "handledCandidates": {
     "20241110": {
       "date": "2026-09-21",
@@ -101,9 +101,9 @@
       "reason": "nonfilm-keyword: 콘서트"
     },
     "20264498": {
-      "date": "2026-11-10",
+      "date": "2026-11-17",
       "action": "rejected",
-      "reason": "영화이고 KOBIS 편성 포맷은 4DX 하나지만, hook에 쓸 확인된 포맷 사실이 없음. 국내 보도는 MX4D·메가박스 특별관 상영까지만 확인되고(MX4D는 배지로 쓸 수 없어 hook에 이름을 쓸 수 없음), 화면비 2.39:1은 나무위키에만 나옴. 추가 검색 한도가 소진되어 공식 출처를 확인하지 못해 보류. 촬영 포맷·화면비를 공식 출처로 확인한 뒤 재검토 필요"
+      "reason": "영화이고 4DX 편성(8개 극장)은 확인되나, 웹 검색 예산 소진과 파싱 오류로 촬영 포맷·화면비 등 포맷 판단용 hook 사실을 확인하지 못함. 다음 점검에서 재검토"
     },
     "20244801": {
       "date": "2026-11-16",
@@ -119,9 +119,14 @@
       "date": "2026-11-16",
       "action": "rejected",
       "reason": "임영웅 콘서트 실황(장르: 음악·다큐멘터리). 이 앱의 대상인 영화가 아니라 콘서트 실황이라 추가하지 않음."
+    },
+    "20167904": {
+      "date": "2026-11-17",
+      "action": "added",
+      "reason": "lalaland 추가"
     }
   },
-  "lastRunDate": "2026-11-16",
+  "lastRunDate": "2026-11-17",
   "observedPremiumFormats": {
     "dune": [
       "IMAX190",
