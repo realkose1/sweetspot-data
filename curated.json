@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-11-17T12:40:10+09:00",
+  "dataTimestamp": "2026-11-18T11:54:06+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -487,7 +487,8 @@
       "genre": "SF · 액션 · 모험",
       "meta": "2026.11.18 개봉 · 159분 · SF/액션/모험",
       "badges": [
-        "DOLBY"
+        "DOLBY",
+        "4DX"
       ],
       "hook": "메가박스가 개봉일인 11월 18일부터 돌비 시네마와 돌비 비전+애트모스 특별관에서 상영해요",
       "open": null,
@@ -512,6 +513,25 @@
       "open": null,
       "tmdbId": 313369,
       "recommendedFormat": "DOLBY",
+      "premiumEnd": null
+    },
+    {
+      "id": "attackontitanwingsoffreedom",
+      "title": "진격의 거인: 자유의 날개",
+      "en": "ATTACK ON TITAN: WINGS OF FREEDOM",
+      "pc1": "#2f2a22",
+      "pc2": "#0b0a09",
+      "date": "2015.12.10",
+      "run": "121분",
+      "genre": "애니메이션 · 액션 · 판타지 · 모험",
+      "meta": "2015.12.10 개봉(2026.11.25 재개봉) · 121분 · 애니메이션/액션",
+      "badges": [
+        "4DX"
+      ],
+      "hook": "CGV 단독으로 재개봉하며 2D와 4DX로 상영해요",
+      "open": null,
+      "tmdbId": 330081,
+      "recommendedFormat": "4DX",
       "premiumEnd": null
     }
   ],
