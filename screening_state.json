@@ -1,11 +1,10 @@
 {
   "candidateFirstSeen": {
     "20268264": "2026-11-16",
-    "20247221": "2026-11-16",
-    "20158492": "2026-11-18"
+    "20247221": "2026-11-16"
   },
   "lastPremiumSeen": {
-    "odyssey": "2026-11-20",
+    "odyssey": "2026-11-21",
     "spiderman": "2026-10-06",
     "hope": "2026-11-17",
     "avengersendgame": "2026-11-17",
@@ -17,43 +16,45 @@
     "streetfighter": "2026-10-27",
     "chiikawathemoviethesecretofthemermaidisland": "2026-11-17",
     "digger": "2026-10-25",
-    "attackontitancrimsonbowandarrow": "2026-11-20",
+    "attackontitancrimsonbowandarrow": "2026-11-21",
     "chainsawmanthemovierezearc": "2026-11-17",
-    "fall2deadpoint": "2026-11-14",
+    "fall2deadpoint": "2026-11-21",
     "dune": "2026-11-17",
     "topgunmaverick": "2026-11-17",
     "michael": "2026-11-17",
-    "thehungergamessunriseonthereaping": "2026-11-20",
+    "thehungergamessunriseonthereaping": "2026-11-21",
     "projecthailmary": "2026-11-17",
-    "lalaland": "2026-11-20"
+    "lalaland": "2026-11-21",
+    "attackontitanwingsoffreedom": "2026-11-20"
   },
   "noPremiumStreak": {
     "odyssey": 0,
-    "spiderman": 41,
-    "hope": 1,
-    "toystory5": 55,
-    "moana": 55,
-    "minions": 55,
-    "avengersendgame": 1,
-    "reawakenedman": 28,
-    "lookback": 27,
-    "whalefall": 12,
-    "guardiansofthevideogame": 1,
-    "colony": 21,
-    "streetfighter": 21,
-    "digger": 22,
-    "chiikawathemoviethesecretofthemermaidisland": 1,
+    "spiderman": 42,
+    "hope": 2,
+    "toystory5": 56,
+    "moana": 56,
+    "minions": 56,
+    "avengersendgame": 2,
+    "reawakenedman": 29,
+    "lookback": 28,
+    "whalefall": 13,
+    "guardiansofthevideogame": 2,
+    "colony": 22,
+    "streetfighter": 22,
+    "digger": 23,
+    "chiikawathemoviethesecretofthemermaidisland": 2,
     "attackontitancrimsonbowandarrow": 0,
-    "chainsawmanthemovierezearc": 1,
-    "fall2deadpoint": 4,
-    "dune": 1,
-    "topgunmaverick": 1,
-    "michael": 1,
-    "projecthailmary": 1,
+    "chainsawmanthemovierezearc": 2,
+    "fall2deadpoint": 0,
+    "dune": 2,
+    "topgunmaverick": 2,
+    "michael": 2,
+    "projecthailmary": 2,
     "thehungergamessunriseonthereaping": 0,
-    "lalaland": 0
+    "lalaland": 0,
+    "attackontitanwingsoffreedom": 0
   },
-  "prevPremiumRowCount": 138,
+  "prevPremiumRowCount": 137,
   "handledCandidates": {
     "20241110": {
       "date": "2026-09-21",
@@ -119,14 +120,9 @@
       "date": "2026-11-16",
       "action": "rejected",
       "reason": "임영웅 콘서트 실황(장르: 음악·다큐멘터리). 이 앱의 대상인 영화가 아니라 콘서트 실황이라 추가하지 않음."
-    },
-    "20158492": {
-      "date": "2026-11-18",
-      "action": "added",
-      "reason": "attackontitanwingsoffreedom 추가"
     }
   },
-  "lastRunDate": "2026-11-18",
+  "lastRunDate": "2026-11-19",
   "observedPremiumFormats": {
     "lalaland": [
       "DOLBY"
@@ -137,6 +133,9 @@
     ],
     "attackontitancrimsonbowandarrow": [
       "SCREENX"
+    ],
+    "attackontitanwingsoffreedom": [
+      "4DX"
     ]
   },
   "noPremiumSince": {
@@ -150,7 +149,6 @@
     "colony": "2026-10-28",
     "streetfighter": "2026-10-28",
     "whalefall": "2026-11-07",
-    "fall2deadpoint": "2026-11-15",
     "hope": "2026-11-18",
     "avengersendgame": "2026-11-18",
     "guardiansofthevideogame": "2026-11-18",

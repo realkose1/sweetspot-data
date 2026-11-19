@@ -9,7 +9,7 @@
     "premiumFormats": [
       "4DX"
     ],
-    "theaterCount": 41,
+    "theaterCount": 42,
     "firstSeenDate": "2026-11-16"
   },
   {
@@ -27,17 +27,5 @@
     ],
     "theaterCount": 40,
     "firstSeenDate": "2026-11-16"
-  },
-  {
-    "movieCd": "20158492",
-    "kobisNm": "진격의 거인: 자유의 날개",
-    "formats": [
-      "4DX"
-    ],
-    "premiumFormats": [
-      "4DX"
-    ],
-    "theaterCount": 1,
-    "firstSeenDate": "2026-11-18"
   }
 ]
