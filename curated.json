@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-11-19T11:31:04+09:00",
+  "dataTimestamp": "2026-11-20T11:18:58+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -185,7 +185,7 @@
       "open": null,
       "tmdbId": 299534,
       "recommendedFormat": "IMAX190",
-      "premiumEnd": null
+      "premiumEnd": "2026.11.17"
     },
     {
       "id": "reawakenedman",
@@ -263,7 +263,7 @@
       "open": null,
       "tmdbId": 1688392,
       "recommendedFormat": "SCREENX",
-      "premiumEnd": null
+      "premiumEnd": "2026.11.17"
     },
     {
       "id": "colony",
@@ -378,7 +378,7 @@
       "open": null,
       "tmdbId": 1218925,
       "recommendedFormat": "SCREENX",
-      "premiumEnd": null
+      "premiumEnd": "2026.11.17"
     },
     {
       "id": "fall2deadpoint",
@@ -417,7 +417,7 @@
       "open": null,
       "tmdbId": 438631,
       "recommendedFormat": "IMAX43",
-      "premiumEnd": null
+      "premiumEnd": "2026.11.17"
     },
     {
       "id": "topgunmaverick",
@@ -436,7 +436,7 @@
       "open": null,
       "tmdbId": 361743,
       "recommendedFormat": "DOLBY",
-      "premiumEnd": null
+      "premiumEnd": "2026.11.17"
     },
     {
       "id": "michael",
@@ -455,7 +455,7 @@
       "open": null,
       "tmdbId": 936075,
       "recommendedFormat": "DOLBY",
-      "premiumEnd": null
+      "premiumEnd": "2026.11.17"
     },
     {
       "id": "projecthailmary",
@@ -474,7 +474,7 @@
       "open": null,
       "tmdbId": 687163,
       "recommendedFormat": "DOLBY",
-      "premiumEnd": null
+      "premiumEnd": "2026.11.17"
     },
     {
       "id": "thehungergamessunriseonthereaping",
