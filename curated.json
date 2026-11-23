@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-11-22T10:09:28+09:00",
+  "dataTimestamp": "2026-11-23T10:33:56+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -531,6 +531,45 @@
       "hook": "CGV 단독으로 재개봉하며 2D와 4DX로 상영해요",
       "open": null,
       "tmdbId": 330081,
+      "recommendedFormat": "4DX",
+      "premiumEnd": null
+    },
+    {
+      "id": "hexed",
+      "title": "헥스: 마녀왕국",
+      "en": "HEXED",
+      "pc1": "#24204a",
+      "pc2": "#080a14",
+      "date": "2026.11.25",
+      "run": "110분",
+      "genre": "모험 · 애니메이션 · 가족 · 판타지 · 코미디",
+      "meta": "2026.11.25 개봉 · 110분 · 애니메이션/가족",
+      "badges": [
+        "4DX",
+        "DOLBY"
+      ],
+      "hook": "11월 25일 개봉부터 돌비 시네마와 4DX 특별관 상영이 함께 확정된 디즈니 애니메이션이에요.",
+      "open": null,
+      "tmdbId": 1538497,
+      "recommendedFormat": "DOLBY",
+      "premiumEnd": null
+    },
+    {
+      "id": "tristestropiques",
+      "title": "슬픈 열대",
+      "en": "TRISTES TROPIQUES",
+      "pc1": "#1f3a33",
+      "pc2": "#070d0b",
+      "date": "2026.11.25",
+      "run": "108분",
+      "genre": "액션 · 스릴러 · 범죄",
+      "meta": "2026.11.25 개봉 · 108분 · 액션/스릴러",
+      "badges": [
+        "4DX"
+      ],
+      "hook": "롯데시네마 SUPER MX4D와 메가박스 MEGA MX4D 포맷으로 개봉일 상영이 확정된 작품이에요.",
+      "open": null,
+      "tmdbId": 1317410,
       "recommendedFormat": "4DX",
       "premiumEnd": null
     }

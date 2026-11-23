@@ -111,6 +111,14 @@
     "attackontitanwingsoffreedom": {
       "movieCd": "20158492",
       "kobisNm": "진격의 거인: 자유의 날개"
+    },
+    "hexed": {
+      "movieCd": "20264608",
+      "kobisNm": "헥스: 마녀왕국"
+    },
+    "tristestropiques": {
+      "movieCd": "20244970",
+      "kobisNm": "슬픈 열대"
     }
   },
   "ignore": {
