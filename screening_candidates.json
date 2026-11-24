@@ -1,21 +1,5 @@
 [
   {
-    "movieCd": "20264608",
-    "kobisNm": "헥스: 마녀왕국",
-    "formats": [
-      "4DX",
-      "DOLBY",
-      "DOLBYVISION",
-      "SUPERPLEX"
-    ],
-    "premiumFormats": [
-      "4DX",
-      "DOLBY"
-    ],
-    "theaterCount": 51,
-    "firstSeenDate": "2026-11-23"
-  },
-  {
     "movieCd": "20247221",
     "kobisNm": "폭설",
     "formats": [
@@ -26,7 +10,7 @@
     "premiumFormats": [
       "4DX"
     ],
-    "theaterCount": 43,
+    "theaterCount": 44,
     "firstSeenDate": "2026-11-16"
   },
   {
@@ -46,17 +30,18 @@
     "firstSeenDate": "2026-11-16"
   },
   {
-    "movieCd": "20244970",
-    "kobisNm": "슬픈 열대",
+    "movieCd": "20264635",
+    "kobisNm": "명탐정 코난: 하이웨이의 타천사",
     "formats": [
       "4DX",
-      "SUPERPLEX"
+      "SCREENX"
     ],
     "premiumFormats": [
-      "4DX"
+      "4DX",
+      "SCREENX"
     ],
-    "theaterCount": 10,
-    "firstSeenDate": "2026-11-23"
+    "theaterCount": 38,
+    "firstSeenDate": "2026-11-24"
   },
   {
     "movieCd": "20264498",

@@ -3,11 +3,10 @@
     "20268264": "2026-11-16",
     "20247221": "2026-11-16",
     "20264498": "2026-11-21",
-    "20264608": "2026-11-23",
-    "20244970": "2026-11-23"
+    "20264635": "2026-11-24"
   },
   "lastPremiumSeen": {
-    "odyssey": "2026-11-24",
+    "odyssey": "2026-11-26",
     "spiderman": "2026-10-06",
     "hope": "2026-11-17",
     "avengersendgame": "2026-11-17",
@@ -20,44 +19,48 @@
     "chiikawathemoviethesecretofthemermaidisland": "2026-11-17",
     "digger": "2026-10-25",
     "attackontitancrimsonbowandarrow": "2026-11-25",
-    "chainsawmanthemovierezearc": "2026-11-25",
+    "chainsawmanthemovierezearc": "2026-11-26",
     "fall2deadpoint": "2026-11-22",
     "dune": "2026-11-17",
     "topgunmaverick": "2026-11-17",
     "michael": "2026-11-17",
     "thehungergamessunriseonthereaping": "2026-11-25",
-    "projecthailmary": "2026-11-25",
-    "lalaland": "2026-11-25",
-    "attackontitanwingsoffreedom": "2026-11-25"
+    "projecthailmary": "2026-11-26",
+    "lalaland": "2026-11-26",
+    "attackontitanwingsoffreedom": "2026-11-26",
+    "hexed": "2026-11-26",
+    "tristestropiques": "2026-11-26"
   },
   "noPremiumStreak": {
     "odyssey": 0,
-    "spiderman": 46,
-    "hope": 6,
-    "toystory5": 60,
-    "moana": 60,
-    "minions": 60,
-    "avengersendgame": 6,
-    "reawakenedman": 33,
-    "lookback": 32,
-    "whalefall": 17,
-    "guardiansofthevideogame": 6,
-    "colony": 26,
-    "streetfighter": 26,
-    "digger": 27,
-    "chiikawathemoviethesecretofthemermaidisland": 6,
+    "spiderman": 47,
+    "hope": 7,
+    "toystory5": 61,
+    "moana": 61,
+    "minions": 61,
+    "avengersendgame": 7,
+    "reawakenedman": 34,
+    "lookback": 33,
+    "whalefall": 18,
+    "guardiansofthevideogame": 7,
+    "colony": 27,
+    "streetfighter": 27,
+    "digger": 28,
+    "chiikawathemoviethesecretofthemermaidisland": 7,
     "attackontitancrimsonbowandarrow": 0,
     "chainsawmanthemovierezearc": 0,
-    "fall2deadpoint": 1,
-    "dune": 6,
-    "topgunmaverick": 6,
-    "michael": 6,
+    "fall2deadpoint": 2,
+    "dune": 7,
+    "topgunmaverick": 7,
+    "michael": 7,
     "projecthailmary": 0,
     "thehungergamessunriseonthereaping": 0,
     "lalaland": 0,
-    "attackontitanwingsoffreedom": 0
+    "attackontitanwingsoffreedom": 0,
+    "hexed": 0,
+    "tristestropiques": 0
   },
-  "prevPremiumRowCount": 136,
+  "prevPremiumRowCount": 138,
   "handledCandidates": {
     "20241110": {
       "date": "2026-09-21",
@@ -105,9 +108,9 @@
       "reason": "nonfilm-keyword: 콘서트"
     },
     "20264498": {
-      "date": "2026-11-17",
-      "action": "rejected",
-      "reason": "영화이고 4DX 편성(8개 극장)은 확인되나, 웹 검색 예산 소진과 파싱 오류로 촬영 포맷·화면비 등 포맷 판단용 hook 사실을 확인하지 못함. 다음 점검에서 재검토"
+      "date": "2026-11-24",
+      "action": "added",
+      "reason": "heartofthebeast 추가"
     },
     "20244801": {
       "date": "2026-11-16",
@@ -124,18 +127,13 @@
       "action": "needsHuman",
       "reason": "제목이 정확히 일치하는 TMDB 항목이 없음 (검색어 '임영웅ㅣ아임 히어로 더 스타디움 2')"
     },
-    "20264608": {
-      "date": "2026-11-23",
+    "20264635": {
+      "date": "2026-11-24",
       "action": "added",
-      "reason": "hexed 추가"
-    },
-    "20244970": {
-      "date": "2026-11-23",
-      "action": "added",
-      "reason": "tristestropiques 추가"
+      "reason": "detectiveconanfallenangelofthehighway 추가"
     }
   },
-  "lastRunDate": "2026-11-23",
+  "lastRunDate": "2026-11-24",
   "observedPremiumFormats": {
     "lalaland": [
       "DOLBY"
@@ -147,6 +145,13 @@
     "projecthailmary": [
       "4DX",
       "DOLBY"
+    ],
+    "hexed": [
+      "4DX",
+      "DOLBY"
+    ],
+    "tristestropiques": [
+      "4DX"
     ],
     "attackontitancrimsonbowandarrow": [
       "SCREENX"

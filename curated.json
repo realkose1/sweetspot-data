@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-11-23T10:33:56+09:00",
+  "dataTimestamp": "2026-11-24T14:17:19+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -570,6 +570,45 @@
       "hook": "롯데시네마 SUPER MX4D와 메가박스 MEGA MX4D 포맷으로 개봉일 상영이 확정된 작품이에요.",
       "open": null,
       "tmdbId": 1317410,
+      "recommendedFormat": "4DX",
+      "premiumEnd": null
+    },
+    {
+      "id": "detectiveconanfallenangelofthehighway",
+      "title": "명탐정 코난: 하이웨이의 타천사",
+      "en": "DETECTIVE CONAN: FALLEN ANGEL OF THE HIGHWAY",
+      "pc1": "#1c2a4a",
+      "pc2": "#080b14",
+      "date": "2026.08.12",
+      "run": "110분",
+      "genre": "액션 · 애니메이션 · 미스터리 · 범죄",
+      "meta": "2026.08.12 개봉(재개봉) · 110분 · 액션/애니메이션",
+      "badges": [
+        "4DX",
+        "SCREENX"
+      ],
+      "hook": "8월 일반 개봉 이후 ScreenX와 4DX 특별관 포맷으로 다시 개봉하는 작품이에요",
+      "open": null,
+      "tmdbId": 1545621,
+      "recommendedFormat": "SCREENX",
+      "premiumEnd": null
+    },
+    {
+      "id": "heartofthebeast",
+      "title": "하트 오브 비스트",
+      "en": "HEART OF THE BEAST",
+      "pc1": "#1f2a2e",
+      "pc2": "#080c0e",
+      "date": "2026.10.28",
+      "run": "102분",
+      "genre": "모험 · 스릴러",
+      "meta": "2026.10.28 개봉 · 102분 · 모험/스릴러",
+      "badges": [
+        "4DX"
+      ],
+      "hook": "롯데시네마 MX4D와 메가박스 특별관 상영이 개봉 전에 확정된 작품이에요",
+      "open": null,
+      "tmdbId": 1263337,
       "recommendedFormat": "4DX",
       "premiumEnd": null
     }
