@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-11-24T14:17:19+09:00",
+  "dataTimestamp": "2026-11-25T13:06:13+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -468,7 +468,8 @@
       "genre": "SF · 모험",
       "meta": "2026.03.18 개봉 · 157분 · SF/모험",
       "badges": [
-        "DOLBY"
+        "DOLBY",
+        "4DX"
       ],
       "hook": "감독들이 안내한 상영 포맷 기준으로 돌비 시네마에서는 2.0:1 화면비로 상영해요",
       "open": null,

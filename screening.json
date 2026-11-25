@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-11-24T14:11:56+09:00",
+  "checkedAt": "2026-11-25T13:01:55+09:00",
   "horizonDays": 3,
   "works": {
     "attackontitancrimsonbowandarrow": {
@@ -10,7 +10,7 @@
             "SCREENX"
           ],
           "lastSeen": "2026-11-25",
-          "showsToday": 3
+          "showsToday": 2
         },
         "yongsanScreenX14": {
           "formats": [
@@ -27,260 +27,260 @@
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "asiad4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "banghak4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "bucheon4dx": {
           "formats": [
             "4DX"
           ],
           "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "showsToday": 6
         },
         "centumcityUltra4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "cheonanTerminalUltra4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 4
         },
         "cheongdam4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "cheongjuZwell4dx": {
           "formats": [
             "4DX"
           ],
           "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "showsToday": 3
         },
         "daeguJukjeon4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "daeguStadium4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "daeguUltra4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "daejeon4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "daejeonTerminal4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 4
         },
         "dongsuwonUltra4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 4
         },
         "dongtanStation4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 4
         },
         "gangbyeon4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 4
         },
         "gimhae4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "godeokgangil4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 4
         },
         "gwanggyoUltra4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 4
         },
         "gwangjuCheomdan4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "gyeyang4dx": {
           "formats": [
             "4DX"
           ],
           "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "showsToday": 4
         },
         "ilsanUltra4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 4
         },
         "incheon4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 4
         },
         "jeju4dx": {
           "formats": [
             "4DX"
           ],
           "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "showsToday": 3
         },
         "jeonjuGosa4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "junggye4dx": {
           "formats": [
             "4DX"
           ],
           "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "showsToday": 4
         },
         "pyeongtaek4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 4
         },
         "sangbongUltra4dx": {
           "formats": [
             "4DX"
           ],
           "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "showsToday": 4
         },
         "seomyeon4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "sinchonArtreon4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 5
         },
         "sinsegaeGyeonggi4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 4
         },
         "ulsanSamsan4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "wangsimniUltra4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 4
         },
         "yeongdeungpo4dx": {
           "formats": [
             "4DX"
           ],
           "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "showsToday": 4
         },
         "yeonnam4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 4
         },
         "yeouido4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "yongsanUltra4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 5
         }
       }
     },
@@ -291,29 +291,29 @@
             "SCREENX"
           ],
           "lastSeen": "2026-11-26",
-          "showsToday": 3
+          "showsToday": 4
         }
       }
     },
-    "hexed": {
+    "detectiveconanfallenangelofthehighway": {
       "halls": {
         "ansan4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
-        "anseongDolby": {
+        "ansanScreenX": {
           "formats": [
-            "DOLBY"
+            "SCREENX"
           ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
-        "asiad4dx": {
+        "baegotScreenX": {
           "formats": [
-            "4DX"
+            "SCREENX"
           ],
           "lastSeen": "2026-11-26",
           "showsToday": 0
@@ -322,126 +322,91 @@
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-25",
+          "lastSeen": "2026-11-27",
+          "showsToday": 0
+        },
+        "bucheon4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-26",
+          "showsToday": 0
+        },
+        "bucheonScreenX": {
+          "formats": [
+            "SCREENX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 0
+        },
+        "centumCityScreenX": {
+          "formats": [
+            "SCREENX"
+          ],
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
         "centumcityUltra4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
-        },
-        "cheonanPentaport4dx": {
-          "formats": [
-            "4DX"
-          ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
         "cheonanTerminalUltra4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
         "cheongdam4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
-        "cheongjuTerminalDolbyVision": {
+        "cheonhoScreenX": {
           "formats": [
-            "DOLBYVISION"
+            "SCREENX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
-        },
-        "cheongjuYongamSuperplex": {
-          "formats": [
-            "SUPERPLEX"
-          ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
-        },
-        "cheongjuZwell4dx": {
-          "formats": [
-            "4DX"
-          ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
-        },
-        "coex": {
-          "formats": [
-            "DOLBY"
-          ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
-        },
-        "coexMx4d": {
-          "formats": [
-            "4DX"
-          ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
         "daeguJukjeon4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
-        },
-        "daeguSinsegaeDolby": {
-          "formats": [
-            "DOLBY"
-          ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
-        },
-        "daeguStadium4dx": {
-          "formats": [
-            "4DX"
-          ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
         "daeguUltra4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
-        "daejeon4dx": {
+        "daejeonTerminalScreenX": {
           "formats": [
-            "4DX"
+            "SCREENX"
           ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
-        "daejeonSinsegaeDolby": {
+        "deungchonScreenX": {
           "formats": [
-            "DOLBY"
+            "SCREENX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
-        },
-        "daejeonTerminal4dx": {
-          "formats": [
-            "4DX"
-          ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
         "dongsuwonUltra4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
         "dongtanStation4dx": {
@@ -451,107 +416,100 @@
           "lastSeen": "2026-11-26",
           "showsToday": 0
         },
-        "dongtanSuperplex": {
-          "formats": [
-            "SUPERPLEX"
-          ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
-        },
-        "eunpyeongSuperplex": {
-          "formats": [
-            "SUPERPLEX"
-          ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
-        },
         "gangbyeon4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
+          "showsToday": 0
+        },
+        "gangnamScreenX": {
+          "formats": [
+            "SCREENX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 0
+        },
+        "gangneungScreenX": {
+          "formats": [
+            "SCREENX"
+          ],
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
         "gimhae4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
+          "showsToday": 0
+        },
+        "gimpoScreenX": {
+          "formats": [
+            "SCREENX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 0
+        },
+        "godeokGangilScreenX": {
+          "formats": [
+            "SCREENX"
+          ],
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
         "godeokgangil4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
-        "goyangStarfieldDolbyVision": {
+        "guroScreenX": {
           "formats": [
-            "DOLBYVISION"
+            "SCREENX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
-        },
-        "guuiEastpoleDolbyVision": {
-          "formats": [
-            "DOLBYVISION"
-          ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
         "gwanggyoUltra4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-25",
-          "showsToday": 0
-        },
-        "gwangjuCheomdan4dx": {
-          "formats": [
-            "4DX"
-          ],
-          "lastSeen": "2026-11-25",
-          "showsToday": 0
-        },
-        "gwangmyeongSuperplex": {
-          "formats": [
-            "SUPERPLEX"
-          ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
         "gyeyang4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-25",
-          "showsToday": 0
-        },
-        "hanamStarfieldDolby": {
-          "formats": [
-            "DOLBY"
-          ],
           "lastSeen": "2026-11-26",
           "showsToday": 0
         },
-        "hanamStarfieldMx4d": {
+        "hongdaeScreenX": {
           "formats": [
-            "4DX"
+            "SCREENX"
           ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
+          "showsToday": 0
+        },
+        "ilsanScreenX": {
+          "formats": [
+            "SCREENX"
+          ],
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
         "ilsanUltra4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
-        "incheon4dx": {
+        "incheonScreenX": {
           "formats": [
-            "4DX"
+            "SCREENX"
           ],
           "lastSeen": "2026-11-26",
           "showsToday": 0
@@ -570,32 +528,25 @@
           "lastSeen": "2026-11-26",
           "showsToday": 0
         },
-        "mokdongDolbyVision": {
+        "oriScreenX": {
           "formats": [
-            "DOLBYVISION"
+            "SCREENX"
           ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
-        "namyangjuDolby": {
+        "pyeongtaekScreenX": {
           "formats": [
-            "DOLBY"
+            "SCREENX"
           ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
-        "pyeongtaek4dx": {
+        "sangbongScreenX": {
           "formats": [
-            "4DX"
+            "SCREENX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
-        },
-        "sangamDolbyVision": {
-          "formats": [
-            "DOLBYVISION"
-          ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
         "sangbongUltra4dx": {
@@ -605,51 +556,51 @@
           "lastSeen": "2026-11-26",
           "showsToday": 0
         },
-        "seomyeon4dx": {
+        "sejongScreenX": {
+          "formats": [
+            "SCREENX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 0
+        },
+        "seomyeonScreenX": {
+          "formats": [
+            "SCREENX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 0
+        },
+        "sinchonArtreon4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
+          "showsToday": 0
+        },
+        "sinchonArtreonScreenX": {
+          "formats": [
+            "SCREENX"
+          ],
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
         "sinsegaeGyeonggi4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
-        "songdoDolby": {
+        "uijeongbuScreenX": {
           "formats": [
-            "DOLBY"
+            "SCREENX"
           ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
-        "suwonAkDolby": {
+        "wangsimniScreenX": {
           "formats": [
-            "DOLBY"
-          ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
-        },
-        "suwonAkMx4d": {
-          "formats": [
-            "4DX"
-          ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
-        },
-        "suwonStarfieldDolbyVision": {
-          "formats": [
-            "DOLBYVISION"
-          ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
-        },
-        "ulsanSamsan4dx": {
-          "formats": [
-            "4DX"
+            "SCREENX"
           ],
           "lastSeen": "2026-11-26",
           "showsToday": 0
@@ -658,14 +609,14 @@
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
-        "wonjuMusilSuperplex": {
+        "ydp": {
           "formats": [
-            "SUPERPLEX"
+            "SCREENX"
           ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
         "yeongdeungpo4dx": {
@@ -679,109 +630,453 @@
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
         "yeouido4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
+          "showsToday": 0
+        },
+        "yongsanScreenX14": {
+          "formats": [
+            "SCREENX"
+          ],
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         },
         "yongsanUltra4dx": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
           "showsToday": 0
         }
       }
     },
-    "lalaland": {
+    "dune": {
       "halls": {
+        "changwonTheCity": {
+          "formats": [
+            "IMAX190"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 0
+        }
+      }
+    },
+    "hexed": {
+      "halls": {
+        "ansan4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 1
+        },
         "anseongDolby": {
           "formats": [
             "DOLBY"
           ],
-          "lastSeen": "2026-11-24",
+          "lastSeen": "2026-11-27",
+          "showsToday": 1
+        },
+        "asiad4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
           "showsToday": 2
+        },
+        "banghak4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-25",
+          "showsToday": 2
+        },
+        "centumcityUltra4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-26",
+          "showsToday": 1
+        },
+        "cheonanPentaport4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 4
+        },
+        "cheonanTerminalUltra4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
+        },
+        "cheongdam4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
+        },
+        "cheongjuTerminalDolbyVision": {
+          "formats": [
+            "DOLBYVISION"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 1
+        },
+        "cheongjuYongamSuperplex": {
+          "formats": [
+            "SUPERPLEX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 5
+        },
+        "cheongjuZwell4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-26",
+          "showsToday": 1
         },
         "coex": {
           "formats": [
             "DOLBY"
           ],
-          "lastSeen": "2026-11-24",
+          "lastSeen": "2026-11-27",
           "showsToday": 2
+        },
+        "coexMx4d": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
+        },
+        "daeguJukjeon4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 1
         },
         "daeguSinsegaeDolby": {
           "formats": [
             "DOLBY"
           ],
-          "lastSeen": "2026-11-24",
-          "showsToday": 3
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
+        },
+        "daeguStadium4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
+        },
+        "daeguUltra4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 1
+        },
+        "daejeon4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
         },
         "daejeonSinsegaeDolby": {
           "formats": [
             "DOLBY"
           ],
-          "lastSeen": "2026-11-24",
-          "showsToday": 3
+          "lastSeen": "2026-11-27",
+          "showsToday": 1
+        },
+        "daejeonTerminal4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
+        },
+        "dongsuwonUltra4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
+        },
+        "dongtanStation4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
+        },
+        "dongtanSuperplex": {
+          "formats": [
+            "SUPERPLEX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 5
+        },
+        "eunpyeongSuperplex": {
+          "formats": [
+            "SUPERPLEX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 6
+        },
+        "gangbyeon4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
+        },
+        "gimhae4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
+        },
+        "godeokgangil4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 1
+        },
+        "goyangStarfieldDolbyVision": {
+          "formats": [
+            "DOLBYVISION"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
+        },
+        "guuiEastpoleDolbyVision": {
+          "formats": [
+            "DOLBYVISION"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
+        },
+        "gwanggyoUltra4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 1
+        },
+        "gwangjuCheomdan4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-25",
+          "showsToday": 2
+        },
+        "gwangmyeongSuperplex": {
+          "formats": [
+            "SUPERPLEX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 5
+        },
+        "gyeyang4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-25",
+          "showsToday": 1
         },
         "hanamStarfieldDolby": {
           "formats": [
             "DOLBY"
           ],
-          "lastSeen": "2026-11-24",
-          "showsToday": 3
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
+        },
+        "hanamStarfieldMx4d": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 1
+        },
+        "ilsanUltra4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
+        },
+        "incheon4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-26",
+          "showsToday": 1
+        },
+        "jeju4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-26",
+          "showsToday": 2
+        },
+        "junggye4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-26",
+          "showsToday": 2
         },
         "mokdongDolbyVision": {
           "formats": [
             "DOLBYVISION"
           ],
-          "lastSeen": "2026-11-24",
+          "lastSeen": "2026-11-26",
           "showsToday": 2
         },
         "namyangjuDolby": {
           "formats": [
             "DOLBY"
           ],
-          "lastSeen": "2026-11-24",
+          "lastSeen": "2026-11-27",
+          "showsToday": 1
+        },
+        "pyeongtaek4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
           "showsToday": 2
         },
         "sangamDolbyVision": {
           "formats": [
             "DOLBYVISION"
           ],
-          "lastSeen": "2026-11-24",
+          "lastSeen": "2026-11-27",
+          "showsToday": 1
+        },
+        "sangbongUltra4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-26",
           "showsToday": 2
+        },
+        "seomyeon4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 1
+        },
+        "sinsegaeGyeonggi4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 1
         },
         "songdoDolby": {
           "formats": [
             "DOLBY"
           ],
-          "lastSeen": "2026-11-24",
-          "showsToday": 3
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
         },
         "suwonAkDolby": {
           "formats": [
             "DOLBY"
           ],
-          "lastSeen": "2026-11-24",
+          "lastSeen": "2026-11-27",
           "showsToday": 2
+        },
+        "suwonAkMx4d": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 1
         },
         "suwonStarfieldDolbyVision": {
           "formats": [
             "DOLBYVISION"
           ],
-          "lastSeen": "2026-11-24",
+          "lastSeen": "2026-11-27",
           "showsToday": 2
         },
+        "ulsanSamsan4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
+        },
+        "wangsimniUltra4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
+        },
+        "wonjuMusilSuperplex": {
+          "formats": [
+            "SUPERPLEX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 5
+        },
+        "yeongdeungpo4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-26",
+          "showsToday": 1
+        },
+        "yeonnam4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
+        },
+        "yeouido4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
+        },
+        "yongsanUltra4dx": {
+          "formats": [
+            "4DX"
+          ],
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
+        }
+      }
+    },
+    "lalaland": {
+      "halls": {
         "worldtower": {
           "formats": [
             "SUPERPLEX"
           ],
-          "lastSeen": "2026-11-26",
+          "lastSeen": "2026-11-27",
           "showsToday": 1
         }
       }
@@ -792,8 +1087,8 @@
           "formats": [
             "SUPERPLEX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 1
+          "lastSeen": "2026-11-27",
+          "showsToday": 0
         }
       }
     },
@@ -803,278 +1098,131 @@
           "formats": [
             "DOLBY"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "cheongjuTerminalDolbyVision": {
           "formats": [
             "DOLBYVISION"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "coex": {
           "formats": [
             "DOLBY"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "coexMx4d": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
         },
         "daeguSinsegaeDolby": {
           "formats": [
             "DOLBY"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "daejeonSinsegaeDolby": {
           "formats": [
             "DOLBY"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 4
         },
         "goyangStarfieldDolbyVision": {
           "formats": [
             "DOLBYVISION"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "guuiEastpoleDolbyVision": {
           "formats": [
             "DOLBYVISION"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "hanamStarfieldDolby": {
           "formats": [
             "DOLBY"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "hanamStarfieldMx4d": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
         },
         "mokdongDolbyVision": {
           "formats": [
             "DOLBYVISION"
           ],
           "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "showsToday": 3
         },
         "namyangjuDolby": {
           "formats": [
             "DOLBY"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "sangamDolbyVision": {
           "formats": [
             "DOLBYVISION"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "songdoDolby": {
           "formats": [
             "DOLBY"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "suwonAkDolby": {
           "formats": [
             "DOLBY"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         },
         "suwonAkMx4d": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
         },
         "suwonStarfieldDolbyVision": {
           "formats": [
             "DOLBYVISION"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         }
       }
     },
     "thehungergamessunriseonthereaping": {
       "halls": {
-        "anseongDolby": {
-          "formats": [
-            "DOLBY"
-          ],
-          "lastSeen": "2026-11-24",
-          "showsToday": 2
-        },
-        "coex": {
-          "formats": [
-            "DOLBY"
-          ],
-          "lastSeen": "2026-11-24",
-          "showsToday": 2
-        },
-        "coexMx4d": {
-          "formats": [
-            "4DX"
-          ],
-          "lastSeen": "2026-11-24",
-          "showsToday": 3
-        },
-        "daeguSinsegaeDolby": {
-          "formats": [
-            "DOLBY"
-          ],
-          "lastSeen": "2026-11-24",
-          "showsToday": 2
-        },
-        "daejeonSinsegaeDolby": {
-          "formats": [
-            "DOLBY"
-          ],
-          "lastSeen": "2026-11-24",
-          "showsToday": 2
-        },
-        "dongtanSuperplex": {
-          "formats": [
-            "SUPERPLEX"
-          ],
-          "lastSeen": "2026-11-24",
-          "showsToday": 4
-        },
-        "gwangbokSuperplex": {
-          "formats": [
-            "SUPERPLEX"
-          ],
-          "lastSeen": "2026-11-24",
-          "showsToday": 4
-        },
-        "hanamStarfieldDolby": {
-          "formats": [
-            "DOLBY"
-          ],
-          "lastSeen": "2026-11-24",
-          "showsToday": 2
-        },
-        "hanamStarfieldMx4d": {
-          "formats": [
-            "4DX"
-          ],
-          "lastSeen": "2026-11-24",
-          "showsToday": 4
-        },
-        "mokdongDolbyVision": {
-          "formats": [
-            "DOLBYVISION"
-          ],
-          "lastSeen": "2026-11-24",
-          "showsToday": 2
-        },
-        "namyangjuDolby": {
-          "formats": [
-            "DOLBY"
-          ],
-          "lastSeen": "2026-11-24",
-          "showsToday": 2
-        },
-        "pajuUnjeongSuperplex": {
-          "formats": [
-            "SUPERPLEX"
-          ],
-          "lastSeen": "2026-11-24",
-          "showsToday": 4
-        },
-        "sangamDolbyVision": {
-          "formats": [
-            "DOLBYVISION"
-          ],
-          "lastSeen": "2026-11-24",
-          "showsToday": 2
-        },
-        "sanginSuperplex": {
-          "formats": [
-            "SUPERPLEX"
-          ],
-          "lastSeen": "2026-11-24",
-          "showsToday": 4
-        },
-        "songdoDolby": {
-          "formats": [
-            "DOLBY"
-          ],
-          "lastSeen": "2026-11-24",
-          "showsToday": 2
-        },
-        "sujiSuperplex": {
-          "formats": [
-            "SUPERPLEX"
-          ],
-          "lastSeen": "2026-11-24",
-          "showsToday": 4
-        },
-        "suwonAkDolby": {
-          "formats": [
-            "DOLBY"
-          ],
-          "lastSeen": "2026-11-24",
-          "showsToday": 3
-        },
-        "suwonAkMx4d": {
-          "formats": [
-            "4DX"
-          ],
-          "lastSeen": "2026-11-24",
-          "showsToday": 1
-        },
-        "suwonStarfieldDolbyVision": {
-          "formats": [
-            "DOLBYVISION"
-          ],
-          "lastSeen": "2026-11-24",
-          "showsToday": 2
-        },
-        "suwonSuperplex": {
-          "formats": [
-            "SUPERPLEX"
-          ],
-          "lastSeen": "2026-11-24",
-          "showsToday": 4
-        },
-        "wonjuMusilSuperplex": {
-          "formats": [
-            "SUPERPLEX"
-          ],
-          "lastSeen": "2026-11-24",
-          "showsToday": 4
-        },
         "worldtower": {
           "formats": [
             "SUPERPLEX"
           ],
           "lastSeen": "2026-11-25",
-          "showsToday": 3
+          "showsToday": 1
         }
       }
     },
@@ -1084,15 +1232,15 @@
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
         },
         "gwangbokSuperplex": {
           "formats": [
             "SUPERPLEX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 6
         },
         "gwangmyeongSuperplex": {
           "formats": [
@@ -1105,57 +1253,57 @@
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
         },
         "pajuUnjeongSuperplex": {
           "formats": [
             "SUPERPLEX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 5
         },
         "sanginSuperplex": {
           "formats": [
             "SUPERPLEX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 5
         },
         "sujiSuperplex": {
           "formats": [
             "SUPERPLEX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 6
         },
         "suwonAkMx4d": {
           "formats": [
             "4DX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 2
         },
         "suwonSuperplex": {
           "formats": [
             "SUPERPLEX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 6
         },
         "wonjuMusilSuperplex": {
           "formats": [
             "SUPERPLEX"
           ],
           "lastSeen": "2026-11-25",
-          "showsToday": 0
+          "showsToday": 1
         },
         "worldtower": {
           "formats": [
             "SUPERPLEX"
           ],
-          "lastSeen": "2026-11-26",
-          "showsToday": 0
+          "lastSeen": "2026-11-27",
+          "showsToday": 3
         }
       }
     }

@@ -1,12 +1,9 @@
 {
   "candidateFirstSeen": {
-    "20268264": "2026-11-16",
-    "20247221": "2026-11-16",
-    "20264498": "2026-11-21",
-    "20264635": "2026-11-24"
+    "20268264": "2026-11-16"
   },
   "lastPremiumSeen": {
-    "odyssey": "2026-11-26",
+    "odyssey": "2026-11-27",
     "spiderman": "2026-10-06",
     "hope": "2026-11-17",
     "avengersendgame": "2026-11-17",
@@ -21,46 +18,49 @@
     "attackontitancrimsonbowandarrow": "2026-11-25",
     "chainsawmanthemovierezearc": "2026-11-26",
     "fall2deadpoint": "2026-11-22",
-    "dune": "2026-11-17",
+    "dune": "2026-11-27",
     "topgunmaverick": "2026-11-17",
     "michael": "2026-11-17",
     "thehungergamessunriseonthereaping": "2026-11-25",
-    "projecthailmary": "2026-11-26",
-    "lalaland": "2026-11-26",
-    "attackontitanwingsoffreedom": "2026-11-26",
-    "hexed": "2026-11-26",
-    "tristestropiques": "2026-11-26"
+    "projecthailmary": "2026-11-27",
+    "lalaland": "2026-11-27",
+    "attackontitanwingsoffreedom": "2026-11-27",
+    "hexed": "2026-11-27",
+    "tristestropiques": "2026-11-27",
+    "detectiveconanfallenangelofthehighway": "2026-11-27"
   },
   "noPremiumStreak": {
     "odyssey": 0,
-    "spiderman": 47,
-    "hope": 7,
-    "toystory5": 61,
-    "moana": 61,
-    "minions": 61,
-    "avengersendgame": 7,
-    "reawakenedman": 34,
-    "lookback": 33,
-    "whalefall": 18,
-    "guardiansofthevideogame": 7,
-    "colony": 27,
-    "streetfighter": 27,
-    "digger": 28,
-    "chiikawathemoviethesecretofthemermaidisland": 7,
+    "spiderman": 48,
+    "hope": 8,
+    "toystory5": 62,
+    "moana": 62,
+    "minions": 62,
+    "avengersendgame": 8,
+    "reawakenedman": 35,
+    "lookback": 34,
+    "whalefall": 19,
+    "guardiansofthevideogame": 8,
+    "colony": 28,
+    "streetfighter": 28,
+    "digger": 29,
+    "chiikawathemoviethesecretofthemermaidisland": 8,
     "attackontitancrimsonbowandarrow": 0,
     "chainsawmanthemovierezearc": 0,
-    "fall2deadpoint": 2,
-    "dune": 7,
-    "topgunmaverick": 7,
-    "michael": 7,
+    "fall2deadpoint": 3,
+    "dune": 0,
+    "topgunmaverick": 8,
+    "michael": 8,
     "projecthailmary": 0,
     "thehungergamessunriseonthereaping": 0,
     "lalaland": 0,
     "attackontitanwingsoffreedom": 0,
     "hexed": 0,
-    "tristestropiques": 0
+    "tristestropiques": 0,
+    "detectiveconanfallenangelofthehighway": 0,
+    "heartofthebeast": 1
   },
-  "prevPremiumRowCount": 138,
+  "prevPremiumRowCount": 181,
   "handledCandidates": {
     "20241110": {
       "date": "2026-09-21",
@@ -107,11 +107,6 @@
       "action": "rejected",
       "reason": "nonfilm-keyword: 콘서트"
     },
-    "20264498": {
-      "date": "2026-11-24",
-      "action": "added",
-      "reason": "heartofthebeast 추가"
-    },
     "20244801": {
       "date": "2026-11-16",
       "action": "rejected",
@@ -126,22 +121,10 @@
       "date": "2026-11-23",
       "action": "needsHuman",
       "reason": "제목이 정확히 일치하는 TMDB 항목이 없음 (검색어 '임영웅ㅣ아임 히어로 더 스타디움 2')"
-    },
-    "20264635": {
-      "date": "2026-11-24",
-      "action": "added",
-      "reason": "detectiveconanfallenangelofthehighway 추가"
     }
   },
-  "lastRunDate": "2026-11-24",
+  "lastRunDate": "2026-11-25",
   "observedPremiumFormats": {
-    "lalaland": [
-      "DOLBY"
-    ],
-    "thehungergamessunriseonthereaping": [
-      "4DX",
-      "DOLBY"
-    ],
     "projecthailmary": [
       "4DX",
       "DOLBY"
@@ -156,8 +139,15 @@
     "attackontitancrimsonbowandarrow": [
       "SCREENX"
     ],
+    "detectiveconanfallenangelofthehighway": [
+      "4DX",
+      "SCREENX"
+    ],
     "attackontitanwingsoffreedom": [
       "4DX"
+    ],
+    "dune": [
+      "IMAX190"
     ],
     "chainsawmanthemovierezearc": [
       "SCREENX"
@@ -178,9 +168,9 @@
     "avengersendgame": "2026-11-18",
     "guardiansofthevideogame": "2026-11-18",
     "chiikawathemoviethesecretofthemermaidisland": "2026-11-18",
-    "dune": "2026-11-18",
     "topgunmaverick": "2026-11-18",
     "michael": "2026-11-18",
-    "fall2deadpoint": "2026-11-23"
+    "fall2deadpoint": "2026-11-23",
+    "heartofthebeast": "2026-11-25"
   }
 }
