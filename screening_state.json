@@ -3,7 +3,7 @@
     "20268264": "2026-11-16"
   },
   "lastPremiumSeen": {
-    "odyssey": "2026-11-27",
+    "odyssey": "2026-11-29",
     "spiderman": "2026-10-06",
     "hope": "2026-11-17",
     "avengersendgame": "2026-11-17",
@@ -13,44 +13,44 @@
     "guardiansofthevideogame": "2026-11-17",
     "colony": "2026-10-27",
     "streetfighter": "2026-10-27",
-    "chiikawathemoviethesecretofthemermaidisland": "2026-11-17",
+    "chiikawathemoviethesecretofthemermaidisland": "2026-11-29",
     "digger": "2026-10-25",
     "attackontitancrimsonbowandarrow": "2026-11-25",
-    "chainsawmanthemovierezearc": "2026-11-26",
+    "chainsawmanthemovierezearc": "2026-11-29",
     "fall2deadpoint": "2026-11-22",
-    "dune": "2026-11-27",
+    "dune": "2026-11-29",
     "topgunmaverick": "2026-11-17",
     "michael": "2026-11-17",
-    "thehungergamessunriseonthereaping": "2026-11-25",
-    "projecthailmary": "2026-11-27",
-    "lalaland": "2026-11-27",
-    "attackontitanwingsoffreedom": "2026-11-27",
-    "hexed": "2026-11-27",
-    "tristestropiques": "2026-11-27",
-    "detectiveconanfallenangelofthehighway": "2026-11-27"
+    "thehungergamessunriseonthereaping": "2026-11-29",
+    "projecthailmary": "2026-11-29",
+    "lalaland": "2026-11-29",
+    "attackontitanwingsoffreedom": "2026-11-29",
+    "hexed": "2026-11-29",
+    "tristestropiques": "2026-11-29",
+    "detectiveconanfallenangelofthehighway": "2026-11-29"
   },
   "noPremiumStreak": {
     "odyssey": 0,
-    "spiderman": 48,
-    "hope": 8,
-    "toystory5": 62,
-    "moana": 62,
-    "minions": 62,
-    "avengersendgame": 8,
-    "reawakenedman": 35,
-    "lookback": 34,
-    "whalefall": 19,
-    "guardiansofthevideogame": 8,
-    "colony": 28,
-    "streetfighter": 28,
-    "digger": 29,
-    "chiikawathemoviethesecretofthemermaidisland": 8,
-    "attackontitancrimsonbowandarrow": 0,
+    "spiderman": 49,
+    "hope": 9,
+    "toystory5": 63,
+    "moana": 63,
+    "minions": 63,
+    "avengersendgame": 9,
+    "reawakenedman": 36,
+    "lookback": 35,
+    "whalefall": 20,
+    "guardiansofthevideogame": 9,
+    "colony": 29,
+    "streetfighter": 29,
+    "digger": 30,
+    "chiikawathemoviethesecretofthemermaidisland": 0,
+    "attackontitancrimsonbowandarrow": 1,
     "chainsawmanthemovierezearc": 0,
-    "fall2deadpoint": 3,
+    "fall2deadpoint": 4,
     "dune": 0,
-    "topgunmaverick": 8,
-    "michael": 8,
+    "topgunmaverick": 9,
+    "michael": 9,
     "projecthailmary": 0,
     "thehungergamessunriseonthereaping": 0,
     "lalaland": 0,
@@ -58,9 +58,9 @@
     "hexed": 0,
     "tristestropiques": 0,
     "detectiveconanfallenangelofthehighway": 0,
-    "heartofthebeast": 1
+    "heartofthebeast": 2
   },
-  "prevPremiumRowCount": 181,
+  "prevPremiumRowCount": 225,
   "handledCandidates": {
     "20241110": {
       "date": "2026-09-21",
@@ -123,7 +123,7 @@
       "reason": "제목이 정확히 일치하는 TMDB 항목이 없음 (검색어 '임영웅ㅣ아임 히어로 더 스타디움 2')"
     }
   },
-  "lastRunDate": "2026-11-25",
+  "lastRunDate": "2026-11-27",
   "observedPremiumFormats": {
     "projecthailmary": [
       "4DX",
@@ -135,9 +135,6 @@
     ],
     "tristestropiques": [
       "4DX"
-    ],
-    "attackontitancrimsonbowandarrow": [
-      "SCREENX"
     ],
     "detectiveconanfallenangelofthehighway": [
       "4DX",
@@ -167,10 +164,10 @@
     "hope": "2026-11-18",
     "avengersendgame": "2026-11-18",
     "guardiansofthevideogame": "2026-11-18",
-    "chiikawathemoviethesecretofthemermaidisland": "2026-11-18",
     "topgunmaverick": "2026-11-18",
     "michael": "2026-11-18",
     "fall2deadpoint": "2026-11-23",
-    "heartofthebeast": "2026-11-25"
+    "heartofthebeast": "2026-11-25",
+    "attackontitancrimsonbowandarrow": "2026-11-27"
   }
 }
