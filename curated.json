@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "dataTimestamp": "2026-11-27T12:37:31+09:00",
+  "dataTimestamp": "2026-11-28T12:14:56+09:00",
   "works": [
     {
       "id": "odyssey",
@@ -611,7 +611,7 @@
       "open": null,
       "tmdbId": 1263337,
       "recommendedFormat": "4DX",
-      "premiumEnd": null
+      "premiumEnd": "2026.11.24"
     }
   ],
   "halls": [
